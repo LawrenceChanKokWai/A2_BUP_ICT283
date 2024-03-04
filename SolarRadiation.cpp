@@ -18,3 +18,9 @@ float SolarRadiation::ConvertUnit( float &measurement ) const
     return ( measurement/1000 * 10/60 );
 }
 
+ostream &operator << ( ostream &output, const SolarRadiation &SR )
+{
+    output << SR.GetMeasurement();
+
+    return output;
+}

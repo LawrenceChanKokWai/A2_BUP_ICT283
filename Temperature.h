@@ -49,5 +49,13 @@ public:
     float ConvertUnit( float &measurement ) const override;
 };
 
+/**
+ * @brief Overloaded stream insertion operator for Temperature objects.
+ * @param[out] output The output stream.
+ * @param[in] TEMP The Temperature object to output.
+ * @return The modified output stream.
+ */
+ostream &operator << ( ostream &output, const Temperature &TEMP );
+
 
 #endif // TEMPERATURE_H_INCLUDED

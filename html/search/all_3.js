@@ -6,5 +6,10 @@ var searchData=
   ['getminute_9',['GetMinute',['../class_time.html#a5e9c43cb59f31cf7e0b8b1df79227e09',1,'Time']]],
   ['getmonth_10',['GetMonth',['../class_date.html#aa316776e60e28ae20a710bcf6d96b7b8',1,'Date']]],
   ['getmonthinstr_11',['GetMonthInStr',['../class_date.html#adb6f84b444ecf60bd8577be22de74fe2',1,'Date']]],
-  ['getyear_12',['GetYear',['../class_date.html#ad3519b229e188cca67c764352929ea83',1,'Date']]]
+  ['getsensordate_12',['GetSensorDate',['../class_sensor_rec_type.html#a7e94391ece6b543bc24c6c053e1db5e7',1,'SensorRecType']]],
+  ['getsensorsolarradiation_13',['GetSensorSolarRadiation',['../class_sensor_rec_type.html#a8db3069b5130feb64cc65135e85e8dc4',1,'SensorRecType']]],
+  ['getsensortemperature_14',['GetSensorTemperature',['../class_sensor_rec_type.html#a09dbaa29cf929cba9a46dc1ec0d198a0',1,'SensorRecType']]],
+  ['getsensortime_15',['GetSensorTime',['../class_sensor_rec_type.html#a7fd301433186563da2d1e8a009cbd5c1',1,'SensorRecType']]],
+  ['getsensorwindspeed_16',['GetSensorWindSpeed',['../class_sensor_rec_type.html#a099718254fa5b11d646fc4a9e9b2244d',1,'SensorRecType']]],
+  ['getyear_17',['GetYear',['../class_date.html#ad3519b229e188cca67c764352929ea83',1,'Date']]]
 ];

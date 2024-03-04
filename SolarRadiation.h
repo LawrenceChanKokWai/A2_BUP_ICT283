@@ -50,5 +50,13 @@ public:
 
 };
 
+/**
+ * @brief Overloaded stream insertion operator for SolarRadiation objects.
+ * @param[out] output The output stream.
+ * @param[in] SR The Solar Radiation object to output.
+ * @return The modified output stream.
+ */
+ostream &operator << ( ostream &output, const SolarRadiation &SR );
+
 
 #endif // SOLARRADIATION_H_INCLUDED

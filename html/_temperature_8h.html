@@ -84,7 +84,8 @@ $(document).ready(function(){initNavTree('_temperature_8h.html',''); initResizab
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Temperature.h File Reference</div>  </div>
 </div><!--header-->
@@ -110,9 +111,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_temperature_8h__dep__incl.png" border="0" usemap="#_temperature_8hdep" alt=""/></div>
 <map name="_temperature_8hdep" id="_temperature_8hdep">
-<area shape="rect" title="Temperature class definition." alt="" coords="89,5,195,32"/>
-<area shape="rect" href="_temperature_8cpp.html" title="Temperature class implementation file." alt="" coords="5,80,124,107"/>
-<area shape="rect" href="_temperature_test_8cpp.html" title="Temperature Test execution file." alt="" coords="149,80,293,107"/>
+<area shape="rect" title="Temperature class definition." alt="" coords="257,5,362,32"/>
+<area shape="rect" href="_sensor_rec_type_8h.html" title="SensorRecType class definition." alt="" coords="100,80,225,107"/>
+<area shape="rect" href="_temperature_8cpp.html" title="Temperature class implementation file." alt="" coords="250,80,369,107"/>
+<area shape="rect" href="_temperature_test_8cpp.html" title="Temperature Test execution file." alt="" coords="393,80,537,107"/>
+<area shape="rect" href="_sensor_rec_type_8cpp.html" title="SensorRecType class implementation file." alt="" coords="5,155,144,181"/>
+<area shape="rect" href="_sensor_rec_type_test_8cpp.html" title="SensorRecType Test execution file." alt="" coords="169,155,333,181"/>
 </map>
 </div>
 </div>
@@ -123,6 +127,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_temperature.html">Temperature</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a temperature measurement.  <a href="class_temperature.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a8e6106b8f9810a522c3383f781eac910"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_temperature_8h.html#a8e6106b8f9810a522c3383f781eac910">operator&lt;&lt;</a> (ostream &amp;output, const <a class="el" href="class_temperature.html">Temperature</a> &amp;TEMP)</td></tr>
+<tr class="memdesc:a8e6106b8f9810a522c3383f781eac910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded stream insertion operator for <a class="el" href="class_temperature.html" title="Represents a temperature measurement.">Temperature</a> objects.  <a href="_temperature_8h.html#a8e6106b8f9810a522c3383f781eac910">More...</a><br /></td></tr>
+<tr class="separator:a8e6106b8f9810a522c3383f781eac910"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_temperature.html" title="Represents a temperature measurement.">Temperature</a> class definition. </p>
@@ -131,7 +141,57 @@ Classes</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="_temperature_8h_source.html">Temperature.h</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a8e6106b8f9810a522c3383f781eac910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e6106b8f9810a522c3383f781eac910">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_temperature.html">Temperature</a> &amp;&#160;</td>
+          <td class="paramname"><em>TEMP</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloaded stream insertion operator for <a class="el" href="class_temperature.html" title="Represents a temperature measurement.">Temperature</a> objects. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>The output stream. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">TEMP</td><td>The <a class="el" href="class_temperature.html" title="Represents a temperature measurement.">Temperature</a> object to output. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The modified output stream. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_temperature_8cpp_source.html#l00021">21</a> of file <a class="el" href="_temperature_8cpp_source.html">Temperature.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_temperature_8h_a8e6106b8f9810a522c3383f781eac910_cgraph.png" border="0" usemap="#_temperature_8h_a8e6106b8f9810a522c3383f781eac910_cgraph" alt=""/></div>
+<map name="_temperature_8h_a8e6106b8f9810a522c3383f781eac910_cgraph" id="_temperature_8h_a8e6106b8f9810a522c3383f781eac910_cgraph">
+<area shape="rect" title="Overloaded stream insertion operator for Temperature objects." alt="" coords="5,5,91,32"/>
+<area shape="rect" href="class_measurement.html#aecf8d91022eefcfc28ca06b72b716eab" title="Getter for the measurement variable." alt="" coords="139,5,348,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

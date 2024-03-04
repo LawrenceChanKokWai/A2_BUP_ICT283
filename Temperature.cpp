@@ -17,3 +17,10 @@ float Temperature::ConvertUnit( float &measurement ) const
 {
     return ( (measurement -32) * 5/9 );
 }
+
+ostream &operator << ( ostream &output, const Temperature &TEMP )
+{
+    output << TEMP.GetMeasurement();
+
+    return output;
+}

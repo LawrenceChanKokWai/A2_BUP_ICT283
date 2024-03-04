@@ -39,11 +39,51 @@
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
+		<Unit filename="Measurement.cpp" />
+		<Unit filename="Measurement.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="MeasurementTest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="SensorRecType.cpp" />
+		<Unit filename="SensorRecType.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="SensorRecTypeTest.cpp" />
+		<Unit filename="SolarRadiation.cpp" />
+		<Unit filename="SolarRadiation.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="SolarRadiationTest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Temperature.cpp" />
+		<Unit filename="Temperature.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="TemperatureTest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="Time.cpp" />
 		<Unit filename="Time.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="TimeTest.cpp" />
+		<Unit filename="TimeTest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="WindSpeed.cpp" />
+		<Unit filename="WindSpeed.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="WindSpeedTest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />

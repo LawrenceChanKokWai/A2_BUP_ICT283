@@ -6,5 +6,6 @@ var hierarchy =
       [ "Temperature", "class_temperature.html", null ],
       [ "WindSpeed", "class_wind_speed.html", null ]
     ] ],
+    [ "SensorRecType", "class_sensor_rec_type.html", null ],
     [ "Time", "class_time.html", null ]
 ];

@@ -1,5 +1,8 @@
 <map id="Temperature.h" name="Temperature.h">
-<area shape="rect" id="node1" title="Temperature class definition." alt="" coords="89,5,195,32"/>
-<area shape="rect" id="node2" href="$_temperature_8cpp.html" title="Temperature class implementation file." alt="" coords="5,80,124,107"/>
-<area shape="rect" id="node3" href="$_temperature_test_8cpp.html" title="Temperature Test execution file." alt="" coords="149,80,293,107"/>
+<area shape="rect" id="node1" title="Temperature class definition." alt="" coords="257,5,362,32"/>
+<area shape="rect" id="node2" href="$_sensor_rec_type_8h.html" title="SensorRecType class definition." alt="" coords="100,80,225,107"/>
+<area shape="rect" id="node5" href="$_temperature_8cpp.html" title="Temperature class implementation file." alt="" coords="250,80,369,107"/>
+<area shape="rect" id="node6" href="$_temperature_test_8cpp.html" title="Temperature Test execution file." alt="" coords="393,80,537,107"/>
+<area shape="rect" id="node3" href="$_sensor_rec_type_8cpp.html" title="SensorRecType class implementation file." alt="" coords="5,155,144,181"/>
+<area shape="rect" id="node4" href="$_sensor_rec_type_test_8cpp.html" title="SensorRecType Test execution file." alt="" coords="169,155,333,181"/>
 </map>

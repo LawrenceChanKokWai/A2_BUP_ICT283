@@ -51,5 +51,14 @@ public:
 
 };
 
+/**
+ * @brief Overloaded stream insertion operator for WindSpeed objects.
+ * @param[out] output The output stream.
+ * @param[in] WS The WindSpeed object to output.
+ * @return The modified output stream.
+ */
+ostream &operator << ( ostream &output, const WindSpeed &WS );
+
+
 
 #endif // WINDSPEED_H_INCLUDED

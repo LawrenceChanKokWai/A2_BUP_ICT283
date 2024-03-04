@@ -1,5 +1,8 @@
 <map id="WindSpeed.h" name="WindSpeed.h">
-<area shape="rect" id="node1" title="WindSpeed class definition." alt="" coords="87,5,187,32"/>
-<area shape="rect" id="node2" href="$_wind_speed_8cpp.html" title="WindSpeed class implementation file." alt="" coords="5,80,120,107"/>
-<area shape="rect" id="node3" href="$_wind_speed_test_8cpp.html" title="WindSpeed Test execution file." alt="" coords="144,80,283,107"/>
+<area shape="rect" id="node1" title="WindSpeed class definition." alt="" coords="257,5,357,32"/>
+<area shape="rect" id="node2" href="$_sensor_rec_type_8h.html" title="SensorRecType class definition." alt="" coords="100,80,225,107"/>
+<area shape="rect" id="node5" href="$_wind_speed_8cpp.html" title="WindSpeed class implementation file." alt="" coords="249,80,364,107"/>
+<area shape="rect" id="node6" href="$_wind_speed_test_8cpp.html" title="WindSpeed Test execution file." alt="" coords="388,80,527,107"/>
+<area shape="rect" id="node3" href="$_sensor_rec_type_8cpp.html" title="SensorRecType class implementation file." alt="" coords="5,155,144,181"/>
+<area shape="rect" id="node4" href="$_sensor_rec_type_test_8cpp.html" title="SensorRecType Test execution file." alt="" coords="169,155,333,181"/>
 </map>

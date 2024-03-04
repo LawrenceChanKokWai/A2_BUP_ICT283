@@ -18,3 +18,10 @@ float WindSpeed::ConvertUnit( float &measurement ) const
     return ( measurement * 3.6 );
 }
 
+ostream &operator << ( ostream &output, const WindSpeed &WS )
+{
+    output << WS.GetMeasurement();
+
+    return output;
+}
+
