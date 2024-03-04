@@ -1,0 +1,132 @@
+\hypertarget{class_temperature}{}\doxysection{Temperature Class Reference}
+\label{class_temperature}\index{Temperature@{Temperature}}
+
+
+Represents a temperature measurement.  
+
+
+
+
+{\ttfamily \#include $<$Temperature.\+h$>$}
+
+
+
+Inheritance diagram for Temperature\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{class_temperature__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Temperature\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{class_temperature__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_temperature_ab8f4f9e793a8e4f35eed33c240bbe278}{Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_temperature_a7f8e1284f1184a4423717ededd228828}{Temperature}} (const float \&measurement)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_temperature_a7d8855920c5d142062c750dbb99477cd}{Convert\+Unit}} (float \&measurement) const override
+\begin{DoxyCompactList}\small\item\em Used for converting unit of temperature reading. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a temperature measurement. 
+
+Definition at line 23 of file Temperature.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_temperature_ab8f4f9e793a8e4f35eed33c240bbe278}\label{class_temperature_ab8f4f9e793a8e4f35eed33c240bbe278}} 
+\index{Temperature@{Temperature}!Temperature@{Temperature}}
+\index{Temperature@{Temperature}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{Temperature()}{Temperature()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Temperature\+::\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\begin{DoxyPostcond}{Postcondition}
+Creates a \mbox{\hyperlink{class_temperature}{Temperature}} object with initial values. 
+\end{DoxyPostcond}
+
+
+Definition at line 12 of file Temperature.\+cpp.
+
+\mbox{\Hypertarget{class_temperature_a7f8e1284f1184a4423717ededd228828}\label{class_temperature_a7f8e1284f1184a4423717ededd228828}} 
+\index{Temperature@{Temperature}!Temperature@{Temperature}}
+\index{Temperature@{Temperature}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{Temperature()}{Temperature()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Temperature\+::\+Temperature (\begin{DoxyParamCaption}\item[{const float \&}]{measurement }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em measurement} & The measurement variable of the \mbox{\hyperlink{class_temperature}{Temperature}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Creates a \mbox{\hyperlink{class_temperature}{Temperature}} object with specified temperature measurement. 
+\end{DoxyPostcond}
+
+
+Definition at line 14 of file Temperature.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_temperature_a7d8855920c5d142062c750dbb99477cd}\label{class_temperature_a7d8855920c5d142062c750dbb99477cd}} 
+\index{Temperature@{Temperature}!ConvertUnit@{ConvertUnit}}
+\index{ConvertUnit@{ConvertUnit}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{ConvertUnit()}{ConvertUnit()}}
+{\footnotesize\ttfamily float Temperature\+::\+Convert\+Unit (\begin{DoxyParamCaption}\item[{float \&}]{measurement }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Used for converting unit of temperature reading. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em measurement} & The measurement variable of the \mbox{\hyperlink{class_temperature}{Temperature}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the converted temperature reading. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_measurement_a00dfffa73aa4111049218c3813b7239c}{Measurement}}.
+
+
+
+Definition at line 16 of file Temperature.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_temperature_a7d8855920c5d142062c750dbb99477cd_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_temperature_8h}{Temperature.\+h}}\item 
+\mbox{\hyperlink{_temperature_8cpp}{Temperature.\+cpp}}\end{DoxyCompactItemize}

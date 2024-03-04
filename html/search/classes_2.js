@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['time_51',['Time',['../class_time.html',1,'']]]
+  ['solarradiation_67',['SolarRadiation',['../class_solar_radiation.html',1,'']]]
 ];

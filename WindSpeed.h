@@ -47,7 +47,7 @@ public:
     *
     * @return the converted windspeed in kWh/m2.
     */
-    float ConvertUnit( float &measurement ) const;
+    float ConvertUnit( float &measurement ) const override;
 
 };
 

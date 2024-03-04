@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('class_measurement.html',''); initResiz
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_measurement-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Measurement Class Reference</div>  </div>
+<div class="title">Measurement Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -96,11 +96,22 @@ $(document).ready(function(){initNavTree('class_measurement.html',''); initResiz
 
 <p><code>#include &lt;<a class="el" href="_measurement_8h_source.html">Measurement.h</a>&gt;</code></p>
 <div class="dynheader">
+Inheritance diagram for Measurement:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_measurement__inherit__graph.png" border="0" usemap="#_measurement_inherit__map" alt="Inheritance graph"/></div>
+<map name="_measurement_inherit__map" id="_measurement_inherit__map">
+<area shape="rect" title="Represents a base class." alt="" coords="143,5,285,141"/>
+<area shape="rect" href="class_solar_radiation.html" title="Represents a temperature measurement." alt="" coords="5,189,132,296"/>
+<area shape="rect" href="class_temperature.html" title="Represents a temperature measurement." alt="" coords="157,189,271,296"/>
+<area shape="rect" href="class_wind_speed.html" title="Represents a wind speed measurement." alt="" coords="295,189,405,296"/>
+</map>
+</div>
+<div class="dynheader">
 Collaboration diagram for Measurement:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_measurement__coll__graph.png" border="0" usemap="#_measurement_coll__map" alt="Collaboration graph"/></div>
 <map name="_measurement_coll__map" id="_measurement_coll__map">
-<area shape="rect" title="Represents a base class." alt="" coords="5,5,148,127"/>
+<area shape="rect" title="Represents a base class." alt="" coords="5,5,148,141"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -118,6 +129,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab6ad71b0556bed9b80d4b4512894237c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_measurement.html#ab6ad71b0556bed9b80d4b4512894237c">SetMeasurement</a> (const float &amp;measurement)</td></tr>
 <tr class="memdesc:ab6ad71b0556bed9b80d4b4512894237c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for the measurement variable.  <a href="class_measurement.html#ab6ad71b0556bed9b80d4b4512894237c">More...</a><br /></td></tr>
 <tr class="separator:ab6ad71b0556bed9b80d4b4512894237c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00dfffa73aa4111049218c3813b7239c"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_measurement.html#a00dfffa73aa4111049218c3813b7239c">ConvertUnit</a> (float &amp;measurement) const =0</td></tr>
+<tr class="memdesc:a00dfffa73aa4111049218c3813b7239c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for converting the unit of measurement.  <a href="class_measurement.html#a00dfffa73aa4111049218c3813b7239c">More...</a><br /></td></tr>
+<tr class="separator:a00dfffa73aa4111049218c3813b7239c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a base class. </p>
@@ -176,6 +190,44 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a00dfffa73aa4111049218c3813b7239c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00dfffa73aa4111049218c3813b7239c">&#9670;&nbsp;</a></span>ConvertUnit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float Measurement::ConvertUnit </td>
+          <td>(</td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>measurement</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used for converting the unit of measurement. </p>
+<p>This pure virtual function is intended to be overridden by derived classes to provide specific conversion logic for different types of measurements. It takes a reference to the measurement variable and converts its unit according to the specific implementation in the derived class.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">measurement</td><td>The measurement variable to be converted. The value will be modified by the conversion process.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted measurement value. </dd></dl>
+
+<p>Implemented in <a class="el" href="class_wind_speed.html#ad6bea193b8038f4958bb12efda66a506">WindSpeed</a>, <a class="el" href="class_solar_radiation.html#a2562175d81e5a83cbae32f81368f6a87">SolarRadiation</a>, and <a class="el" href="class_temperature.html#a7d8855920c5d142062c750dbb99477cd">Temperature</a>.</p>
+
+</div>
+</div>
 <a id="aecf8d91022eefcfc28ca06b72b716eab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aecf8d91022eefcfc28ca06b72b716eab">&#9670;&nbsp;</a></span>GetMeasurement()</h2>
 

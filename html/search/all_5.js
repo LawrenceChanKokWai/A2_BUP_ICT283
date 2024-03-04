@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['setday_23',['SetDay',['../class_date.html#aa10bb7c41d0aaa084790f48dd9dbffd9',1,'Date']]],
-  ['sethour_24',['SetHour',['../class_time.html#a0f1261eb686b1aaa0366d39e035fb818',1,'Time']]],
-  ['setmeasurement_25',['SetMeasurement',['../class_measurement.html#ab6ad71b0556bed9b80d4b4512894237c',1,'Measurement']]],
-  ['setminute_26',['SetMinute',['../class_time.html#af0b98cbc57d252e672b4599571142376',1,'Time']]],
-  ['setmonth_27',['SetMonth',['../class_date.html#a66c5ea64f0337c094c58df64ad9b0c0e',1,'Date']]],
-  ['setyear_28',['SetYear',['../class_date.html#a732cdd3dafa961d7c11b3252ad95ddbd',1,'Date']]]
+  ['operator_21_3d_18',['operator!=',['../class_date.html#aa588a7e75cf80a4006f84ff1bb34ef4c',1,'Date::operator!=()'],['../class_time.html#a5cd452a4b56184f9dd2d1c0dfd355cdb',1,'Time::operator!=()']]],
+  ['operator_3c_19',['operator&lt;',['../class_date.html#addd352f0f78543481eeb8193632fbb54',1,'Date::operator&lt;()'],['../class_time.html#a0afdf460342ac000a48a8fb0bc2df04d',1,'Time::operator&lt;()']]],
+  ['operator_3c_3c_20',['operator&lt;&lt;',['../_date_8cpp.html#a53f3d8362b3eb41fbaef063fd31fb2a2',1,'operator&lt;&lt;(ostream &amp;outputStream, const Date &amp;D):&#160;Date.cpp'],['../_date_8h.html#a53f3d8362b3eb41fbaef063fd31fb2a2',1,'operator&lt;&lt;(ostream &amp;outputStream, const Date &amp;D):&#160;Date.cpp'],['../_time_8cpp.html#a48e96373f934d0a94893a70a8eb70cdc',1,'operator&lt;&lt;(ostream &amp;outputStream, const Time &amp;T):&#160;Time.cpp'],['../_time_8h.html#a48e96373f934d0a94893a70a8eb70cdc',1,'operator&lt;&lt;(ostream &amp;outputStream, const Time &amp;T):&#160;Time.cpp']]],
+  ['operator_3d_3d_21',['operator==',['../class_date.html#a4f0329cead08f44bbccfe186c994d545',1,'Date::operator==()'],['../class_time.html#a269b454360649eb83808f0c0eb157bb5',1,'Time::operator==()']]],
+  ['operator_3e_22',['operator&gt;',['../class_date.html#a4d95cf15d8716b7661a6d114e050bb68',1,'Date::operator&gt;()'],['../class_time.html#a98fb641d4ba27f1e25b3489d25a975ff',1,'Time::operator&gt;()']]],
+  ['operator_3e_3e_23',['operator&gt;&gt;',['../_date_8cpp.html#a91689294160722f73fdf2a3dfbfeebac',1,'operator&gt;&gt;(istream &amp;inputStream, Date &amp;D):&#160;Date.cpp'],['../_date_8h.html#a91689294160722f73fdf2a3dfbfeebac',1,'operator&gt;&gt;(istream &amp;inputStream, Date &amp;D):&#160;Date.cpp'],['../_time_8cpp.html#a7edd6ddded2629b1909953202d397eea',1,'operator&gt;&gt;(istream &amp;inputStream, Time &amp;T):&#160;Time.cpp'],['../_time_8h.html#a7edd6ddded2629b1909953202d397eea',1,'operator&gt;&gt;(istream &amp;inputStream, Time &amp;T):&#160;Time.cpp']]]
 ];

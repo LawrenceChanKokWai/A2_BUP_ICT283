@@ -1,0 +1,5 @@
+<map id="WindSpeed.h" name="WindSpeed.h">
+<area shape="rect" id="node1" title="WindSpeed class definition." alt="" coords="87,5,187,32"/>
+<area shape="rect" id="node2" href="$_wind_speed_8cpp.html" title="WindSpeed class implementation file." alt="" coords="5,80,120,107"/>
+<area shape="rect" id="node3" href="$_wind_speed_test_8cpp.html" title="WindSpeed Test execution file." alt="" coords="144,80,283,107"/>
+</map>

@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['main_12',['main',['../_date_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;DateTest.cpp'],['../_measurement_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;MeasurementTest.cpp'],['../_time_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;TimeTest.cpp']]],
-  ['measurement_13',['Measurement',['../class_measurement.html',1,'Measurement'],['../class_measurement.html#a80b305f40c6b3a713e39770de9753666',1,'Measurement::Measurement()'],['../class_measurement.html#a0fef7212ca69500f0fe3ec90d29aa1f1',1,'Measurement::Measurement(const float &amp;measurement)']]],
-  ['measurement_2ecpp_14',['Measurement.cpp',['../_measurement_8cpp.html',1,'']]],
-  ['measurement_2eh_15',['Measurement.h',['../_measurement_8h.html',1,'']]],
-  ['measurementtest_2ecpp_16',['MeasurementTest.cpp',['../_measurement_test_8cpp.html',1,'']]]
+  ['getday_6',['GetDay',['../class_date.html#a6645ca88c5f417544415abe127dbeaba',1,'Date']]],
+  ['gethour_7',['GetHour',['../class_time.html#a468cb29f77bc1b290df3e63a87164c30',1,'Time']]],
+  ['getmeasurement_8',['GetMeasurement',['../class_measurement.html#aecf8d91022eefcfc28ca06b72b716eab',1,'Measurement']]],
+  ['getminute_9',['GetMinute',['../class_time.html#a5e9c43cb59f31cf7e0b8b1df79227e09',1,'Time']]],
+  ['getmonth_10',['GetMonth',['../class_date.html#aa316776e60e28ae20a710bcf6d96b7b8',1,'Date']]],
+  ['getmonthinstr_11',['GetMonthInStr',['../class_date.html#adb6f84b444ecf60bd8577be22de74fe2',1,'Date']]],
+  ['getyear_12',['GetYear',['../class_date.html#ad3519b229e188cca67c764352929ea83',1,'Date']]]
 ];

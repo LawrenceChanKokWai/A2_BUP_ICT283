@@ -11,6 +11,16 @@ Represents a base class.
 
 
 
+Inheritance diagram for Measurement\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_measurement__inherit__graph}
+\end{center}
+\end{figure}
+
+
 Collaboration diagram for Measurement\+:
 \nopagebreak
 \begin{figure}[H]
@@ -29,7 +39,9 @@ Collaboration diagram for Measurement\+:
 float \mbox{\hyperlink{class_measurement_aecf8d91022eefcfc28ca06b72b716eab}{Get\+Measurement}} () const
 \begin{DoxyCompactList}\small\item\em Getter for the measurement variable. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_measurement_ab6ad71b0556bed9b80d4b4512894237c}{Set\+Measurement}} (const float \&measurement)
-\begin{DoxyCompactList}\small\item\em Setter for the measurement variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Setter for the measurement variable. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_measurement_a00dfffa73aa4111049218c3813b7239c}{Convert\+Unit}} (float \&measurement) const =0
+\begin{DoxyCompactList}\small\item\em Used for converting the unit of measurement. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -82,6 +94,30 @@ Definition at line 17 of file Measurement.\+cpp.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_measurement_a00dfffa73aa4111049218c3813b7239c}\label{class_measurement_a00dfffa73aa4111049218c3813b7239c}} 
+\index{Measurement@{Measurement}!ConvertUnit@{ConvertUnit}}
+\index{ConvertUnit@{ConvertUnit}!Measurement@{Measurement}}
+\doxysubsubsection{\texorpdfstring{ConvertUnit()}{ConvertUnit()}}
+{\footnotesize\ttfamily virtual float Measurement\+::\+Convert\+Unit (\begin{DoxyParamCaption}\item[{float \&}]{measurement }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Used for converting the unit of measurement. 
+
+This pure virtual function is intended to be overridden by derived classes to provide specific conversion logic for different types of measurements. It takes a reference to the measurement variable and converts its unit according to the specific implementation in the derived class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em measurement} & The measurement variable to be converted. The value will be modified by the conversion process.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted measurement value. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_wind_speed_ad6bea193b8038f4958bb12efda66a506}{Wind\+Speed}}, \mbox{\hyperlink{class_solar_radiation_a2562175d81e5a83cbae32f81368f6a87}{Solar\+Radiation}}, and \mbox{\hyperlink{class_temperature_a7d8855920c5d142062c750dbb99477cd}{Temperature}}.
+
 \mbox{\Hypertarget{class_measurement_aecf8d91022eefcfc28ca06b72b716eab}\label{class_measurement_aecf8d91022eefcfc28ca06b72b716eab}} 
 \index{Measurement@{Measurement}!GetMeasurement@{GetMeasurement}}
 \index{GetMeasurement@{GetMeasurement}!Measurement@{Measurement}}
@@ -99,8 +135,7 @@ The measurement variable of the Observations.
 
 Definition at line 22 of file Measurement.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -129,8 +164,7 @@ Sets the measurement variable to the specified value.
 
 Definition at line 27 of file Measurement.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -57,6 +57,21 @@ public:
      */
     void SetMeasurement( const float &measurement );
 
+    /**
+    * @brief Used for converting the unit of measurement.
+    *
+    * This pure virtual function is intended to be overridden by derived classes to provide
+    * specific conversion logic for different types of measurements. It takes a reference to
+    * the measurement variable and converts its unit according to the specific implementation
+    * in the derived class.
+    *
+    * @param[in,out] measurement The measurement variable to be converted. The value will be
+    * modified by the conversion process.
+    *
+    * @return The converted measurement value.
+    */
+    virtual float ConvertUnit( float &measurement ) const = 0;
+
 private:
     float INITIAL_VALUE = 0.0;   ///< Initial value for the Measurement.
 

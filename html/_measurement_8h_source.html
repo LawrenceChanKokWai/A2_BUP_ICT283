@@ -106,19 +106,22 @@ $(document).ready(function(){initNavTree('_measurement_8h_source.html',''); init
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_measurement.html#ab6ad71b0556bed9b80d4b4512894237c">SetMeasurement</a>( <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;measurement );</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">float</span> INITIAL_VALUE = 0.0;   </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">float</span> m_measurement;            </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif // MEASUREMENT_H_INCLUDED</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="class_measurement.html#a00dfffa73aa4111049218c3813b7239c">ConvertUnit</a>( <span class="keywordtype">float</span> &amp;measurement ) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">float</span> INITIAL_VALUE = 0.0;   </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">float</span> m_measurement;            </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif // MEASUREMENT_H_INCLUDED</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_measurement_html"><div class="ttname"><a href="class_measurement.html">Measurement</a></div><div class="ttdoc">Represents a base class.</div><div class="ttdef"><b>Definition:</b> <a href="_measurement_8h_source.html#l00027">Measurement.h:27</a></div></div>
 <div class="ttc" id="aclass_measurement_html_ab6ad71b0556bed9b80d4b4512894237c"><div class="ttname"><a href="class_measurement.html#ab6ad71b0556bed9b80d4b4512894237c">Measurement::SetMeasurement</a></div><div class="ttdeci">void SetMeasurement(const float &amp;measurement)</div><div class="ttdoc">Setter for the measurement variable.</div><div class="ttdef"><b>Definition:</b> <a href="_measurement_8cpp_source.html#l00027">Measurement.cpp:27</a></div></div>
 <div class="ttc" id="aclass_measurement_html_a80b305f40c6b3a713e39770de9753666"><div class="ttname"><a href="class_measurement.html#a80b305f40c6b3a713e39770de9753666">Measurement::Measurement</a></div><div class="ttdeci">Measurement()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_measurement_8cpp_source.html#l00012">Measurement.cpp:12</a></div></div>
+<div class="ttc" id="aclass_measurement_html_a00dfffa73aa4111049218c3813b7239c"><div class="ttname"><a href="class_measurement.html#a00dfffa73aa4111049218c3813b7239c">Measurement::ConvertUnit</a></div><div class="ttdeci">virtual float ConvertUnit(float &amp;measurement) const =0</div><div class="ttdoc">Used for converting the unit of measurement.</div></div>
 <div class="ttc" id="aclass_measurement_html_aecf8d91022eefcfc28ca06b72b716eab"><div class="ttname"><a href="class_measurement.html#aecf8d91022eefcfc28ca06b72b716eab">Measurement::GetMeasurement</a></div><div class="ttdeci">float GetMeasurement() const</div><div class="ttdoc">Getter for the measurement variable.</div><div class="ttdef"><b>Definition:</b> <a href="_measurement_8cpp_source.html#l00022">Measurement.cpp:22</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

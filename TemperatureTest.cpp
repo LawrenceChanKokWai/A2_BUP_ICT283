@@ -20,8 +20,7 @@ void TestDefaultConstructor( const Temperature &temperature );
 void TestParameterizedConstructor( const Temperature &temperature, const float &validMeasurement  );
 void TestSetters( Temperature &temperature, const float &validMeasurement );
 void TestGetters( const Temperature &temperature, const float &validMeasurement );
-
-
+void TestConvertingFahrenheitToDegreeC( const Temperature &temperature, float &reading );
 
 int main()
 {
@@ -29,6 +28,7 @@ int main()
     istringstream inputStream;
     float validMeasurement = 12.12;
     float newValidMeasurement = 11.11;
+    float reading = 118.4;
     Temperature testTemperature;
     Temperature temperatureValid( validMeasurement );
 
@@ -36,6 +36,7 @@ int main()
     TestParameterizedConstructor( temperatureValid, validMeasurement );
     TestSetters( testTemperature, newValidMeasurement );
     TestGetters( testTemperature, newValidMeasurement );
+    TestConvertingFahrenheitToDegreeC( testTemperature, reading );
 
     return 0;
 }
@@ -79,5 +80,14 @@ void TestGetters( const Temperature &temperature, const float &validMeasurement 
             "Test 4: Getters\n",
             "Test Data/Values: temperature = 11.11\n",
             "Expected Output: temperature = 11.11\n");
+}
+
+void TestConvertingFahrenheitToDegreeC( const Temperature &temperature, float &reading )
+{
+    float expected = temperature.ConvertUnit( reading );
+    cout     << "Test 5: Converting Fahrenheit To DegreeC\n"
+                << "Test Data/Values: Fahrenheit = 118.4\n"
+                << "Expected Output: DegreeC = 48.0\n"
+                << "Actual Output: " << expected << endl;
 }
 
