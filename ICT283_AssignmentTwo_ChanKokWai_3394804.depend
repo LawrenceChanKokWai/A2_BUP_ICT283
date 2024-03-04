@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1709540752 source:c:\users\chankokwai\desktop\ict283_assignmenttwo_chankokwai_3394804\datetest.cpp
+	"Date.h"
+	<iostream>
+	<sstream>
+	<iomanip>
+
+1709542760 c:\users\chankokwai\desktop\ict283_assignmenttwo_chankokwai_3394804\date.h
+	<iostream>
+
+1709540485 source:c:\users\chankokwai\desktop\ict283_assignmenttwo_chankokwai_3394804\date.cpp
+	"Date.h"
+
+1709543676 source:c:\users\chankokwai\desktop\ict283_assignmenttwo_chankokwai_3394804\time.cpp
+	"Time.h"
+
+1709543064 c:\users\chankokwai\desktop\ict283_assignmenttwo_chankokwai_3394804\time.h
+	<iostream>
+	<iomanip>
+
+1709544425 source:c:\users\chankokwai\desktop\ict283_assignmenttwo_chankokwai_3394804\timetest.cpp
+	"Time.h"
+	<iostream>
+	<sstream>
+	<iomanip>
+
