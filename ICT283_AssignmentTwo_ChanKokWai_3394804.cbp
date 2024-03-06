@@ -31,6 +31,24 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="AVL.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="AVLTest.cpp" />
+		<Unit filename="AoAvlMap.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="AoAvlMapTest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="BST.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="BSTTest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="Date.cpp" />
 		<Unit filename="Date.h">
 			<Option target="&lt;{~None~}&gt;" />
@@ -51,7 +69,10 @@
 		<Unit filename="SensorRecType.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="SensorRecTypeTest.cpp" />
+		<Unit filename="SensorRecTypeTest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="SolarRadiation.cpp" />
 		<Unit filename="SolarRadiation.h">
 			<Option target="&lt;{~None~}&gt;" />
@@ -75,6 +96,9 @@
 		<Unit filename="TimeTest.cpp">
 			<Option compile="0" />
 			<Option link="0" />
+		</Unit>
+		<Unit filename="Tree.h">
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="WindSpeed.cpp" />
 		<Unit filename="WindSpeed.h">
