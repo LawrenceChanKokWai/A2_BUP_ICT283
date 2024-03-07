@@ -14,14 +14,13 @@ template<class T>
 void TestInsertionAndSearchOperation( BST<T> &bst );
 
 template<class T>
-void TestPrintLayout( BST<T> &bst );
+void TestTraversalOrders( const BST<T> &bst );
 
 template<class T>
-void TestTraversalOrders( BST<T> &bst );
+void TestDeepCopyingOperations( BST<T> &bst );
 
-void TestDeleteOperation();
-
-void TestDeepCopyingOperations();
+template<class T>
+void TestDeleteOperation( BST<T> &bst );
 
 template<class T>
 void Display( const T &node );
@@ -35,11 +34,9 @@ int main()
 
     TestInitialization( bst );
     TestInsertionAndSearchOperation( bst );
-    TestPrintLayout( bst );
     TestTraversalOrders( bst );
-
-    TestDeleteOperation();
-    TestDeepCopyingOperations();
+    TestDeepCopyingOperations( bst );
+    TestDeleteOperation( bst );
 
     return 0;
 }
@@ -54,7 +51,7 @@ void Assert_Equals( bool condition, const string &message )
 template<class T>
 void TestInitialization( const BST<T> &bst )
 {
-    cout << "Test on initialization of BinarySearchTree" << endl;
+    cout << "Test on initialization of BST Tree" << endl;
     Assert_Equals( bst.GetTreeHeight() == 0, "Constructed initial tree height is zero" );
     Assert_Equals( bst.GetTreeNodes() == 0, "Constructed initial tree node is zero" );
     Assert_Equals( bst.GetTreeLeaves() == 0, "Constructed initial tree leaves is zero" );
@@ -65,7 +62,7 @@ void TestInitialization( const BST<T> &bst )
 template<class T>
 void TestInsertionAndSearchOperation( BST<T> &bst )
 {
-    cout << "Test on node insertion to BinarySearchTree" << endl;
+    cout << "Test on node insertion to BST Tree" << endl;
     Assert_Equals( bst.InsertNode(5), "Insertion of object 5");
     Assert_Equals( bst.GetTreeHeight() == 1, "Tree height after inserting a node" );
     Assert_Equals( bst.GetTreeNodes() == 1, "Tree node after inserting a node" );
@@ -84,102 +81,89 @@ void TestInsertionAndSearchOperation( BST<T> &bst )
     cout << endl;
 }
 
-template<class T>
-void TestPrintLayout( BST<T> &bst )
-{
-    cout << "Test on Tree Layout" << endl;
-    Print( bst.GetRoot(), 5 );
-    cout << endl;
-}
-
 //++++ Test traversal orders +++
 template<class T>
-void TestTraversalOrders( BST<T> &bst )
+void TestTraversalOrders( const BST<T> &bst )
 {
-    bst.InsertNode(5);
-    bst.InsertNode(3);
-    bst.InsertNode(10);
-
     cout << "Test on Traversal Orders" << endl;
     cout << "\tActual Pre-Order Traversal: ";
     bst.PreOrderTraversal( Display );
-    cout << " | Expected Pre-Order Traversal: 5 3 6 10" << endl;
+    cout << " | Expected Pre-Order Traversal: 5 6 10" << endl;
     cout << "\tActual In-Order Traversal: ";
     bst.InOrderTraversal( Display );
-    cout << " | Expected In-Order Traversal: 3 5 6 10" << endl;
+    cout << " | Expected In-Order Traversal: 5 6 10" << endl;
     cout << "\tActual Post-Order Traversal: ";
     bst.PostOrderTraversal( Display );
-    cout << " |Expected Post-Order Traversal: 3 10 6 5" << '\n' << endl;
-
-    Print( bst.GetRoot(), 5);
-    cout << endl;
+    cout << " |Expected Post-Order Traversal: 10 6 5" << '\n' << endl;
 }
 
 //++++ Test Copy Constructor & Equals Assignment Operators +++
-void TestDeepCopyingOperations()
+template<class T>
+void TestDeepCopyingOperations( BST<T> &bst )
 {
-    BST<int> bst;
-    bst.InsertNode(5);
-    bst.InsertNode(3);
-    bst.InsertNode(10);
-
-    BST<int> copiedBST( bst );
+    BST<unsigned> copiedBST( bst );
     cout << "Test on copy constructor" << endl;
-    Assert_Equals( copiedBST.GetTreeHeight() == 2, "Height of copied BST using copy constructor" );
-    Assert_Equals( copiedBST.GetTreeNodes() == 3, "Number of nodes from copiedBST using copy constructor" );
-    Assert_Equals( copiedBST.GetTreeLeaves() == 2, "Number of leaves from copiedBST using copy constructor" );
+    Assert_Equals( copiedBST.GetTreeHeight() == bst.GetTreeHeight(), "Height of copied BST using copy constructor" );
+    Assert_Equals( copiedBST.GetTreeNodes() == bst.GetTreeNodes(), "Number of nodes from copiedBST using copy constructor" );
+    Assert_Equals( copiedBST.GetTreeLeaves() == bst.GetTreeLeaves(), "Number of leaves from copiedBST using copy constructor" );
     Assert_Equals( &copiedBST != &bst, "Both Addresses from copiedBST and otherBST differences using copy constructor");
+    Print( copiedBST.GetRoot(), 5);
     cout << endl;
 
     cout << "Test on equal assignment operator" << endl;
-    BST<int> equalAssignmentBST( bst );
-    Assert_Equals( equalAssignmentBST.GetTreeHeight() == 2, "Height of copied BST using copy constructor" );
+    BST<unsigned> equalAssignmentBST( bst );
+    Assert_Equals( equalAssignmentBST.GetTreeHeight() == 3, "Height of copied BST using copy constructor" );
     Assert_Equals( equalAssignmentBST.GetTreeNodes() == 3, "Number of nodes from copiedBST using copy constructor" );
-    Assert_Equals( equalAssignmentBST.GetTreeLeaves() == 2, "Number of leaves from copiedBST using copy constructor" );
+    Assert_Equals( equalAssignmentBST.GetTreeLeaves() == 1, "Number of leaves from copiedBST using copy constructor" );
     Assert_Equals( &equalAssignmentBST != &bst, "Both Addresses from equalAssignmentBST and otherBST differences using copy constructor");
     cout << endl;
 }
 
+
 //++++ Test Deleting a node +++
-void TestDeleteOperation()
+template<class T>
+void TestDeleteOperation( BST<T> &bst )
 {
-    BST<int> bst;
-    bst.InsertNode(5);
-    cout << "Test on deleting object operation" << endl;
-    Assert_Equals( bst.DeleteNode(5), "Deletion of node object 5 (1 node)" );
-    bst.InsertNode(5);
-    bst.InsertNode(3);
-    cout << "\nScenario deleting left child node \n";
-    cout << "\t   In-Order before left child node: [ "; bst.InOrderTraversal( Display ); cout << " ]" << endl;
-    Assert_Equals( bst.DeleteNode(3), "Deletion of node with only a left leaf (2 node)" );
-    cout << "\t   In-Order after deleting left child node: [ "; bst.InOrderTraversal( Display ); cout << " ]" << endl;
+    bst.InsertNode( 15 );
+    bst.InsertNode( 16 );
+    bst.InsertNode( 17 );
+    bst.InsertNode( 19 );
 
-    bst.InsertNode(3);
-    cout << "\nScenario deleting root node \n";
-    cout << "\t   In-Order before root node: [ "; bst.InOrderTraversal( Display ); cout << " ]" << endl;
-    Assert_Equals( bst.DeleteNode(5), "Deletion of root node (2 node)" );
-    cout << "\t   In-Order after deleting root node: [ "; bst.InOrderTraversal( Display ); cout << " ]" << endl;
+    cout << "--> Before Deletion: " << endl;
+    cout << "Tree Height: " << bst.GetTreeHeight() << '\n'
+         << "Tree Nodes: " << bst.GetTreeNodes() << '\n'
+         << "Tree Leaves: " << bst.GetTreeLeaves() << '\n' << endl;
+    Print( bst.GetRoot(), 5 );
+    cout << endl;
 
-    bst.InsertNode(8);
-    bst.InsertNode(3);
-    bst.InsertNode(10);
-    bst.InsertNode(1);
-    bst.InsertNode(6); //<-- delete this
-    bst.InsertNode(4);
-    bst.InsertNode(7);
+    cout << "--> Test on deleting object operation" << endl;
+    Assert_Equals( bst.DeleteNode(5), "Deletion of node object 5 (1 leave node without child)" );
+    cout << "Tree Height: " << bst.GetTreeHeight() << '\n'
+         << "Tree Nodes: " << bst.GetTreeNodes() << '\n'
+         << "Tree Leaves: " << bst.GetTreeLeaves() << '\n' << endl;
+    Print( bst.GetRoot(), 5 );
+    cout << endl;
 
-    cout << "\nScenario deleting node with left and right child \n";
-    cout << "\t   In-Order before node deletion: [ "; bst.InOrderTraversal( Display ); cout << " ]" << endl;
-    Assert_Equals( bst.DeleteNode(6), "Deletion of root node (2 node)" );
-    cout << "\t   In-Order after deleting root node: [ "; bst.InOrderTraversal( Display ); cout << " ]" << endl;
+    cout << "--> Test on deleting object operation" << endl;
+    Assert_Equals( bst.DeleteNode(17), "Deletion of node object 17 (1 node with left and right child)" );
+    cout << "Tree Height: " << bst.GetTreeHeight() << '\n'
+         << "Tree Nodes: " << bst.GetTreeNodes() << '\n'
+         << "Tree Leaves: " << bst.GetTreeLeaves() << '\n' << endl;
+    Print( bst.GetRoot(), 5 );
+    cout << endl;
 
+    cout << "--> Test on deleting object operation" << endl;
+    Assert_Equals( bst.DeleteNode(15), "Deletion of node object 15 (root node)" );
+    cout << "Tree Height: " << bst.GetTreeHeight() << '\n'
+            << "Tree Nodes: " << bst.GetTreeNodes() << '\n'
+            << "Tree Leaves: " << bst.GetTreeLeaves() << '\n' << endl;
+    Print( bst.GetRoot(), 5 );
     cout << endl;
 }
 
-
-
 template<class T>
-void Print(Node<T> * r, int space) {
+void Print(Node<T> * r, int space)
+{
     const unsigned SPACE = 10;
     if (r == NULL) // Base case  1
         return;
@@ -194,8 +178,7 @@ void Print(Node<T> * r, int space) {
 
 //++++ For displaying traversal operation +++
 template<class T>
-void Display( const T &node ) {
+void Display( const T &node )
+{
     cout << node << " ";
 }
-
-

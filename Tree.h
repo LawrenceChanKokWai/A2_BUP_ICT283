@@ -343,7 +343,7 @@ void Tree<T>::CopyTree( Node<T> *&copiedTreeRoot, Node<T> *otherTreeRoot )
     {
         copiedTreeRoot = new Node<T>;
         copiedTreeRoot->m_object = otherTreeRoot->m_object;
-        CopyTree( copiedTreeRoot->m_left, otherTreeRoot->m_right );
+        CopyTree( copiedTreeRoot->m_left, otherTreeRoot->m_left );
         CopyTree( copiedTreeRoot->m_right, otherTreeRoot->m_right );
     }
 }

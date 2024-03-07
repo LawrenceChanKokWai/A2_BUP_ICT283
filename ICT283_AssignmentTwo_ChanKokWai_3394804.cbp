@@ -34,7 +34,10 @@
 		<Unit filename="AVL.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="AVLTest.cpp" />
+		<Unit filename="AVLTest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="AoAvlMap.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
@@ -45,10 +48,7 @@
 		<Unit filename="BST.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="BSTTest.cpp">
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
+		<Unit filename="BSTTest.cpp" />
 		<Unit filename="Date.cpp" />
 		<Unit filename="Date.h">
 			<Option target="&lt;{~None~}&gt;" />

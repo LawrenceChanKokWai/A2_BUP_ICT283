@@ -36,7 +36,7 @@ bool BST<T>::InsertNode( const T &object )
 }
 
 template<class T>
-bool Tree<T>::DeleteNode( const T &object )
+bool BST<T>::DeleteNode( const T &object )
 {
     return Delete( this->m_root, object );
 }
@@ -53,20 +53,20 @@ bool BST<T>::Insert( Node<T> *&current, const T &object )
         current->m_object = object;
         current->m_left = nullptr;
         current->m_right = nullptr;
+        return true;
     }
     else if( object < current->m_object )
     {
-        return Insert( current->m_left, object );
+        return ( Insert( current->m_left, object ) );
     }
     else if( object > current->m_object )
     {
-        return Insert( current->m_right, object );
+        return ( Insert( current->m_right, object ) );
     }
     else
     {
         return false;
     }
-    return true;
 }
 
 template<class T>
@@ -100,7 +100,7 @@ bool BST<T>::Delete( Node<T> *&current, const T &object )
         }
         else
         {
-            if( GetHeight(current->m_left) >= GetHeight(current->m_right) )
+            if( this->GetHeight(current->m_left) >= this->GetHeight(current->m_right) )
             {
                 Node<T> *temp = current->m_left;
                 while( temp->m_right != nullptr )
