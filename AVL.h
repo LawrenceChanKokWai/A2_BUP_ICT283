@@ -336,8 +336,4 @@ bool AVL<T>::DeleteNode( const T &object )
     return Delete( this->m_root, object );
 }
 
-
-
-
-
 #endif // AVL_H_INCLUDED

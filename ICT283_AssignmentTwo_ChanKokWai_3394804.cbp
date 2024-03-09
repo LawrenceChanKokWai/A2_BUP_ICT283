@@ -34,14 +34,14 @@
 		<Unit filename="AVL.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="AVLTest.cpp" />
-		<Unit filename="AoAvlMap.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="AoAvlMapTest.cpp">
+		<Unit filename="AVLTest.cpp">
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
+		<Unit filename="AoAvlMap.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="AoAvlMapTest.cpp" />
 		<Unit filename="BST.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
@@ -64,6 +64,13 @@
 		<Unit filename="MeasurementTest.cpp">
 			<Option compile="0" />
 			<Option link="0" />
+		</Unit>
+		<Unit filename="Processor.cpp" />
+		<Unit filename="Processor.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="SensorMeasurementType.h">
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="SensorRecType.cpp" />
 		<Unit filename="SensorRecType.h">
