@@ -1,4 +1,13 @@
 
+/**
+* @file BSTTest.cpp
+* @brief BST Test execution file
+*
+* This file contains the execution unit test for BST Class.
+*
+* @author Chan Kok Wai ( Student Number: 33924804 )
+* @version 1.0
+*/
 #include<iostream>
 
 #include "BST.h"

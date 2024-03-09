@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['date_2',['Date',['../class_date.html',1,'Date'],['../class_date.html#a4e59ed4ba66eec61c27460c5d09fa1bd',1,'Date::Date()'],['../class_date.html#aebecb25915744f99550a9e2bb5a06b63',1,'Date::Date(const unsigned &amp;day, const unsigned &amp;month, const unsigned &amp;year)']]],
-  ['date_2ecpp_3',['Date.cpp',['../_date_8cpp.html',1,'']]],
-  ['date_2eh_4',['Date.h',['../_date_8h.html',1,'']]],
-  ['datetest_2ecpp_5',['DateTest.cpp',['../_date_test_8cpp.html',1,'']]]
+  ['convertunit_11',['ConvertUnit',['../class_measurement.html#a00dfffa73aa4111049218c3813b7239c',1,'Measurement::ConvertUnit()'],['../class_solar_radiation.html#a2562175d81e5a83cbae32f81368f6a87',1,'SolarRadiation::ConvertUnit()'],['../class_temperature.html#a7d8855920c5d142062c750dbb99477cd',1,'Temperature::ConvertUnit()'],['../class_wind_speed.html#ad6bea193b8038f4958bb12efda66a506',1,'WindSpeed::ConvertUnit()']]],
+  ['copytree_12',['CopyTree',['../class_tree.html#a5953ef0d64a1a0a4862376b92b6a1208',1,'Tree']]]
 ];

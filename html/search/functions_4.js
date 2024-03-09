@@ -1,5 +1,23 @@
 var searchData=
 [
-  ['main_125',['main',['../_date_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;DateTest.cpp'],['../_measurement_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;MeasurementTest.cpp'],['../_sensor_rec_type_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;SensorRecTypeTest.cpp'],['../_solar_radiation_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;SolarRadiationTest.cpp'],['../_temperature_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;TemperatureTest.cpp'],['../_time_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;TimeTest.cpp'],['../_wind_speed_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;WindSpeedTest.cpp']]],
-  ['measurement_126',['Measurement',['../class_measurement.html#a80b305f40c6b3a713e39770de9753666',1,'Measurement::Measurement()'],['../class_measurement.html#a0fef7212ca69500f0fe3ec90d29aa1f1',1,'Measurement::Measurement(const float &amp;measurement)']]]
+  ['getday_190',['GetDay',['../class_date.html#a6645ca88c5f417544415abe127dbeaba',1,'Date']]],
+  ['getheight_191',['GetHeight',['../class_tree.html#a2f5a3bbb794f377f6e47aa068992b454',1,'Tree']]],
+  ['gethour_192',['GetHour',['../class_time.html#a468cb29f77bc1b290df3e63a87164c30',1,'Time']]],
+  ['getleaves_193',['GetLeaves',['../class_tree.html#a2b28d6d430d0ae0a832fce5b653f4d2c',1,'Tree']]],
+  ['getmaxtreesubheight_194',['GetMaxTreeSubHeight',['../class_tree.html#a95c514dc005fba6d4863e52d77f51151',1,'Tree']]],
+  ['getmeasurement_195',['GetMeasurement',['../class_measurement.html#aecf8d91022eefcfc28ca06b72b716eab',1,'Measurement']]],
+  ['getminute_196',['GetMinute',['../class_time.html#a5e9c43cb59f31cf7e0b8b1df79227e09',1,'Time']]],
+  ['getmonth_197',['GetMonth',['../class_date.html#aa316776e60e28ae20a710bcf6d96b7b8',1,'Date']]],
+  ['getmonthinstr_198',['GetMonthInStr',['../class_date.html#adb6f84b444ecf60bd8577be22de74fe2',1,'Date']]],
+  ['getnodes_199',['GetNodes',['../class_tree.html#acaf7821762fc42e92c5ae6731737db3f',1,'Tree']]],
+  ['getroot_200',['GetRoot',['../class_tree.html#a5596f364c74235f642a3e995878943fa',1,'Tree']]],
+  ['getsensordate_201',['GetSensorDate',['../class_sensor_rec_type.html#a7e94391ece6b543bc24c6c053e1db5e7',1,'SensorRecType']]],
+  ['getsensorsolarradiation_202',['GetSensorSolarRadiation',['../class_sensor_rec_type.html#a8db3069b5130feb64cc65135e85e8dc4',1,'SensorRecType']]],
+  ['getsensortemperature_203',['GetSensorTemperature',['../class_sensor_rec_type.html#a09dbaa29cf929cba9a46dc1ec0d198a0',1,'SensorRecType']]],
+  ['getsensortime_204',['GetSensorTime',['../class_sensor_rec_type.html#a7fd301433186563da2d1e8a009cbd5c1',1,'SensorRecType']]],
+  ['getsensorwindspeed_205',['GetSensorWindSpeed',['../class_sensor_rec_type.html#a099718254fa5b11d646fc4a9e9b2244d',1,'SensorRecType']]],
+  ['gettreeheight_206',['GetTreeHeight',['../class_tree.html#a030a95ed5fbf5725c04e6c95d973dfc6',1,'Tree']]],
+  ['gettreeleaves_207',['GetTreeLeaves',['../class_tree.html#a597230911c83f98802722a71f22725c8',1,'Tree']]],
+  ['gettreenodes_208',['GetTreeNodes',['../class_tree.html#ab793c2ca18ef3d4a24dcf64902a75880',1,'Tree']]],
+  ['getyear_209',['GetYear',['../class_date.html#ad3519b229e188cca67c764352929ea83',1,'Date']]]
 ];

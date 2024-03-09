@@ -1,20 +1,90 @@
+
+///
+/// @file BST.h
+/// @brief BST tree class definition.
+///
+/// This file contains the definition of the BST Tree class.
+///
+/// @author Chan Kok Wai ( Student Number: 33924804 )
+/// @version 1.0.0
+///
 #ifndef BST_H_INCLUDED
 #define BST_H_INCLUDED
 
 #include "Tree.h"
 
+/**
+* @brief Represents the BST Class
+*/
 template<class T>
 class BST: public Tree<T>
 {
 public:
+
+    /**
+    * @brief Default constructor for the binary search tree (BST).
+    *
+    * Constructs a binary search tree with no nodes.
+    *
+    * @tparam T The data type of the elements stored in the BST.
+    */
     BST();
+
+    /**
+    * @brief Destructor for the binary search tree (BST).
+    *
+    * Destroys the binary search tree by recursively deleting all nodes.
+    *
+    * @tparam T The data type of the elements stored in the BST.
+    */
     ~BST();
 
+    /**
+    * @brief Insert a node with the given object into the binary search tree (BST).
+    *
+    * This function inserts a new node containing the specified object into the binary search tree (BST).
+    *
+    * @tparam T The data type of the elements stored in the BST.
+    * @param object The object to be inserted into the BST.
+    * @return true if the insertion is successful, false if the object already exists in the tree.
+    */
     bool InsertNode( const T &object ) override;
+
+    /**
+    * @brief Delete a node with the given object from the binary search tree (BST).
+    *
+    * This function deletes a node containing the specified object from the binary search tree (BST).
+    *
+    * @tparam T The data type of the elements stored in the BST.
+    * @param object The object to be deleted from the BST.
+    * @return true if the deletion is successful, false if the object is not found in the tree.
+    */
     bool DeleteNode( const T &object ) override;
 
 private:
+
+    /**
+    * @brief Insert a node with the given object into the binary search tree (BST).
+    *
+    * This private function inserts a new node containing the specified object into the binary search tree (BST).
+    *
+    * @tparam T The data type of the elements stored in the BST.
+    * @param current A reference to the pointer to the current node being processed. Initially, it should be a reference to the root node of the tree.
+    * @param object The object to be inserted into the BST.
+    * @return true if the insertion is successful, false if the object already exists in the tree.
+    */
     bool Insert( Node<T> *&current, const T &object ) override;
+
+    /**
+    * @brief Delete a node with the given object from the binary search tree (BST).
+    *
+    * This private function deletes a node containing the specified object from the binary search tree (BST).
+    *
+    * @tparam T The data type of the elements stored in the BST.
+    * @param current A reference to the pointer to the current node being processed. Initially, it should be a reference to the root node of the tree.
+    * @param object The object to be deleted from the BST.
+    * @return true if the deletion is successful, false if the object is not found in the tree.
+    */
     bool Delete( Node<T> *&current, const T &object ) override;
 };
 

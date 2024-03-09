@@ -1,0 +1,188 @@
+\hypertarget{class_a_v_l}{}\doxysection{A\+VL$<$ T $>$ Class Template Reference}
+\label{class_a_v_l}\index{AVL$<$ T $>$@{AVL$<$ T $>$}}
+
+
+Represents the \mbox{\hyperlink{class_a_v_l}{A\+VL}} Class.  
+
+
+
+
+{\ttfamily \#include $<$A\+V\+L.\+h$>$}
+
+
+
+Inheritance diagram for A\+VL$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_a_v_l__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+VL$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_a_v_l__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_v_l_aa5d8d7a3a8edfc399277cd29b10795ea}{A\+VL}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_v_l_a07d2694a7bb1f26f9990f01acf29c5af}{$\sim$\+A\+VL}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_v_l_a3fcad3edf35b4200b334edb889a95def}{Insert\+Node}} (const T \&object) override
+\begin{DoxyCompactList}\small\item\em Insert a node with the given object into the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_v_l_aa1154a6ffc56514ab05239e8ff283e4a}{Delete\+Node}} (const T \&object) override
+\begin{DoxyCompactList}\small\item\em Delete a node with the given object from the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class A\+V\+L$<$ T $>$}
+
+Represents the \mbox{\hyperlink{class_a_v_l}{A\+VL}} Class. 
+
+Definition at line 20 of file A\+V\+L.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_a_v_l_aa5d8d7a3a8edfc399277cd29b10795ea}\label{class_a_v_l_aa5d8d7a3a8edfc399277cd29b10795ea}} 
+\index{AVL$<$ T $>$@{AVL$<$ T $>$}!AVL@{AVL}}
+\index{AVL@{AVL}!AVL$<$ T $>$@{AVL$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AVL()}{AVL()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$\+::\mbox{\hyperlink{class_a_v_l}{A\+VL}}}
+
+
+
+Default constructor for the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. 
+
+Constructs an \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree with no nodes.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the elements stored in the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 319 of file A\+V\+L.\+h.
+
+\mbox{\Hypertarget{class_a_v_l_a07d2694a7bb1f26f9990f01acf29c5af}\label{class_a_v_l_a07d2694a7bb1f26f9990f01acf29c5af}} 
+\index{AVL$<$ T $>$@{AVL$<$ T $>$}!````~AVL@{$\sim$AVL}}
+\index{````~AVL@{$\sim$AVL}!AVL$<$ T $>$@{AVL$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$AVL()}{~AVL()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_a_v_l}{A\+VL}}}
+
+
+
+Destructor for the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. 
+
+Destroys the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree by recursively deleting all nodes.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the elements stored in the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 322 of file A\+V\+L.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_v_l_aa1154a6ffc56514ab05239e8ff283e4a}\label{class_a_v_l_aa1154a6ffc56514ab05239e8ff283e4a}} 
+\index{AVL$<$ T $>$@{AVL$<$ T $>$}!DeleteNode@{DeleteNode}}
+\index{DeleteNode@{DeleteNode}!AVL$<$ T $>$@{AVL$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteNode()}{DeleteNode()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$\+::Delete\+Node (\begin{DoxyParamCaption}\item[{const T \&}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Delete a node with the given object from the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. 
+
+This function deletes a node containing the specified object from the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree while maintaining the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree property.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the elements stored in the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & The object to be deleted from the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the deletion is successful, false if the object is not found in the tree. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tree_a9fac6880bddfbf0f134b645597c84502}{Tree$<$ T $>$}}.
+
+
+
+Definition at line 334 of file A\+V\+L.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_v_l_aa1154a6ffc56514ab05239e8ff283e4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_v_l_a3fcad3edf35b4200b334edb889a95def}\label{class_a_v_l_a3fcad3edf35b4200b334edb889a95def}} 
+\index{AVL$<$ T $>$@{AVL$<$ T $>$}!InsertNode@{InsertNode}}
+\index{InsertNode@{InsertNode}!AVL$<$ T $>$@{AVL$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InsertNode()}{InsertNode()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$\+::Insert\+Node (\begin{DoxyParamCaption}\item[{const T \&}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Insert a node with the given object into the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. 
+
+This function inserts a new node containing the specified object into the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree while maintaining the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree property.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the elements stored in the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & The object to be inserted into the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the insertion is successful, false if the object already exists in the tree. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tree_aac4a2389f6e9ef8fe7ec06da23b51242}{Tree$<$ T $>$}}.
+
+
+
+Definition at line 328 of file A\+V\+L.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_v_l_a3fcad3edf35b4200b334edb889a95def_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_a_v_l_8h}{A\+V\+L.\+h}}\end{DoxyCompactItemize}

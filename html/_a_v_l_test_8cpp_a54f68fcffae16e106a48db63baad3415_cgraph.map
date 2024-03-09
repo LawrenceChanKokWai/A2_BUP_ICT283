@@ -1,0 +1,11 @@
+<map id="TestDeleteOperation" name="TestDeleteOperation">
+<area shape="rect" id="node1" title=" " alt="" coords="5,183,145,209"/>
+<area shape="rect" id="node2" href="$_a_v_l_test_8cpp.html#a0153045686dc242fefe3bddac5b95f82" title=" " alt="" coords="211,5,317,32"/>
+<area shape="rect" id="node3" href="$class_a_v_l.html#aa1154a6ffc56514ab05239e8ff283e4a" title="Delete a node with the given object from the AVL tree." alt="" coords="203,56,325,83"/>
+<area shape="rect" id="node4" href="$class_tree.html#a5596f364c74235f642a3e995878943fa" title="Get the root node of the tree." alt="" coords="213,107,315,133"/>
+<area shape="rect" id="node5" href="$class_tree.html#a030a95ed5fbf5725c04e6c95d973dfc6" title="Get the height of the Tree." alt="" coords="195,157,333,184"/>
+<area shape="rect" id="node6" href="$class_tree.html#a597230911c83f98802722a71f22725c8" title="Get the number of leaf nodes in the Tree." alt="" coords="193,208,335,235"/>
+<area shape="rect" id="node7" href="$class_tree.html#ab793c2ca18ef3d4a24dcf64902a75880" title="Get the number of nodes in the Tree." alt="" coords="195,259,333,285"/>
+<area shape="rect" id="node8" href="$class_a_v_l.html#a3fcad3edf35b4200b334edb889a95def" title="Insert a node with the given object into the AVL tree." alt="" coords="205,309,323,336"/>
+<area shape="rect" id="node9" href="$_a_v_l_test_8cpp.html#a8abe23a066cec2040882f24866fe5fba" title=" " alt="" coords="239,360,289,387"/>
+</map>

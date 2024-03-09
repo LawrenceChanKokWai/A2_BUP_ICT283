@@ -1,5 +1,7 @@
 <map id="SensorRecType.h" name="SensorRecType.h">
-<area shape="rect" id="node1" title="SensorRecType class definition." alt="" coords="100,5,225,32"/>
-<area shape="rect" id="node2" href="$_sensor_rec_type_8cpp.html" title="SensorRecType class implementation file." alt="" coords="5,80,144,107"/>
-<area shape="rect" id="node3" href="$_sensor_rec_type_test_8cpp.html" title="SensorRecType Test execution file." alt="" coords="169,80,333,107"/>
+<area shape="rect" id="node1" title="SensorRecType class definition." alt="" coords="147,5,272,32"/>
+<area shape="rect" id="node2" href="$_ao_avl_map_8h.html" title=" " alt="" coords="25,80,116,107"/>
+<area shape="rect" id="node4" href="$_sensor_rec_type_8cpp.html" title="SensorRecType class implementation file." alt="" coords="140,80,279,107"/>
+<area shape="rect" id="node5" href="$_sensor_rec_type_test_8cpp.html" title="SensorRecType Test execution file." alt="" coords="303,80,467,107"/>
+<area shape="rect" id="node3" href="$_ao_avl_map_test_8cpp.html" title=" " alt="" coords="5,155,136,181"/>
 </map>

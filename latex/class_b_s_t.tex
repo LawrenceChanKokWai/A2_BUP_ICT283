@@ -1,0 +1,188 @@
+\hypertarget{class_b_s_t}{}\doxysection{B\+ST$<$ T $>$ Class Template Reference}
+\label{class_b_s_t}\index{BST$<$ T $>$@{BST$<$ T $>$}}
+
+
+Represents the \mbox{\hyperlink{class_b_s_t}{B\+ST}} Class.  
+
+
+
+
+{\ttfamily \#include $<$B\+S\+T.\+h$>$}
+
+
+
+Inheritance diagram for B\+ST$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_b_s_t__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for B\+ST$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_b_s_t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_s_t_adcc81f772005f6902635e02156a7ef22}{B\+ST}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the binary search tree (\mbox{\hyperlink{class_b_s_t}{B\+ST}}). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_t_ad3708ce5f813d8f8d8bd24bb9f133ffe}{$\sim$\+B\+ST}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the binary search tree (\mbox{\hyperlink{class_b_s_t}{B\+ST}}). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_b_s_t_a15120449334ed08286ff128bcf432ca4}{Insert\+Node}} (const T \&object) override
+\begin{DoxyCompactList}\small\item\em Insert a node with the given object into the binary search tree (\mbox{\hyperlink{class_b_s_t}{B\+ST}}). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_b_s_t_a892a6828ab4299dd854931556d4889e7}{Delete\+Node}} (const T \&object) override
+\begin{DoxyCompactList}\small\item\em Delete a node with the given object from the binary search tree (\mbox{\hyperlink{class_b_s_t}{B\+ST}}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class B\+S\+T$<$ T $>$}
+
+Represents the \mbox{\hyperlink{class_b_s_t}{B\+ST}} Class. 
+
+Definition at line 20 of file B\+S\+T.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_s_t_adcc81f772005f6902635e02156a7ef22}\label{class_b_s_t_adcc81f772005f6902635e02156a7ef22}} 
+\index{BST$<$ T $>$@{BST$<$ T $>$}!BST@{BST}}
+\index{BST@{BST}!BST$<$ T $>$@{BST$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BST()}{BST()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ T $>$\+::\mbox{\hyperlink{class_b_s_t}{B\+ST}}}
+
+
+
+Default constructor for the binary search tree (\mbox{\hyperlink{class_b_s_t}{B\+ST}}). 
+
+Constructs a binary search tree with no nodes.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the elements stored in the \mbox{\hyperlink{class_b_s_t}{B\+ST}}. \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 94 of file B\+S\+T.\+h.
+
+\mbox{\Hypertarget{class_b_s_t_ad3708ce5f813d8f8d8bd24bb9f133ffe}\label{class_b_s_t_ad3708ce5f813d8f8d8bd24bb9f133ffe}} 
+\index{BST$<$ T $>$@{BST$<$ T $>$}!````~BST@{$\sim$BST}}
+\index{````~BST@{$\sim$BST}!BST$<$ T $>$@{BST$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$BST()}{~BST()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_b_s_t}{B\+ST}}}
+
+
+
+Destructor for the binary search tree (\mbox{\hyperlink{class_b_s_t}{B\+ST}}). 
+
+Destroys the binary search tree by recursively deleting all nodes.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the elements stored in the \mbox{\hyperlink{class_b_s_t}{B\+ST}}. \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 97 of file B\+S\+T.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_s_t_a892a6828ab4299dd854931556d4889e7}\label{class_b_s_t_a892a6828ab4299dd854931556d4889e7}} 
+\index{BST$<$ T $>$@{BST$<$ T $>$}!DeleteNode@{DeleteNode}}
+\index{DeleteNode@{DeleteNode}!BST$<$ T $>$@{BST$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteNode()}{DeleteNode()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ T $>$\+::Delete\+Node (\begin{DoxyParamCaption}\item[{const T \&}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Delete a node with the given object from the binary search tree (\mbox{\hyperlink{class_b_s_t}{B\+ST}}). 
+
+This function deletes a node containing the specified object from the binary search tree (\mbox{\hyperlink{class_b_s_t}{B\+ST}}).
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the elements stored in the \mbox{\hyperlink{class_b_s_t}{B\+ST}}. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & The object to be deleted from the \mbox{\hyperlink{class_b_s_t}{B\+ST}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the deletion is successful, false if the object is not found in the tree. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tree_a9fac6880bddfbf0f134b645597c84502}{Tree$<$ T $>$}}.
+
+
+
+Definition at line 109 of file B\+S\+T.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_s_t_a892a6828ab4299dd854931556d4889e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_b_s_t_a15120449334ed08286ff128bcf432ca4}\label{class_b_s_t_a15120449334ed08286ff128bcf432ca4}} 
+\index{BST$<$ T $>$@{BST$<$ T $>$}!InsertNode@{InsertNode}}
+\index{InsertNode@{InsertNode}!BST$<$ T $>$@{BST$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InsertNode()}{InsertNode()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ T $>$\+::Insert\+Node (\begin{DoxyParamCaption}\item[{const T \&}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Insert a node with the given object into the binary search tree (\mbox{\hyperlink{class_b_s_t}{B\+ST}}). 
+
+This function inserts a new node containing the specified object into the binary search tree (\mbox{\hyperlink{class_b_s_t}{B\+ST}}).
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the elements stored in the \mbox{\hyperlink{class_b_s_t}{B\+ST}}. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & The object to be inserted into the \mbox{\hyperlink{class_b_s_t}{B\+ST}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the insertion is successful, false if the object already exists in the tree. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tree_aac4a2389f6e9ef8fe7ec06da23b51242}{Tree$<$ T $>$}}.
+
+
+
+Definition at line 103 of file B\+S\+T.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_b_s_t_a15120449334ed08286ff128bcf432ca4_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_b_s_t_8h}{B\+S\+T.\+h}}\end{DoxyCompactItemize}

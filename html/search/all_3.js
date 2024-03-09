@@ -1,15 +1,11 @@
 var searchData=
 [
-  ['getday_6',['GetDay',['../class_date.html#a6645ca88c5f417544415abe127dbeaba',1,'Date']]],
-  ['gethour_7',['GetHour',['../class_time.html#a468cb29f77bc1b290df3e63a87164c30',1,'Time']]],
-  ['getmeasurement_8',['GetMeasurement',['../class_measurement.html#aecf8d91022eefcfc28ca06b72b716eab',1,'Measurement']]],
-  ['getminute_9',['GetMinute',['../class_time.html#a5e9c43cb59f31cf7e0b8b1df79227e09',1,'Time']]],
-  ['getmonth_10',['GetMonth',['../class_date.html#aa316776e60e28ae20a710bcf6d96b7b8',1,'Date']]],
-  ['getmonthinstr_11',['GetMonthInStr',['../class_date.html#adb6f84b444ecf60bd8577be22de74fe2',1,'Date']]],
-  ['getsensordate_12',['GetSensorDate',['../class_sensor_rec_type.html#a7e94391ece6b543bc24c6c053e1db5e7',1,'SensorRecType']]],
-  ['getsensorsolarradiation_13',['GetSensorSolarRadiation',['../class_sensor_rec_type.html#a8db3069b5130feb64cc65135e85e8dc4',1,'SensorRecType']]],
-  ['getsensortemperature_14',['GetSensorTemperature',['../class_sensor_rec_type.html#a09dbaa29cf929cba9a46dc1ec0d198a0',1,'SensorRecType']]],
-  ['getsensortime_15',['GetSensorTime',['../class_sensor_rec_type.html#a7fd301433186563da2d1e8a009cbd5c1',1,'SensorRecType']]],
-  ['getsensorwindspeed_16',['GetSensorWindSpeed',['../class_sensor_rec_type.html#a099718254fa5b11d646fc4a9e9b2244d',1,'SensorRecType']]],
-  ['getyear_17',['GetYear',['../class_date.html#ad3519b229e188cca67c764352929ea83',1,'Date']]]
+  ['date_13',['Date',['../class_date.html',1,'Date'],['../class_date.html#a4e59ed4ba66eec61c27460c5d09fa1bd',1,'Date::Date()'],['../class_date.html#aebecb25915744f99550a9e2bb5a06b63',1,'Date::Date(const unsigned &amp;day, const unsigned &amp;month, const unsigned &amp;year)']]],
+  ['date_2ecpp_14',['Date.cpp',['../_date_8cpp.html',1,'']]],
+  ['date_2eh_15',['Date.h',['../_date_8h.html',1,'']]],
+  ['datetest_2ecpp_16',['DateTest.cpp',['../_date_test_8cpp.html',1,'']]],
+  ['delete_17',['Delete',['../class_tree.html#a4768c5f1eabf101f09a4c9d76b7cbae0',1,'Tree']]],
+  ['deletenode_18',['DeleteNode',['../class_a_v_l.html#aa1154a6ffc56514ab05239e8ff283e4a',1,'AVL::DeleteNode()'],['../class_b_s_t.html#a892a6828ab4299dd854931556d4889e7',1,'BST::DeleteNode()'],['../class_tree.html#a9fac6880bddfbf0f134b645597c84502',1,'Tree::DeleteNode()']]],
+  ['destroy_19',['Destroy',['../class_tree.html#a32f6059fe774b46f73859a170771fa0f',1,'Tree']]],
+  ['display_20',['Display',['../_a_v_l_test_8cpp.html#a0260e2b306ab9baf57d9872f4b5717b8',1,'Display(const T &amp;node):&#160;AVLTest.cpp'],['../_b_s_t_test_8cpp.html#a0260e2b306ab9baf57d9872f4b5717b8',1,'Display(const T &amp;node):&#160;BSTTest.cpp']]]
 ];

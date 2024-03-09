@@ -1,0 +1,111 @@
+\hypertarget{class_ao_avl_map}{}\doxysection{Ao\+Avl\+Map$<$ T $>$ Class Template Reference}
+\label{class_ao_avl_map}\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Ao\+Avl\+Map.\+h$>$}
+
+
+
+Collaboration diagram for Ao\+Avl\+Map$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_ao_avl_map__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$ \mbox{\hyperlink{class_ao_avl_map_a1e25723b5c98c0b5326e8effe0659d46}{Month\+To\+Records\+Array\+A\+VL}}\mbox{[}12\mbox{]}
+\item 
+typedef map$<$ unsigned, \mbox{\hyperlink{class_ao_avl_map_a1e25723b5c98c0b5326e8effe0659d46}{Month\+To\+Records\+Array\+A\+VL}} $>$ \mbox{\hyperlink{class_ao_avl_map_aff365e765c65e4dbed068cd40d853045}{Year\+To\+Records\+Array\+A\+V\+L\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ao_avl_map_a10c037bd5adf6b00e6aa50d3846355c6}{Ao\+Avl\+Map}} ()
+\item 
+bool \mbox{\hyperlink{class_ao_avl_map_a6e74c4a67ad8ab935bf82c8a3a2746f7}{Is\+Map\+Empty}} () const
+\item 
+bool \mbox{\hyperlink{class_ao_avl_map_a3902f7ec7d33d6d9b927a12131ca1c1f}{Is\+Array\+A\+V\+L\+Empty}} () const
+\item 
+void \mbox{\hyperlink{class_ao_avl_map_a6bf5f895a3d6fc6f5d082b68bda60883}{Insert}} (unsigned year, unsigned month, \mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} \&sensor\+Rec\+Type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Ao\+Avl\+Map$<$ T $>$}
+
+
+
+Definition at line 12 of file Ao\+Avl\+Map.\+h.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_ao_avl_map_a1e25723b5c98c0b5326e8effe0659d46}\label{class_ao_avl_map_a1e25723b5c98c0b5326e8effe0659d46}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!MonthToRecordsArrayAVL@{MonthToRecordsArrayAVL}}
+\index{MonthToRecordsArrayAVL@{MonthToRecordsArrayAVL}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MonthToRecordsArrayAVL}{MonthToRecordsArrayAVL}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+typedef \mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$T$>$ \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Month\+To\+Records\+Array\+A\+VL\mbox{[}12\mbox{]}}
+
+
+
+Definition at line 15 of file Ao\+Avl\+Map.\+h.
+
+\mbox{\Hypertarget{class_ao_avl_map_aff365e765c65e4dbed068cd40d853045}\label{class_ao_avl_map_aff365e765c65e4dbed068cd40d853045}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!YearToRecordsArrayAVLMap@{YearToRecordsArrayAVLMap}}
+\index{YearToRecordsArrayAVLMap@{YearToRecordsArrayAVLMap}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{YearToRecordsArrayAVLMap}{YearToRecordsArrayAVLMap}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+typedef map$<$unsigned, \mbox{\hyperlink{class_ao_avl_map_a1e25723b5c98c0b5326e8effe0659d46}{Month\+To\+Records\+Array\+A\+VL}}$>$ \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::\mbox{\hyperlink{class_ao_avl_map_aff365e765c65e4dbed068cd40d853045}{Year\+To\+Records\+Array\+A\+V\+L\+Map}}}
+
+
+
+Definition at line 16 of file Ao\+Avl\+Map.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ao_avl_map_a10c037bd5adf6b00e6aa50d3846355c6}\label{class_ao_avl_map_a10c037bd5adf6b00e6aa50d3846355c6}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!AoAvlMap@{AoAvlMap}}
+\index{AoAvlMap@{AoAvlMap}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AoAvlMap()}{AoAvlMap()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}}
+
+
+
+Definition at line 33 of file Ao\+Avl\+Map.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ao_avl_map_a6bf5f895a3d6fc6f5d082b68bda60883}\label{class_ao_avl_map_a6bf5f895a3d6fc6f5d082b68bda60883}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Insert (\begin{DoxyParamCaption}\item[{unsigned}]{year,  }\item[{unsigned}]{month,  }\item[{\mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} \&}]{sensor\+Rec\+Type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_ao_avl_map_a3902f7ec7d33d6d9b927a12131ca1c1f}\label{class_ao_avl_map_a3902f7ec7d33d6d9b927a12131ca1c1f}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!IsArrayAVLEmpty@{IsArrayAVLEmpty}}
+\index{IsArrayAVLEmpty@{IsArrayAVLEmpty}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsArrayAVLEmpty()}{IsArrayAVLEmpty()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Is\+Array\+A\+V\+L\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_ao_avl_map_a6e74c4a67ad8ab935bf82c8a3a2746f7}\label{class_ao_avl_map_a6e74c4a67ad8ab935bf82c8a3a2746f7}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!IsMapEmpty@{IsMapEmpty}}
+\index{IsMapEmpty@{IsMapEmpty}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsMapEmpty()}{IsMapEmpty()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Is\+Map\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ao_avl_map_8h}{Ao\+Avl\+Map.\+h}}\end{DoxyCompactItemize}

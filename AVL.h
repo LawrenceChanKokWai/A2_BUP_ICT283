@@ -1,23 +1,140 @@
+
+///
+/// @file AVL.h
+/// @brief AVL tree class definition.
+///
+/// This file contains the definition of the AVL Tree class.
+///
+/// @author Chan Kok Wai ( Student Number: 33924804 )
+/// @version 1.0.0
+///
 #ifndef AVL_H_INCLUDED
 #define AVL_H_INCLUDED
 
 #include "Tree.h"
 
+/**
+* @brief Represents the AVL Class
+*/
 template<class T>
 class AVL: public Tree<T>
 {
 public:
+
+    /**
+    * @brief Default constructor for the AVL tree.
+    *
+    * Constructs an AVL tree with no nodes.
+    *
+    * @tparam T The data type of the elements stored in the AVL tree.
+    */
     AVL();
+
+    /**
+    * @brief Destructor for the AVL tree.
+    *
+    * Destroys the AVL tree by recursively deleting all nodes.
+    *
+    * @tparam T The data type of the elements stored in the AVL tree.
+    */
     ~AVL();
 
+    /**
+    * @brief Insert a node with the given object into the AVL tree.
+    *
+    * This function inserts a new node containing the specified object into the AVL tree
+    * while maintaining the AVL tree property.
+    *
+    * @tparam T The data type of the elements stored in the AVL tree.
+    * @param object The object to be inserted into the AVL tree.
+    * @return true if the insertion is successful, false if the object already exists in the tree.
+    */
     bool InsertNode( const T &object ) override;
+
+    /**
+    * @brief Delete a node with the given object from the AVL tree.
+    *
+    * This function deletes a node containing the specified object from the AVL tree
+    * while maintaining the AVL tree property.
+    *
+    * @tparam T The data type of the elements stored in the AVL tree.
+    * @param object The object to be deleted from the AVL tree.
+    * @return true if the deletion is successful, false if the object is not found in the tree.
+    */
     bool DeleteNode( const T &object ) override;
 
 private:
+
+    /**
+    * @brief Get the balance factor of a given AVL tree node.
+    *
+    * This function calculates the balance factor of the specified AVL tree node.
+    * The balance factor is the difference between the heights of the left and right
+    * subtrees of the node. It indicates whether the subtree rooted at this node is
+    * balanced, left-heavy, or right-heavy.
+    *
+    * @tparam T The data type of the elements stored in the AVL tree.
+    * @param ptr A pointer to the node for which the balance factor is calculated.
+    * @return The balance factor of the node. It is calculated as the difference
+    *         between the height of the left subtree and the height of the right
+    *         subtree. If the node is null, -1 is returned.
+    */
     int GetBalanceFactor( Node<T> *ptr );
+
+    /**
+    * @brief Perform a right rotation on the given AVL tree node.
+    *
+    * This function performs a right rotation on the specified AVL tree node.
+    * Right rotation is a type of rotation operation in AVL trees used to
+    * restore the balance of the tree. It involves rotating the node and its
+    * left child in a clockwise direction.
+    *
+    * @tparam T The data type of the elements stored in the AVL tree.
+    * @param rst A pointer to the node to be rotated.
+    * @return A pointer to the root of the subtree resulting from the rotation.
+    */
     Node<T> *RightRotate( Node<T> *rst );
+
+    /**
+    * @brief Perform a left rotation on the given AVL tree node.
+    *
+    * This function performs a left rotation on the specified AVL tree node.
+    * Left rotation is a type of rotation operation in AVL trees used to
+    * restore the balance of the tree. It involves rotating the node and its
+    * right child in an anti-clockwise direction.
+    *
+    * @tparam T The data type of the elements stored in the AVL tree.
+    * @param lst A pointer to the node to be rotated.
+    * @return A pointer to the root of the subtree resulting from the rotation.
+    */
     Node<T> *LeftRotate( Node<T> *lst );
+
+    /**
+    * @brief Insert a new node with the given object into the AVL tree.
+    *
+    * This function inserts a new node containing the specified object into the AVL tree
+    * while maintaining the AVL tree property. If the object is already present in the tree,
+    * the insertion fails, and false is returned.
+    *
+    * @tparam T The data type of the elements stored in the AVL tree.
+    * @param current A reference to the pointer to the current node being processed. Initially, it should be a reference to the root node of the tree.
+    * @param object The object to be inserted into the AVL tree.
+    * @return true if the insertion is successful, false if the object already exists in the tree.
+    */
     bool Insert( Node<T> *&current, const T &object ) override;
+
+    /**
+     * @brief Delete a node with the given object from the AVL tree.
+     *
+     * This function deletes a node containing the specified object from the AVL tree
+     * while maintaining the AVL tree property. If the object is not found in the tree,
+     * the deletion fails, and false is returned.
+     *
+     * @tparam T The data type of the elements stored in the AVL tree.
+     * @param current A reference to the pointer to the current node being processed. Initially, it should be a reference to the root node of the tree.
+     * @param object The object to be deleted from the AVL tree.
+     * @return true if the deletion is successful, false if the object is not found in the tree.
+     */
     bool Delete( Node<T> *&current, const T &object ) override;
 
 };
@@ -161,7 +278,8 @@ bool AVL<T>::Delete( Node<T> *&current, const T &object )
             deleted = Delete(current->m_right, temp->m_object);
         }
 
-        if(deleted) {
+        if(deleted)
+        {
             // Calculate balance factor and perform rotations if needed
             int balanceFactor = GetBalanceFactor(current);
 

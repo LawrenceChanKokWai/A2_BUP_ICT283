@@ -1,10 +1,20 @@
+
+///
+/// @file Tree.h
+/// @brief Tree base class definition.
+///
+/// This file contains the definition of the Tree base class.
+///
+/// @author Chan Kok Wai ( Student Number: 33924804 )
+/// @version 1.1.0
+///
 #ifndef TREE_H_INCLUDED
 #define TREE_H_INCLUDED
 
 #include<iostream>
 
 /**
-* @brief Node structure for an template Binary Search Tree (BST).
+* @brief Node structure for an template Tree.
 */
 template<class T>
 struct Node
@@ -14,6 +24,9 @@ struct Node
     Node *m_right;  /**< Pointer to the right child. */
 };
 
+/**
+* @brief Tree base class.
+*/
 template<class T>
 class Tree
 {
@@ -26,7 +39,7 @@ public:
     */
 
     /**
-    * @brief Constructor used for creating an empty template BST.
+    * @brief Constructor used for creating an empty template Tree.
     */
     Tree();
 
@@ -42,15 +55,15 @@ public:
     */
 
     /**
-    * @brief Copy constructor used for creating a new BST from another BST.
-    * @param[in] otherTree Reference to the BST to be copied.
+    * @brief Copy constructor used for creating a new Tree from another Tree.
+    * @param[in] otherTree Reference to the Tree to be copied.
     */
     Tree( const Tree &otherTree );
 
     /**
-    * @brief Equals assignment operator used for assigning the contents from another BST.
-    * @param[in] otherTree Reference to another BST on the right-hand side of the assignment.
-    * @return Reference to the modified BST.
+    * @brief Equals assignment operator used for assigning the contents from another Tree.
+    * @param[in] otherTree Reference to another Tree on the right-hand side of the assignment.
+    * @return Reference to the modified Tree.
     */
     Tree &operator = ( const Tree &otherTree );
     /** @} */
@@ -61,28 +74,35 @@ public:
     */
 
     /**
-    * @brief Checks if the BST is empty.
-    * @return True if BST is empty else False.
+    * @brief Checks if the Tree is empty.
+    * @return True if Tree is empty else False.
     */
     bool IsEmpty() const;
 
+    /**
+    * @brief Get the root node of the tree.
+    *
+    * This function returns a pointer to the root node of the tree.
+    *
+    * @return A pointer to the root node of the tree.
+    */
     Node<T> *GetRoot() const;
 
     /**
-    * @brief Get the height of the BST.
-    * @return Height of the BST.
+    * @brief Get the height of the Tree.
+    * @return Height of the Tree.
     */
     int GetTreeHeight() const;
 
     /**
-    * @brief Get the number of nodes in the BST.
-    * @return Number of nodes in the BST.
+    * @brief Get the number of nodes in the Tree.
+    * @return Number of nodes in the Tree.
     */
     int GetTreeNodes() const;
 
     /**
-    * @brief Get the number of leaf nodes in the BST.
-    * @return Number of leaf nodes in the BST.
+    * @brief Get the number of leaf nodes in the Tree.
+    * @return Number of leaf nodes in the Tree.
     */
     int GetTreeLeaves() const;
 
@@ -92,22 +112,22 @@ public:
     */
 
     /**
-    * @brief Insert a new node with the specified object into the BST.
-    * @param[in] object The object to be inserted into the BST.
-    * @return True if the insertion is successful, false if the object already exists in the BST.
+    * @brief Insert a new node with the specified object into the Tree.
+    * @param[in] object The object to be inserted into the Tree.
+    * @return True if the insertion is successful, false if the object already exists in the Tree.
     */
     virtual bool InsertNode( const T &object ) = 0;
 
     /**
-    * @brief Search for a node with the specified object in the BST.
-    * @param[in] object The object to be searched in the BST.
+    * @brief Search for a node with the specified object in the Tree.
+    * @param[in] object The object to be searched in the Tree.
     * @return True if the object is found, false otherwise.
     */
     bool SearchNode( const T &object );
 
     /**
-    * @brief Delete a node with the specified object in the BST.
-    * @param[in] object The object to be deleted in the BST.
+    * @brief Delete a node with the specified object in the Tree.
+    * @param[in] object The object to be deleted in the Tree.
     * @return True if the object is deleted, false otherwise.
     */
     virtual bool DeleteNode( const T &object ) = 0;
@@ -119,17 +139,17 @@ public:
     */
 
     /**
-    * @brief Perform a pre-order traversal of the BST and print the node values.
+    * @brief Perform a pre-order traversal of the Tree and print the node values.
     */
     void PreOrderTraversal( PFnTraversal traversal ) const;
 
     /**
-    * @brief Perform a in-order traversal of the BST and print the node values.
+    * @brief Perform a in-order traversal of the Tree and print the node values.
     */
     void InOrderTraversal( PFnTraversal traversal ) const;
 
     /**
-    * @brief Perform a post-order traversal of the BST and print the node values.
+    * @brief Perform a post-order traversal of the Tree and print the node values.
     */
     void PostOrderTraversal( PFnTraversal traversal ) const;
     /** @} */
@@ -137,10 +157,10 @@ public:
 
 
 protected:
-    Node<T> *m_root;    /**< Pointer to the root of the BST */
+    Node<T> *m_root;    /**< Pointer to the root of the Tree */
 
     /**
-    * @brief Recursively destroy the BST starting from the given node.
+    * @brief Recursively destroy the Tree starting from the given node.
     * @param[in] ptr Pointer to the root node of the subtree to be destroyed.
     */
     void Destroy( Node<T> *&ptr );
@@ -198,7 +218,7 @@ protected:
     bool Search( Node<T> *&current, const T &object );
 
     /**
-    * @brief Method used to delete a node with the specified object in a BST tree.
+    * @brief Method used to delete a node with the specified object in a Tree tree.
     * @param[in] current Pointer to the root of the current node.
     * @param[in] object The object to be deleted.
     * @return True if the object is deleted, false otherwise.

@@ -1,0 +1,764 @@
+\hypertarget{class_tree}{}\doxysection{Tree$<$ T $>$ Class Template Reference}
+\label{class_tree}\index{Tree$<$ T $>$@{Tree$<$ T $>$}}
+
+
+\mbox{\hyperlink{class_tree}{Tree}} base class.  
+
+
+
+
+{\ttfamily \#include $<$Tree.\+h$>$}
+
+
+
+Inheritance diagram for Tree$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_tree__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tree$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_tree__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{class_tree_a46e5fa0d2056c3db382460c6d987b737}{P\+Fn\+Traversal}}) (const T \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{Indent}\textbf{ Constructor \& Destructor}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tree_a30ebe31999547d31fea5b40cc805f6a2}{Tree}} ()
+\begin{DoxyCompactList}\small\item\em Constructor used for creating an empty template \mbox{\hyperlink{class_tree}{Tree}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree_a04affc46d89a0ef5d517ab685c9c346e}{$\sim$\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Destructor used for releasing allocate memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Copy Constructor \& Overload Equals Assignment Operator}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tree_a3d55b9c390d7540317de29ca05a3e05b}{Tree}} (const \mbox{\hyperlink{class_tree}{Tree}} \&other\+Tree)
+\begin{DoxyCompactList}\small\item\em Copy constructor used for creating a new \mbox{\hyperlink{class_tree}{Tree}} from another \mbox{\hyperlink{class_tree}{Tree}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree}{Tree}} \& \mbox{\hyperlink{class_tree_aaea71906a9b35a24d04f459f0a51b050}{operator=}} (const \mbox{\hyperlink{class_tree}{Tree}} \&other\+Tree)
+\begin{DoxyCompactList}\small\item\em Equals assignment operator used for assigning the contents from another \mbox{\hyperlink{class_tree}{Tree}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Assessors}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_tree_a044a94a076990c0520c25705382d1454}{Is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \mbox{\hyperlink{class_tree}{Tree}} is empty. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_tree_a5596f364c74235f642a3e995878943fa}{Get\+Root}} () const
+\begin{DoxyCompactList}\small\item\em Get the root node of the tree. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tree_a030a95ed5fbf5725c04e6c95d973dfc6}{Get\+Tree\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Get the height of the \mbox{\hyperlink{class_tree}{Tree}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tree_ab793c2ca18ef3d4a24dcf64902a75880}{Get\+Tree\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of nodes in the \mbox{\hyperlink{class_tree}{Tree}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tree_a597230911c83f98802722a71f22725c8}{Get\+Tree\+Leaves}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of leaf nodes in the \mbox{\hyperlink{class_tree}{Tree}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Modifiers}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_tree_aac4a2389f6e9ef8fe7ec06da23b51242}{Insert\+Node}} (const T \&object)=0
+\begin{DoxyCompactList}\small\item\em Insert a new node with the specified object into the \mbox{\hyperlink{class_tree}{Tree}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tree_acf0cb1178e10fcdbd06e9b101c0ce678}{Search\+Node}} (const T \&object)
+\begin{DoxyCompactList}\small\item\em Search for a node with the specified object in the \mbox{\hyperlink{class_tree}{Tree}}. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_tree_a9fac6880bddfbf0f134b645597c84502}{Delete\+Node}} (const T \&object)=0
+\begin{DoxyCompactList}\small\item\em Delete a node with the specified object in the \mbox{\hyperlink{class_tree}{Tree}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tree_a3c6d0827e3f1a0d7ca8e42634fda861a}{Pre\+Order\+Traversal}} (\mbox{\hyperlink{class_tree_a46e5fa0d2056c3db382460c6d987b737}{P\+Fn\+Traversal}} traversal) const
+\begin{DoxyCompactList}\small\item\em Perform a pre-\/order traversal of the \mbox{\hyperlink{class_tree}{Tree}} and print the node values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tree_a4d29f29b9501d174fab425e6e1c38ab0}{In\+Order\+Traversal}} (\mbox{\hyperlink{class_tree_a46e5fa0d2056c3db382460c6d987b737}{P\+Fn\+Traversal}} traversal) const
+\begin{DoxyCompactList}\small\item\em Perform a in-\/order traversal of the \mbox{\hyperlink{class_tree}{Tree}} and print the node values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tree_a6083a1ba68c84a4fc80e9639f9886bb2}{Post\+Order\+Traversal}} (\mbox{\hyperlink{class_tree_a46e5fa0d2056c3db382460c6d987b737}{P\+Fn\+Traversal}} traversal) const
+\begin{DoxyCompactList}\small\item\em Perform a post-\/order traversal of the \mbox{\hyperlink{class_tree}{Tree}} and print the node values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tree_a32f6059fe774b46f73859a170771fa0f}{Destroy}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$\&ptr)
+\begin{DoxyCompactList}\small\item\em Recursively destroy the \mbox{\hyperlink{class_tree}{Tree}} starting from the given node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tree_a5953ef0d64a1a0a4862376b92b6a1208}{Copy\+Tree}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$\&copied\+Tree\+Root, \mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$other\+Tree\+Root)
+\begin{DoxyCompactList}\small\item\em Method used to copy the contents of one subtree to another. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tree_a95c514dc005fba6d4863e52d77f51151}{Get\+Max\+Tree\+Sub\+Height}} (int left, int right) const
+\begin{DoxyCompactList}\small\item\em Method used to get the maximum of two integers. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tree_a2f5a3bbb794f377f6e47aa068992b454}{Get\+Height}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ptr) const
+\begin{DoxyCompactList}\small\item\em Method used to get the height of a subtree at the given node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tree_acaf7821762fc42e92c5ae6731737db3f}{Get\+Nodes}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ptr) const
+\begin{DoxyCompactList}\small\item\em Method used to get the total number of nodes in a subtree at the given node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tree_a2b28d6d430d0ae0a832fce5b653f4d2c}{Get\+Leaves}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ptr) const
+\begin{DoxyCompactList}\small\item\em Method used to get the number of leaf nodes in a subtree at the given node. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_tree_a97f47942518add7d96509e2b9bf0a540}{Insert}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$\&current, const T \&object)=0
+\begin{DoxyCompactList}\small\item\em Method used to insert a new node with the specified object into a subtree. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tree_afedf8158bf6ad32cf3568409f1d81150}{Search}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$\&current, const T \&object)
+\begin{DoxyCompactList}\small\item\em Method used to search for a node with the specified object in a subtree. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_tree_a4768c5f1eabf101f09a4c9d76b7cbae0}{Delete}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$\&current, const T \&object)=0
+\begin{DoxyCompactList}\small\item\em Method used to delete a node with the specified object in a \mbox{\hyperlink{class_tree}{Tree}} tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tree_a75f6d3c33b6953ead7704350ee19fcef}{Pre\+Order}} (\mbox{\hyperlink{class_tree_a46e5fa0d2056c3db382460c6d987b737}{P\+Fn\+Traversal}} traversal, \mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ptr) const
+\begin{DoxyCompactList}\small\item\em Method used to perform a pre-\/order traversal of a subtree and print the node values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tree_a5344c97d57067fd9e853b97cbb8d04d8}{In\+Order}} (\mbox{\hyperlink{class_tree_a46e5fa0d2056c3db382460c6d987b737}{P\+Fn\+Traversal}} traversal, \mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ptr) const
+\begin{DoxyCompactList}\small\item\em Method used to perform an in-\/order traversal of a subtree and print the node values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tree_abf853f3ba2eeb4f07f21f2f6a9df1eac}{Post\+Order}} (\mbox{\hyperlink{class_tree_a46e5fa0d2056c3db382460c6d987b737}{P\+Fn\+Traversal}} traversal, \mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ptr) const
+\begin{DoxyCompactList}\small\item\em Method used to perform a post-\/order traversal of a subtree and print the node values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_tree_a4098a01e271f8649bff54a04fbb4df94}{m\+\_\+root}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Tree$<$ T $>$}
+
+\mbox{\hyperlink{class_tree}{Tree}} base class. 
+
+Definition at line 31 of file Tree.\+h.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_tree_a46e5fa0d2056c3db382460c6d987b737}\label{class_tree_a46e5fa0d2056c3db382460c6d987b737}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!PFnTraversal@{PFnTraversal}}
+\index{PFnTraversal@{PFnTraversal}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PFnTraversal}{PFnTraversal}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+typedef void( $\ast$ \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::P\+Fn\+Traversal) (const T \&)}
+
+
+
+Definition at line 34 of file Tree.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tree_a30ebe31999547d31fea5b40cc805f6a2}\label{class_tree_a30ebe31999547d31fea5b40cc805f6a2}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!Tree@{Tree}}
+\index{Tree@{Tree}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::\mbox{\hyperlink{class_tree}{Tree}}}
+
+
+
+Constructor used for creating an empty template \mbox{\hyperlink{class_tree}{Tree}}. 
+
+
+
+Definition at line 261 of file Tree.\+h.
+
+\mbox{\Hypertarget{class_tree_a04affc46d89a0ef5d517ab685c9c346e}\label{class_tree_a04affc46d89a0ef5d517ab685c9c346e}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!````~Tree@{$\sim$Tree}}
+\index{````~Tree@{$\sim$Tree}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Tree()}{~Tree()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_tree}{Tree}}}
+
+
+
+Destructor used for releasing allocate memory. 
+
+
+
+Definition at line 267 of file Tree.\+h.
+
+\mbox{\Hypertarget{class_tree_a3d55b9c390d7540317de29ca05a3e05b}\label{class_tree_a3d55b9c390d7540317de29ca05a3e05b}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!Tree@{Tree}}
+\index{Tree@{Tree}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::\mbox{\hyperlink{class_tree}{Tree}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$ \&}]{other\+Tree }\end{DoxyParamCaption})}
+
+
+
+Copy constructor used for creating a new \mbox{\hyperlink{class_tree}{Tree}} from another \mbox{\hyperlink{class_tree}{Tree}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other\+Tree} & Reference to the \mbox{\hyperlink{class_tree}{Tree}} to be copied. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 372 of file Tree.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tree_a5953ef0d64a1a0a4862376b92b6a1208}\label{class_tree_a5953ef0d64a1a0a4862376b92b6a1208}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!CopyTree@{CopyTree}}
+\index{CopyTree@{CopyTree}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CopyTree()}{CopyTree()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Copy\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$\&}]{copied\+Tree\+Root,  }\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$}]{other\+Tree\+Root }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method used to copy the contents of one subtree to another. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em copied\+Tree\+Root} & Reference to the root of the copied subtree. \\
+\hline
+\mbox{\texttt{ in}}  & {\em other\+Tree\+Root} & Pointer to the root of the subtree to be copied. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 356 of file Tree.\+h.
+
+\mbox{\Hypertarget{class_tree_a4768c5f1eabf101f09a4c9d76b7cbae0}\label{class_tree_a4768c5f1eabf101f09a4c9d76b7cbae0}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!Delete@{Delete}}
+\index{Delete@{Delete}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual bool \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$\&}]{current,  }\item[{const T \&}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method used to delete a node with the specified object in a \mbox{\hyperlink{class_tree}{Tree}} tree. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em current} & Pointer to the root of the current node. \\
+\hline
+\mbox{\texttt{ in}}  & {\em object} & The object to be deleted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the object is deleted, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tree_a9fac6880bddfbf0f134b645597c84502}\label{class_tree_a9fac6880bddfbf0f134b645597c84502}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!DeleteNode@{DeleteNode}}
+\index{DeleteNode@{DeleteNode}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteNode()}{DeleteNode()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual bool \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Delete\+Node (\begin{DoxyParamCaption}\item[{const T \&}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Delete a node with the specified object in the \mbox{\hyperlink{class_tree}{Tree}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em object} & The object to be deleted in the \mbox{\hyperlink{class_tree}{Tree}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the object is deleted, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_a_v_l_aa1154a6ffc56514ab05239e8ff283e4a}{A\+V\+L$<$ T $>$}}, and \mbox{\hyperlink{class_b_s_t_a892a6828ab4299dd854931556d4889e7}{B\+S\+T$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_tree_a32f6059fe774b46f73859a170771fa0f}\label{class_tree_a32f6059fe774b46f73859a170771fa0f}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$\&}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Recursively destroy the \mbox{\hyperlink{class_tree}{Tree}} starting from the given node. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Pointer to the root node of the subtree to be destroyed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 249 of file Tree.\+h.
+
+\mbox{\Hypertarget{class_tree_a2f5a3bbb794f377f6e47aa068992b454}\label{class_tree_a2f5a3bbb794f377f6e47aa068992b454}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Get\+Height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$}]{ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method used to get the height of a subtree at the given node. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Pointer to the root of the subtree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Height of the subtree. 
+\end{DoxyReturn}
+
+
+Definition at line 298 of file Tree.\+h.
+
+\mbox{\Hypertarget{class_tree_a2b28d6d430d0ae0a832fce5b653f4d2c}\label{class_tree_a2b28d6d430d0ae0a832fce5b653f4d2c}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!GetLeaves@{GetLeaves}}
+\index{GetLeaves@{GetLeaves}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetLeaves()}{GetLeaves()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Get\+Leaves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$}]{ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method used to get the number of leaf nodes in a subtree at the given node. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Pointer to the root of the subtree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of leaf nodes in the subtree. 
+\end{DoxyReturn}
+
+
+Definition at line 336 of file Tree.\+h.
+
+\mbox{\Hypertarget{class_tree_a95c514dc005fba6d4863e52d77f51151}\label{class_tree_a95c514dc005fba6d4863e52d77f51151}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!GetMaxTreeSubHeight@{GetMaxTreeSubHeight}}
+\index{GetMaxTreeSubHeight@{GetMaxTreeSubHeight}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetMaxTreeSubHeight()}{GetMaxTreeSubHeight()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Get\+Max\+Tree\+Sub\+Height (\begin{DoxyParamCaption}\item[{int}]{left,  }\item[{int}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method used to get the maximum of two integers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & First integer representing the left subtree. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & Second integer representing the right subtree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Maximum of x or y. 
+\end{DoxyReturn}
+
+
+Definition at line 285 of file Tree.\+h.
+
+\mbox{\Hypertarget{class_tree_acaf7821762fc42e92c5ae6731737db3f}\label{class_tree_acaf7821762fc42e92c5ae6731737db3f}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!GetNodes@{GetNodes}}
+\index{GetNodes@{GetNodes}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetNodes()}{GetNodes()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Get\+Nodes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$}]{ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method used to get the total number of nodes in a subtree at the given node. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Pointer to the root of the subtree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of nodes in the subtree. 
+\end{DoxyReturn}
+
+
+Definition at line 317 of file Tree.\+h.
+
+\mbox{\Hypertarget{class_tree_a5596f364c74235f642a3e995878943fa}\label{class_tree_a5596f364c74235f642a3e995878943fa}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!GetRoot@{GetRoot}}
+\index{GetRoot@{GetRoot}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetRoot()}{GetRoot()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Get\+Root}
+
+
+
+Get the root node of the tree. 
+
+This function returns a pointer to the root node of the tree.
+
+\begin{DoxyReturn}{Returns}
+A pointer to the root node of the tree. 
+\end{DoxyReturn}
+
+
+Definition at line 279 of file Tree.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tree_a5596f364c74235f642a3e995878943fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_a030a95ed5fbf5725c04e6c95d973dfc6}\label{class_tree_a030a95ed5fbf5725c04e6c95d973dfc6}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!GetTreeHeight@{GetTreeHeight}}
+\index{GetTreeHeight@{GetTreeHeight}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetTreeHeight()}{GetTreeHeight()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Get\+Tree\+Height}
+
+
+
+Get the height of the \mbox{\hyperlink{class_tree}{Tree}}. 
+
+\begin{DoxyReturn}{Returns}
+Height of the \mbox{\hyperlink{class_tree}{Tree}}. 
+\end{DoxyReturn}
+
+
+Definition at line 311 of file Tree.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tree_a030a95ed5fbf5725c04e6c95d973dfc6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_a597230911c83f98802722a71f22725c8}\label{class_tree_a597230911c83f98802722a71f22725c8}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!GetTreeLeaves@{GetTreeLeaves}}
+\index{GetTreeLeaves@{GetTreeLeaves}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetTreeLeaves()}{GetTreeLeaves()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Get\+Tree\+Leaves}
+
+
+
+Get the number of leaf nodes in the \mbox{\hyperlink{class_tree}{Tree}}. 
+
+\begin{DoxyReturn}{Returns}
+Number of leaf nodes in the \mbox{\hyperlink{class_tree}{Tree}}. 
+\end{DoxyReturn}
+
+
+Definition at line 350 of file Tree.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tree_a597230911c83f98802722a71f22725c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_ab793c2ca18ef3d4a24dcf64902a75880}\label{class_tree_ab793c2ca18ef3d4a24dcf64902a75880}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!GetTreeNodes@{GetTreeNodes}}
+\index{GetTreeNodes@{GetTreeNodes}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetTreeNodes()}{GetTreeNodes()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Get\+Tree\+Nodes}
+
+
+
+Get the number of nodes in the \mbox{\hyperlink{class_tree}{Tree}}. 
+
+\begin{DoxyReturn}{Returns}
+Number of nodes in the \mbox{\hyperlink{class_tree}{Tree}}. 
+\end{DoxyReturn}
+
+
+Definition at line 330 of file Tree.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tree_ab793c2ca18ef3d4a24dcf64902a75880_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_a5344c97d57067fd9e853b97cbb8d04d8}\label{class_tree_a5344c97d57067fd9e853b97cbb8d04d8}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!InOrder@{InOrder}}
+\index{InOrder@{InOrder}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InOrder()}{InOrder()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::In\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree_a46e5fa0d2056c3db382460c6d987b737}{P\+Fn\+Traversal}}}]{traversal,  }\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$}]{ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method used to perform an in-\/order traversal of a subtree and print the node values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Pointer to the root of the subtree. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 430 of file Tree.\+h.
+
+\mbox{\Hypertarget{class_tree_a4d29f29b9501d174fab425e6e1c38ab0}\label{class_tree_a4d29f29b9501d174fab425e6e1c38ab0}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!InOrderTraversal@{InOrderTraversal}}
+\index{InOrderTraversal@{InOrderTraversal}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InOrderTraversal()}{InOrderTraversal()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::In\+Order\+Traversal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree_a46e5fa0d2056c3db382460c6d987b737}{P\+Fn\+Traversal}}}]{traversal }\end{DoxyParamCaption}) const}
+
+
+
+Perform a in-\/order traversal of the \mbox{\hyperlink{class_tree}{Tree}} and print the node values. 
+
+
+
+Definition at line 441 of file Tree.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tree_a4d29f29b9501d174fab425e6e1c38ab0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_a97f47942518add7d96509e2b9bf0a540}\label{class_tree_a97f47942518add7d96509e2b9bf0a540}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual bool \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$\&}]{current,  }\item[{const T \&}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method used to insert a new node with the specified object into a subtree. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em current} & Pointer to the root of the current subtree. \\
+\hline
+\mbox{\texttt{ in}}  & {\em object} & The object to be inserted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the insertion is successful, false if the object already exists in the subtree. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tree_aac4a2389f6e9ef8fe7ec06da23b51242}\label{class_tree_aac4a2389f6e9ef8fe7ec06da23b51242}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!InsertNode@{InsertNode}}
+\index{InsertNode@{InsertNode}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InsertNode()}{InsertNode()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual bool \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Insert\+Node (\begin{DoxyParamCaption}\item[{const T \&}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Insert a new node with the specified object into the \mbox{\hyperlink{class_tree}{Tree}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em object} & The object to be inserted into the \mbox{\hyperlink{class_tree}{Tree}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the insertion is successful, false if the object already exists in the \mbox{\hyperlink{class_tree}{Tree}}. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_a_v_l_a3fcad3edf35b4200b334edb889a95def}{A\+V\+L$<$ T $>$}}, and \mbox{\hyperlink{class_b_s_t_a15120449334ed08286ff128bcf432ca4}{B\+S\+T$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_tree_a044a94a076990c0520c25705382d1454}\label{class_tree_a044a94a076990c0520c25705382d1454}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsEmpty()}{IsEmpty()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Is\+Empty}
+
+
+
+Checks if the \mbox{\hyperlink{class_tree}{Tree}} is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if \mbox{\hyperlink{class_tree}{Tree}} is empty else False. 
+\end{DoxyReturn}
+
+
+Definition at line 273 of file Tree.\+h.
+
+\mbox{\Hypertarget{class_tree_aaea71906a9b35a24d04f459f0a51b050}\label{class_tree_aaea71906a9b35a24d04f459f0a51b050}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$ \& \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$ \&}]{other\+Tree }\end{DoxyParamCaption})}
+
+
+
+Equals assignment operator used for assigning the contents from another \mbox{\hyperlink{class_tree}{Tree}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other\+Tree} & Reference to another \mbox{\hyperlink{class_tree}{Tree}} on the right-\/hand side of the assignment. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the modified \mbox{\hyperlink{class_tree}{Tree}}. 
+\end{DoxyReturn}
+
+
+Definition at line 385 of file Tree.\+h.
+
+\mbox{\Hypertarget{class_tree_abf853f3ba2eeb4f07f21f2f6a9df1eac}\label{class_tree_abf853f3ba2eeb4f07f21f2f6a9df1eac}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!PostOrder@{PostOrder}}
+\index{PostOrder@{PostOrder}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PostOrder()}{PostOrder()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Post\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree_a46e5fa0d2056c3db382460c6d987b737}{P\+Fn\+Traversal}}}]{traversal,  }\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$}]{ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method used to perform a post-\/order traversal of a subtree and print the node values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Pointer to the root of the subtree. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 464 of file Tree.\+h.
+
+\mbox{\Hypertarget{class_tree_a6083a1ba68c84a4fc80e9639f9886bb2}\label{class_tree_a6083a1ba68c84a4fc80e9639f9886bb2}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!PostOrderTraversal@{PostOrderTraversal}}
+\index{PostOrderTraversal@{PostOrderTraversal}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PostOrderTraversal()}{PostOrderTraversal()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Post\+Order\+Traversal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree_a46e5fa0d2056c3db382460c6d987b737}{P\+Fn\+Traversal}}}]{traversal }\end{DoxyParamCaption}) const}
+
+
+
+Perform a post-\/order traversal of the \mbox{\hyperlink{class_tree}{Tree}} and print the node values. 
+
+
+
+Definition at line 475 of file Tree.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tree_a6083a1ba68c84a4fc80e9639f9886bb2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_a75f6d3c33b6953ead7704350ee19fcef}\label{class_tree_a75f6d3c33b6953ead7704350ee19fcef}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!PreOrder@{PreOrder}}
+\index{PreOrder@{PreOrder}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PreOrder()}{PreOrder()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Pre\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree_a46e5fa0d2056c3db382460c6d987b737}{P\+Fn\+Traversal}}}]{traversal,  }\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$}]{ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method used to perform a pre-\/order traversal of a subtree and print the node values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Pointer to the root of the subtree. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 447 of file Tree.\+h.
+
+\mbox{\Hypertarget{class_tree_a3c6d0827e3f1a0d7ca8e42634fda861a}\label{class_tree_a3c6d0827e3f1a0d7ca8e42634fda861a}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!PreOrderTraversal@{PreOrderTraversal}}
+\index{PreOrderTraversal@{PreOrderTraversal}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PreOrderTraversal()}{PreOrderTraversal()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Pre\+Order\+Traversal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree_a46e5fa0d2056c3db382460c6d987b737}{P\+Fn\+Traversal}}}]{traversal }\end{DoxyParamCaption}) const}
+
+
+
+Perform a pre-\/order traversal of the \mbox{\hyperlink{class_tree}{Tree}} and print the node values. 
+
+
+
+Definition at line 458 of file Tree.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tree_a3c6d0827e3f1a0d7ca8e42634fda861a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_afedf8158bf6ad32cf3568409f1d81150}\label{class_tree_afedf8158bf6ad32cf3568409f1d81150}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!Search@{Search}}
+\index{Search@{Search}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$\&}]{current,  }\item[{const T \&}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method used to search for a node with the specified object in a subtree. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em current} & Pointer to the root of the current subtree. \\
+\hline
+\mbox{\texttt{ in}}  & {\em object} & The object to be searched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the object is found, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 403 of file Tree.\+h.
+
+\mbox{\Hypertarget{class_tree_acf0cb1178e10fcdbd06e9b101c0ce678}\label{class_tree_acf0cb1178e10fcdbd06e9b101c0ce678}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!SearchNode@{SearchNode}}
+\index{SearchNode@{SearchNode}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SearchNode()}{SearchNode()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::Search\+Node (\begin{DoxyParamCaption}\item[{const T \&}]{object }\end{DoxyParamCaption})}
+
+
+
+Search for a node with the specified object in the \mbox{\hyperlink{class_tree}{Tree}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em object} & The object to be searched in the \mbox{\hyperlink{class_tree}{Tree}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the object is found, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 424 of file Tree.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tree_acf0cb1178e10fcdbd06e9b101c0ce678_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_tree_a4098a01e271f8649bff54a04fbb4df94}\label{class_tree_a4098a01e271f8649bff54a04fbb4df94}} 
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!m\_root@{m\_root}}
+\index{m\_root@{m\_root}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_root}{m\_root}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{struct_node}{Node}}$<$T$>$$\ast$ \mbox{\hyperlink{class_tree}{Tree}}$<$ T $>$\+::m\+\_\+root\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the root of the \mbox{\hyperlink{class_tree}{Tree}} 
+
+Definition at line 160 of file Tree.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_tree_8h}{Tree.\+h}}\end{DoxyCompactItemize}
