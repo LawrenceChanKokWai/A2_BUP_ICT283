@@ -34,7 +34,7 @@ Processor &Processor::GetInstance()
     return *s_instance;
 }
 
-void Processor::LoadCSVFilePathToVector( vector<string> &csvFilePath, ifstream &input, const string &filename )
+void Processor::LoadCSVFilePathToVector( Vector<string> &csvFilePath, ifstream &input, const string &filename )
 {
     string file_path;
     if( !input )
@@ -49,55 +49,22 @@ void Processor::LoadCSVFilePathToVector( vector<string> &csvFilePath, ifstream &
         while( input.peek() != EOF )
         {
             input >> file_path;
-            csvFilePath.push_back( file_path );
+            csvFilePath.InsertLast( file_path );
         }
     }
     input.close();
 }
 
-/**
-void Processor::LoadCSVData( Vector<string> &csvFilePath, MapAov &mapAov )
-{
-    for( unsigned i(0); i<csvFilePath.GetUsed(); i++ )
-    {
-        string modifiedFilePath = "C:/Users/ChanKokWai/Desktop/V3_AssignmentOne/ICT283_AssignmentOne_ChanKokWai_3394804/data/" + csvFilePath[i];
-        ifstream CSVFile( modifiedFilePath );
-        if( !CSVFile )
-        {
-            cerr << "Error Opening CSV File Path: " << modifiedFilePath << endl;
-        }
-        else
-        {
-            cout << "Opening CSV File Path: " << modifiedFilePath << endl;
-        }
-
-        string line;
-        SensorRecType sensorRecType;
-        getline( CSVFile, line );
-        while( CSVFile.peek() != EOF )
-        {
-            CSVFile >> sensorRecType;
-            m_dataRead ++;
-
-            mapAov.InsertSensorData( sensorRecType );
-            m_dataInserted ++;
-        }
-        CSVFile.close();
-    }
-    LoadDisplayCount();
-}
-*/
-
-void Processor::LoadCSVData( vector<string> &csvFilePath, AoAvlMap<SensorRecType> &mapAoBst )
+void Processor::LoadCSVData( Vector<string> &csvFilePath, AoAvlMap<SensorRecType> &mapAoBst )
 {
     string headerLine;
     string line;
-    vector<string> headers;
-    vector<string> records;
+    Vector<string> headers;
+    Vector<string> records;
 
     string sysFilePath = string(__FILE__).substr(0, string(__FILE__).find_last_of("\\/") + 1) + "data\\";
 
-    for (unsigned i(0); i<csvFilePath.size(); i++ )
+    for (unsigned i(0); i<csvFilePath.GetUsed(); i++ )
     {
         string modifiedFilePath = sysFilePath + csvFilePath[i];
         ifstream inFile( modifiedFilePath );
@@ -107,7 +74,7 @@ void Processor::LoadCSVData( vector<string> &csvFilePath, AoAvlMap<SensorRecType
             cout << "Opening CSV File Path: " << modifiedFilePath << endl;
             if( getline( inFile, headerLine ) )
             {
-                headers = split( headerLine, ',' );
+                headers = Split( headerLine, ',' );
             }
             // Read data
             while (std::getline(inFile, line))
@@ -118,14 +85,14 @@ void Processor::LoadCSVData( vector<string> &csvFilePath, AoAvlMap<SensorRecType
                     continue;
                 }
 
-                records = split(line, ',');
+                records = Split(line, ',');
 
                 // Find the indices of the columns we want to read
                 int WAST_index = -1;
                 int T_index = -1;
                 int S_index = -1;
                 int SR_index = -1;
-                for (unsigned i = 0; i < headers.size(); ++i)
+                for (unsigned i = 0; i < headers.GetUsed(); ++i)
                 {
                     if (headers[i] == "WAST")
                     {
@@ -166,10 +133,10 @@ void Processor::LoadCSVData( vector<string> &csvFilePath, AoAvlMap<SensorRecType
                     SR = records[SR_index];
 
                     // Split WAST into Date and Time.
-                    vector<string> WAST_parts = split(WAST, ' ' ); // Date [0] , Time [1]
-                    vector<string> date = split(WAST_parts[0], '/' ); // day [0], month [1], year [2]
+                    Vector<string> WAST_parts = Split(WAST, ' ' ); // Date [0] , Time [1]
+                    Vector<string> date = Split(WAST_parts[0], '/' ); // day [0], month [1], year [2]
 
-                    vector<string> time = split( WAST_parts[1], ':' );
+                    Vector<string> time = Split( WAST_parts[1], ':' );
 
                     DValue.SetDay( stoi( date[0]) );
                     DValue.SetMonth( stoi( date[1]) );
@@ -183,7 +150,7 @@ void Processor::LoadCSVData( vector<string> &csvFilePath, AoAvlMap<SensorRecType
                     SRValue.SetMeasurement( stof(SR) );
 
                     SensorRecType sensorRecType( DValue, TValue, SValue, SRValue, TEMPValue );
-                    cout << sensorRecType << endl;
+                    //cout << sensorRecType << endl;
 
                     mapAoBst.InsertSensorData( sensorRecType );
                     m_dataInserted ++;
@@ -223,15 +190,15 @@ bool Processor::OutputStreamMeasurement(
     return true;
 }
 
-vector<string> Processor::split( const string &aString, char delimiter )
+Vector<string> Processor::Split( const string &aString, char delimiter )
 {
-    vector<string> someStrings;
+    Vector<string> someStrings;
     string someString;
     istringstream stringStream( aString );
 
     while( getline( stringStream, someString, delimiter) )
     {
-        someStrings.push_back( someString );
+        someStrings.InsertLast( someString );
     }
     return someStrings;
 }

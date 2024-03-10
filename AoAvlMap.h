@@ -38,36 +38,9 @@ public:
 
     void InOrderTraversalSum(Node<T>* root, SensorMeasurementType sensorMeasurementType, float& sum) const;
 
+    void InOrderTraversalSumAndSquareSum(Node<T>* root, SensorMeasurementType sensorMeasurementType, float& sum, float& sumSquare) const;
 
-    /**
-     * @brief Switch function to compute the sum of different types of measurements.
-     *
-     * @param[in] sensorRecords The AVL of sensor records.
-     * @param[in] sensorMeasurementType The type of measurement to compute.
-     *
-     * @return The computed measurement based on the switch case.
-     */
-    //float SumOfMeasurementSwitch( const AVL<T> &sensorRecords, SensorMeasurementType sensorMeasurementType ) const;
-
-    /**
-     * @brief Switch function to compute the mean of different types of measurements.
-     *
-     * @param[in] sensorRecords The vector of sensor records.
-     * @param[in] sensorMeasurementType The type of measurement to compute.
-     *
-     * @return The computed measurement based on the switch case.
-     */
-    //float MeanOfMeasurementSwitch( const Vector<SensorRecType> &sensorRecords, SensorMeasurementType sensorMeasurementType ) const;
-
-    /**
-     * @brief Switch function to compute the sample standard deviation of different types of measurements.
-     *
-     * @param[in] sensorRecords The vector of sensor records.
-     * @param[in] sensorMeasurementType The type of measurement to compute.
-     *
-     * @return The computed measurement based on the switch case.
-     */
-    //float SampleStandardDeviationMeasurementSwitch( const Vector<SensorRecType> &sensorRecords, SensorMeasurementType sensorMeasurementType ) const;
+    float SampleStandardDeviationMeasurementSwitch(Node<T>* root, SensorMeasurementType sensorMeasurementType, unsigned &count) const;
 
 
 private:
@@ -116,13 +89,12 @@ bool AoAvlMap<T>::InsertSensorData(const T &sensorData)
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Calculations of different types of measurements
 template<class T>
-void AoAvlMap<T>::InOrderTraversalSum(Node<T>* root, SensorMeasurementType sensorMeasurementType, float& sum) const
+void AoAvlMap<T>::InOrderTraversalSum( Node<T>* root, SensorMeasurementType sensorMeasurementType, float& sum ) const
 {
     if (root == nullptr)
     {
         return;
     }
-
     InOrderTraversalSum(root->m_left, sensorMeasurementType, sum);
 
     switch (sensorMeasurementType)
@@ -141,38 +113,47 @@ void AoAvlMap<T>::InOrderTraversalSum(Node<T>* root, SensorMeasurementType senso
     InOrderTraversalSum(root->m_right, sensorMeasurementType, sum);
 }
 
-
-
-// Calculations of different types of measurements
-/**
+// +++++++++++++ InOrderTraversalSum&SquareSum ++++++++++++++++++++++++++++++++++++++++++++
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Calculates the sum and sum of squares of different types of measurements
 template<class T>
-float AoAvlMap<T>::SumOfMeasurementSwitch( const AVL<T> &sensorRecords, SensorMeasurementType sensorMeasurementType ) const
-{
-    float sum = 0.0;
+void AoAvlMap<T>::InOrderTraversalSumAndSquareSum(Node<T>* root, SensorMeasurementType sensorMeasurementType, float& sum, float& sumSquare) const {
+    if (root == nullptr)
+        return;
 
-    switch( sensorMeasurementType )
-    {
-    case SensorMeasurementType::WIND_SPEED:
-        for( unsigned i(0); i<sensorRecords.GetUsed(); i++ )
-        {
-            sum += sensorRecords[i].GetSensorWindSpeed().GetMeasurement();
-        }
-        break;
-    case SensorMeasurementType::AMBIENT_TEMPERATURE:
-        for( unsigned i(0); i<sensorRecords.GetUsed(); i++ )
-        {
-            sum += sensorRecords[i].GetSensorTemperature().GetMeasurement();
-        }
-        break;
-    case SensorMeasurementType::SOLAR_RADIATION:
-        for( unsigned i(0); i<sensorRecords.GetUsed(); i++ )
-        {
-            sum += sensorRecords[i].GetSensorSolarRadiation().GetMeasurement();
-        }
-        break;
+    InOrderTraversalSumAndSquareSum(root->m_left, sensorMeasurementType, sum, sumSquare);
+
+    switch (sensorMeasurementType) {
+        case SensorMeasurementType::WIND_SPEED:
+            sum += root->m_object.GetSensorWindSpeed().GetMeasurement();
+            sumSquare += pow(root->m_object.GetSensorWindSpeed().GetMeasurement(), 2);
+            break;
+        case SensorMeasurementType::AMBIENT_TEMPERATURE:
+            sum += root->m_object.GetSensorTemperature().GetMeasurement();
+            sumSquare += pow(root->m_object.GetSensorTemperature().GetMeasurement(), 2);
+            break;
+        case SensorMeasurementType::SOLAR_RADIATION:
+            sum += root->m_object.GetSensorSolarRadiation().GetMeasurement();
+            sumSquare += pow(root->m_object.GetSensorSolarRadiation().GetMeasurement(), 2);
+            break;
     }
-    return sum;
-} */
+
+    InOrderTraversalSumAndSquareSum(root->m_right, sensorMeasurementType, sum, sumSquare);
+}
+
+// Inside the AoAvlMap class definition
+template<class T>
+float AoAvlMap<T>::SampleStandardDeviationMeasurementSwitch(Node<T>* root, SensorMeasurementType sensorMeasurementType, unsigned &count) const {
+    float sum = 0.0;
+    float sumSquare = 0.0;
+    InOrderTraversalSumAndSquareSum(root, sensorMeasurementType, sum, sumSquare);
+
+    float variance = (sumSquare - pow(sum, 2) / count) / (count - 1);
+    return sqrt(variance);
+}
+
+
+
 
 
 #endif // AOAVLMAP_H_INCLUDED

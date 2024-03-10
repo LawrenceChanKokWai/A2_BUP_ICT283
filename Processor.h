@@ -14,10 +14,10 @@
 #include<iostream>
 #include<fstream>
 #include<string>
-#include<vector>
 
 #include "AoAvlMap.h"
 #include "Constant.h"
+#include "Vector.h"
 
 using namespace std;
 
@@ -45,7 +45,7 @@ public:
      * @param[in] input The input stream from which to read the file paths.
      * @param[in] filename The name of the txt file being loaded.
      */
-    void LoadCSVFilePathToVector( vector<string> &csvFilePath, ifstream &input, const string &filename );
+    void LoadCSVFilePathToVector( Vector<string> &csvFilePath, ifstream &input, const string &filename );
 
     /**
      * @brief Loads CSV data from a vector of file paths into a vector of WindRecType objects.
@@ -54,7 +54,7 @@ public:
      * @param[in] windRecTypeVec The vector to store the WindRecType objects.
      * @param[in] windRecType An object of type WindRecType.
      */
-    void LoadCSVData( vector<string> &csvFilePath, AoAvlMap<SensorRecType> &mapAoBst );
+    void LoadCSVData( Vector<string> &csvFilePath, AoAvlMap<SensorRecType> &mapAoBst );
 
     /**
      * @brief Records sensor data to an output file and computes statistical measurements.
@@ -98,7 +98,7 @@ private:
      */
     void LoadDisplayCount();
 
-    vector<string> split( const string &aString, char delimiter );
+    Vector<string> Split( const string &aString, char delimiter );
 
 };
 

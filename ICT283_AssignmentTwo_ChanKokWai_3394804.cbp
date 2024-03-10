@@ -69,6 +69,10 @@
 		<Unit filename="Processor.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="ProcessorTest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="SensorMeasurementType.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
@@ -106,6 +110,13 @@
 		</Unit>
 		<Unit filename="Tree.h">
 			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="Vector.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="VectorTest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
 		</Unit>
 		<Unit filename="WindSpeed.cpp" />
 		<Unit filename="WindSpeed.h">

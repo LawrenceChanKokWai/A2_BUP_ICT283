@@ -18,7 +18,13 @@ template<class T>
 void TestDisplayData( AoAvlMap<T> &testMap );
 
 template<class T>
-void TestInOrderTraversalSum(AoAvlMap<T> &testMap);
+void TestDisplayYearMonthData( AoAvlMap<T> &testMap, const unsigned &year, const unsigned &month );
+
+template<class T>
+void TestInOrderTraversalSum(AoAvlMap<T> &testMap, const unsigned &year, const unsigned &month );
+
+template<class T>
+void TestInOrderTraversalSSD( AoAvlMap<T> &testMap );
 
 
 int main()
@@ -44,9 +50,12 @@ int main()
     TestInsertData( testMap, records );
     TestInsertData( testMap, otherRecords );
 
-    TestDisplayData( testMap );
+    //TestDisplayData( testMap );
+    TestDisplayYearMonthData( testMap, 2020, 10 );
 
-    TestInOrderTraversalSum(testMap);
+    TestInOrderTraversalSum( testMap, 2020, 10 );
+
+    TestInOrderTraversalSSD( testMap );
 
 
     return 0;
@@ -96,6 +105,75 @@ void TestDisplayData( AoAvlMap<T> &testMap )
 }
 
 template<class T>
+void TestDisplayYearMonthData( AoAvlMap<T> &testMap, const unsigned &year, const unsigned &month )
+{
+    // Verify the state of the map after insertion
+    SensorRecType sensorRec;
+    float sumWindSpeed = 0.0;
+    float sumSolarRadiation = 0.0;
+    float sumTemperature = 0.0;
+
+    auto sensorDataMap = testMap.GetSensorData();
+
+    cout << "Display Data With user year and month: " << endl;
+    for (const auto& entry : sensorDataMap)
+    {
+        cout << "\tYear: " << entry.first << endl;
+        if( year == entry.first )
+        {
+            for (unsigned i = 0; i < AoAvlMap<SensorRecType>::NUM_MTH; ++i)
+            {
+                if( month-1 == i )
+                {
+                    auto& avl = entry.second[i];
+                    cout << '\t' << '\t' << sensorRec.GetSensorDate().GetMonthInStr(i + 1) << ": " << endl;
+
+                    if (!avl.IsEmpty())
+                    {
+                        // Iterate through AVL tree and print data
+                        // Modify this part according to your AVL implementation
+                        avl.InOrderTraversal(Display);
+                        //cout << avl.GetRoot()->m_object.GetSensorWindSpeed().GetMeasurement() << endl;
+                        testMap.InOrderTraversalSum(testMap.GetSensorData()[year][month - 1].GetRoot(), SensorMeasurementType::WIND_SPEED, sumWindSpeed);
+                        testMap.InOrderTraversalSum(testMap.GetSensorData()[year][month - 1].GetRoot(), SensorMeasurementType::SOLAR_RADIATION, sumSolarRadiation);
+                        testMap.InOrderTraversalSum(testMap.GetSensorData()[year][month - 1].GetRoot(), SensorMeasurementType::AMBIENT_TEMPERATURE, sumTemperature);
+
+                        unsigned count = avl.GetTreeNodes();
+
+                        cout << '\t' << '\t' << '\t' << "SumOfWindSpeed: " << sumWindSpeed << "( " << sumWindSpeed / count << " )"  << '\n'
+                                << '\t' << '\t' << '\t' << "SumOfSolarRadiation: " << sumSolarRadiation << '\n'
+                                << '\t' << '\t' << '\t' << "SumTemperature: " << sumTemperature << endl;
+
+                    }
+                    else
+                    {
+                        cout << "Empty";
+                    }
+                    cout << endl;
+                }
+            }
+        }
+        else
+        {
+            cout << endl;
+            cout << "Year is not Found: No Data" << endl;
+        }
+    }
+}
+
+
+template<class T>
+void TestInOrderTraversalSum(AoAvlMap<T> &testMap, const unsigned &year, const unsigned &month )
+{
+    cout << "\nTest On InOrderTraversalSum: " << endl;
+    float sum = 0.0;
+    testMap.InOrderTraversalSum(testMap.GetSensorData()[year][month - 1].GetRoot(), SensorMeasurementType::WIND_SPEED, sum);
+    float expectedSum = 42.4; // 20.2 + 22.2
+    Assert_Equals(sum == expectedSum, "InOrderTraversalSum test passed!");
+}
+
+/**
+template<class T>
 void TestInOrderTraversalSum(AoAvlMap<T> &testMap)
 {
     cout << "\nTest On InOrderTraversalSum: " << endl;
@@ -105,6 +183,30 @@ void TestInOrderTraversalSum(AoAvlMap<T> &testMap)
     testMap.InOrderTraversalSum(testMap.GetSensorData()[year][month - 1].GetRoot(), SensorMeasurementType::WIND_SPEED, sum);
     float expectedSum = 42.4; // 20.2 + 22.2
     Assert_Equals(sum == expectedSum, "InOrderTraversalSum test passed!");
+} */
+
+template<class T>
+void TestInOrderTraversalSSD( AoAvlMap<T> &testMap )
+{
+    cout << "\nTest On InOrderTraversalSSD: " << endl;
+    // Assuming you have an instance of AoAvlMap<SensorRecType> named aoAvlMap
+
+    // Get the AVL tree for a specific year and month
+    unsigned year = 2020;
+    unsigned month = 10; // July
+    auto& avlTree = testMap.GetSensorData()[year][month - 1]; // Adjust month to be zero-indexed
+
+    // Define the sensor measurement type for which you want to calculate the sample standard deviation
+    SensorMeasurementType sensorType = SensorMeasurementType::WIND_SPEED;
+
+    // Calculate the sample standard deviation
+    unsigned count = testMap.GetSensorData()[year][month - 1].GetTreeNodes();
+    float sampleStandardDeviation = testMap.SampleStandardDeviationMeasurementSwitch(avlTree.GetRoot(), sensorType, count);
+
+    // Output the result
+    std::cout << "Sample standard deviation of wind speed for " << month << "/" << year << ": " << sampleStandardDeviation << std::endl;
+
+
 }
 
 
@@ -114,3 +216,4 @@ void Display( const T &node )
 {
     cout << '\n' << '\t' << '\t' << '\t' << node << " ";
 }
+
