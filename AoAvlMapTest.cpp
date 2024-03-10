@@ -26,6 +26,8 @@ void TestInOrderTraversalSum(AoAvlMap<T> &testMap, const unsigned &year, const u
 template<class T>
 void TestInOrderTraversalSSD( AoAvlMap<T> &testMap );
 
+template<class T>
+void TestHighestSolarRadiation( AoAvlMap<T> ao_avl_map );
 
 int main()
 {
@@ -56,6 +58,8 @@ int main()
     TestInOrderTraversalSum( testMap, 2020, 10 );
 
     TestInOrderTraversalSSD( testMap );
+
+    TestHighestSolarRadiation( testMap );
 
 
     return 0;
@@ -201,14 +205,20 @@ void TestInOrderTraversalSSD( AoAvlMap<T> &testMap )
 
     // Calculate the sample standard deviation
     unsigned count = testMap.GetSensorData()[year][month - 1].GetTreeNodes();
-    float sampleStandardDeviation = testMap.SampleStandardDeviationMeasurementSwitch(avlTree.GetRoot(), sensorType, count);
+    float sampleStandardDeviation = testMap.CalculateSampleStandardDeviation(avlTree.GetRoot(), sensorType, count);
 
     // Output the result
     std::cout << "Sample standard deviation of wind speed for " << month << "/" << year << ": " << sampleStandardDeviation << std::endl;
-
-
 }
 
+
+template<class T>
+void TestHighestSolarRadiation( AoAvlMap<T> ao_avl_map )
+{
+    //AoAvlMap<SensorRecType> ao_avl_map;
+    pair<float, string> highest_solar_radiation = ao_avl_map.FindHighestSolarRadiation(11, 10, 2020);
+    cout << "The highest solar radiation reading is " << highest_solar_radiation.first << " at " << highest_solar_radiation.second << "." << endl;
+}
 
 //++++ For displaying traversal operation +++
 template<class T>

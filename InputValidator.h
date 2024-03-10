@@ -38,18 +38,6 @@ public:
     InputValidator();
 
     /**
-     * @brief Validates user input for month.
-     *
-     * This function repeatedly prompts the user to enter a month value until a valid input is provided.
-     * It displays a message indicating the acceptable range of months and requests input from the user.
-     * If the input is invalid (non-numeric or out of range), an error message is shown, and the user is prompted again.
-     *
-     * @param month A reference to a string variable where the user input for month will be stored.
-     * @return The validated user input for month.
-     */
-    unsigned MonthValidation( string &month );
-
-    /**
      * @brief Validates user input for year.
      *
      * This function repeatedly prompts the user to enter a year value until a valid input is provided.
@@ -61,18 +49,34 @@ public:
      */
     unsigned YearValidation( string &year );
 
-private:
-    unsigned m_userYear;         ///< Holds the user input for year.
-    unsigned m_userMonth;       ///< Holds the user input for year.
+    /**
+    * @brief Validates user input for month.
+    *
+    * This function repeatedly prompts the user to enter a month value until a valid input is provided.
+    * It displays a message indicating the acceptable range of months and requests input from the user.
+    * If the input is invalid (non-numeric or out of range), an error message is shown, and the user is prompted again.
+    *
+    * @param month A reference to a string variable where the user input for month will be stored.
+    * @return The validated user input for month.
+    */
+    unsigned MonthValidation( string &month );
 
     /**
-     * @brief Checks if the user input for month is valid.
-     *
-     * This function verifies whether the user-provided month value is within the acceptable range (1 to 12).
-     *
-     * @return True if the input is invalid (outside the range of 1 to 12), false otherwise.
-     */
-    bool IsMonthInputValid() const;
+    * @brief Validates user input for day.
+    *
+    * This function repeatedly prompts the user to enter a day value until a valid input is provided.
+    * It displays a message indicating the acceptable range of months and requests input from the user.
+    * If the input is invalid (non-numeric or out of range), an error message is shown, and the user is prompted again.
+    *
+    * @param day A reference to a string variable where the user input for day will be stored.
+    * @return The validated user input for day.
+    */
+    unsigned DayValidation( string &day );
+
+private:
+    unsigned m_userYear;         ///< Holds the user input for year.
+    unsigned m_userMonth;       ///< Holds the user input for month.
+    unsigned m_userDay;          ///< Hold the user input from day
 
     /**
      * @brief Checks if the user input for year is valid.
@@ -82,6 +86,24 @@ private:
      * @return True if the input is invalid (outside the range of 2010 to 2030), false otherwise.
      */
     bool IsYearInputValid() const;
+
+    /**
+    * @brief Checks if the user input for month is valid.
+    *
+    * This function verifies whether the user-provided month value is within the acceptable range (1 to 12).
+    *
+    * @return True if the input is invalid (outside the range of 1 to 12), false otherwise.
+    */
+    bool IsMonthInputValid() const;
+
+    /**
+     * @brief Checks if the user input for day is valid.
+     *
+     * This function verifies whether the user-provided day value is within the acceptable range (1 to 31).
+     *
+     * @return True if the input is invalid (outside the range of 1 to 31), false otherwise.
+     */
+    bool IsDayInputValid() const;
 };
 
 #endif // INPUTVALIDATOR_H_INCLUDED

@@ -13,6 +13,27 @@ InputValidator::InputValidator()
 {
     m_userYear = 0;
     m_userMonth = 0;
+    m_userDay = 0;
+}
+
+unsigned InputValidator::DayValidation( string &day )
+{
+    do
+    {
+        cout << Constant::INFO(Constant::DAY_RANGE_MSG) << '\n'
+             << Constant::SELECTION_INPUT;
+        cin >> day;
+        try
+        {
+            m_userDay = stoi( day );
+        }
+        catch (...)
+        {
+            cout << Constant::STATUS(!IsDayInputValid(), Constant::INVALID_NUMERIC_ENTRY_MSG) << '\n';
+        }
+    }
+    while (IsDayInputValid());   // Continue looping until the input is valid
+    return m_userDay;
 }
 
 unsigned InputValidator::MonthValidation( string &month )
@@ -55,6 +76,11 @@ unsigned InputValidator::YearValidation( string &year )
     return m_userYear;
 }
 
+bool InputValidator::IsDayInputValid() const
+{
+    return ( m_userDay <= 0 || m_userDay > 32 );
+}
+
 bool InputValidator::IsMonthInputValid() const
 {
     return ( m_userMonth <= 0 || m_userMonth > 12 );
@@ -62,5 +88,5 @@ bool InputValidator::IsMonthInputValid() const
 
 bool InputValidator::IsYearInputValid() const
 {
-    return ( m_userYear <= 2010 || m_userYear > 2030 );
+    return ( m_userYear < 2010 || m_userYear > 2030 );
 }

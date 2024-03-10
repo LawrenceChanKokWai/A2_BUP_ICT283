@@ -21,10 +21,11 @@ int main()
 {
     string directoryPath = string(__FILE__).substr(0, string(__FILE__).find_last_of("\\/") + 1) + "data\\";
 
-    const string filename = directoryPath + "data_source.txt";
+    const string filename = directoryPath + "data_source_test.txt";
     const string outFilePath = directoryPath + "WindTempSolar.csv";
     Vector<string> csvFilePath;
     AoAvlMap<SensorRecType> mapAov;
+    vector<pair<float, string>> highestSolarRadiations;
     ifstream inFile( filename );
     ofstream outputFile( outFilePath );
 
@@ -54,10 +55,12 @@ int main()
 
     string year;
     string month;
+    string day;
     bool isFileExported = false;
     char user_choice;
     do
     {
+        unsigned validatedDay = 0;
         unsigned validatedMonth = 0;
         unsigned validatedYear = 0;
 
@@ -66,7 +69,8 @@ int main()
                    << Constant::MENU_OPTION_TWO_MSG
                    << Constant::MENU_OPTION_THREE_MSG
                    << Constant::MENU_OPTION_FOUR_MSG
-                   << Constant::MENU_OPTION_FIVE_MSG << endl;
+                   << Constant::MENU_OPTION_FIVE_MSG
+                   << Constant::MENU_OPTION_SIX_MSG << endl;
 
         cout << Constant::SELECTION_INPUT;
         user_choice = getch();
@@ -90,7 +94,7 @@ int main()
                 convertedWindSpeedMean = sensorRecType.GetSensorWindSpeed().ConvertUnit( windSpeedMean );
 
                 // calculate the sample standard deviation and convert the wind speed....
-                windSpeedSampleStandardDeviation = mapAov.SampleStandardDeviationMeasurementSwitch(sensorRecords.GetRoot(), SensorMeasurementType::WIND_SPEED, count);
+                windSpeedSampleStandardDeviation = mapAov.CalculateSampleStandardDeviation(sensorRecords.GetRoot(), SensorMeasurementType::WIND_SPEED, count);
                 convertedWindSpeedSampleStandardDeviation = sensorRecType.GetSensorWindSpeed().ConvertUnit( windSpeedSampleStandardDeviation );
 
                 // output the results
@@ -125,7 +129,7 @@ int main()
                     temperatureMean = sumTemperature/count;
 
                     // calculate the sample standard deviation and convert the temperature....
-                    temperatureSampleStandardDeviation = mapAov.SampleStandardDeviationMeasurementSwitch(sensorRecords.GetRoot(), SensorMeasurementType::AMBIENT_TEMPERATURE, count);
+                    temperatureSampleStandardDeviation = mapAov.CalculateSampleStandardDeviation(sensorRecords.GetRoot(), SensorMeasurementType::AMBIENT_TEMPERATURE, count);
 
                     // output results
                     cout << sensorRecType.GetSensorDate().GetMonthInStr( month ) << ": " <<
@@ -154,7 +158,7 @@ int main()
                     convertedSolarRadiation = sensorRecType.GetSensorSolarRadiation().ConvertUnit( sumSolarRadiation );
 
                     cout << sensorRecType.GetSensorDate().GetMonthInStr(month) << ": "
-                         << setprecision(3) << convertedSolarRadiation << " kWh/m2" << endl;
+                         << setprecision(5) << convertedSolarRadiation << " kWh/m2" << endl;
                 }
                 else
                 {
@@ -192,8 +196,8 @@ int main()
                     windSpeedMean = sumWindSpeed/count;
 
                     // calculate the sample standard deviation and convert the wind speed....
-                    temperatureSampleStandardDeviation = mapAov.SampleStandardDeviationMeasurementSwitch(sensorRecords.GetRoot(), SensorMeasurementType::AMBIENT_TEMPERATURE, count);
-                    windSpeedSampleStandardDeviation = mapAov.SampleStandardDeviationMeasurementSwitch(sensorRecords.GetRoot(), SensorMeasurementType::WIND_SPEED, count);
+                    temperatureSampleStandardDeviation = mapAov.CalculateSampleStandardDeviation(sensorRecords.GetRoot(), SensorMeasurementType::AMBIENT_TEMPERATURE, count);
+                    windSpeedSampleStandardDeviation = mapAov.CalculateSampleStandardDeviation(sensorRecords.GetRoot(), SensorMeasurementType::WIND_SPEED, count);
 
                     convertedWindSpeedMean = sensorRecType.GetSensorWindSpeed().ConvertUnit( windSpeedMean );
                     convertedWindSpeedSampleStandardDeviation = sensorRecType.GetSensorWindSpeed().ConvertUnit( windSpeedSampleStandardDeviation );
@@ -202,7 +206,7 @@ int main()
                     cout << sensorRecType.GetSensorDate().GetMonthInStr(month) << ","
                          << setprecision(3) << convertedWindSpeedMean << "(" << setprecision(3) << convertedWindSpeedSampleStandardDeviation << "),"
                          << setprecision(3) << temperatureMean << "(" << setprecision(3) << temperatureSampleStandardDeviation << "),"
-                         << setprecision(3) << convertedSolarRadiation << endl;
+                         << setprecision(5) << convertedSolarRadiation << endl;
 
                     if(
                         Processor::GetInstance().OutputStreamMeasurement(
@@ -236,6 +240,25 @@ int main()
             break;
         case '5':
             cout << Constant::SELECTED_OPTION_FIVE_MSG << endl;
+            validatedDay = validator.DayValidation(day);
+            validatedMonth = validator.MonthValidation(month);
+            validatedYear = validator.YearValidation(year);
+
+            highestSolarRadiations = mapAov.FindHighestSolarRadiation( validatedDay, validatedMonth, validatedYear );
+
+            cout << '\n' << Constant::OUTPUT << endl;
+            cout << "Date: " << validatedDay << "/" << validatedMonth << "/" << validatedYear << '\n'
+                 << Constant::SOLAR_RADIATION_HIGH_MSG << highestSolarRadiations[0].first << " W/m2\n" << endl;
+
+            cout << "Times with the highest solar radiation:" << endl;
+            for (const auto& radiation : highestSolarRadiations)
+            {
+                cout << "Time: " << radiation.second << endl;
+            }
+            cout << endl;
+            break;
+        case '6':
+            cout << Constant::SELECTED_OPTION_SIX_MSG << endl;
             exit(0);
             break;
         default:

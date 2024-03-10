@@ -52,6 +52,9 @@
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
+		<Unit filename="Constant.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="Date.cpp" />
 		<Unit filename="Date.h">
 			<Option target="&lt;{~None~}&gt;" />
