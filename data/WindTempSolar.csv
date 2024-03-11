@@ -1,0 +1,11 @@
+Month,Average Wind Speed(stdev),Average Ambient Temperature(stdev),Solar Radiation
+March,20.3(10.9),22.8(5.21),193
+April,34.4(9.49),42.6(5.02),339
+May,50.4(11.2),57.8(3.24),437
+June,56.7(8.45),72.9(4.69),528
+July,67.6(11),84(3.69),623
+August,86.6(10.5),99.5(4.11),746
+September,110(12.2),119(3.99),901
+October,125(9.12),133(4.75),1.11e+003
+November,150(9),156(4.58),1.34e+003
+December,167(8.11),173(4.96),1.62e+003
