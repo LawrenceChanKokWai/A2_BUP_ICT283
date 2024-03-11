@@ -134,23 +134,23 @@
 1710012153 source:c:\users\chankokwai\desktop\ict283_assignmenttwo_chankokwai_3394804\processor.cpp
 	"Processor.h"
 
-1710052794 source:c:\users\chankokwai\desktop\a2_bup_ict283\aoavlmaptest.cpp
+1710057468 source:c:\users\chankokwai\desktop\a2_bup_ict283\aoavlmaptest.cpp
 	<iostream>
 	"AoAvlMap.h"
 
-1710053718 c:\users\chankokwai\desktop\a2_bup_ict283\aoavlmap.h
+1710057318 c:\users\chankokwai\desktop\a2_bup_ict283\aoavlmap.h
 	<map>
 	"AVL.h"
 	"SensorRecType.h"
 	"SensorMeasurementType.h"
 
-1709994556 c:\users\chankokwai\desktop\a2_bup_ict283\avl.h
+1709998156 c:\users\chankokwai\desktop\a2_bup_ict283\avl.h
 	"Tree.h"
 
-1709994556 c:\users\chankokwai\desktop\a2_bup_ict283\tree.h
+1709998156 c:\users\chankokwai\desktop\a2_bup_ict283\tree.h
 	<iostream>
 
-1709994556 c:\users\chankokwai\desktop\a2_bup_ict283\sensorrectype.h
+1709998156 c:\users\chankokwai\desktop\a2_bup_ict283\sensorrectype.h
 	<iostream>
 	<string>
 	"Date.h"
@@ -159,40 +159,40 @@
 	"SolarRadiation.h"
 	"Temperature.h"
 
-1709994556 c:\users\chankokwai\desktop\a2_bup_ict283\date.h
+1709998156 c:\users\chankokwai\desktop\a2_bup_ict283\date.h
 	<iostream>
 
-1709994556 c:\users\chankokwai\desktop\a2_bup_ict283\time.h
+1709998156 c:\users\chankokwai\desktop\a2_bup_ict283\time.h
 	<iostream>
 	<iomanip>
 
-1709994556 c:\users\chankokwai\desktop\a2_bup_ict283\windspeed.h
+1709998156 c:\users\chankokwai\desktop\a2_bup_ict283\windspeed.h
 	<iostream>
 	"Measurement.h"
 
-1709994556 c:\users\chankokwai\desktop\a2_bup_ict283\measurement.h
+1709998156 c:\users\chankokwai\desktop\a2_bup_ict283\measurement.h
 	<cmath>
 
-1709994556 c:\users\chankokwai\desktop\a2_bup_ict283\solarradiation.h
+1709998156 c:\users\chankokwai\desktop\a2_bup_ict283\solarradiation.h
 	<iostream>
 	"Measurement.h"
 
-1709994556 c:\users\chankokwai\desktop\a2_bup_ict283\temperature.h
+1709998156 c:\users\chankokwai\desktop\a2_bup_ict283\temperature.h
 	<iostream>
 	"Measurement.h"
 
-1709994556 c:\users\chankokwai\desktop\a2_bup_ict283\sensormeasurementtype.h
+1709998156 c:\users\chankokwai\desktop\a2_bup_ict283\sensormeasurementtype.h
 
-1709994556 source:c:\users\chankokwai\desktop\a2_bup_ict283\date.cpp
+1709998156 source:c:\users\chankokwai\desktop\a2_bup_ict283\date.cpp
 	"Date.h"
 
-1709994556 source:c:\users\chankokwai\desktop\a2_bup_ict283\measurement.cpp
+1709998156 source:c:\users\chankokwai\desktop\a2_bup_ict283\measurement.cpp
 	"Measurement.h"
 
-1709996811 source:c:\users\chankokwai\desktop\a2_bup_ict283\processor.cpp
+1710000411 source:c:\users\chankokwai\desktop\a2_bup_ict283\processor.cpp
 	"Processor.h"
 
-1709995596 c:\users\chankokwai\desktop\a2_bup_ict283\processor.h
+1709999196 c:\users\chankokwai\desktop\a2_bup_ict283\processor.h
 	<iostream>
 	<fstream>
 	<string>
@@ -200,22 +200,22 @@
 	"Constant.h"
 	"Vector.h"
 
-1709994556 c:\users\chankokwai\desktop\a2_bup_ict283\constant.h
+1709998156 c:\users\chankokwai\desktop\a2_bup_ict283\constant.h
 	<string>
 
-1709994556 source:c:\users\chankokwai\desktop\a2_bup_ict283\sensorrectype.cpp
+1709998156 source:c:\users\chankokwai\desktop\a2_bup_ict283\sensorrectype.cpp
 	"SensorRecType.h"
 
-1709994556 source:c:\users\chankokwai\desktop\a2_bup_ict283\solarradiation.cpp
+1709998156 source:c:\users\chankokwai\desktop\a2_bup_ict283\solarradiation.cpp
 	"SolarRadiation.h"
 
-1709994556 source:c:\users\chankokwai\desktop\a2_bup_ict283\temperature.cpp
+1709998156 source:c:\users\chankokwai\desktop\a2_bup_ict283\temperature.cpp
 	"Temperature.h"
 
-1709994556 source:c:\users\chankokwai\desktop\a2_bup_ict283\time.cpp
+1709998156 source:c:\users\chankokwai\desktop\a2_bup_ict283\time.cpp
 	"Time.h"
 
-1709994556 source:c:\users\chankokwai\desktop\a2_bup_ict283\windspeed.cpp
+1709998156 source:c:\users\chankokwai\desktop\a2_bup_ict283\windspeed.cpp
 	"WindSpeed.h"
 
 1709994774 source:c:\users\chankokwai\desktop\a2_bup_ict283\vectortest.cpp
@@ -223,9 +223,24 @@
 	<typeinfo>
 	"Vector.h"
 
-1709994741 c:\users\chankokwai\desktop\a2_bup_ict283\vector.h
+1709998341 c:\users\chankokwai\desktop\a2_bup_ict283\vector.h
 
 1709996762 source:c:\users\chankokwai\desktop\a2_bup_ict283\processortest.cpp
 	<iostream>
+	"Processor.h"
+
+1710115411 source:c:\users\chankokwai\desktop\a2_bup_ict283\inputvalidator.cpp
+	"InputValidator.h"
+
+1710115382 c:\users\chankokwai\desktop\a2_bup_ict283\inputvalidator.h
+	<iostream>
+	"Constant.h"
+
+1710118599 source:c:\users\chankokwai\desktop\a2_bup_ict283\main.cpp
+	<iostream>
+	<iomanip>
+	<conio.h>
+	<cstdlib>
+	"InputValidator.h"
 	"Processor.h"
 

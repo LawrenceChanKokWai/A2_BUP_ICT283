@@ -41,7 +41,10 @@
 		<Unit filename="AoAvlMap.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="AoAvlMapTest.cpp" />
+		<Unit filename="AoAvlMapTest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="BST.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
@@ -57,6 +60,11 @@
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
+		<Unit filename="InputValidator.cpp" />
+		<Unit filename="InputValidator.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="Main.cpp" />
 		<Unit filename="Measurement.cpp" />
 		<Unit filename="Measurement.h">
 			<Option target="&lt;{~None~}&gt;" />
