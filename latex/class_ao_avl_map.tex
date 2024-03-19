@@ -2,6 +2,11 @@
 \label{class_ao_avl_map}\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
 
 
+Represents the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} Class.  
+
+
+
+
 {\ttfamily \#include $<$Ao\+Avl\+Map.\+h$>$}
 
 
@@ -10,99 +15,237 @@ Collaboration diagram for Ao\+Avl\+Map$<$ T $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=190pt]{class_ao_avl_map__coll__graph}
+\includegraphics[width=263pt]{class_ao_avl_map__coll__graph}
 \end{center}
 \end{figure}
-\doxysubsection*{Public Types}
-\begin{DoxyCompactItemize}
-\item 
-typedef \mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$ \mbox{\hyperlink{class_ao_avl_map_a1e25723b5c98c0b5326e8effe0659d46}{Month\+To\+Records\+Array\+A\+VL}}\mbox{[}12\mbox{]}
-\item 
-typedef map$<$ unsigned, \mbox{\hyperlink{class_ao_avl_map_a1e25723b5c98c0b5326e8effe0659d46}{Month\+To\+Records\+Array\+A\+VL}} $>$ \mbox{\hyperlink{class_ao_avl_map_aff365e765c65e4dbed068cd40d853045}{Year\+To\+Records\+Array\+A\+V\+L\+Map}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_ao_avl_map_a10c037bd5adf6b00e6aa50d3846355c6}{Ao\+Avl\+Map}} ()
+const map$<$ unsigned, array$<$ \mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$, \mbox{\hyperlink{class_ao_avl_map_a4da8c4cf4eeaf7a7c6f784a259472fcb}{N\+U\+M\+\_\+\+M\+TH}} $>$ $>$ \& \mbox{\hyperlink{class_ao_avl_map_a7e21558689bec8bcab2dedf297b1f798}{Get\+Sensor\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Get a constant reference to the sensor data map. \end{DoxyCompactList}\item 
+map$<$ unsigned, array$<$ \mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$, \mbox{\hyperlink{class_ao_avl_map_a4da8c4cf4eeaf7a7c6f784a259472fcb}{N\+U\+M\+\_\+\+M\+TH}} $>$ $>$ \& \mbox{\hyperlink{class_ao_avl_map_aa41825b1eccd51d7295585ce395040c5}{Get\+Sensor\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Get a reference to the sensor data map. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ao_avl_map_affcadb4f51032bc0cd78619fd97f1bcc}{Insert\+Sensor\+Data}} (const T \&sensor\+Data)
+\begin{DoxyCompactList}\small\item\em Insert sensor data into the map consisted with array of Vectors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ao_avl_map_afe182a9b789a029dba7352892669fa19}{In\+Order\+Traversal\+Sum}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$root, \mbox{\hyperlink{_sensor_measurement_type_8h_abee7b7fdc87d37c2132a67729cc0ab43}{Sensor\+Measurement\+Type}} sensor\+Measurement\+Type, float \&sum) const
+\begin{DoxyCompactList}\small\item\em Performs in-\/order traversal of the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree and accumulates the sum of sensor measurements. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ao_avl_map_a66bd893ec3632a752ebc316e43c3236a}{Calculate\+Sample\+Standard\+Deviation}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$root, \mbox{\hyperlink{_sensor_measurement_type_8h_abee7b7fdc87d37c2132a67729cc0ab43}{Sensor\+Measurement\+Type}} sensor\+Measurement\+Type, unsigned \&count) const
+\begin{DoxyCompactList}\small\item\em Calculates the sample standard deviation of sensor measurements. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ float, string $>$ $>$ \mbox{\hyperlink{class_ao_avl_map_a179fdb3242917507c47368b918ed74ac}{Find\+Highest\+Solar\+Radiation}} (unsigned day, unsigned month, unsigned year) const
+\begin{DoxyCompactList}\small\item\em Finds the highest solar radiation readings for a specific date. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{class_ao_avl_map_a6e74c4a67ad8ab935bf82c8a3a2746f7}{Is\+Map\+Empty}} () const
-\item 
-bool \mbox{\hyperlink{class_ao_avl_map_a3902f7ec7d33d6d9b927a12131ca1c1f}{Is\+Array\+A\+V\+L\+Empty}} () const
-\item 
-void \mbox{\hyperlink{class_ao_avl_map_a6bf5f895a3d6fc6f5d082b68bda60883}{Insert}} (unsigned year, unsigned month, \mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} \&sensor\+Rec\+Type)
-\end{DoxyCompactItemize}
+static const unsigned \mbox{\hyperlink{class_ao_avl_map_a4da8c4cf4eeaf7a7c6f784a259472fcb}{N\+U\+M\+\_\+\+M\+TH}} = 12
+\begin{DoxyCompactList}\small\item\em Number of months in a year. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \subsubsection*{template$<$class T$>$\newline
 class Ao\+Avl\+Map$<$ T $>$}
 
+Represents the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} Class. 
 
-
-Definition at line 12 of file Ao\+Avl\+Map.\+h.
-
-
-
-\doxysubsection{Member Typedef Documentation}
-\mbox{\Hypertarget{class_ao_avl_map_a1e25723b5c98c0b5326e8effe0659d46}\label{class_ao_avl_map_a1e25723b5c98c0b5326e8effe0659d46}} 
-\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!MonthToRecordsArrayAVL@{MonthToRecordsArrayAVL}}
-\index{MonthToRecordsArrayAVL@{MonthToRecordsArrayAVL}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{MonthToRecordsArrayAVL}{MonthToRecordsArrayAVL}}
-{\footnotesize\ttfamily template$<$class T $>$ \\
-typedef \mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$T$>$ \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Month\+To\+Records\+Array\+A\+VL\mbox{[}12\mbox{]}}
-
-
-
-Definition at line 15 of file Ao\+Avl\+Map.\+h.
-
-\mbox{\Hypertarget{class_ao_avl_map_aff365e765c65e4dbed068cd40d853045}\label{class_ao_avl_map_aff365e765c65e4dbed068cd40d853045}} 
-\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!YearToRecordsArrayAVLMap@{YearToRecordsArrayAVLMap}}
-\index{YearToRecordsArrayAVLMap@{YearToRecordsArrayAVLMap}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{YearToRecordsArrayAVLMap}{YearToRecordsArrayAVLMap}}
-{\footnotesize\ttfamily template$<$class T $>$ \\
-typedef map$<$unsigned, \mbox{\hyperlink{class_ao_avl_map_a1e25723b5c98c0b5326e8effe0659d46}{Month\+To\+Records\+Array\+A\+VL}}$>$ \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::\mbox{\hyperlink{class_ao_avl_map_aff365e765c65e4dbed068cd40d853045}{Year\+To\+Records\+Array\+A\+V\+L\+Map}}}
-
-
-
-Definition at line 16 of file Ao\+Avl\+Map.\+h.
-
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_ao_avl_map_a10c037bd5adf6b00e6aa50d3846355c6}\label{class_ao_avl_map_a10c037bd5adf6b00e6aa50d3846355c6}} 
-\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!AoAvlMap@{AoAvlMap}}
-\index{AoAvlMap@{AoAvlMap}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{AoAvlMap()}{AoAvlMap()}}
-{\footnotesize\ttfamily template$<$class T $>$ \\
-\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}}
-
-
-
-Definition at line 33 of file Ao\+Avl\+Map.\+h.
+Definition at line 27 of file Ao\+Avl\+Map.\+h.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_ao_avl_map_a6bf5f895a3d6fc6f5d082b68bda60883}\label{class_ao_avl_map_a6bf5f895a3d6fc6f5d082b68bda60883}} 
-\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!Insert@{Insert}}
-\index{Insert@{Insert}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+\mbox{\Hypertarget{class_ao_avl_map_a66bd893ec3632a752ebc316e43c3236a}\label{class_ao_avl_map_a66bd893ec3632a752ebc316e43c3236a}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!CalculateSampleStandardDeviation@{CalculateSampleStandardDeviation}}
+\index{CalculateSampleStandardDeviation@{CalculateSampleStandardDeviation}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CalculateSampleStandardDeviation()}{CalculateSampleStandardDeviation()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-void \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Insert (\begin{DoxyParamCaption}\item[{unsigned}]{year,  }\item[{unsigned}]{month,  }\item[{\mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} \&}]{sensor\+Rec\+Type }\end{DoxyParamCaption})}
+float \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Calculate\+Sample\+Standard\+Deviation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$}]{root,  }\item[{\mbox{\hyperlink{_sensor_measurement_type_8h_abee7b7fdc87d37c2132a67729cc0ab43}{Sensor\+Measurement\+Type}}}]{sensor\+Measurement\+Type,  }\item[{unsigned \&}]{count }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{class_ao_avl_map_a3902f7ec7d33d6d9b927a12131ca1c1f}\label{class_ao_avl_map_a3902f7ec7d33d6d9b927a12131ca1c1f}} 
-\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!IsArrayAVLEmpty@{IsArrayAVLEmpty}}
-\index{IsArrayAVLEmpty@{IsArrayAVLEmpty}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{IsArrayAVLEmpty()}{IsArrayAVLEmpty()}}
-{\footnotesize\ttfamily template$<$class T $>$ \\
-bool \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Is\+Array\+A\+V\+L\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{class_ao_avl_map_a6e74c4a67ad8ab935bf82c8a3a2746f7}\label{class_ao_avl_map_a6e74c4a67ad8ab935bf82c8a3a2746f7}} 
-\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!IsMapEmpty@{IsMapEmpty}}
-\index{IsMapEmpty@{IsMapEmpty}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{IsMapEmpty()}{IsMapEmpty()}}
+
+Calculates the sample standard deviation of sensor measurements. 
+
+This method computes the sample standard deviation of sensor measurements stored in the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. It traverses the tree to accumulate the sum of measurements and the sum of squared measurements, then uses these values to compute the sample variance and finally returns the square root of the variance.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em root} & Pointer to the root node of the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sensor\+Measurement\+Type} & Type of sensor measurement for which standard deviation is calculated. \\
+\hline
+\mbox{\texttt{ in}}  & {\em count} & Reference to the variable storing the count of measurements. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sample standard deviation of sensor measurements. 
+\end{DoxyReturn}
+
+
+Definition at line 215 of file Ao\+Avl\+Map.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ao_avl_map_a66bd893ec3632a752ebc316e43c3236a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ao_avl_map_a179fdb3242917507c47368b918ed74ac}\label{class_ao_avl_map_a179fdb3242917507c47368b918ed74ac}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!FindHighestSolarRadiation@{FindHighestSolarRadiation}}
+\index{FindHighestSolarRadiation@{FindHighestSolarRadiation}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{FindHighestSolarRadiation()}{FindHighestSolarRadiation()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-bool \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Is\+Map\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+vector$<$ pair$<$ float, string $>$ $>$ \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Find\+Highest\+Solar\+Radiation (\begin{DoxyParamCaption}\item[{unsigned}]{day,  }\item[{unsigned}]{month,  }\item[{unsigned}]{year }\end{DoxyParamCaption}) const}
+
+
+
+Finds the highest solar radiation readings for a specific date. 
+
+This method searches the \mbox{\hyperlink{class_a_v_l}{A\+VL}} map for the highest solar radiation readings recorded on the specified date (day, month, year). It returns a vector of pairs containing the highest radiation value(s) and the corresponding time(s) of measurement.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em day} & The day of the date. \\
+\hline
+\mbox{\texttt{ in}}  & {\em month} & The month of the date. \\
+\hline
+\mbox{\texttt{ in}}  & {\em year} & The year of the date. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of pairs representing the highest solar radiation and its corresponding time(s). 
+\end{DoxyReturn}
+
+
+Definition at line 226 of file Ao\+Avl\+Map.\+h.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_ao_avl_map_a179fdb3242917507c47368b918ed74ac_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ao_avl_map_a179fdb3242917507c47368b918ed74ac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ao_avl_map_aa41825b1eccd51d7295585ce395040c5}\label{class_ao_avl_map_aa41825b1eccd51d7295585ce395040c5}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!GetSensorData@{GetSensorData}}
+\index{GetSensorData@{GetSensorData}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetSensorData()}{GetSensorData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+map$<$unsigned, array$<$\mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$T$>$, \mbox{\hyperlink{class_ao_avl_map_a4da8c4cf4eeaf7a7c6f784a259472fcb}{N\+U\+M\+\_\+\+M\+TH}}$>$ $>$\& \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Get\+Sensor\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a reference to the sensor data map. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the sensor data map. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ao_avl_map_a7e21558689bec8bcab2dedf297b1f798}\label{class_ao_avl_map_a7e21558689bec8bcab2dedf297b1f798}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!GetSensorData@{GetSensorData}}
+\index{GetSensorData@{GetSensorData}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetSensorData()}{GetSensorData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+map$<$ unsigned, array$<$ \mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$, \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::\mbox{\hyperlink{class_ao_avl_map_a4da8c4cf4eeaf7a7c6f784a259472fcb}{N\+U\+M\+\_\+\+M\+TH}} $>$ $>$ \& \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Get\+Sensor\+Data}
+
+
+
+Get a constant reference to the sensor data map. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{namespace_constant}{Constant}} reference to the sensor data map. 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file Ao\+Avl\+Map.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ao_avl_map_a7e21558689bec8bcab2dedf297b1f798_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ao_avl_map_afe182a9b789a029dba7352892669fa19}\label{class_ao_avl_map_afe182a9b789a029dba7352892669fa19}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!InOrderTraversalSum@{InOrderTraversalSum}}
+\index{InOrderTraversalSum@{InOrderTraversalSum}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InOrderTraversalSum()}{InOrderTraversalSum()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::In\+Order\+Traversal\+Sum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$}]{root,  }\item[{\mbox{\hyperlink{_sensor_measurement_type_8h_abee7b7fdc87d37c2132a67729cc0ab43}{Sensor\+Measurement\+Type}}}]{sensor\+Measurement\+Type,  }\item[{float \&}]{sum }\end{DoxyParamCaption}) const}
+
+
+
+Performs in-\/order traversal of the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree and accumulates the sum of sensor measurements. 
+
+This method traverses the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree in an in-\/order manner and accumulates the sum of sensor measurements based on the specified sensor measurement type. The accumulated sum is stored in the reference variable \textquotesingle{}sum\textquotesingle{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em root} & Pointer to the root node of the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sensor\+Measurement\+Type} & Type of sensor measurement for which the sum is calculated. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sum} & Reference to the variable storing the sum of sensor measurements. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 159 of file Ao\+Avl\+Map.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ao_avl_map_afe182a9b789a029dba7352892669fa19_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ao_avl_map_affcadb4f51032bc0cd78619fd97f1bcc}\label{class_ao_avl_map_affcadb4f51032bc0cd78619fd97f1bcc}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!InsertSensorData@{InsertSensorData}}
+\index{InsertSensorData@{InsertSensorData}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InsertSensorData()}{InsertSensorData()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Insert\+Sensor\+Data (\begin{DoxyParamCaption}\item[{const T \&}]{sensor\+Data }\end{DoxyParamCaption})}
+
+
+
+Insert sensor data into the map consisted with array of Vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Data} & The sensor data to be inserted. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 131 of file Ao\+Avl\+Map.\+h.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ao_avl_map_affcadb4f51032bc0cd78619fd97f1bcc_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_ao_avl_map_a4da8c4cf4eeaf7a7c6f784a259472fcb}\label{class_ao_avl_map_a4da8c4cf4eeaf7a7c6f784a259472fcb}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!NUM\_MTH@{NUM\_MTH}}
+\index{NUM\_MTH@{NUM\_MTH}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{NUM\_MTH}{NUM\_MTH}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const unsigned \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::N\+U\+M\+\_\+\+M\+TH = 12\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number of months in a year. 
+
+
+
+Definition at line 30 of file Ao\+Avl\+Map.\+h.
 
 
 

@@ -1,0 +1,6 @@
+<map id="TestHighestSolarRadiation" name="TestHighestSolarRadiation">
+<area shape="rect" id="node1" title=" " alt="" coords="5,35,180,61"/>
+<area shape="rect" id="node2" href="$_ao_avl_map_test_8cpp.html#a0153045686dc242fefe3bddac5b95f82" title=" " alt="" coords="268,5,375,32"/>
+<area shape="rect" id="node3" href="$class_ao_avl_map.html#a179fdb3242917507c47368b918ed74ac" title="Finds the highest solar radiation readings for a specific date." alt="" coords="228,57,415,98"/>
+<area shape="rect" id="node4" href="$class_tree.html#a5596f364c74235f642a3e995878943fa" title="Get the root node of the tree." alt="" coords="463,64,565,91"/>
+</map>

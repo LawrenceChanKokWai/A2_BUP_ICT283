@@ -48,11 +48,15 @@ public:
     void LoadCSVFilePathToVector( Vector<string> &csvFilePath, ifstream &input, const string &filename );
 
     /**
-     * @brief Loads CSV data from a vector of file paths into a vector of WindRecType objects.
+     * @brief Loads data from CSV files into an AVL map.
      *
-     * @param[in] csvFilePath The vector containing the CSV file paths.
-     * @param[in] windRecTypeVec The vector to store the WindRecType objects.
-     * @param[in] windRecType An object of type WindRecType.
+     * This method reads data from CSV files specified by the given file paths and inserts the data into
+     * an AVL map of sensor records. Each CSV file is expected to have a header line containing column names,
+     * followed by data records. The method parses the CSV files, extracts relevant sensor data, constructs
+     * sensor records, and inserts them into the AVL map.
+     *
+     * @param csvFilePath Vector containing the file paths of CSV files to be loaded.
+     * @param mapAoBst Reference to the AVL map where the sensor data will be inserted.
      */
     void LoadCSVData( Vector<string> &csvFilePath, AoAvlMap<SensorRecType> &mapAoBst );
 
@@ -98,6 +102,18 @@ private:
      */
     void LoadDisplayCount();
 
+    /**
+    *
+    * @brief Splits a string into substrings using a specified delimiter.
+    *
+    * This function takes a string and a delimiter character as input and splits the string into substrings
+    * using the specified delimiter. It returns a vector containing the resulting substrings.
+    *
+    * @param[in] aString The string to be split.
+    * @param[in] delimiter The character used as the delimiter for splitting.
+    * @return A vector containing the substrings resulting from the split operation.
+    *
+    */
     Vector<string> Split( const string &aString, char delimiter );
 
 };

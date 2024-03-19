@@ -1,3 +1,13 @@
+
+///
+/// @file AoAvlMap.h
+/// @brief AoAvlMap class definition.
+///
+/// This file contains the definition of the AoAvlMap class.
+///
+/// @author Chan Kok Wai ( Student Number: 33924804 )
+/// @version 1.0.0
+///
 #ifndef AOAVLMAP_H_INCLUDED
 #define AOAVLMAP_H_INCLUDED
 
@@ -10,6 +20,9 @@
 
 using namespace std;
 
+/**
+* @brief Represents the AoAvlMap Class
+*/
 template<class T>
 class AoAvlMap
 {
@@ -21,14 +34,14 @@ public:
      *
      * @return Constant reference to the sensor data map.
      */
-    const map<unsigned, array<AVL<T>, NUM_MTH>>& GetSensorData() const;
+    const map<unsigned, array<AVL<T>, NUM_MTH>> &GetSensorData() const;
 
     /**
      * @brief Get a reference to the sensor data map.
      *
      * @return Reference to the sensor data map.
      */
-    map<unsigned, array<AVL<T>, NUM_MTH>>& GetSensorData();
+    map<unsigned, array<AVL<T>, NUM_MTH>> &GetSensorData();
 
     /**
      * @brief Insert sensor data into the map consisted with array of Vectors.
@@ -37,12 +50,47 @@ public:
      */
     bool InsertSensorData(const T &sensorData);
 
-    void InOrderTraversalSum(Node<T>* root, SensorMeasurementType sensorMeasurementType, float& sum) const;
 
+    /**
+    * @brief Performs in-order traversal of the AVL tree and accumulates the sum of sensor measurements.
+    *
+    * This method traverses the AVL tree in an in-order manner and accumulates the sum of sensor measurements
+    * based on the specified sensor measurement type. The accumulated sum is stored in the reference variable 'sum'.
+    *
+    * @param[in] root Pointer to the root node of the AVL tree.
+    * @param[in] sensorMeasurementType Type of sensor measurement for which the sum is calculated.
+    * @param[in] sum Reference to the variable storing the sum of sensor measurements.
+    */
+    void InOrderTraversalSum(Node<T> *root, SensorMeasurementType sensorMeasurementType, float &sum) const;
+
+    /**
+    * @brief Calculates the sample standard deviation of sensor measurements.
+    *
+    * This method computes the sample standard deviation of sensor measurements
+    * stored in the AVL tree. It traverses the tree to accumulate the sum of
+    * measurements and the sum of squared measurements, then uses these values
+    * to compute the sample variance and finally returns the square root of the variance.
+    *
+    * @param[in] root Pointer to the root node of the AVL tree.
+    * @param[in] sensorMeasurementType Type of sensor measurement for which standard deviation is calculated.
+    * @param[in] count Reference to the variable storing the count of measurements.
+    * @return The sample standard deviation of sensor measurements.
+    */
     float CalculateSampleStandardDeviation(Node<T>* root, SensorMeasurementType sensorMeasurementType, unsigned &count) const;
 
-    //pair<float, string> FindHighestSolarRadiation(unsigned day, unsigned month, unsigned year) const;
 
+    /**
+    * @brief Finds the highest solar radiation readings for a specific date.
+    *
+    * This method searches the AVL map for the highest solar radiation readings recorded
+    * on the specified date (day, month, year). It returns a vector of pairs containing
+    * the highest radiation value(s) and the corresponding time(s) of measurement.
+    *
+    * @param[in] day The day of the date.
+    * @param[in] month The month of the date.
+    * @param[in] year The year of the date.
+    * @return A vector of pairs representing the highest solar radiation and its corresponding time(s).
+    */
     vector<pair<float, string>> FindHighestSolarRadiation(unsigned day, unsigned month, unsigned year) const;
 
 
@@ -50,6 +98,19 @@ public:
 private:
     map<unsigned, array<AVL<SensorRecType>, NUM_MTH>> m_data;    ///< Map storing arrays of sensor data vectors organized by month and year.
 
+
+    /**
+    * @brief Performs in-order traversal of the AVL tree and accumulates the sum and sum of squares of sensor measurements.
+    *
+    * This method traverses the AVL tree in an in-order manner and accumulates the sum and sum of squares of sensor measurements
+    * based on the specified sensor measurement type. The accumulated sums are stored in the reference variables 'sum' and 'sumSquare'.
+    *
+    * @param[in] root Pointer to the root node of the AVL tree.
+    * @param[in] sensorMeasurementType Type of sensor measurement for which the sums are calculated.
+    * @param[in] sum Reference to the variable storing the sum of sensor measurements.
+    * @param[in] sumSquare Reference to the variable storing the sum of squares of sensor measurements.
+    *
+    */
     void InOrderTraversalSumAndSquareSum(Node<T>* root, SensorMeasurementType sensorMeasurementType, float& sum, float& sumSquare) const;
 
 };
@@ -161,42 +222,6 @@ float AoAvlMap<T>::CalculateSampleStandardDeviation(Node<T>* root, SensorMeasure
     return sqrt(variance);
 }
 
-//==================================================================================================
-/**
-template<class T>
-pair<float, string> AoAvlMap<T>::FindHighestSolarRadiation(unsigned day, unsigned month, unsigned year) const
-{
-    float highestRadiation = 0.0;
-    string hour;
-    string minute;
-    string highestTime;
-
-    // Find the AVL tree corresponding to the given day, month, and year
-    auto yearIter = m_data.find(year);
-    if (yearIter != m_data.end()) {
-        const AVL<T>& avl_tree = yearIter->second[month - 1];
-
-        // Traverse the AVL tree to find the highest solar radiation reading
-        Node<T>* root = avl_tree.GetRoot();
-        while (root != nullptr) {
-            if (root->m_object.GetSensorDate().GetDay() == day &&
-                root->m_object.GetSensorDate().GetMonth() == month &&
-                root->m_object.GetSensorDate().GetYear() == year &&
-                root->m_object.GetSensorSolarRadiation().GetMeasurement() > highestRadiation) {
-
-                highestRadiation = root->m_object.GetSensorSolarRadiation().GetMeasurement();
-                hour = to_string(root->m_object.GetSensorTime().GetHour());
-                minute = to_string(root->m_object.GetSensorTime().GetMinute());
-                highestTime = hour + ":" + minute;
-            }
-
-            root = root->m_right;
-        }
-    }
-
-    return make_pair(highestRadiation, highestTime);
-} */
-
 template<class T>
 vector<pair<float, string>> AoAvlMap<T>::FindHighestSolarRadiation(unsigned day, unsigned month, unsigned year) const
 {
@@ -205,16 +230,19 @@ vector<pair<float, string>> AoAvlMap<T>::FindHighestSolarRadiation(unsigned day,
 
     // Find the AVL tree corresponding to the given day, month, and year
     auto yearIter = m_data.find(year);
-    if (yearIter != m_data.end()) {
+    if (yearIter != m_data.end())
+    {
         const AVL<T>& avl_tree = yearIter->second[month - 1];
 
         // Traverse the AVL tree to find the highest solar radiation reading
         Node<T>* root = avl_tree.GetRoot();
-        while (root != nullptr) {
+        while (root != nullptr)
+        {
             if (root->m_object.GetSensorDate().GetDay() == day &&
-                root->m_object.GetSensorDate().GetMonth() == month &&
-                root->m_object.GetSensorDate().GetYear() == year &&
-                root->m_object.GetSensorSolarRadiation().GetMeasurement() > highestRadiation) {
+                    root->m_object.GetSensorDate().GetMonth() == month &&
+                    root->m_object.GetSensorDate().GetYear() == year &&
+                    root->m_object.GetSensorSolarRadiation().GetMeasurement() > highestRadiation)
+            {
 
                 highestRadiation = root->m_object.GetSensorSolarRadiation().GetMeasurement();
                 string hour = to_string(root->m_object.GetSensorTime().GetHour());
@@ -222,10 +250,12 @@ vector<pair<float, string>> AoAvlMap<T>::FindHighestSolarRadiation(unsigned day,
                 string time = hour + ":" + minute;
                 highestRadiations.clear(); // Clear previous highest times
                 highestRadiations.push_back(make_pair(highestRadiation, time));
-            } else if (root->m_object.GetSensorDate().GetDay() == day &&
-                       root->m_object.GetSensorDate().GetMonth() == month &&
-                       root->m_object.GetSensorDate().GetYear() == year &&
-                       root->m_object.GetSensorSolarRadiation().GetMeasurement() == highestRadiation) {
+            }
+            else if (root->m_object.GetSensorDate().GetDay() == day &&
+                     root->m_object.GetSensorDate().GetMonth() == month &&
+                     root->m_object.GetSensorDate().GetYear() == year &&
+                     root->m_object.GetSensorSolarRadiation().GetMeasurement() == highestRadiation)
+            {
                 string hour = to_string(root->m_object.GetSensorTime().GetHour());
                 string minute = to_string(root->m_object.GetSensorTime().GetMinute());
                 string time = hour + ":" + minute;

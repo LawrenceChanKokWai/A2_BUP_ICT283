@@ -155,7 +155,7 @@ Constructor used for creating an empty template \mbox{\hyperlink{class_tree}{Tre
 
 
 
-Definition at line 261 of file Tree.\+h.
+Definition at line 267 of file Tree.\+h.
 
 \mbox{\Hypertarget{class_tree_a04affc46d89a0ef5d517ab685c9c346e}\label{class_tree_a04affc46d89a0ef5d517ab685c9c346e}} 
 \index{Tree$<$ T $>$@{Tree$<$ T $>$}!````~Tree@{$\sim$Tree}}
@@ -170,7 +170,7 @@ Destructor used for releasing allocate memory.
 
 
 
-Definition at line 267 of file Tree.\+h.
+Definition at line 273 of file Tree.\+h.
 
 \mbox{\Hypertarget{class_tree_a3d55b9c390d7540317de29ca05a3e05b}\label{class_tree_a3d55b9c390d7540317de29ca05a3e05b}} 
 \index{Tree$<$ T $>$@{Tree$<$ T $>$}!Tree@{Tree}}
@@ -190,7 +190,7 @@ Copy constructor used for creating a new \mbox{\hyperlink{class_tree}{Tree}} fro
 \end{DoxyParams}
 
 
-Definition at line 372 of file Tree.\+h.
+Definition at line 378 of file Tree.\+h.
 
 
 
@@ -215,7 +215,7 @@ Method used to copy the contents of one subtree to another.
 \end{DoxyParams}
 
 
-Definition at line 356 of file Tree.\+h.
+Definition at line 362 of file Tree.\+h.
 
 \mbox{\Hypertarget{class_tree_a4768c5f1eabf101f09a4c9d76b7cbae0}\label{class_tree_a4768c5f1eabf101f09a4c9d76b7cbae0}} 
 \index{Tree$<$ T $>$@{Tree$<$ T $>$}!Delete@{Delete}}
@@ -279,7 +279,7 @@ Recursively destroy the \mbox{\hyperlink{class_tree}{Tree}} starting from the gi
 \end{DoxyParams}
 
 
-Definition at line 249 of file Tree.\+h.
+Definition at line 255 of file Tree.\+h.
 
 \mbox{\Hypertarget{class_tree_a2f5a3bbb794f377f6e47aa068992b454}\label{class_tree_a2f5a3bbb794f377f6e47aa068992b454}} 
 \index{Tree$<$ T $>$@{Tree$<$ T $>$}!GetHeight@{GetHeight}}
@@ -302,7 +302,7 @@ Height of the subtree.
 \end{DoxyReturn}
 
 
-Definition at line 298 of file Tree.\+h.
+Definition at line 304 of file Tree.\+h.
 
 \mbox{\Hypertarget{class_tree_a2b28d6d430d0ae0a832fce5b653f4d2c}\label{class_tree_a2b28d6d430d0ae0a832fce5b653f4d2c}} 
 \index{Tree$<$ T $>$@{Tree$<$ T $>$}!GetLeaves@{GetLeaves}}
@@ -325,7 +325,7 @@ Number of leaf nodes in the subtree.
 \end{DoxyReturn}
 
 
-Definition at line 336 of file Tree.\+h.
+Definition at line 342 of file Tree.\+h.
 
 \mbox{\Hypertarget{class_tree_a95c514dc005fba6d4863e52d77f51151}\label{class_tree_a95c514dc005fba6d4863e52d77f51151}} 
 \index{Tree$<$ T $>$@{Tree$<$ T $>$}!GetMaxTreeSubHeight@{GetMaxTreeSubHeight}}
@@ -340,17 +340,17 @@ Method used to get the maximum of two integers.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em x} & First integer representing the left subtree. \\
+\mbox{\texttt{ in}}  & {\em left} & First integer representing the left subtree. \\
 \hline
-\mbox{\texttt{ in}}  & {\em y} & Second integer representing the right subtree. \\
+\mbox{\texttt{ in}}  & {\em right} & Second integer representing the right subtree. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Maximum of x or y. 
+Maximum of left or right. 
 \end{DoxyReturn}
 
 
-Definition at line 285 of file Tree.\+h.
+Definition at line 291 of file Tree.\+h.
 
 \mbox{\Hypertarget{class_tree_acaf7821762fc42e92c5ae6731737db3f}\label{class_tree_acaf7821762fc42e92c5ae6731737db3f}} 
 \index{Tree$<$ T $>$@{Tree$<$ T $>$}!GetNodes@{GetNodes}}
@@ -373,7 +373,7 @@ Number of nodes in the subtree.
 \end{DoxyReturn}
 
 
-Definition at line 317 of file Tree.\+h.
+Definition at line 323 of file Tree.\+h.
 
 \mbox{\Hypertarget{class_tree_a5596f364c74235f642a3e995878943fa}\label{class_tree_a5596f364c74235f642a3e995878943fa}} 
 \index{Tree$<$ T $>$@{Tree$<$ T $>$}!GetRoot@{GetRoot}}
@@ -393,7 +393,7 @@ A pointer to the root node of the tree.
 \end{DoxyReturn}
 
 
-Definition at line 279 of file Tree.\+h.
+Definition at line 285 of file Tree.\+h.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -418,7 +418,7 @@ Height of the \mbox{\hyperlink{class_tree}{Tree}}.
 \end{DoxyReturn}
 
 
-Definition at line 311 of file Tree.\+h.
+Definition at line 317 of file Tree.\+h.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -443,7 +443,7 @@ Number of leaf nodes in the \mbox{\hyperlink{class_tree}{Tree}}.
 \end{DoxyReturn}
 
 
-Definition at line 350 of file Tree.\+h.
+Definition at line 356 of file Tree.\+h.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -468,7 +468,7 @@ Number of nodes in the \mbox{\hyperlink{class_tree}{Tree}}.
 \end{DoxyReturn}
 
 
-Definition at line 330 of file Tree.\+h.
+Definition at line 336 of file Tree.\+h.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -490,12 +490,14 @@ Method used to perform an in-\/order traversal of a subtree and print the node v
 
 
 \begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em traversal} & The function to apply to each object during traversal. \\
+\hline
 \mbox{\texttt{ in}}  & {\em ptr} & Pointer to the root of the subtree. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 430 of file Tree.\+h.
+Definition at line 436 of file Tree.\+h.
 
 \mbox{\Hypertarget{class_tree_a4d29f29b9501d174fab425e6e1c38ab0}\label{class_tree_a4d29f29b9501d174fab425e6e1c38ab0}} 
 \index{Tree$<$ T $>$@{Tree$<$ T $>$}!InOrderTraversal@{InOrderTraversal}}
@@ -510,7 +512,7 @@ Perform a in-\/order traversal of the \mbox{\hyperlink{class_tree}{Tree}} and pr
 
 
 
-Definition at line 441 of file Tree.\+h.
+Definition at line 447 of file Tree.\+h.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -579,8 +581,15 @@ True if \mbox{\hyperlink{class_tree}{Tree}} is empty else False.
 \end{DoxyReturn}
 
 
-Definition at line 273 of file Tree.\+h.
+Definition at line 279 of file Tree.\+h.
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{class_tree_a044a94a076990c0520c25705382d1454_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_tree_aaea71906a9b35a24d04f459f0a51b050}\label{class_tree_aaea71906a9b35a24d04f459f0a51b050}} 
 \index{Tree$<$ T $>$@{Tree$<$ T $>$}!operator=@{operator=}}
 \index{operator=@{operator=}!Tree$<$ T $>$@{Tree$<$ T $>$}}
@@ -602,7 +611,7 @@ Reference to the modified \mbox{\hyperlink{class_tree}{Tree}}.
 \end{DoxyReturn}
 
 
-Definition at line 385 of file Tree.\+h.
+Definition at line 391 of file Tree.\+h.
 
 \mbox{\Hypertarget{class_tree_abf853f3ba2eeb4f07f21f2f6a9df1eac}\label{class_tree_abf853f3ba2eeb4f07f21f2f6a9df1eac}} 
 \index{Tree$<$ T $>$@{Tree$<$ T $>$}!PostOrder@{PostOrder}}
@@ -617,12 +626,14 @@ Method used to perform a post-\/order traversal of a subtree and print the node 
 
 
 \begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em traversal} & The function to apply to each object during traversal. \\
+\hline
 \mbox{\texttt{ in}}  & {\em ptr} & Pointer to the root of the subtree. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 464 of file Tree.\+h.
+Definition at line 470 of file Tree.\+h.
 
 \mbox{\Hypertarget{class_tree_a6083a1ba68c84a4fc80e9639f9886bb2}\label{class_tree_a6083a1ba68c84a4fc80e9639f9886bb2}} 
 \index{Tree$<$ T $>$@{Tree$<$ T $>$}!PostOrderTraversal@{PostOrderTraversal}}
@@ -637,7 +648,7 @@ Perform a post-\/order traversal of the \mbox{\hyperlink{class_tree}{Tree}} and 
 
 
 
-Definition at line 475 of file Tree.\+h.
+Definition at line 481 of file Tree.\+h.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -659,12 +670,14 @@ Method used to perform a pre-\/order traversal of a subtree and print the node v
 
 
 \begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em traversal} & The function to apply to each object during traversal. \\
+\hline
 \mbox{\texttt{ in}}  & {\em ptr} & Pointer to the root of the subtree. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 447 of file Tree.\+h.
+Definition at line 453 of file Tree.\+h.
 
 \mbox{\Hypertarget{class_tree_a3c6d0827e3f1a0d7ca8e42634fda861a}\label{class_tree_a3c6d0827e3f1a0d7ca8e42634fda861a}} 
 \index{Tree$<$ T $>$@{Tree$<$ T $>$}!PreOrderTraversal@{PreOrderTraversal}}
@@ -679,7 +692,7 @@ Perform a pre-\/order traversal of the \mbox{\hyperlink{class_tree}{Tree}} and p
 
 
 
-Definition at line 458 of file Tree.\+h.
+Definition at line 464 of file Tree.\+h.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -711,7 +724,7 @@ True if the object is found, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 403 of file Tree.\+h.
+Definition at line 409 of file Tree.\+h.
 
 \mbox{\Hypertarget{class_tree_acf0cb1178e10fcdbd06e9b101c0ce678}\label{class_tree_acf0cb1178e10fcdbd06e9b101c0ce678}} 
 \index{Tree$<$ T $>$@{Tree$<$ T $>$}!SearchNode@{SearchNode}}
@@ -734,7 +747,7 @@ True if the object is found, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 424 of file Tree.\+h.
+Definition at line 430 of file Tree.\+h.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]

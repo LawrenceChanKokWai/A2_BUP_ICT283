@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AssignmentTwo: AoAvlMap.h File Reference</title>
+<title>Assignment Two: AoAvlMap.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,10 +25,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">AssignmentTwo
-   &#160;<span id="projectnumber">1.2.0</span>
+   <div id="projectname">Assignment Two
    </div>
-   <div id="projectbrief">ICT283</div>
   </td>
  </tr>
  </tbody>
@@ -89,18 +87,25 @@ $(document).ready(function(){initNavTree('_ao_avl_map_8h.html',''); initResizabl
 <div class="title">AoAvlMap.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_ao_avl_map.html" title="Represents the AoAvlMap Class.">AoAvlMap</a> class definition.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;map&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="_a_v_l_8h_source.html">AVL.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_sensor_rec_type_8h_source.html">SensorRecType.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_sensor_measurement_type_8h_source.html">SensorMeasurementType.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for AoAvlMap.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="_ao_avl_map_8h__incl.png" border="0" usemap="#_ao_avl_map_8h" alt=""/></div>
 <map name="_ao_avl_map_8h" id="_ao_avl_map_8h">
-<area shape="rect" title=" " alt="" coords="426,5,517,32"/>
-<area shape="rect" title=" " alt="" coords="337,80,384,107"/>
-<area shape="rect" href="_a_v_l_8h.html" title="AVL tree class definition." alt="" coords="649,80,707,107"/>
-<area shape="rect" href="_sensor_rec_type_8h.html" title="SensorRecType class definition." alt="" coords="409,80,534,107"/>
+<area shape="rect" title="AoAvlMap class definition." alt="" coords="427,5,518,32"/>
+<area shape="rect" title=" " alt="" coords="259,80,305,107"/>
+<area shape="rect" title=" " alt="" coords="330,80,386,107"/>
+<area shape="rect" href="_a_v_l_8h.html" title="AVL tree class definition." alt="" coords="559,80,618,107"/>
+<area shape="rect" href="_sensor_rec_type_8h.html" title="SensorRecType class definition." alt="" coords="410,80,535,107"/>
+<area shape="rect" href="_sensor_measurement_type_8h.html" title="SensorMeasurementType class definition." alt="" coords="642,80,823,107"/>
 <area shape="rect" href="_tree_8h.html" title="Tree base class definition." alt="" coords="701,155,759,181"/>
 <area shape="rect" title=" " alt="" coords="395,229,467,256"/>
 <area shape="rect" title=" " alt="" coords="485,155,540,181"/>
@@ -119,8 +124,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_ao_avl_map_8h__dep__incl.png" border="0" usemap="#_ao_avl_map_8hdep" alt=""/></div>
 <map name="_ao_avl_map_8hdep" id="_ao_avl_map_8hdep">
-<area shape="rect" title=" " alt="" coords="25,5,116,32"/>
-<area shape="rect" href="_ao_avl_map_test_8cpp.html" title=" " alt="" coords="5,80,136,107"/>
+<area shape="rect" title="AoAvlMap class definition." alt="" coords="93,5,184,32"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html" title="AoAvlMap Test execution file." alt="" coords="5,80,136,107"/>
+<area shape="rect" href="_processor_8h.html" title="Processor class definition." alt="" coords="161,80,253,107"/>
+<area shape="rect" href="_main_8cpp.html" title="Entry point for the assignment. The main execution file." alt="" coords="55,155,129,181"/>
+<area shape="rect" href="_processor_8cpp.html" title="Processor class implementation file." alt="" coords="153,155,260,181"/>
+<area shape="rect" href="_processor_test_8cpp.html" title="Processor Test execution file." alt="" coords="284,155,415,181"/>
 </map>
 </div>
 </div>
@@ -129,9 +138,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ao_avl_map.html">AoAvlMap&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the <a class="el" href="class_ao_avl_map.html" title="Represents the AoAvlMap Class.">AoAvlMap</a> Class.  <a href="class_ao_avl_map.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_ao_avl_map.html" title="Represents the AoAvlMap Class.">AoAvlMap</a> class definition. </p>
+<p>This file contains the definition of the <a class="el" href="class_ao_avl_map.html" title="Represents the AoAvlMap Class.">AoAvlMap</a> class.</p>
+<dl class="section author"><dt>Author</dt><dd>Chan Kok Wai ( Student Number: 33924804 ) </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0.0 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="_ao_avl_map_8h_source.html">AoAvlMap.h</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

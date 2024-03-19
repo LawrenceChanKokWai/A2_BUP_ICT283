@@ -1,4 +1,12 @@
-
+/**
+* @file ProcessorTest.cpp
+* @brief Processor Test execution file
+*
+* This file contains the execution unit test for Processor Class.
+*
+* @author Chan Kok Wai ( Student Number: 33924804 )
+* @version 1.0
+*/
 #include<iostream>
 
 #include "Processor.h"

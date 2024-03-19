@@ -1,0 +1,11 @@
+<map id="Processor::LoadCSVData" name="Processor::LoadCSVData">
+<area shape="rect" id="node1" title="Loads data from CSV files into an AVL map." alt="" coords="5,183,176,209"/>
+<area shape="rect" id="node2" href="$class_vector.html#ab72cd45d42bfea0432b2780c504ea867" title="Get the number of elements used in the vector." alt="" coords="269,5,387,32"/>
+<area shape="rect" id="node3" href="$class_ao_avl_map.html#affcadb4f51032bc0cd78619fd97f1bcc" title="Insert sensor data into the map consisted with array of Vectors." alt="" coords="234,56,422,83"/>
+<area shape="rect" id="node4" href="$class_date.html#aa10bb7c41d0aaa084790f48dd9dbffd9" title="Method that allows setting the day associated with the Date class." alt="" coords="278,107,378,133"/>
+<area shape="rect" id="node5" href="$class_time.html#a0f1261eb686b1aaa0366d39e035fb818" title="Method that allows setting the hour associated with the Time class." alt="" coords="275,157,381,184"/>
+<area shape="rect" id="node6" href="$class_measurement.html#ab6ad71b0556bed9b80d4b4512894237c" title="Setter for the measurement variable." alt="" coords="224,208,432,235"/>
+<area shape="rect" id="node7" href="$class_time.html#af0b98cbc57d252e672b4599571142376" title="Method that allows setting the minute associated with the Time class." alt="" coords="269,259,387,285"/>
+<area shape="rect" id="node8" href="$class_date.html#a66c5ea64f0337c094c58df64ad9b0c0e" title="Method that allows setting the month associated with the Date class." alt="" coords="271,309,385,336"/>
+<area shape="rect" id="node9" href="$class_date.html#a732cdd3dafa961d7c11b3252ad95ddbd" title="Method that allows setting the year associated with the Date class." alt="" coords="276,360,380,387"/>
+</map>

@@ -1,6 +1,10 @@
 <map id="Time::SetMinute" name="Time::SetMinute">
-<area shape="rect" id="node1" title="Method that allows setting the minute associated with the Time class." alt="" coords="241,31,359,57"/>
-<area shape="rect" id="node2" href="$_time_8h.html#a7edd6ddded2629b1909953202d397eea" title="Function: Overloaded stream extraction operator for Time class." alt="" coords="106,5,191,32"/>
-<area shape="rect" id="node3" href="$_time_test_8cpp.html#aec9b862ad01f148b02d9b3b6d55d467e" title=" " alt="" coords="104,56,193,83"/>
-<area shape="rect" id="node4" href="$_time_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" id="node1" title="Method that allows setting the minute associated with the Time class." alt="" coords="493,81,611,108"/>
+<area shape="rect" id="node2" href="$class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="275,31,445,57"/>
+<area shape="rect" id="node6" href="$_time_8h.html#a7edd6ddded2629b1909953202d397eea" title="Function: Overloaded stream extraction operator for Time class." alt="" coords="317,81,403,108"/>
+<area shape="rect" id="node7" href="$_time_test_8cpp.html#aec9b862ad01f148b02d9b3b6d55d467e" title=" " alt="" coords="315,132,405,159"/>
+<area shape="rect" id="node3" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="140,5,191,32"/>
+<area shape="rect" id="node4" href="$_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5" title=" " alt="" coords="104,56,227,83"/>
+<area shape="rect" id="node5" href="$_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" id="node8" href="$_time_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="140,132,191,159"/>
 </map>

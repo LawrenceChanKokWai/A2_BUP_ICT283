@@ -75,7 +75,6 @@ public:
     * calls the CopyVector method. Finally return *this.
     *
     * @param[in] otherVector The vector to be assigned.
-    * @param[out] A newly constructed vector with context copied over.
     * @return The newly created Vector Object.
     */
     Vector &operator = ( const Vector &otherVector );
@@ -133,11 +132,16 @@ public:
     * @brief Access an element by vector's index.
     *
     * @param[in] index The index of the element to access in the vector.
-    * @param[out] The element content from the vector index.
     * @return unsigned element object.
     */
     T &operator [] (const unsigned &index );
 
+    /**
+    * @brief Access an element by vector's index by const.
+    *
+    * @param[in] index The index of the element to access in the vector.
+    * @return unsigned element object.
+    */
     const T &operator [] (const unsigned &index ) const;
 
     /** @} */
@@ -154,7 +158,6 @@ public:
     * it will be resized to double its capacity by calling the Resize() method.
     *
     * @param[in] object The object to be inserted to the vector end.
-    * @param[out] True if the operation was successful, false otherwise.
     * @return boolean data type.
     */
     bool InsertLast( const T &object );
@@ -167,6 +170,7 @@ public:
     * it will be resized to double its capacity by calling the Resize() method.
     *
     * @param object The object to be inserted to the vector.
+    & @param index The index indication on the vector.
     * @return True if the operation was successful, false otherwise.
     */
     bool InsertAt( const T &object, const unsigned &index );
@@ -186,8 +190,7 @@ public:
     *
     * Removes the object from the user's desired index in the vector.
     *
-    * @param[in] object The index of the element to be remove on the vector.
-    * @param[out] True if the operation was successful, false otherwise.
+    * @param[in] index The index of the element to be remove on the vector.
     * @return boolean data type.
     */
     bool RemoveAt( const unsigned &index );

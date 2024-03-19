@@ -78,7 +78,7 @@ unsigned InputValidator::YearValidation( string &year )
 
 bool InputValidator::IsDayInputValid() const
 {
-    return ( m_userDay <= 0 || m_userDay > 32 );
+    return ( m_userDay <= 0 || m_userDay > 31 );
 }
 
 bool InputValidator::IsMonthInputValid() const

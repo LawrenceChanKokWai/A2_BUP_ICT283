@@ -1,0 +1,4 @@
+<map id="AoAvlMap::FindHighestSolarRadiation" name="AoAvlMap::FindHighestSolarRadiation">
+<area shape="rect" id="node1" title="Finds the highest solar radiation readings for a specific date." alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node2" href="$class_tree.html#a5596f364c74235f642a3e995878943fa" title="Get the root node of the tree." alt="" coords="240,13,343,39"/>
+</map>

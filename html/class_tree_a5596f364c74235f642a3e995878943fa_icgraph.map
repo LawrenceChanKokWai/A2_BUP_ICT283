@@ -1,8 +1,12 @@
 <map id="Tree::GetRoot" name="Tree::GetRoot">
-<area shape="rect" id="node1" title="Get the root node of the tree." alt="" coords="368,56,471,83"/>
-<area shape="rect" id="node2" href="$_b_s_t_test_8cpp.html#a90b27fd60dbfba7e08870323a7e4ac2b" title=" " alt="" coords="119,5,305,32"/>
-<area shape="rect" id="node4" href="$_a_v_l_test_8cpp.html#a54f68fcffae16e106a48db63baad3415" title=" " alt="" coords="142,56,282,83"/>
-<area shape="rect" id="node6" href="$_a_v_l_test_8cpp.html#a3c9113385ae70056e89b004fb8cf416f" title=" " alt="" coords="104,107,320,133"/>
-<area shape="rect" id="node3" href="$_b_s_t_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
-<area shape="rect" id="node5" href="$_a_v_l_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" id="node1" title="Get the root node of the tree." alt="" coords="591,119,693,145"/>
+<area shape="rect" id="node2" href="$class_ao_avl_map.html#a179fdb3242917507c47368b918ed74ac" title="Finds the highest solar radiation readings for a specific date." alt="" coords="341,53,528,94"/>
+<area shape="rect" id="node3" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="166,5,217,32"/>
+<area shape="rect" id="node6" href="$_b_s_t_test_8cpp.html#a90b27fd60dbfba7e08870323a7e4ac2b" title=" " alt="" coords="341,119,528,145"/>
+<area shape="rect" id="node8" href="$_a_v_l_test_8cpp.html#a54f68fcffae16e106a48db63baad3415" title=" " alt="" coords="365,169,505,196"/>
+<area shape="rect" id="node10" href="$_a_v_l_test_8cpp.html#a3c9113385ae70056e89b004fb8cf416f" title=" " alt="" coords="327,220,543,247"/>
+<area shape="rect" id="node4" href="$_ao_avl_map_test_8cpp.html#ae86e61b058632ed0330fb232098ed60c" title=" " alt="" coords="104,60,279,87"/>
+<area shape="rect" id="node5" href="$_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,60,56,87"/>
+<area shape="rect" id="node7" href="$_b_s_t_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="166,119,217,145"/>
+<area shape="rect" id="node9" href="$_a_v_l_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="166,195,217,221"/>
 </map>

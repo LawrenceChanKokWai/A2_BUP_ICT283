@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['windspeed_149',['WindSpeed',['../class_wind_speed.html',1,'']]]
+  ['sensorrectype_241',['SensorRecType',['../class_sensor_rec_type.html',1,'']]],
+  ['solarradiation_242',['SolarRadiation',['../class_solar_radiation.html',1,'']]]
 ];

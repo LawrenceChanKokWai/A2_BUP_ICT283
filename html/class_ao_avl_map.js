@@ -1,9 +1,9 @@
 var class_ao_avl_map =
 [
-    [ "MonthToRecordsArrayAVL", "class_ao_avl_map.html#a1e25723b5c98c0b5326e8effe0659d46", null ],
-    [ "YearToRecordsArrayAVLMap", "class_ao_avl_map.html#aff365e765c65e4dbed068cd40d853045", null ],
-    [ "AoAvlMap", "class_ao_avl_map.html#a10c037bd5adf6b00e6aa50d3846355c6", null ],
-    [ "Insert", "class_ao_avl_map.html#a6bf5f895a3d6fc6f5d082b68bda60883", null ],
-    [ "IsArrayAVLEmpty", "class_ao_avl_map.html#a3902f7ec7d33d6d9b927a12131ca1c1f", null ],
-    [ "IsMapEmpty", "class_ao_avl_map.html#a6e74c4a67ad8ab935bf82c8a3a2746f7", null ]
+    [ "CalculateSampleStandardDeviation", "class_ao_avl_map.html#a66bd893ec3632a752ebc316e43c3236a", null ],
+    [ "FindHighestSolarRadiation", "class_ao_avl_map.html#a179fdb3242917507c47368b918ed74ac", null ],
+    [ "GetSensorData", "class_ao_avl_map.html#aa41825b1eccd51d7295585ce395040c5", null ],
+    [ "GetSensorData", "class_ao_avl_map.html#a7e21558689bec8bcab2dedf297b1f798", null ],
+    [ "InOrderTraversalSum", "class_ao_avl_map.html#afe182a9b789a029dba7352892669fa19", null ],
+    [ "InsertSensorData", "class_ao_avl_map.html#affcadb4f51032bc0cd78619fd97f1bcc", null ]
 ];

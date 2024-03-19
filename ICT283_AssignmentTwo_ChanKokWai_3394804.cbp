@@ -67,6 +67,10 @@
 		<Unit filename="InputValidator.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="InputValidatorTest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="Main.cpp" />
 		<Unit filename="Measurement.cpp" />
 		<Unit filename="Measurement.h">

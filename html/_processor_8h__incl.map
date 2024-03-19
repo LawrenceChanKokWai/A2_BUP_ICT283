@@ -1,0 +1,23 @@
+<map id="Processor.h" name="Processor.h">
+<area shape="rect" id="node1" title="Processor class definition." alt="" coords="487,5,579,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="230,304,302,331"/>
+<area shape="rect" id="node3" title=" " alt="" coords="291,80,356,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="737,229,792,256"/>
+<area shape="rect" id="node5" href="$_ao_avl_map_8h.html" title="AoAvlMap class definition." alt="" coords="381,80,471,107"/>
+<area shape="rect" id="node20" href="$_constant_8h.html" title="Constant namespace class definition." alt="" coords="678,80,763,107"/>
+<area shape="rect" id="node21" href="$_vector_8h.html" title="Vector template class definition." alt="" coords="788,80,859,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="327,155,373,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="398,155,454,181"/>
+<area shape="rect" id="node8" href="$_a_v_l_8h.html" title="AVL tree class definition." alt="" coords="38,155,97,181"/>
+<area shape="rect" id="node10" href="$_sensor_rec_type_8h.html" title="SensorRecType class definition." alt="" coords="478,155,603,181"/>
+<area shape="rect" id="node19" href="$_sensor_measurement_type_8h.html" title="SensorMeasurementType class definition." alt="" coords="121,155,302,181"/>
+<area shape="rect" id="node9" href="$_tree_8h.html" title="Tree base class definition." alt="" coords="38,229,97,256"/>
+<area shape="rect" id="node11" href="$_date_8h.html" title="Date class definition." alt="" coords="257,229,317,256"/>
+<area shape="rect" id="node12" href="$_time_8h.html" title="Time class definition." alt="" coords="121,229,182,256"/>
+<area shape="rect" id="node14" href="$_wind_speed_8h.html" title="WindSpeed class definition." alt="" coords="484,229,584,256"/>
+<area shape="rect" id="node17" href="$_solar_radiation_8h.html" title="SolarRadiation class definition." alt="" coords="342,229,459,256"/>
+<area shape="rect" id="node18" href="$_temperature_8h.html" title="Temperature class definition." alt="" coords="608,229,713,256"/>
+<area shape="rect" id="node13" title=" " alt="" coords="118,304,185,331"/>
+<area shape="rect" id="node15" href="$_measurement_8h.html" title="Measurement class definition." alt="" coords="478,304,590,331"/>
+<area shape="rect" id="node16" title=" " alt="" coords="505,379,563,405"/>
+</map>

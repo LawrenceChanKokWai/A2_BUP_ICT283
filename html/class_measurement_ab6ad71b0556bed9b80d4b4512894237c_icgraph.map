@@ -1,5 +1,9 @@
 <map id="Measurement::SetMeasurement" name="Measurement::SetMeasurement">
-<area shape="rect" id="node1" title="Setter for the measurement variable." alt="" coords="241,5,449,32"/>
-<area shape="rect" id="node2" href="$_measurement_test_8cpp.html#aa2412fec55f4efed17f5a4d56372c7ad" title=" " alt="" coords="104,5,193,32"/>
-<area shape="rect" id="node3" href="$_measurement_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node1" title="Setter for the measurement variable." alt="" coords="493,81,701,108"/>
+<area shape="rect" id="node2" href="$class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="275,56,445,83"/>
+<area shape="rect" id="node6" href="$_measurement_test_8cpp.html#aa2412fec55f4efed17f5a4d56372c7ad" title=" " alt="" coords="315,107,405,133"/>
+<area shape="rect" id="node3" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="140,5,191,32"/>
+<area shape="rect" id="node4" href="$_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5" title=" " alt="" coords="104,56,227,83"/>
+<area shape="rect" id="node5" href="$_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" id="node7" href="$_measurement_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="140,107,191,133"/>
 </map>

@@ -85,6 +85,7 @@ void TestGetters( const WindSpeed &windspeed, const float &validMeasurement )
 void TestConvertingWindSpeed( const WindSpeed &windspeed, float &reading )
 {
     float expected = 108.0;
+
     Assert( windspeed.ConvertUnit( reading ) == expected,
             "Test 5: Converting WindSpeed to kWh/m2\n",
             "Test Data/Values: windspeed = 30.0\n",

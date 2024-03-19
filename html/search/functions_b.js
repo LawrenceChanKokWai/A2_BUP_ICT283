@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['windspeed_276',['WindSpeed',['../class_wind_speed.html#a333639e0d29a9f64b016ca28723f7138',1,'WindSpeed::WindSpeed()'],['../class_wind_speed.html#a3c7f915b1369975c5b4c285acdd25375',1,'WindSpeed::WindSpeed(const float &amp;measurement)']]]
+  ['removeat_361',['RemoveAt',['../class_vector.html#ab83cc7f486d849b61a7899e32e666f5a',1,'Vector']]],
+  ['removelast_362',['RemoveLast',['../class_vector.html#a451ca9a45740e49f1761e5ef43097c4e',1,'Vector']]]
 ];

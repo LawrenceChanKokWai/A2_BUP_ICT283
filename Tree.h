@@ -174,9 +174,9 @@ protected:
 
     /**
     * @brief Method used to get the maximum of two integers.
-    * @param[in] x First integer representing the left subtree.
-    * @param[in] y Second integer representing the right subtree.
-    * @return Maximum of x or y.
+    * @param[in] left First integer representing the left subtree.
+    * @param[in] right Second integer representing the right subtree.
+    * @return Maximum of left or right.
     */
     int GetMaxTreeSubHeight( int left, int right ) const;
 
@@ -227,18 +227,24 @@ protected:
 
     /**
     * @brief Method used to perform a pre-order traversal of a subtree and print the node values.
+    *
+    * @param[in] traversal The function to apply to each object during traversal.
     * @param[in] ptr Pointer to the root of the subtree.
     */
     void PreOrder( PFnTraversal traversal, Node<T> *ptr ) const;
 
     /**
     * @brief Method used to perform an in-order traversal of a subtree and print the node values.
+    *
+    * @param[in] traversal The function to apply to each object during traversal.
     * @param[in] ptr Pointer to the root of the subtree.
     */
     void InOrder( PFnTraversal traversal, Node<T> *ptr ) const;
 
     /**
     * @brief Method used to perform a post-order traversal of a subtree and print the node values.
+    *
+    * @param[in] traversal The function to apply to each object during traversal.
     * @param[in] ptr Pointer to the root of the subtree.
     */
     void PostOrder( PFnTraversal traversal, Node<T> *ptr ) const;

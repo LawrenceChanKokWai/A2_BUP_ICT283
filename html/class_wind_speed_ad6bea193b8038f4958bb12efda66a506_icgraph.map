@@ -1,5 +1,6 @@
 <map id="WindSpeed::ConvertUnit" name="WindSpeed::ConvertUnit">
-<area shape="rect" id="node1" title="Converts windspeed reading to kWh/m2." alt="" coords="327,5,489,32"/>
-<area shape="rect" id="node2" href="$_wind_speed_test_8cpp.html#af02bd09da5338e859159e3633f4e22ce" title=" " alt="" coords="104,5,279,32"/>
-<area shape="rect" id="node3" href="$_wind_speed_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node1" title="Converts windspeed reading to kWh/m2." alt="" coords="327,31,489,57"/>
+<area shape="rect" id="node2" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="166,5,217,32"/>
+<area shape="rect" id="node3" href="$_wind_speed_test_8cpp.html#af02bd09da5338e859159e3633f4e22ce" title=" " alt="" coords="104,56,279,83"/>
+<area shape="rect" id="node4" href="$_wind_speed_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
 </map>

@@ -1,7 +1,12 @@
 <map id="Date::GetMonthInStr" name="Date::GetMonthInStr">
-<area shape="rect" id="node1" title="Method that allows retrieving the month in string with the Date class." alt="" coords="339,56,480,83"/>
-<area shape="rect" id="node2" href="$_date_8h.html#a53f3d8362b3eb41fbaef063fd31fb2a2" title="Function: Overloaded stream insertion operator for Date class." alt="" coords="155,5,240,32"/>
-<area shape="rect" id="node3" href="$_date_test_8cpp.html#a43e42ed7bbc1a151504211d11989e180" title=" " alt="" coords="104,56,291,83"/>
-<area shape="rect" id="node5" href="$_date_test_8cpp.html#a4855e70bedaaca5af9f70a9e9f438715" title=" " alt="" coords="107,107,287,133"/>
-<area shape="rect" id="node4" href="$_date_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" id="node1" title="Method that allows retrieving the month in string with the Date class." alt="" coords="401,157,543,184"/>
+<area shape="rect" id="node2" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="203,5,254,32"/>
+<area shape="rect" id="node3" href="$_date_8h.html#a53f3d8362b3eb41fbaef063fd31fb2a2" title="Function: Overloaded stream insertion operator for Date class." alt="" coords="186,56,271,83"/>
+<area shape="rect" id="node4" href="$class_processor.html#a9ffca81c2e7aee9a5194e5d6f62d2ee4" title="Records sensor data to an output file and computes statistical measurements." alt="" coords="104,107,353,133"/>
+<area shape="rect" id="node5" href="$_ao_avl_map_test_8cpp.html#a15579abe7c37a35b4cb621992b516d6b" title=" " alt="" coords="170,157,287,184"/>
+<area shape="rect" id="node6" href="$_ao_avl_map_test_8cpp.html#a22e5ce533a9f4feeaf2921e4d659a8ba" title=" " alt="" coords="139,208,319,235"/>
+<area shape="rect" id="node8" href="$_date_test_8cpp.html#a43e42ed7bbc1a151504211d11989e180" title=" " alt="" coords="135,259,322,285"/>
+<area shape="rect" id="node10" href="$_date_test_8cpp.html#a4855e70bedaaca5af9f70a9e9f438715" title=" " alt="" coords="139,309,319,336"/>
+<area shape="rect" id="node7" href="$_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,208,56,235"/>
+<area shape="rect" id="node9" href="$_date_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,284,56,311"/>
 </map>

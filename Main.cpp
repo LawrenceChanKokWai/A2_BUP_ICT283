@@ -21,7 +21,7 @@ int main()
 {
     string directoryPath = string(__FILE__).substr(0, string(__FILE__).find_last_of("\\/") + 1) + "data\\";
 
-    const string filename = directoryPath + "data_source_test.txt";
+    const string filename = directoryPath + "data_source.txt";
     const string outFilePath = directoryPath + "WindTempSolar.csv";
     Vector<string> csvFilePath;
     AoAvlMap<SensorRecType> mapAov;
