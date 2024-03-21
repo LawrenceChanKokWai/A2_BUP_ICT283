@@ -80,6 +80,9 @@
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
+		<Unit filename="Menu.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="Processor.cpp" />
 		<Unit filename="Processor.h">
 			<Option target="&lt;{~None~}&gt;" />

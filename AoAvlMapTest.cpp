@@ -34,8 +34,11 @@ void TestInOrderTraversalSum(AoAvlMap<T> &testMap, const unsigned &year, const u
 template<class T>
 void TestInOrderTraversalSSD( AoAvlMap<T> &testMap );
 
+void TestExtractMeasurements();
+
+/**
 template<class T>
-void TestHighestSolarRadiation(AoAvlMap<T> &testMap, unsigned day, unsigned month, unsigned year);
+void TestHighestSolarRadiation(AoAvlMap<T> &testMap, unsigned day, unsigned month, unsigned year);*/
 
 //template<class T>
 //void TestHighestSolarRadiation( AoAvlMap<T> ao_avl_map );
@@ -70,7 +73,9 @@ int main()
 
     TestInOrderTraversalSSD( testMap );
 
-    TestHighestSolarRadiation(testMap, 11, 10, 2020);
+    TestExtractMeasurements();
+
+    //TestHighestSolarRadiation(testMap, 11, 10, 2020);
 
     //TestHighestSolarRadiation( testMap );
 
@@ -189,19 +194,6 @@ void TestInOrderTraversalSum(AoAvlMap<T> &testMap, const unsigned &year, const u
     Assert_Equals(sum == expectedSum, "InOrderTraversalSum test passed!");
 }
 
-/**
-template<class T>
-void TestInOrderTraversalSum(AoAvlMap<T> &testMap)
-{
-    cout << "\nTest On InOrderTraversalSum: " << endl;
-    float sum = 0.0;
-    unsigned year = 2020;
-    unsigned month = 10;
-    testMap.InOrderTraversalSum(testMap.GetSensorData()[year][month - 1].GetRoot(), SensorMeasurementType::WIND_SPEED, sum);
-    float expectedSum = 42.4; // 20.2 + 22.2
-    Assert_Equals(sum == expectedSum, "InOrderTraversalSum test passed!");
-} */
-
 template<class T>
 void TestInOrderTraversalSSD( AoAvlMap<T> &testMap )
 {
@@ -224,6 +216,45 @@ void TestInOrderTraversalSSD( AoAvlMap<T> &testMap )
     std::cout << "Sample standard deviation of wind speed for " << month << "/" << year << ": " << sampleStandardDeviation << std::endl;
 }
 
+void TestExtractMeasurements()
+{
+    AoAvlMap<SensorRecType> testMap;
+    AVL<SensorRecType> sensorRecords;
+    vector<float> windMeasurements;
+
+    Date date1(2022, 3, 20);
+    Time time1(8, 0);
+    WindSpeed windSpeed1(15.5);
+    Temperature temperature1(25.0);
+    SolarRadiation solarRadiation1(550.0);
+    SensorRecType record1(date1, time1, windSpeed1, solarRadiation1, temperature1);
+    testMap.InsertSensorData(record1);
+
+    Date date2(2022, 3, 20);
+    Time time2(9, 0);
+    WindSpeed windSpeed2(18.2);
+    Temperature temperature2(26.0);
+    SolarRadiation solarRadiation2(600.0);
+    SensorRecType record2(date2, time2, windSpeed2, solarRadiation2, temperature2);
+    testMap.InsertSensorData(record2);
+
+
+   // Get the sensor data map
+    const auto& sensorDataMap = testMap.GetSensorData();
+
+    // Loop through all entries in the sensor data map
+    for (const auto& entry : sensorDataMap)
+    {
+        for (const auto& avl : entry.second)
+        {
+            // Extract wind speed measurements for the current AVL tree
+            testMap.ExtractMeasurements(avl.GetRoot(), SensorMeasurementType::WIND_SPEED, windMeasurements);
+        }
+    }
+    // Verify the number of wind speed measurements extracted
+    Assert_Equals(windMeasurements.size() == 2, "Correct number of wind speed measurements stored in vector");
+}
+
 
 /**
 template<class T>
@@ -232,7 +263,7 @@ void TestHighestSolarRadiation( AoAvlMap<T> ao_avl_map )
     //AoAvlMap<SensorRecType> ao_avl_map;
     pair<float, string> highest_solar_radiation = ao_avl_map.FindHighestSolarRadiation(11, 10, 2020);
     cout << "The highest solar radiation reading is " << highest_solar_radiation.first << " at " << highest_solar_radiation.second << "." << endl;
-} */
+}
 
 template<class T>
 void TestHighestSolarRadiation(AoAvlMap<T> &testMap, unsigned day, unsigned month, unsigned year)
@@ -255,7 +286,7 @@ void TestHighestSolarRadiation(AoAvlMap<T> &testMap, unsigned day, unsigned mont
     {
         Assert_Equals(radiation.first >= 0.0f, "Solar radiation reading is non-negative");
     }
-}
+} */
 
 //++++ For displaying traversal operation +++
 template<class T>

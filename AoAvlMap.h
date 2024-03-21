@@ -12,8 +12,8 @@
 #define AOAVLMAP_H_INCLUDED
 
 #include<map>
-#include<vector>
 
+#include "Vector.h"
 #include "AVL.h"
 #include "SensorRecType.h"
 #include "SensorMeasurementType.h"
@@ -78,6 +78,9 @@ public:
     */
     float CalculateSampleStandardDeviation(Node<T>* root, SensorMeasurementType sensorMeasurementType, unsigned &count) const;
 
+    void ExtractMeasurements(Node<T>* root, SensorMeasurementType sensorMeasurementType, Vector<float>& measurements) const;
+
+    float CalculateSPCC( const Vector<float>& data1, const Vector<float>& data2 ) const;
 
     /**
     * @brief Finds the highest solar radiation readings for a specific date.
@@ -91,9 +94,7 @@ public:
     * @param[in] year The year of the date.
     * @return A vector of pairs representing the highest solar radiation and its corresponding time(s).
     */
-    vector<pair<float, string>> FindHighestSolarRadiation(unsigned day, unsigned month, unsigned year) const;
-
-
+    //vector<pair<float, string>> FindHighestSolarRadiation(unsigned day, unsigned month, unsigned year) const;
 
 private:
     map<unsigned, array<AVL<SensorRecType>, NUM_MTH>> m_data;    ///< Map storing arrays of sensor data vectors organized by month and year.
@@ -112,6 +113,23 @@ private:
     *
     */
     void InOrderTraversalSumAndSquareSum(Node<T>* root, SensorMeasurementType sensorMeasurementType, float& sum, float& sumSquare) const;
+
+    /**
+     * @brief Traverses the AVL tree recursively to find the highest solar radiation readings for a given date.
+     *
+     * This function traverses the AVL tree recursively starting from the given node to find the highest solar radiation
+     * readings recorded on a specific date. It updates the highest radiation value and corresponding times accordingly.
+     *
+     * @tparam T The type of data stored in the AVL tree.
+     * @param node Pointer to the current node being visited during traversal.
+     * @param day The day of the month for which the highest radiation is being searched.
+     * @param month The month for which the highest radiation is being searched.
+     * @param year The year for which the highest radiation is being searched.
+     * @param highestRadiation Reference to the variable holding the highest radiation value found so far.
+     * @param highestRadiations Reference to the vector holding pairs of highest radiation values and corresponding times.
+     */
+    //void TraverseAndFindHighestRadiation(Node<T>* node, unsigned day, unsigned month, unsigned year, float& highestRadiation, vector<pair<float, string>>& highestRadiations) const;
+
 
 };
 
@@ -222,51 +240,78 @@ float AoAvlMap<T>::CalculateSampleStandardDeviation(Node<T>* root, SensorMeasure
     return sqrt(variance);
 }
 
+
 template<class T>
-vector<pair<float, string>> AoAvlMap<T>::FindHighestSolarRadiation(unsigned day, unsigned month, unsigned year) const
+void AoAvlMap<T>::ExtractMeasurements(Node<T>* root, SensorMeasurementType sensorMeasurementType, Vector<float>& measurements) const
 {
-    float highestRadiation = 0.0;
-    vector<std::pair<float, std::string>> highestRadiations;
+    if (root == nullptr)
+        return;
 
-    // Find the AVL tree corresponding to the given day, month, and year
-    auto yearIter = m_data.find(year);
-    if (yearIter != m_data.end())
+    ExtractMeasurements(root->m_left, sensorMeasurementType, measurements);
+
+    // Depending on the sensor measurement type, extract the corresponding measurement and push it into the vector
+    switch (sensorMeasurementType)
     {
-        const AVL<T>& avl_tree = yearIter->second[month - 1];
-
-        // Traverse the AVL tree to find the highest solar radiation reading
-        Node<T>* root = avl_tree.GetRoot();
-        while (root != nullptr)
-        {
-            if (root->m_object.GetSensorDate().GetDay() == day &&
-                    root->m_object.GetSensorDate().GetMonth() == month &&
-                    root->m_object.GetSensorDate().GetYear() == year &&
-                    root->m_object.GetSensorSolarRadiation().GetMeasurement() > highestRadiation)
-            {
-
-                highestRadiation = root->m_object.GetSensorSolarRadiation().GetMeasurement();
-                string hour = to_string(root->m_object.GetSensorTime().GetHour());
-                string minute = to_string(root->m_object.GetSensorTime().GetMinute());
-                string time = hour + ":" + minute;
-                highestRadiations.clear(); // Clear previous highest times
-                highestRadiations.push_back(make_pair(highestRadiation, time));
-            }
-            else if (root->m_object.GetSensorDate().GetDay() == day &&
-                     root->m_object.GetSensorDate().GetMonth() == month &&
-                     root->m_object.GetSensorDate().GetYear() == year &&
-                     root->m_object.GetSensorSolarRadiation().GetMeasurement() == highestRadiation)
-            {
-                string hour = to_string(root->m_object.GetSensorTime().GetHour());
-                string minute = to_string(root->m_object.GetSensorTime().GetMinute());
-                string time = hour + ":" + minute;
-                highestRadiations.push_back(make_pair(highestRadiation, time));
-            }
-
-            root = root->m_right;
-        }
+    case SensorMeasurementType::WIND_SPEED:
+        measurements.InsertLast(root->m_object.GetSensorWindSpeed().GetMeasurement());
+        break;
+    case SensorMeasurementType::AMBIENT_TEMPERATURE:
+        measurements.InsertLast(root->m_object.GetSensorTemperature().GetMeasurement());
+        break;
+    case SensorMeasurementType::SOLAR_RADIATION:
+        measurements.InsertLast(root->m_object.GetSensorSolarRadiation().GetMeasurement());
+        break;
     }
 
-    return highestRadiations;
+    ExtractMeasurements(root->m_right, sensorMeasurementType, measurements);
+}
+
+
+template<class T>
+float AoAvlMap<T>::CalculateSPCC(const Vector<float> &dataOne, const Vector<float> &dataTwo ) const
+{
+    float sumValueOne = 0.0;
+    float sumValueTwo = 0.0;
+
+    // Check if the sizes of dataOne and dataTwo are equal
+    if (dataOne.GetUsed() != dataTwo.GetUsed() || dataOne.IsEmpty() || dataTwo.IsEmpty())
+    {
+        // Return an error value
+        return -1.0;
+    }
+
+    for( unsigned i(0); i < dataOne.GetUsed(); i++ )
+    {
+        sumValueOne += dataOne[i];
+    }
+    for( unsigned i(0); i < dataTwo.GetUsed(); i++ )
+    {
+        sumValueTwo += dataTwo[i];
+    }
+
+    // Calculate means of dataOne and dataTwo
+    float mean1 = sumValueOne / dataOne.GetUsed();
+    float mean2 = sumValueTwo / dataTwo.GetUsed();
+
+    // Calculate covariance and variances
+    float cov = 0.0;
+    float valueOne = 0.0;
+    float valueTwo = 0.0;
+
+    for (unsigned i(0); i < dataOne.GetUsed(); ++i)
+    {
+        cov += (dataOne[i] - mean1) * (dataTwo[i] - mean2);
+        valueOne += pow(dataOne[i] - mean1, 2);
+        valueTwo += pow(dataTwo[i] - mean2, 2);
+    }
+    cov /= dataOne.GetUsed();
+    valueOne /= dataOne.GetUsed();
+    valueTwo /= dataTwo.GetUsed();
+
+    // Calculate Sample Pearson Correlation Coefficient (sPCC)
+    float spcc = cov / (sqrt(valueOne) * sqrt(valueTwo));
+
+    return spcc;
 }
 
 #endif // AOAVLMAP_H_INCLUDED
