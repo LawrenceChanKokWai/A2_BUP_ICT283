@@ -1,20 +1,94 @@
+
+///
+/// @file Menu.h
+/// @brief Menu class definition.
+///
+/// This file contains the definition of the Menu class.
+///
+/// @author Chan Kok Wai ( Student Number: 33924804 )
+/// @version 1.0.0
+///
 #ifndef MENU_H_INCLUDED
 #define MENU_H_INCLUDED
 
+/**
+ *  @class Menu
+ *
+ *  @brief A class representing a menu interface for sensor data analysis.
+ *
+ *  This class provides various options for processing and analyzing sensor data,
+ *  including calculating averages, standard deviations, exporting data to files,
+ *  and calculating sample Pearson correlation coefficients.
+ *
+ */
 template<class T>
 class Menu
 {
 public:
+
+    /**
+     *
+     *  @brief Option to calculate and display average wind speed and its standard deviation for a specified year and month.
+     *
+     *  @param[in] avl An AVL tree containing sensor data.
+     *  @param[in] aoAvlMap An AoAvlMap containing sensor data.
+     *  @param[in] year The year for which data is to be analyzed.
+     *  @param[in] month The month for which data is to be analyzed.
+     *
+     */
     void OptionOne( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year, unsigned &month ) const;
-    void OptionTwo( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year ) const;
-    void OptionThree( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year ) const;
+
+    /**
+     *  @brief Option to calculate and display either average ambient temperature
+     *  or solar radiation for each month of a specified year.
+     *
+     *  @param[in] avl An AVL tree containing sensor data.
+     *  @param[in] aoAvlMap An AoAvlMap containing sensor data.
+     *  @param[in] year The year for which data is to be analyzed.
+     *  @param[in] option A character indicating the option to calculate ('2' for temperature, '3' for solar radiation).
+     *
+     */
+    void OptionTwoThree( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year, char &option ) const;
+
+    /**
+     *
+     *  @brief Option to process sensor data for all months of a specified year and export results to a file.
+     *
+     *  @param[in] avl An AVL tree containing sensor data.
+     *  @param[in] aoAvlMap An AoAvlMap containing sensor data.
+     *  @param[in] outputFile An ofstream object representing the output file.
+     *  @param[in] filePath The path to the output file.
+     *  @param[in] year The year for which data is to be exported.
+     *
+     */
     void OptionFour( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, ofstream &outputFile, const string &filePath, unsigned &year );
+
+    /**
+     *  @brief Option to calculate and display sample Pearson correlation coefficient values
+     *  for wind speed, temperature, and solar radiation for a specified month.
+     *
+     *  @param[in] aoAvlMap An AoAvlMap containing sensor data.
+     *  @param[in] month The month for which correlation coefficients are to be calculated.
+     *
+     */
     void OptionFive( AoAvlMap<T> &aoAvlMap, unsigned &month );
 
 private:
+
+    /**
+     *
+     *  @brief Helper function to print sample Pearson correlation coefficient values with appropriate labels and formatting.
+     *
+     *  @param[in] label The label for the correlation coefficient.
+     *  @param[in] value The value of the correlation coefficient.
+     *
+     */
     void PrintSpccValues(const string &label, float value);
 
 };
+
+// ++++++++++++ PUBLIC +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 template<class T>
 void Menu<T>::OptionOne( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year, unsigned &month ) const
@@ -53,62 +127,58 @@ void Menu<T>::OptionOne( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year, uns
     cout << endl;
 }
 
-
 template<class T>
-void Menu<T>::OptionTwo( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year ) const
+void Menu<T>::OptionTwoThree( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year, char &option ) const
 {
     T sensorRecType;
-    float sumTemperature = 0.0;
+    float sum = 0.0;
     unsigned count = 0;
+    string unit;
+    SensorMeasurementType measurementType;
 
-    for (unsigned month = 1; month <= 12; ++month)
+    if (option == '2')
     {
-        avl = aoAvlMap.GetSensorData()[year][month - 1];
-        if (!avl.IsEmpty())
-        {
-            // Getting the sum....
-            aoAvlMap.InOrderTraversalSum(avl.GetRoot(), SensorMeasurementType::AMBIENT_TEMPERATURE, sumTemperature);
-
-            // calculate the mean....
-            count = avl.GetTreeNodes();
-            float temperatureMean = sumTemperature/count;
-
-            // calculate the sample standard deviation and convert the temperature....
-            float temperatureSampleStandardDeviation = aoAvlMap.CalculateSampleStandardDeviation(avl.GetRoot(), SensorMeasurementType::AMBIENT_TEMPERATURE, count);
-
-            // output results
-            cout << sensorRecType.GetSensorDate().GetMonthInStr( month ) << ": " <<
-                 setprecision(3) << temperatureMean << " degrees C, stdev: " <<  setprecision(3) << temperatureSampleStandardDeviation << endl;
-        }
-        else
-        {
-            // output of no data
-            cout << sensorRecType.GetSensorDate().GetMonthInStr(month) << ": No Data" << endl;
-        }
+        measurementType = SensorMeasurementType::AMBIENT_TEMPERATURE;
+        unit = "degrees C";
     }
-    cout << endl;
-}
-
-template<class T>
-void Menu<T>::OptionThree( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year ) const
-{
-    T sensorRecType;
-    float sumSolarRadiation = 0.0;
+    else if (option == '3')
+    {
+        measurementType = SensorMeasurementType::SOLAR_RADIATION;
+        unit = "kWh/m2";
+    }
 
     for (unsigned month = 1; month <= 12; ++month)
     {
         avl = aoAvlMap.GetSensorData()[year][month - 1];
         if (!avl.IsEmpty())
         {
-            // calculate the sum...
-            aoAvlMap.InOrderTraversalSum(avl.GetRoot(), SensorMeasurementType::SOLAR_RADIATION, sumSolarRadiation);
-            float convertedSolarRadiation = sensorRecType.GetSensorSolarRadiation().ConvertUnit( sumSolarRadiation );
+            // Calculate the sum
+            aoAvlMap.InOrderTraversalSum(avl.GetRoot(), measurementType, sum);
 
-            cout << sensorRecType.GetSensorDate().GetMonthInStr(month) << ": "
-                 << setprecision(5) << convertedSolarRadiation << " kWh/m2" << endl;
+            // Calculate the mean
+            count = avl.GetTreeNodes();
+            float mean = sum / count;
+
+            if (option == '2')
+            {
+                // Calculate the sample standard deviation
+                float sampleStandardDeviation = aoAvlMap.CalculateSampleStandardDeviation(avl.GetRoot(), measurementType, count);
+
+                // Output results for Option Two
+                cout << sensorRecType.GetSensorDate().GetMonthInStr(month) << ": "
+                     << setprecision(3) << mean << " " << unit << ", stdev: "
+                     << setprecision(3) << sampleStandardDeviation << endl;
+            }
+            else if (option == '3')
+            {
+                // Output results for Option Three
+                cout << sensorRecType.GetSensorDate().GetMonthInStr(month) << ": "
+                     << setprecision(5) << mean << " " << unit << endl;
+            }
         }
         else
         {
+            // Output of no data
             cout << sensorRecType.GetSensorDate().GetMonthInStr(month) << ": No Data" << endl;
         }
     }
@@ -225,6 +295,9 @@ void Menu<T>::OptionFive( AoAvlMap<T> &aoAvlMap, unsigned &month )
     cout << endl;
 }
 
+
+// ++++++++++++ PRIVATE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 template<class T>
 void Menu<T>::PrintSpccValues(const string &label, float value)
 {

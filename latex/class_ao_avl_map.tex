@@ -11,7 +11,8 @@ Represents the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} Class.
 
 
 
-Collaboration diagram for Ao\+Avl\+Map$<$ T $>$\+:\nopagebreak
+Collaboration diagram for Ao\+Avl\+Map$<$ T $>$\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -31,8 +32,10 @@ void \mbox{\hyperlink{class_ao_avl_map_afe182a9b789a029dba7352892669fa19}{In\+Or
 \begin{DoxyCompactList}\small\item\em Performs in-\/order traversal of the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree and accumulates the sum of sensor measurements. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_ao_avl_map_a66bd893ec3632a752ebc316e43c3236a}{Calculate\+Sample\+Standard\+Deviation}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$root, \mbox{\hyperlink{_sensor_measurement_type_8h_abee7b7fdc87d37c2132a67729cc0ab43}{Sensor\+Measurement\+Type}} sensor\+Measurement\+Type, unsigned \&count) const
 \begin{DoxyCompactList}\small\item\em Calculates the sample standard deviation of sensor measurements. \end{DoxyCompactList}\item 
-vector$<$ pair$<$ float, string $>$ $>$ \mbox{\hyperlink{class_ao_avl_map_a179fdb3242917507c47368b918ed74ac}{Find\+Highest\+Solar\+Radiation}} (unsigned day, unsigned month, unsigned year) const
-\begin{DoxyCompactList}\small\item\em Finds the highest solar radiation readings for a specific date. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9}{Extract\+Measurements}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$root, \mbox{\hyperlink{_sensor_measurement_type_8h_abee7b7fdc87d37c2132a67729cc0ab43}{Sensor\+Measurement\+Type}} sensor\+Measurement\+Type, \mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&measurements) const
+\item 
+float \mbox{\hyperlink{class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f}{Calculate\+S\+P\+CC}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&data1, const \mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&data2) const
+\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -78,56 +81,68 @@ The sample standard deviation of sensor measurements.
 \end{DoxyReturn}
 
 
-Definition at line 230 of file Ao\+Avl\+Map.\+h.
+Definition at line 233 of file Ao\+Avl\+Map.\+h.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_ao_avl_map_a66bd893ec3632a752ebc316e43c3236a_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_ao_avl_map_a179fdb3242917507c47368b918ed74ac}\label{class_ao_avl_map_a179fdb3242917507c47368b918ed74ac}} 
-\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!FindHighestSolarRadiation@{FindHighestSolarRadiation}}
-\index{FindHighestSolarRadiation@{FindHighestSolarRadiation}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{FindHighestSolarRadiation()}{FindHighestSolarRadiation()}}
+\mbox{\Hypertarget{class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f}\label{class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!CalculateSPCC@{CalculateSPCC}}
+\index{CalculateSPCC@{CalculateSPCC}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CalculateSPCC()}{CalculateSPCC()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-vector$<$ pair$<$ float, string $>$ $>$ \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Find\+Highest\+Solar\+Radiation (\begin{DoxyParamCaption}\item[{unsigned}]{day,  }\item[{unsigned}]{month,  }\item[{unsigned}]{year }\end{DoxyParamCaption}) const}
+float \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Calculate\+S\+P\+CC (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&}]{data1,  }\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&}]{data2 }\end{DoxyParamCaption}) const}
 
 
 
-Finds the highest solar radiation readings for a specific date. 
+Definition at line 271 of file Ao\+Avl\+Map.\+h.
 
-This method searches the \mbox{\hyperlink{class_a_v_l}{A\+VL}} map for the highest solar radiation readings recorded on the specified date (day, month, year). It returns a vector of pairs containing the highest radiation value(s) and the corresponding time(s) of measurement.
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em day} & The day of the date. \\
-\hline
-\mbox{\texttt{ in}}  & {\em month} & The month of the date. \\
-\hline
-\mbox{\texttt{ in}}  & {\em year} & The year of the date. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A vector of pairs representing the highest solar radiation and its corresponding time(s). 
-\end{DoxyReturn}
-
-
-Definition at line 280 of file Ao\+Avl\+Map.\+h.
-
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=333pt]{class_ao_avl_map_a179fdb3242917507c47368b918ed74ac_cgraph}
+\includegraphics[width=339pt]{class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ao_avl_map_a179fdb3242917507c47368b918ed74ac_icgraph}
+\includegraphics[width=350pt]{class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9}\label{class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!ExtractMeasurements@{ExtractMeasurements}}
+\index{ExtractMeasurements@{ExtractMeasurements}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ExtractMeasurements()}{ExtractMeasurements()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Extract\+Measurements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$}]{root,  }\item[{\mbox{\hyperlink{_sensor_measurement_type_8h_abee7b7fdc87d37c2132a67729cc0ab43}{Sensor\+Measurement\+Type}}}]{sensor\+Measurement\+Type,  }\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&}]{measurements }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 245 of file Ao\+Avl\+Map.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_ao_avl_map_aa41825b1eccd51d7295585ce395040c5}\label{class_ao_avl_map_aa41825b1eccd51d7295585ce395040c5}} 
@@ -160,9 +175,10 @@ Get a constant reference to the sensor data map.
 \end{DoxyReturn}
 
 
-Definition at line 134 of file Ao\+Avl\+Map.\+h.
+Definition at line 137 of file Ao\+Avl\+Map.\+h.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -193,9 +209,10 @@ This method traverses the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree in an in-\/
 \end{DoxyParams}
 
 
-Definition at line 174 of file Ao\+Avl\+Map.\+h.
+Definition at line 177 of file Ao\+Avl\+Map.\+h.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -220,9 +237,10 @@ Insert sensor data into the map consisted with array of Vectors.
 \end{DoxyParams}
 
 
-Definition at line 146 of file Ao\+Avl\+Map.\+h.
+Definition at line 149 of file Ao\+Avl\+Map.\+h.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

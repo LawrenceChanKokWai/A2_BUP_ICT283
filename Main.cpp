@@ -27,17 +27,17 @@ int main()
     const string filename = directoryPath + "data_source.txt";
     const string outFilePath = directoryPath + "WindTempSolar.csv";
     Vector<string> csvFilePath;
-    AoAvlMap<SensorRecType> mapAov;
+    AoAvlMap<SensorRecType> mapRecords;
     ifstream inFile( filename );
     ofstream outputFile( outFilePath );
 
     Processor::GetInstance();
     Processor::GetInstance().LoadCSVFilePathToVector( csvFilePath, inFile, filename );
-    Processor::GetInstance().LoadCSVData( csvFilePath, mapAov );
+    Processor::GetInstance().LoadCSVData( csvFilePath, mapRecords );
 
     InputValidator validator;
     SensorRecType sensorRecType;
-    AVL<SensorRecType> sensorRecords;
+    AVL<SensorRecType> avlRecords;
 
     Menu<SensorRecType> menu;
 
@@ -50,7 +50,7 @@ int main()
         unsigned validatedMonth = 0;
         unsigned validatedYear = 0;
 
-        cout       << Constant::MENU_OPTIONS_MSG
+        cout    << Constant::MENU_OPTIONS_MSG
                    << Constant::MENU_OPTION_ONE_MSG
                    << Constant::MENU_OPTION_TWO_MSG
                    << Constant::MENU_OPTION_THREE_MSG
@@ -68,7 +68,7 @@ int main()
             validatedMonth = validator.MonthValidation(month);
             validatedYear = validator.YearValidation(year);
 
-            menu.OptionOne( sensorRecords, mapAov, validatedYear, validatedMonth );
+            menu.OptionOne( avlRecords, mapRecords, validatedYear, validatedMonth );
 
             break;
         case '2':
@@ -76,7 +76,7 @@ int main()
             validatedYear = validator.YearValidation(year);
             cout << '\n'  << Constant::OUTPUT << '\n' << validatedYear << ":" << endl;
 
-            menu.OptionTwo( sensorRecords, mapAov, validatedYear );
+            menu.OptionTwoThree( avlRecords, mapRecords, validatedYear, user_choice );
 
             break;
         case '3':
@@ -84,7 +84,7 @@ int main()
             validatedYear = validator.YearValidation(year);
             cout << '\n'  << Constant::OUTPUT << '\n' << validatedYear << ":" << endl;
 
-            menu.OptionThree( sensorRecords, mapAov, validatedYear );
+            menu.OptionTwoThree( avlRecords, mapRecords, validatedYear, user_choice );
 
             break;
         case '4':
@@ -93,7 +93,7 @@ int main()
             cout << '\n' << Constant::OUTPUT << endl;
             cout << '\n' <<  validatedYear << ":" << endl;
 
-            menu.OptionFour( sensorRecords, mapAov, outputFile, outFilePath, validatedYear );
+            menu.OptionFour( avlRecords, mapRecords, outputFile, outFilePath, validatedYear );
 
             break;
         case '5':
@@ -104,7 +104,7 @@ int main()
             cout << '\n' << Constant::OUTPUT << endl;
             cout << "Sample Pearson Correlation Coefficient for " << sensorRecType.GetSensorDate().GetMonthInStr(validatedMonth) << endl;
 
-            menu.OptionFive( mapAov, validatedMonth );
+            menu.OptionFive( mapRecords, validatedMonth );
 
             break;
         }

@@ -7,7 +7,8 @@
 
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include \char`\"{}Ao\+Avl\+Map.\+h\char`\"{}}\newline
-Include dependency graph for Ao\+Avl\+Map\+Test.\+cpp\+:\nopagebreak
+Include dependency graph for Ao\+Avl\+Map\+Test.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -31,7 +32,7 @@ void \mbox{\hyperlink{_ao_avl_map_test_8cpp_a0153045686dc242fefe3bddac5b95f82}{A
 \item 
 {\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{_ao_avl_map_test_8cpp_a406eedd7f92f9735f39fe0d1bc35c2f7}{Test\+In\+Order\+Traversal\+S\+SD}} (\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&test\+Map)
 \item 
-{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{_ao_avl_map_test_8cpp_ae86e61b058632ed0330fb232098ed60c}{Test\+Highest\+Solar\+Radiation}} (\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&test\+Map, unsigned day, unsigned month, unsigned year)
+void \mbox{\hyperlink{_ao_avl_map_test_8cpp_ac8582988e27bbf21c4b1e47c221984e5}{Test\+Extract\+Measurements}} ()
 \item 
 int \mbox{\hyperlink{_ao_avl_map_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \end{DoxyCompactItemize}
@@ -59,9 +60,10 @@ Chan Kok Wai ( Student Number\+: 33924804 )
 
 
 
-Definition at line 81 of file Ao\+Avl\+Map\+Test.\+cpp.
+Definition at line 86 of file Ao\+Avl\+Map\+Test.\+cpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -75,9 +77,17 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$class T $>$ \\
 void Display (\begin{DoxyParamCaption}\item[{const T \&}]{node }\end{DoxyParamCaption})}
 
+template$<$class T$>$ void Test\+Highest\+Solar\+Radiation( Ao\+Avl\+Map$<$\+T$>$ ao\+\_\+avl\+\_\+map ) \{ Ao\+Avl\+Map$<$\+Sensor\+Rec\+Type$>$ ao\+\_\+avl\+\_\+map; pair$<$float, string$>$ highest\+\_\+solar\+\_\+radiation = ao\+\_\+avl\+\_\+map.\+Find\+Highest\+Solar\+Radiation(11, 10, 2020); cout $<$$<$ \char`\"{}\+The highest solar radiation reading is \char`\"{} $<$$<$ highest\+\_\+solar\+\_\+radiation.\+first $<$$<$ \char`\"{} at \char`\"{} $<$$<$ highest\+\_\+solar\+\_\+radiation.\+second $<$$<$ \char`\"{}.\char`\"{} $<$$<$ endl; \}
 
+template$<$class T$>$ void Test\+Highest\+Solar\+Radiation(\+Ao\+Avl\+Map$<$\+T$>$ \&test\+Map, unsigned day, unsigned month, unsigned year) \{ cout $<$$<$ \char`\"{}\textbackslash{}n\+Test On Find\+Highest\+Solar\+Radiation\+: \char`\"{} $<$$<$ endl;
 
-Definition at line 262 of file Ao\+Avl\+Map\+Test.\+cpp.
+Call the function being tested vector$<$pair$<$float, string$>$$>$ highest\+Radiations = test\+Map.\+Find\+Highest\+Solar\+Radiation(day, month, year);
+
+Print the results cout $<$$<$ \char`\"{}\+Highest Solar Radiation Readings for \char`\"{} $<$$<$ day $<$$<$ \char`\"{}/\char`\"{} $<$$<$ month $<$$<$ \char`\"{}/\char`\"{} $<$$<$ year $<$$<$ \char`\"{}\+:\char`\"{} $<$$<$ endl; for (const auto \&radiation \+: highest\+Radiations) \{ cout $<$$<$ \char`\"{}\+Radiation\+: \char`\"{} $<$$<$ radiation.\+first $<$$<$ \char`\"{} k\+W/m$^\wedge$2, Time\+: \char`\"{} $<$$<$ radiation.\+second $<$$<$ endl; \} Assert\+\_\+\+Equals(!highest\+Radiations.empty(), \char`\"{}\+Highest solar radiation readings are not empty\char`\"{});
+
+Assert that each radiation reading is non-\/negative for (const auto \&radiation \+: highest\+Radiations) \{ Assert\+\_\+\+Equals(radiation.\+first $>$= 0.\+0f, \char`\"{}\+Solar radiation reading is non-\/negative\char`\"{}); \} \} 
+
+Definition at line 293 of file Ao\+Avl\+Map\+Test.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -92,11 +102,12 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+template$<$class T$>$ void Test\+Highest\+Solar\+Radiation(\+Ao\+Avl\+Map$<$\+T$>$ \&test\+Map, unsigned day, unsigned month, unsigned year); 
 
+Definition at line 46 of file Ao\+Avl\+Map\+Test.\+cpp.
 
-Definition at line 43 of file Ao\+Avl\+Map\+Test.\+cpp.
-
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -112,7 +123,7 @@ void Test\+Display\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_
 
 
 
-Definition at line 95 of file Ao\+Avl\+Map\+Test.\+cpp.
+Definition at line 100 of file Ao\+Avl\+Map\+Test.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -130,7 +141,7 @@ void Test\+Display\+Year\+Month\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyp
 
 
 
-Definition at line 125 of file Ao\+Avl\+Map\+Test.\+cpp.
+Definition at line 130 of file Ao\+Avl\+Map\+Test.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -146,29 +157,30 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=289pt]{_ao_avl_map_test_8cpp_a22e5ce533a9f4feeaf2921e4d659a8ba_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{_ao_avl_map_test_8cpp_ae86e61b058632ed0330fb232098ed60c}\label{_ao_avl_map_test_8cpp_ae86e61b058632ed0330fb232098ed60c}} 
-\index{AoAvlMapTest.cpp@{AoAvlMapTest.cpp}!TestHighestSolarRadiation@{TestHighestSolarRadiation}}
-\index{TestHighestSolarRadiation@{TestHighestSolarRadiation}!AoAvlMapTest.cpp@{AoAvlMapTest.cpp}}
-\doxysubsubsection{\texorpdfstring{TestHighestSolarRadiation()}{TestHighestSolarRadiation()}}
-{\footnotesize\ttfamily template$<$class T $>$ \\
-void Test\+Highest\+Solar\+Radiation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&}]{test\+Map,  }\item[{unsigned}]{day,  }\item[{unsigned}]{month,  }\item[{unsigned}]{year }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_ao_avl_map_test_8cpp_ac8582988e27bbf21c4b1e47c221984e5}\label{_ao_avl_map_test_8cpp_ac8582988e27bbf21c4b1e47c221984e5}} 
+\index{AoAvlMapTest.cpp@{AoAvlMapTest.cpp}!TestExtractMeasurements@{TestExtractMeasurements}}
+\index{TestExtractMeasurements@{TestExtractMeasurements}!AoAvlMapTest.cpp@{AoAvlMapTest.cpp}}
+\doxysubsubsection{\texorpdfstring{TestExtractMeasurements()}{TestExtractMeasurements()}}
+{\footnotesize\ttfamily void Test\+Extract\+Measurements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-template$<$class T$>$ void Test\+Highest\+Solar\+Radiation( Ao\+Avl\+Map$<$\+T$>$ ao\+\_\+avl\+\_\+map ) \{ Ao\+Avl\+Map$<$\+Sensor\+Rec\+Type$>$ ao\+\_\+avl\+\_\+map; pair$<$float, string$>$ highest\+\_\+solar\+\_\+radiation = ao\+\_\+avl\+\_\+map.\+Find\+Highest\+Solar\+Radiation(11, 10, 2020); cout $<$$<$ \char`\"{}\+The highest solar radiation reading is \char`\"{} $<$$<$ highest\+\_\+solar\+\_\+radiation.\+first $<$$<$ \char`\"{} at \char`\"{} $<$$<$ highest\+\_\+solar\+\_\+radiation.\+second $<$$<$ \char`\"{}.\char`\"{} $<$$<$ endl; \} 
 
-Definition at line 238 of file Ao\+Avl\+Map\+Test.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Definition at line 219 of file Ao\+Avl\+Map\+Test.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{_ao_avl_map_test_8cpp_ae86e61b058632ed0330fb232098ed60c_cgraph}
+\includegraphics[width=350pt]{_ao_avl_map_test_8cpp_ac8582988e27bbf21c4b1e47c221984e5_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=285pt]{_ao_avl_map_test_8cpp_ae86e61b058632ed0330fb232098ed60c_icgraph}
+\includegraphics[width=285pt]{_ao_avl_map_test_8cpp_ac8582988e27bbf21c4b1e47c221984e5_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{_ao_avl_map_test_8cpp_a406eedd7f92f9735f39fe0d1bc35c2f7}\label{_ao_avl_map_test_8cpp_a406eedd7f92f9735f39fe0d1bc35c2f7}} 
@@ -178,9 +190,9 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$class T $>$ \\
 void Test\+In\+Order\+Traversal\+S\+SD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&}]{test\+Map }\end{DoxyParamCaption})}
 
-template$<$class T$>$ void Test\+In\+Order\+Traversal\+Sum(\+Ao\+Avl\+Map$<$\+T$>$ \&test\+Map) \{ cout $<$$<$ \char`\"{}\textbackslash{}n\+Test On In\+Order\+Traversal\+Sum\+: \char`\"{} $<$$<$ endl; float sum = 0.\+0; unsigned year = 2020; unsigned month = 10; test\+Map.\+In\+Order\+Traversal\+Sum(test\+Map.\+Get\+Sensor\+Data()\mbox{[}year\mbox{]}\mbox{[}month -\/ 1\mbox{]}.Get\+Root(), \mbox{\hyperlink{_sensor_measurement_type_8h_abee7b7fdc87d37c2132a67729cc0ab43a30a18401577fc1eca7cc0e35e9b5faef}{Sensor\+Measurement\+Type\+::\+W\+I\+N\+D\+\_\+\+S\+P\+E\+ED}}, sum); float expected\+Sum = 42.\+4; // 20.\+2 + 22.\+2 Assert\+\_\+\+Equals(sum == expected\+Sum, \char`\"{}\+In\+Order\+Traversal\+Sum test passed!\char`\"{}); \} 
 
-Definition at line 206 of file Ao\+Avl\+Map\+Test.\+cpp.
+
+Definition at line 198 of file Ao\+Avl\+Map\+Test.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -205,7 +217,7 @@ void Test\+In\+Order\+Traversal\+Sum (\begin{DoxyParamCaption}\item[{\mbox{\hype
 
 
 
-Definition at line 183 of file Ao\+Avl\+Map\+Test.\+cpp.
+Definition at line 188 of file Ao\+Avl\+Map\+Test.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -230,7 +242,7 @@ void Test\+Insert\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a
 
 
 
-Definition at line 87 of file Ao\+Avl\+Map\+Test.\+cpp.
+Definition at line 92 of file Ao\+Avl\+Map\+Test.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

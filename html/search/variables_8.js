@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['selected_5foption_5ffive_5fmsg_459',['SELECTED_OPTION_FIVE_MSG',['../namespace_constant.html#a5db1970bed05d59fb9a7a6fe28b3733a',1,'Constant']]],
-  ['selected_5foption_5ffour_5fmsg_460',['SELECTED_OPTION_FOUR_MSG',['../namespace_constant.html#a7cf2df285f1d92219940fd95a97f2989',1,'Constant']]],
-  ['selected_5foption_5fone_5fmsg_461',['SELECTED_OPTION_ONE_MSG',['../namespace_constant.html#adb53ba11b57b9e77f3bf68172c90488a',1,'Constant']]],
-  ['selected_5foption_5fsix_5fmsg_462',['SELECTED_OPTION_SIX_MSG',['../namespace_constant.html#a259270bc65e3c87ccd9376a1b97c7b40',1,'Constant']]],
-  ['selected_5foption_5fthree_5fmsg_463',['SELECTED_OPTION_THREE_MSG',['../namespace_constant.html#a31fee176e8c0c9563000463ba82dc487',1,'Constant']]],
-  ['selected_5foption_5ftwo_5fmsg_464',['SELECTED_OPTION_TWO_MSG',['../namespace_constant.html#a37e785807a4f2d9a921abdf2852cab95',1,'Constant']]],
-  ['selection_5finput_465',['SELECTION_INPUT',['../namespace_constant.html#a214af7084f5ce6abd7084212b7635d16',1,'Constant']]],
-  ['solar_5fradiation_5fhigh_5fmsg_466',['SOLAR_RADIATION_HIGH_MSG',['../namespace_constant.html#a535fac769a9547a04d99401526c33d18',1,'Constant']]]
+  ['temperature_5fstandard_5fdeviation_477',['TEMPERATURE_STANDARD_DEVIATION',['../namespace_constant.html#a94858ef2907346195dd68c0d5dff988d',1,'Constant']]],
+  ['total_5ferror_5fdata_5fmsg_478',['TOTAL_ERROR_DATA_MSG',['../namespace_constant.html#aebae814fae06a9758d1c28d931c7106f',1,'Constant']]],
+  ['total_5fread_5fdata_5fmsg_479',['TOTAL_READ_DATA_MSG',['../namespace_constant.html#a3b25932b515817f24b46f746c4654ea3',1,'Constant']]],
+  ['total_5fsaved_5fdata_5fmsg_480',['TOTAL_SAVED_DATA_MSG',['../namespace_constant.html#aa5c507fc288b7c880ef32fefcdf91760',1,'Constant']]]
 ];

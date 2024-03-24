@@ -100,7 +100,7 @@ Collaboration diagram for AoAvlMap&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_ao_avl_map__coll__graph.png" border="0" usemap="#_ao_avl_map_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="_ao_avl_map_3_01_t_01_4_coll__map" id="_ao_avl_map_3_01_t_01_4_coll__map">
-<area shape="rect" title="Represents the AoAvlMap Class." alt="" coords="5,5,249,156"/>
+<area shape="rect" title="Represents the AoAvlMap Class." alt="" coords="5,5,249,171"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -121,9 +121,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a66bd893ec3632a752ebc316e43c3236a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ao_avl_map.html#a66bd893ec3632a752ebc316e43c3236a">CalculateSampleStandardDeviation</a> (<a class="el" href="struct_node.html">Node</a>&lt; T &gt; *root, <a class="el" href="_sensor_measurement_type_8h.html#abee7b7fdc87d37c2132a67729cc0ab43">SensorMeasurementType</a> sensorMeasurementType, unsigned &amp;count) const</td></tr>
 <tr class="memdesc:a66bd893ec3632a752ebc316e43c3236a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the sample standard deviation of sensor measurements.  <a href="class_ao_avl_map.html#a66bd893ec3632a752ebc316e43c3236a">More...</a><br /></td></tr>
 <tr class="separator:a66bd893ec3632a752ebc316e43c3236a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a179fdb3242917507c47368b918ed74ac"><td class="memItemLeft" align="right" valign="top">vector&lt; pair&lt; float, string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ao_avl_map.html#a179fdb3242917507c47368b918ed74ac">FindHighestSolarRadiation</a> (unsigned day, unsigned month, unsigned year) const</td></tr>
-<tr class="memdesc:a179fdb3242917507c47368b918ed74ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the highest solar radiation readings for a specific date.  <a href="class_ao_avl_map.html#a179fdb3242917507c47368b918ed74ac">More...</a><br /></td></tr>
-<tr class="separator:a179fdb3242917507c47368b918ed74ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ebd2f8953929698626a253d805d71a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ao_avl_map.html#a9ebd2f8953929698626a253d805d71a9">ExtractMeasurements</a> (<a class="el" href="struct_node.html">Node</a>&lt; T &gt; *root, <a class="el" href="_sensor_measurement_type_8h.html#abee7b7fdc87d37c2132a67729cc0ab43">SensorMeasurementType</a> sensorMeasurementType, <a class="el" href="class_vector.html">Vector</a>&lt; float &gt; &amp;measurements) const</td></tr>
+<tr class="separator:a9ebd2f8953929698626a253d805d71a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88fbb2373ede5785d10dc4af24ce993f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ao_avl_map.html#a88fbb2373ede5785d10dc4af24ce993f">CalculateSPCC</a> (const <a class="el" href="class_vector.html">Vector</a>&lt; float &gt; &amp;data1, const <a class="el" href="class_vector.html">Vector</a>&lt; float &gt; &amp;data2) const</td></tr>
+<tr class="separator:a88fbb2373ede5785d10dc4af24ce993f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -185,23 +186,26 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The sample standard deviation of sensor measurements. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_ao_avl_map_8h_source.html#l00230">230</a> of file <a class="el" href="_ao_avl_map_8h_source.html">AoAvlMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_ao_avl_map_8h_source.html#l00233">233</a> of file <a class="el" href="_ao_avl_map_8h_source.html">AoAvlMap.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_ao_avl_map_a66bd893ec3632a752ebc316e43c3236a_icgraph.png" border="0" usemap="#class_ao_avl_map_a66bd893ec3632a752ebc316e43c3236a_icgraph" alt=""/></div>
 <map name="class_ao_avl_map_a66bd893ec3632a752ebc316e43c3236a_icgraph" id="class_ao_avl_map_a66bd893ec3632a752ebc316e43c3236a_icgraph">
-<area shape="rect" title="Calculates the sample standard deviation of sensor measurements." alt="" coords="319,23,505,65"/>
-<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="162,5,213,32"/>
-<area shape="rect" href="_ao_avl_map_test_8cpp.html#a406eedd7f92f9735f39fe0d1bc35c2f7" title=" " alt="" coords="104,56,271,83"/>
-<area shape="rect" href="_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" title="Calculates the sample standard deviation of sensor measurements." alt="" coords="319,74,505,115"/>
+<area shape="rect" href="class_menu.html#ab2efff71fdf8728a1d593c2a0f323b3d" title="Option to process sensor data for all months of a specified year and export results to a file." alt="" coords="124,5,251,32"/>
+<area shape="rect" href="class_menu.html#a393c430fcb58575dbd8d2219046a0aeb" title="Option to calculate and display average wind speed and its standard deviation for a specified year an..." alt="" coords="125,56,249,83"/>
+<area shape="rect" href="class_menu.html#ac59025fad993c4db4cb50feaad62e4a0" title="Option to calculate and display either average ambient temperature or solar radiation for each month ..." alt="" coords="110,107,265,133"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#a406eedd7f92f9735f39fe0d1bc35c2f7" title=" " alt="" coords="104,157,271,184"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,157,56,184"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a179fdb3242917507c47368b918ed74ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a179fdb3242917507c47368b918ed74ac">&#9670;&nbsp;</a></span>FindHighestSolarRadiation()</h2>
+<a id="a88fbb2373ede5785d10dc4af24ce993f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88fbb2373ede5785d10dc4af24ce993f">&#9670;&nbsp;</a></span>CalculateSPCC()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,22 +213,16 @@ Here is the caller graph for this function:</div>
 template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt; pair&lt; float, string &gt; &gt; <a class="el" href="class_ao_avl_map.html">AoAvlMap</a>&lt; T &gt;::FindHighestSolarRadiation </td>
+          <td class="memname">float <a class="el" href="class_ao_avl_map.html">AoAvlMap</a>&lt; T &gt;::CalculateSPCC </td>
           <td>(</td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>day</em>, </td>
+          <td class="paramtype">const <a class="el" href="class_vector.html">Vector</a>&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>data1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>month</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>year</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_vector.html">Vector</a>&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>data2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -234,36 +232,83 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Finds the highest solar radiation readings for a specific date. </p>
-<p>This method searches the <a class="el" href="class_a_v_l.html" title="Represents the AVL Class.">AVL</a> map for the highest solar radiation readings recorded on the specified date (day, month, year). It returns a vector of pairs containing the highest radiation value(s) and the corresponding time(s) of measurement.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">day</td><td>The day of the date. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">month</td><td>The month of the date. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">year</td><td>The year of the date. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A vector of pairs representing the highest solar radiation and its corresponding time(s). </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_ao_avl_map_8h_source.html#l00280">280</a> of file <a class="el" href="_ao_avl_map_8h_source.html">AoAvlMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_ao_avl_map_8h_source.html#l00271">271</a> of file <a class="el" href="_ao_avl_map_8h_source.html">AoAvlMap.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_ao_avl_map_a179fdb3242917507c47368b918ed74ac_cgraph.png" border="0" usemap="#class_ao_avl_map_a179fdb3242917507c47368b918ed74ac_cgraph" alt=""/></div>
-<map name="class_ao_avl_map_a179fdb3242917507c47368b918ed74ac_cgraph" id="class_ao_avl_map_a179fdb3242917507c47368b918ed74ac_cgraph">
-<area shape="rect" title="Finds the highest solar radiation readings for a specific date." alt="" coords="5,5,192,47"/>
-<area shape="rect" href="class_tree.html#a5596f364c74235f642a3e995878943fa" title="Get the root node of the tree." alt="" coords="240,13,343,39"/>
+<div class="center"><img src="class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f_cgraph.png" border="0" usemap="#class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f_cgraph" alt=""/></div>
+<map name="class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f_cgraph" id="class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,184,57"/>
+<area shape="rect" href="class_vector.html#ab72cd45d42bfea0432b2780c504ea867" title="Get the number of elements used in the vector." alt="" coords="232,5,351,32"/>
+<area shape="rect" href="class_vector.html#a9c74fd822fb8b1c5f7eeaf7deaad9abc" title="Check on if Vector is empty." alt="" coords="233,56,349,83"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_ao_avl_map_a179fdb3242917507c47368b918ed74ac_icgraph.png" border="0" usemap="#class_ao_avl_map_a179fdb3242917507c47368b918ed74ac_icgraph" alt=""/></div>
-<map name="class_ao_avl_map_a179fdb3242917507c47368b918ed74ac_icgraph" id="class_ao_avl_map_a179fdb3242917507c47368b918ed74ac_icgraph">
-<area shape="rect" title="Finds the highest solar radiation readings for a specific date." alt="" coords="327,23,513,65"/>
-<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="166,5,217,32"/>
-<area shape="rect" href="_ao_avl_map_test_8cpp.html#ae86e61b058632ed0330fb232098ed60c" title=" " alt="" coords="104,56,279,83"/>
+<div class="center"><img src="class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f_icgraph.png" border="0" usemap="#class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f_icgraph" alt=""/></div>
+<map name="class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f_icgraph" id="class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f_icgraph">
+<area shape="rect" title=" " alt="" coords="275,5,453,32"/>
+<area shape="rect" href="class_menu.html#a92bafcf65e97e2539fb0030422aa80d8" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="104,5,227,32"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9ebd2f8953929698626a253d805d71a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ebd2f8953929698626a253d805d71a9">&#9670;&nbsp;</a></span>ExtractMeasurements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_ao_avl_map.html">AoAvlMap</a>&lt; T &gt;::ExtractMeasurements </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_sensor_measurement_type_8h.html#abee7b7fdc87d37c2132a67729cc0ab43">SensorMeasurementType</a>&#160;</td>
+          <td class="paramname"><em>sensorMeasurementType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector</a>&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>measurements</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ao_avl_map_8h_source.html#l00245">245</a> of file <a class="el" href="_ao_avl_map_8h_source.html">AoAvlMap.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9_cgraph.png" border="0" usemap="#class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9_cgraph" alt=""/></div>
+<map name="class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9_cgraph" id="class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,221,32"/>
+<area shape="rect" href="class_vector.html#a0b4525d26f9397f327e6adb7c7eee22c" title="Insert an object to the end of the vector." alt="" coords="269,5,395,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9_icgraph.png" border="0" usemap="#class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9_icgraph" alt=""/></div>
+<map name="class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9_icgraph" id="class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9_icgraph">
+<area shape="rect" title=" " alt="" coords="327,31,543,57"/>
+<area shape="rect" href="class_menu.html#a92bafcf65e97e2539fb0030422aa80d8" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="130,5,253,32"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#ac8582988e27bbf21c4b1e47c221984e5" title=" " alt="" coords="104,56,279,83"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 <area shape="rect" href="_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
 </map>
 </div>
@@ -309,19 +354,24 @@ template&lt;class T &gt; </div>
 <p>Get a constant reference to the sensor data map. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespace_constant.html" title="Namespace containing constant messages used in the program.">Constant</a> reference to the sensor data map. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_ao_avl_map_8h_source.html#l00134">134</a> of file <a class="el" href="_ao_avl_map_8h_source.html">AoAvlMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_ao_avl_map_8h_source.html#l00137">137</a> of file <a class="el" href="_ao_avl_map_8h_source.html">AoAvlMap.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_ao_avl_map_a7e21558689bec8bcab2dedf297b1f798_icgraph.png" border="0" usemap="#class_ao_avl_map_a7e21558689bec8bcab2dedf297b1f798_icgraph" alt=""/></div>
 <map name="class_ao_avl_map_a7e21558689bec8bcab2dedf297b1f798_icgraph" id="class_ao_avl_map_a7e21558689bec8bcab2dedf297b1f798_icgraph">
-<area shape="rect" title="Get a constant reference to the sensor data map." alt="" coords="332,107,509,133"/>
-<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="169,5,219,32"/>
-<area shape="rect" href="_ao_avl_map_test_8cpp.html#a15579abe7c37a35b4cb621992b516d6b" title=" " alt="" coords="135,56,253,83"/>
-<area shape="rect" href="_ao_avl_map_test_8cpp.html#a22e5ce533a9f4feeaf2921e4d659a8ba" title=" " alt="" coords="104,107,284,133"/>
-<area shape="rect" href="_ao_avl_map_test_8cpp.html#a406eedd7f92f9735f39fe0d1bc35c2f7" title=" " alt="" coords="111,157,277,184"/>
-<area shape="rect" href="_ao_avl_map_test_8cpp.html#a4751e01c2167c05d37fc7018d96b29c8" title=" " alt="" coords="111,208,277,235"/>
-<area shape="rect" href="_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,157,56,184"/>
+<area shape="rect" title="Get a constant reference to the sensor data map." alt="" coords="332,208,509,235"/>
+<area shape="rect" href="class_menu.html#a92bafcf65e97e2539fb0030422aa80d8" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="133,5,255,32"/>
+<area shape="rect" href="class_menu.html#ab2efff71fdf8728a1d593c2a0f323b3d" title="Option to process sensor data for all months of a specified year and export results to a file." alt="" coords="131,56,257,83"/>
+<area shape="rect" href="class_menu.html#a393c430fcb58575dbd8d2219046a0aeb" title="Option to calculate and display average wind speed and its standard deviation for a specified year an..." alt="" coords="132,107,256,133"/>
+<area shape="rect" href="class_menu.html#ac59025fad993c4db4cb50feaad62e4a0" title="Option to calculate and display either average ambient temperature or solar radiation for each month ..." alt="" coords="117,157,271,184"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#a15579abe7c37a35b4cb621992b516d6b" title=" " alt="" coords="135,208,253,235"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#a22e5ce533a9f4feeaf2921e4d659a8ba" title=" " alt="" coords="104,259,284,285"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#ac8582988e27bbf21c4b1e47c221984e5" title=" " alt="" coords="107,309,281,336"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#a406eedd7f92f9735f39fe0d1bc35c2f7" title=" " alt="" coords="111,360,277,387"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#a4751e01c2167c05d37fc7018d96b29c8" title=" " alt="" coords="111,411,277,437"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,335,56,361"/>
 </map>
 </div>
 
@@ -372,17 +422,20 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_ao_avl_map_8h_source.html#l00174">174</a> of file <a class="el" href="_ao_avl_map_8h_source.html">AoAvlMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_ao_avl_map_8h_source.html#l00177">177</a> of file <a class="el" href="_ao_avl_map_8h_source.html">AoAvlMap.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_ao_avl_map_afe182a9b789a029dba7352892669fa19_icgraph.png" border="0" usemap="#class_ao_avl_map_afe182a9b789a029dba7352892669fa19_icgraph" alt=""/></div>
 <map name="class_ao_avl_map_afe182a9b789a029dba7352892669fa19_icgraph" id="class_ao_avl_map_afe182a9b789a029dba7352892669fa19_icgraph">
-<area shape="rect" title="Performs in&#45;order traversal of the AVL tree and accumulates the sum of sensor measurements." alt="" coords="332,56,540,83"/>
-<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="169,5,219,32"/>
-<area shape="rect" href="_ao_avl_map_test_8cpp.html#a22e5ce533a9f4feeaf2921e4d659a8ba" title=" " alt="" coords="104,56,284,83"/>
-<area shape="rect" href="_ao_avl_map_test_8cpp.html#a4751e01c2167c05d37fc7018d96b29c8" title=" " alt="" coords="111,107,277,133"/>
-<area shape="rect" href="_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" title="Performs in&#45;order traversal of the AVL tree and accumulates the sum of sensor measurements." alt="" coords="332,107,540,133"/>
+<area shape="rect" href="class_menu.html#ab2efff71fdf8728a1d593c2a0f323b3d" title="Option to process sensor data for all months of a specified year and export results to a file." alt="" coords="131,5,257,32"/>
+<area shape="rect" href="class_menu.html#a393c430fcb58575dbd8d2219046a0aeb" title="Option to calculate and display average wind speed and its standard deviation for a specified year an..." alt="" coords="132,56,256,83"/>
+<area shape="rect" href="class_menu.html#ac59025fad993c4db4cb50feaad62e4a0" title="Option to calculate and display either average ambient temperature or solar radiation for each month ..." alt="" coords="117,107,271,133"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#a22e5ce533a9f4feeaf2921e4d659a8ba" title=" " alt="" coords="104,157,284,184"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#a4751e01c2167c05d37fc7018d96b29c8" title=" " alt="" coords="111,208,277,235"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,183,56,209"/>
 </map>
 </div>
 
@@ -414,19 +467,20 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_ao_avl_map_8h_source.html#l00146">146</a> of file <a class="el" href="_ao_avl_map_8h_source.html">AoAvlMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_ao_avl_map_8h_source.html#l00149">149</a> of file <a class="el" href="_ao_avl_map_8h_source.html">AoAvlMap.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_ao_avl_map_affcadb4f51032bc0cd78619fd97f1bcc_icgraph.png" border="0" usemap="#class_ao_avl_map_affcadb4f51032bc0cd78619fd97f1bcc_icgraph" alt=""/></div>
 <map name="class_ao_avl_map_affcadb4f51032bc0cd78619fd97f1bcc_icgraph" id="class_ao_avl_map_affcadb4f51032bc0cd78619fd97f1bcc_icgraph">
-<area shape="rect" title="Insert sensor data into the map consisted with array of Vectors." alt="" coords="493,81,681,108"/>
-<area shape="rect" href="class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="275,56,445,83"/>
-<area shape="rect" href="_ao_avl_map_test_8cpp.html#a3fca6b5072a0713600abe13bbb77d8c6" title=" " alt="" coords="307,107,413,133"/>
+<area shape="rect" title="Insert sensor data into the map consisted with array of Vectors." alt="" coords="497,81,685,108"/>
+<area shape="rect" href="class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="277,31,447,57"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#ac8582988e27bbf21c4b1e47c221984e5" title=" " alt="" coords="275,81,449,108"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#a3fca6b5072a0713600abe13bbb77d8c6" title=" " alt="" coords="309,132,415,159"/>
 <area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="140,5,191,32"/>
 <area shape="rect" href="_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5" title=" " alt="" coords="104,56,227,83"/>
 <area shape="rect" href="_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
-<area shape="rect" href="_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="140,107,191,133"/>
+<area shape="rect" href="_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="140,119,191,145"/>
 </map>
 </div>
 

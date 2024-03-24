@@ -8,6 +8,7 @@ var hierarchy =
       [ "Temperature", "class_temperature.html", null ],
       [ "WindSpeed", "class_wind_speed.html", null ]
     ] ],
+    [ "Menu< T >", "class_menu.html", null ],
     [ "Node< T >", "struct_node.html", null ],
     [ "Processor", "class_processor.html", null ],
     [ "SensorRecType", "class_sensor_rec_type.html", null ],

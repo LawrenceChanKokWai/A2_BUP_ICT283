@@ -1,4 +1,7 @@
 <map id="Tree::IsEmpty" name="Tree::IsEmpty">
-<area shape="rect" id="node1" title="Checks if the Tree is empty." alt="" coords="104,5,207,32"/>
-<area shape="rect" id="node2" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node1" title="Checks if the Tree is empty." alt="" coords="307,56,409,83"/>
+<area shape="rect" id="node2" href="$class_menu.html#ab2efff71fdf8728a1d593c2a0f323b3d" title="Option to process sensor data for all months of a specified year and export results to a file." alt="" coords="118,5,245,32"/>
+<area shape="rect" id="node4" href="$class_menu.html#a393c430fcb58575dbd8d2219046a0aeb" title="Option to calculate and display average wind speed and its standard deviation for a specified year an..." alt="" coords="119,56,243,83"/>
+<area shape="rect" id="node5" href="$class_menu.html#ac59025fad993c4db4cb50feaad62e4a0" title="Option to calculate and display either average ambient temperature or solar radiation for each month ..." alt="" coords="104,107,259,133"/>
+<area shape="rect" id="node3" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
 </map>

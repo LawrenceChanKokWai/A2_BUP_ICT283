@@ -1,0 +1,218 @@
+\hypertarget{class_menu}{}\doxysection{Menu$<$ T $>$ Class Template Reference}
+\label{class_menu}\index{Menu$<$ T $>$@{Menu$<$ T $>$}}
+
+
+A class representing a menu interface for sensor data analysis.  
+
+
+
+
+{\ttfamily \#include $<$Menu.\+h$>$}
+
+
+
+Collaboration diagram for Menu$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_menu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_menu_a393c430fcb58575dbd8d2219046a0aeb}{Option\+One}} (\mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$ \&avl, \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&ao\+Avl\+Map, unsigned \&year, unsigned \&month) const
+\begin{DoxyCompactList}\small\item\em Option to calculate and display average wind speed and its standard deviation for a specified year and month. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_ac59025fad993c4db4cb50feaad62e4a0}{Option\+Two\+Three}} (\mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$ \&avl, \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&ao\+Avl\+Map, unsigned \&year, char \&option) const
+\begin{DoxyCompactList}\small\item\em Option to calculate and display either average ambient temperature or solar radiation for each month of a specified year. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_ab2efff71fdf8728a1d593c2a0f323b3d}{Option\+Four}} (\mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$ \&avl, \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&ao\+Avl\+Map, ofstream \&output\+File, const string \&file\+Path, unsigned \&year)
+\begin{DoxyCompactList}\small\item\em Option to process sensor data for all months of a specified year and export results to a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_a92bafcf65e97e2539fb0030422aa80d8}{Option\+Five}} (\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&ao\+Avl\+Map, unsigned \&month)
+\begin{DoxyCompactList}\small\item\em Option to calculate and display sample Pearson correlation coefficient values for wind speed, temperature, and solar radiation for a specified month. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Menu$<$ T $>$}
+
+A class representing a menu interface for sensor data analysis. 
+
+This class provides various options for processing and analyzing sensor data, including calculating averages, standard deviations, exporting data to files, and calculating sample Pearson correlation coefficients. 
+
+Definition at line 25 of file Menu.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_menu_a92bafcf65e97e2539fb0030422aa80d8}\label{class_menu_a92bafcf65e97e2539fb0030422aa80d8}} 
+\index{Menu$<$ T $>$@{Menu$<$ T $>$}!OptionFive@{OptionFive}}
+\index{OptionFive@{OptionFive}!Menu$<$ T $>$@{Menu$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{OptionFive()}{OptionFive()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_menu}{Menu}}$<$ T $>$\+::Option\+Five (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&}]{ao\+Avl\+Map,  }\item[{unsigned \&}]{month }\end{DoxyParamCaption})}
+
+
+
+Option to calculate and display sample Pearson correlation coefficient values for wind speed, temperature, and solar radiation for a specified month. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ao\+Avl\+Map} & An \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} containing sensor data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em month} & The month for which correlation coefficients are to be calculated. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 265 of file Menu.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_menu_a92bafcf65e97e2539fb0030422aa80d8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_menu_a92bafcf65e97e2539fb0030422aa80d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_menu_ab2efff71fdf8728a1d593c2a0f323b3d}\label{class_menu_ab2efff71fdf8728a1d593c2a0f323b3d}} 
+\index{Menu$<$ T $>$@{Menu$<$ T $>$}!OptionFour@{OptionFour}}
+\index{OptionFour@{OptionFour}!Menu$<$ T $>$@{Menu$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{OptionFour()}{OptionFour()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_menu}{Menu}}$<$ T $>$\+::Option\+Four (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$ \&}]{avl,  }\item[{\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&}]{ao\+Avl\+Map,  }\item[{ofstream \&}]{output\+File,  }\item[{const string \&}]{file\+Path,  }\item[{unsigned \&}]{year }\end{DoxyParamCaption})}
+
+
+
+Option to process sensor data for all months of a specified year and export results to a file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em avl} & An \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree containing sensor data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ao\+Avl\+Map} & An \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} containing sensor data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em output\+File} & An ofstream object representing the output file. \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+Path} & The path to the output file. \\
+\hline
+\mbox{\texttt{ in}}  & {\em year} & The year for which data is to be exported. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 189 of file Menu.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_menu_ab2efff71fdf8728a1d593c2a0f323b3d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{class_menu_ab2efff71fdf8728a1d593c2a0f323b3d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_menu_a393c430fcb58575dbd8d2219046a0aeb}\label{class_menu_a393c430fcb58575dbd8d2219046a0aeb}} 
+\index{Menu$<$ T $>$@{Menu$<$ T $>$}!OptionOne@{OptionOne}}
+\index{OptionOne@{OptionOne}!Menu$<$ T $>$@{Menu$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{OptionOne()}{OptionOne()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_menu}{Menu}}$<$ T $>$\+::Option\+One (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$ \&}]{avl,  }\item[{\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&}]{ao\+Avl\+Map,  }\item[{unsigned \&}]{year,  }\item[{unsigned \&}]{month }\end{DoxyParamCaption}) const}
+
+
+
+Option to calculate and display average wind speed and its standard deviation for a specified year and month. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em avl} & An \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree containing sensor data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ao\+Avl\+Map} & An \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} containing sensor data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em year} & The year for which data is to be analyzed. \\
+\hline
+\mbox{\texttt{ in}}  & {\em month} & The month for which data is to be analyzed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 94 of file Menu.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_menu_a393c430fcb58575dbd8d2219046a0aeb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{class_menu_a393c430fcb58575dbd8d2219046a0aeb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_menu_ac59025fad993c4db4cb50feaad62e4a0}\label{class_menu_ac59025fad993c4db4cb50feaad62e4a0}} 
+\index{Menu$<$ T $>$@{Menu$<$ T $>$}!OptionTwoThree@{OptionTwoThree}}
+\index{OptionTwoThree@{OptionTwoThree}!Menu$<$ T $>$@{Menu$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{OptionTwoThree()}{OptionTwoThree()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_menu}{Menu}}$<$ T $>$\+::Option\+Two\+Three (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$ \&}]{avl,  }\item[{\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&}]{ao\+Avl\+Map,  }\item[{unsigned \&}]{year,  }\item[{char \&}]{option }\end{DoxyParamCaption}) const}
+
+
+
+Option to calculate and display either average ambient temperature or solar radiation for each month of a specified year. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em avl} & An \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree containing sensor data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ao\+Avl\+Map} & An \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} containing sensor data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em year} & The year for which data is to be analyzed. \\
+\hline
+\mbox{\texttt{ in}}  & {\em option} & A character indicating the option to calculate (\textquotesingle{}2\textquotesingle{} for temperature, \textquotesingle{}3\textquotesingle{} for solar radiation). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 131 of file Menu.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_menu_ac59025fad993c4db4cb50feaad62e4a0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_menu_ac59025fad993c4db4cb50feaad62e4a0_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_menu_8h}{Menu.\+h}}\end{DoxyCompactItemize}

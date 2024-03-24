@@ -1,7 +1,10 @@
 <map id="AoAvlMap::InOrderTraversalSum" name="AoAvlMap::InOrderTraversalSum">
-<area shape="rect" id="node1" title="Performs in&#45;order traversal of the AVL tree and accumulates the sum of sensor measurements." alt="" coords="332,56,540,83"/>
-<area shape="rect" id="node2" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="169,5,219,32"/>
-<area shape="rect" id="node3" href="$_ao_avl_map_test_8cpp.html#a22e5ce533a9f4feeaf2921e4d659a8ba" title=" " alt="" coords="104,56,284,83"/>
-<area shape="rect" id="node5" href="$_ao_avl_map_test_8cpp.html#a4751e01c2167c05d37fc7018d96b29c8" title=" " alt="" coords="111,107,277,133"/>
-<area shape="rect" id="node4" href="$_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" id="node1" title="Performs in&#45;order traversal of the AVL tree and accumulates the sum of sensor measurements." alt="" coords="332,107,540,133"/>
+<area shape="rect" id="node2" href="$class_menu.html#ab2efff71fdf8728a1d593c2a0f323b3d" title="Option to process sensor data for all months of a specified year and export results to a file." alt="" coords="131,5,257,32"/>
+<area shape="rect" id="node4" href="$class_menu.html#a393c430fcb58575dbd8d2219046a0aeb" title="Option to calculate and display average wind speed and its standard deviation for a specified year an..." alt="" coords="132,56,256,83"/>
+<area shape="rect" id="node5" href="$class_menu.html#ac59025fad993c4db4cb50feaad62e4a0" title="Option to calculate and display either average ambient temperature or solar radiation for each month ..." alt="" coords="117,107,271,133"/>
+<area shape="rect" id="node6" href="$_ao_avl_map_test_8cpp.html#a22e5ce533a9f4feeaf2921e4d659a8ba" title=" " alt="" coords="104,157,284,184"/>
+<area shape="rect" id="node8" href="$_ao_avl_map_test_8cpp.html#a4751e01c2167c05d37fc7018d96b29c8" title=" " alt="" coords="111,208,277,235"/>
+<area shape="rect" id="node3" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" id="node7" href="$_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,183,56,209"/>
 </map>

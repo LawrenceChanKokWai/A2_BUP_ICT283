@@ -1,0 +1,8 @@
+<map id="TestExtractMeasurements" name="TestExtractMeasurements">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,180,108"/>
+<area shape="rect" id="node2" href="$_ao_avl_map_test_8cpp.html#a0153045686dc242fefe3bddac5b95f82" title=" " alt="" coords="283,5,389,32"/>
+<area shape="rect" id="node3" href="$class_ao_avl_map.html#a9ebd2f8953929698626a253d805d71a9" title=" " alt="" coords="228,56,444,83"/>
+<area shape="rect" id="node5" href="$class_ao_avl_map.html#a7e21558689bec8bcab2dedf297b1f798" title="Get a constant reference to the sensor data map." alt="" coords="247,107,425,133"/>
+<area shape="rect" id="node6" href="$class_ao_avl_map.html#affcadb4f51032bc0cd78619fd97f1bcc" title="Insert sensor data into the map consisted with array of Vectors." alt="" coords="242,157,430,184"/>
+<area shape="rect" id="node4" href="$class_vector.html#a0b4525d26f9397f327e6adb7c7eee22c" title="Insert an object to the end of the vector." alt="" coords="492,56,617,83"/>
+</map>

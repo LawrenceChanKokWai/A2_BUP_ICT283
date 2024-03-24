@@ -28,6 +28,9 @@ var files_dup =
       [ "Measurement", "class_measurement.html", "class_measurement" ]
     ] ],
     [ "MeasurementTest.cpp", "_measurement_test_8cpp.html", "_measurement_test_8cpp" ],
+    [ "Menu.h", "_menu_8h.html", [
+      [ "Menu", "class_menu.html", "class_menu" ]
+    ] ],
     [ "Processor.cpp", "_processor_8cpp.html", null ],
     [ "Processor.h", "_processor_8h.html", [
       [ "Processor", "class_processor.html", "class_processor" ]
