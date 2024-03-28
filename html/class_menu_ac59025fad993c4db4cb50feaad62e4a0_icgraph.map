@@ -1,4 +1,7 @@
 <map id="Menu::OptionTwoThree" name="Menu::OptionTwoThree">
-<area shape="rect" id="node1" title="Option to calculate and display either average ambient temperature or solar radiation for each month ..." alt="" coords="104,5,259,32"/>
-<area shape="rect" id="node2" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node1" title="Option to calculate and display either average ambient temperature or solar radiation for each month ..." alt="" coords="269,56,424,83"/>
+<area shape="rect" id="node2" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="137,5,188,32"/>
+<area shape="rect" id="node3" href="$_menu_test_8cpp.html#a883a2b5cfd009d28c65b02e51f77d2e8" title=" " alt="" coords="104,56,221,83"/>
+<area shape="rect" id="node5" href="$_menu_test_8cpp.html#aef1ec7b3ae811c644406e5a338f04031" title=" " alt="" coords="109,107,217,133"/>
+<area shape="rect" id="node4" href="$_menu_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,56,108"/>
 </map>

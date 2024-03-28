@@ -1,4 +1,5 @@
 <map id="Menu.h" name="Menu.h">
-<area shape="rect" id="node1" title="Menu class definition." alt="" coords="10,5,75,32"/>
+<area shape="rect" id="node1" title="Menu class definition." alt="" coords="66,5,131,32"/>
 <area shape="rect" id="node2" href="$_main_8cpp.html" title="Entry point for the assignment. The main execution file." alt="" coords="5,80,80,107"/>
+<area shape="rect" id="node3" href="$_menu_test_8cpp.html" title="Menu Test execution file." alt="" coords="104,80,208,107"/>
 </map>

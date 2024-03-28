@@ -1,10 +1,15 @@
 <map id="AoAvlMap::InOrderTraversalSum" name="AoAvlMap::InOrderTraversalSum">
-<area shape="rect" id="node1" title="Performs in&#45;order traversal of the AVL tree and accumulates the sum of sensor measurements." alt="" coords="332,107,540,133"/>
-<area shape="rect" id="node2" href="$class_menu.html#ab2efff71fdf8728a1d593c2a0f323b3d" title="Option to process sensor data for all months of a specified year and export results to a file." alt="" coords="131,5,257,32"/>
-<area shape="rect" id="node4" href="$class_menu.html#a393c430fcb58575dbd8d2219046a0aeb" title="Option to calculate and display average wind speed and its standard deviation for a specified year an..." alt="" coords="132,56,256,83"/>
-<area shape="rect" id="node5" href="$class_menu.html#ac59025fad993c4db4cb50feaad62e4a0" title="Option to calculate and display either average ambient temperature or solar radiation for each month ..." alt="" coords="117,107,271,133"/>
-<area shape="rect" id="node6" href="$_ao_avl_map_test_8cpp.html#a22e5ce533a9f4feeaf2921e4d659a8ba" title=" " alt="" coords="104,157,284,184"/>
-<area shape="rect" id="node8" href="$_ao_avl_map_test_8cpp.html#a4751e01c2167c05d37fc7018d96b29c8" title=" " alt="" coords="111,208,277,235"/>
-<area shape="rect" id="node3" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
-<area shape="rect" id="node7" href="$_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,183,56,209"/>
+<area shape="rect" id="node1" title="Performs in&#45;order traversal of the AVL tree and accumulates the sum of sensor measurements." alt="" coords="497,157,705,184"/>
+<area shape="rect" id="node2" href="$class_menu.html#ab2efff71fdf8728a1d593c2a0f323b3d" title="Option to process sensor data for all months of a specified year and export results to a file." alt="" coords="296,107,423,133"/>
+<area shape="rect" id="node6" href="$class_menu.html#a393c430fcb58575dbd8d2219046a0aeb" title="Option to calculate and display average wind speed and its standard deviation for a specified year an..." alt="" coords="297,157,421,184"/>
+<area shape="rect" id="node8" href="$class_menu.html#ac59025fad993c4db4cb50feaad62e4a0" title="Option to calculate and display either average ambient temperature or solar radiation for each month ..." alt="" coords="282,56,437,83"/>
+<area shape="rect" id="node11" href="$_ao_avl_map_test_8cpp.html#a22e5ce533a9f4feeaf2921e4d659a8ba" title=" " alt="" coords="269,259,449,285"/>
+<area shape="rect" id="node13" href="$_ao_avl_map_test_8cpp.html#a4751e01c2167c05d37fc7018d96b29c8" title=" " alt="" coords="276,208,443,235"/>
+<area shape="rect" id="node3" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="137,107,188,133"/>
+<area shape="rect" id="node4" href="$_menu_test_8cpp.html#aaec49654a81505febfa00c2fe7913bad" title=" " alt="" coords="107,157,218,184"/>
+<area shape="rect" id="node5" href="$_menu_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,107,56,133"/>
+<area shape="rect" id="node7" href="$_menu_test_8cpp.html#a88f425fa14510646038d2871d8600fb4" title=" " alt="" coords="108,208,217,235"/>
+<area shape="rect" id="node9" href="$_menu_test_8cpp.html#a883a2b5cfd009d28c65b02e51f77d2e8" title=" " alt="" coords="104,5,221,32"/>
+<area shape="rect" id="node10" href="$_menu_test_8cpp.html#aef1ec7b3ae811c644406e5a338f04031" title=" " alt="" coords="109,56,217,83"/>
+<area shape="rect" id="node12" href="$_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="137,259,188,285"/>
 </map>

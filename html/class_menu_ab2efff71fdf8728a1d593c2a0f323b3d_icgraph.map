@@ -1,4 +1,6 @@
 <map id="Menu::OptionFour" name="Menu::OptionFour">
-<area shape="rect" id="node1" title="Option to process sensor data for all months of a specified year and export results to a file." alt="" coords="104,5,231,32"/>
-<area shape="rect" id="node2" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node1" title="Option to process sensor data for all months of a specified year and export results to a file." alt="" coords="263,31,389,57"/>
+<area shape="rect" id="node2" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="134,5,185,32"/>
+<area shape="rect" id="node3" href="$_menu_test_8cpp.html#aaec49654a81505febfa00c2fe7913bad" title=" " alt="" coords="104,56,215,83"/>
+<area shape="rect" id="node4" href="$_menu_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
 </map>

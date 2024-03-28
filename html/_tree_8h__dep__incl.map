@@ -1,13 +1,14 @@
 <map id="Tree.h" name="Tree.h">
-<area shape="rect" id="node1" title="Tree base class definition." alt="" coords="279,5,337,32"/>
-<area shape="rect" id="node2" href="$_a_v_l_8h.html" title="AVL tree class definition." alt="" coords="228,80,287,107"/>
-<area shape="rect" id="node10" href="$_b_s_t_8h.html" title="BST tree class definition." alt="" coords="329,80,388,107"/>
-<area shape="rect" id="node3" href="$_ao_avl_map_8h.html" title="AoAvlMap class definition." alt="" coords="93,155,184,181"/>
-<area shape="rect" id="node9" href="$_a_v_l_test_8cpp.html" title="AVL Test execution file." alt="" coords="209,155,306,181"/>
-<area shape="rect" id="node4" href="$_ao_avl_map_test_8cpp.html" title="AoAvlMap Test execution file." alt="" coords="5,229,136,256"/>
-<area shape="rect" id="node5" href="$_processor_8h.html" title="Processor class definition." alt="" coords="161,229,253,256"/>
-<area shape="rect" id="node6" href="$_main_8cpp.html" title="Entry point for the assignment. The main execution file." alt="" coords="55,304,129,331"/>
-<area shape="rect" id="node7" href="$_processor_8cpp.html" title="Processor class implementation file." alt="" coords="153,304,260,331"/>
-<area shape="rect" id="node8" href="$_processor_test_8cpp.html" title="Processor Test execution file." alt="" coords="284,304,415,331"/>
-<area shape="rect" id="node11" href="$_b_s_t_test_8cpp.html" title="BST Test execution file." alt="" coords="330,155,427,181"/>
+<area shape="rect" id="node1" title="Tree base class definition." alt="" coords="293,5,352,32"/>
+<area shape="rect" id="node2" href="$_a_v_l_8h.html" title="AVL tree class definition." alt="" coords="243,80,301,107"/>
+<area shape="rect" id="node11" href="$_b_s_t_8h.html" title="BST tree class definition." alt="" coords="344,80,403,107"/>
+<area shape="rect" id="node3" href="$_ao_avl_map_8h.html" title="AoAvlMap class definition." alt="" coords="108,155,199,181"/>
+<area shape="rect" id="node10" href="$_a_v_l_test_8cpp.html" title="AVL Test execution file." alt="" coords="223,155,321,181"/>
+<area shape="rect" id="node4" href="$_ao_avl_map_test_8cpp.html" title="AoAvlMap Test execution file." alt="" coords="20,229,151,256"/>
+<area shape="rect" id="node5" href="$_processor_8h.html" title="Processor class definition." alt="" coords="175,229,267,256"/>
+<area shape="rect" id="node6" href="$_main_8cpp.html" title="Entry point for the assignment. The main execution file." alt="" coords="5,304,80,331"/>
+<area shape="rect" id="node7" href="$_menu_test_8cpp.html" title="Menu Test execution file." alt="" coords="104,304,208,331"/>
+<area shape="rect" id="node8" href="$_processor_8cpp.html" title="Processor class implementation file." alt="" coords="232,304,339,331"/>
+<area shape="rect" id="node9" href="$_processor_test_8cpp.html" title="Processor Test execution file." alt="" coords="363,304,493,331"/>
+<area shape="rect" id="node12" href="$_b_s_t_test_8cpp.html" title="BST Test execution file." alt="" coords="345,155,442,181"/>
 </map>

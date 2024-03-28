@@ -1,7 +1,9 @@
 <map id="AoAvlMap::ExtractMeasurements" name="AoAvlMap::ExtractMeasurements">
-<area shape="rect" id="node1" title=" " alt="" coords="327,31,543,57"/>
-<area shape="rect" id="node2" href="$class_menu.html#a92bafcf65e97e2539fb0030422aa80d8" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="130,5,253,32"/>
-<area shape="rect" id="node4" href="$_ao_avl_map_test_8cpp.html#ac8582988e27bbf21c4b1e47c221984e5" title=" " alt="" coords="104,56,279,83"/>
-<area shape="rect" id="node3" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
-<area shape="rect" id="node5" href="$_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" id="node1" title="Extracts measurements of a specified sensor measurement type from the AVL tree." alt="" coords="483,81,699,108"/>
+<area shape="rect" id="node2" href="$class_menu.html#a92bafcf65e97e2539fb0030422aa80d8" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="286,56,409,83"/>
+<area shape="rect" id="node6" href="$_ao_avl_map_test_8cpp.html#ac8582988e27bbf21c4b1e47c221984e5" title=" " alt="" coords="260,107,435,133"/>
+<area shape="rect" id="node3" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="133,5,183,32"/>
+<area shape="rect" id="node4" href="$_menu_test_8cpp.html#a867b9298fce2d874c7c6608b8e93ac83" title=" " alt="" coords="104,56,212,83"/>
+<area shape="rect" id="node5" href="$_menu_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" id="node7" href="$_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="133,107,183,133"/>
 </map>

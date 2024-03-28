@@ -560,8 +560,8 @@
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="Left" type="integer">404</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">2044</XPD:ATTR>
-<XPD:ATTR name="Width" type="integer">544</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">98</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">654</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">124</XPD:ATTR>
 <XPD:REF name="Model">1Bf1QcwgdE2ausCd3VEvDgAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="eQnrflDctESA50iysmET2AAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="tEarzNg3t0SAPt84XItsmwAA">
@@ -3101,7 +3101,7 @@
 <XPD:ATTR name="Name" type="string">class T</XPD:ATTR>
 <XPD:REF name="Template">1Bf1QcwgdE2ausCd3VEvDgAA</XPD:REF>
 </XPD:OBJ>
-<XPD:ATTR name="#Operations" type="integer">3</XPD:ATTR>
+<XPD:ATTR name="#Operations" type="integer">5</XPD:ATTR>
 <XPD:OBJ name="Operations[0]" type="UMLOperation" guid="jSqJh88NR0KX9VPWNe/2KgAA">
 <XPD:ATTR name="Name" type="string">OptionOne</XPD:ATTR>
 <XPD:REF name="Owner">1Bf1QcwgdE2ausCd3VEvDgAA</XPD:REF>
@@ -3134,9 +3134,9 @@
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="Operations[1]" type="UMLOperation" guid="V1yYJOvNN0m+ocm78Cy4wQAA">
-<XPD:ATTR name="Name" type="string">OptionTwo</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">OptionTwoThree</XPD:ATTR>
 <XPD:REF name="Owner">1Bf1QcwgdE2ausCd3VEvDgAA</XPD:REF>
-<XPD:ATTR name="#Parameters" type="integer">4</XPD:ATTR>
+<XPD:ATTR name="#Parameters" type="integer">5</XPD:ATTR>
 <XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="9yZF2/xKFEKfKbFa8hwQCgAA">
 <XPD:ATTR name="Name" type="string">&amp;avl</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">AVL&lt;T&gt;</XPD:ATTR>
@@ -3158,11 +3158,16 @@
 <XPD:ATTR name="TypeExpression" type="string">void</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">V1yYJOvNN0m+ocm78Cy4wQAA</XPD:REF>
 </XPD:OBJ>
+<XPD:OBJ name="Parameters[4]" type="UMLParameter" guid="r06HxyfRLUOcCQlXWhUL6AAA">
+<XPD:ATTR name="Name" type="string">&amp;option</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">char</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">V1yYJOvNN0m+ocm78Cy4wQAA</XPD:REF>
+</XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="Operations[2]" type="UMLOperation" guid="hwRH+czU8keVdG7bN2FIHQAA">
-<XPD:ATTR name="Name" type="string">OptionThree</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">OptionFour</XPD:ATTR>
 <XPD:REF name="Owner">1Bf1QcwgdE2ausCd3VEvDgAA</XPD:REF>
-<XPD:ATTR name="#Parameters" type="integer">4</XPD:ATTR>
+<XPD:ATTR name="#Parameters" type="integer">6</XPD:ATTR>
 <XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="WwLDaHoe/k6x3JvbuERJBwAA">
 <XPD:ATTR name="Name" type="string">&amp;avl</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">AVL&lt;T&gt;</XPD:ATTR>
@@ -3174,8 +3179,8 @@
 <XPD:REF name="BehavioralFeature">hwRH+czU8keVdG7bN2FIHQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="rmdWil2rPU++hj1l4+N0wgAA">
-<XPD:ATTR name="Name" type="string">&amp;year</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">unsigned</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">&amp;outputFile</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">ofstream</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">hwRH+czU8keVdG7bN2FIHQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Parameters[3]" type="UMLParameter" guid="OLGyuUNehEm8H5Bup5n4hgAA">
@@ -3183,6 +3188,58 @@
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">void</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">hwRH+czU8keVdG7bN2FIHQAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[4]" type="UMLParameter" guid="Np52UjhUS0GDfg4/p+hSvQAA">
+<XPD:ATTR name="Name" type="string">&amp;filePath</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">const string</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">hwRH+czU8keVdG7bN2FIHQAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[5]" type="UMLParameter" guid="Fys9VN6za0an0uOQzD5xsQAA">
+<XPD:ATTR name="Name" type="string">&amp;year</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">unsigned</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">hwRH+czU8keVdG7bN2FIHQAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[3]" type="UMLOperation" guid="yQrl2lVp00SXjQAanT8UYQAA">
+<XPD:ATTR name="Name" type="string">OptionFive</XPD:ATTR>
+<XPD:REF name="Owner">1Bf1QcwgdE2ausCd3VEvDgAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">3</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="lzLYpPPHu0W4EIW+wRnUeQAA">
+<XPD:ATTR name="Name" type="string">&amp;aoAvlMap</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">AoAvlMap&lt;T&gt;</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">yQrl2lVp00SXjQAanT8UYQAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="kHAZOe1mskm9fwEDOCiUEAAA">
+<XPD:ATTR name="Name" type="string">&amp;month</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">unsigned</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">yQrl2lVp00SXjQAanT8UYQAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="Og8dZGCyUUKRBamWMtSt2AAA">
+<XPD:ATTR name="Name" type="string">return</XPD:ATTR>
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">void</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">yQrl2lVp00SXjQAanT8UYQAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[4]" type="UMLOperation" guid="yAgdjBCsgkOFy/S9whyBzgAA">
+<XPD:ATTR name="Name" type="string">PrintSpccValues</XPD:ATTR>
+<XPD:REF name="Owner">1Bf1QcwgdE2ausCd3VEvDgAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">3</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="Lo8lIwbawEakmOXitwTkawAA">
+<XPD:ATTR name="Name" type="string">&amp;label</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">const string</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">yAgdjBCsgkOFy/S9whyBzgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="UUwL1PpmHkKBN8XyqY01EwAA">
+<XPD:ATTR name="Name" type="string">value</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">float</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">yAgdjBCsgkOFy/S9whyBzgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="hT6YgyG0IEOXLBC+LnS1MAAA">
+<XPD:ATTR name="Name" type="string">return</XPD:ATTR>
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">void</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">yAgdjBCsgkOFy/S9whyBzgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>

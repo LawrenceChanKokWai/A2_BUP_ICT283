@@ -1,6 +1,8 @@
 <map id="Vector::IsEmpty" name="Vector::IsEmpty">
-<area shape="rect" id="node1" title="Check on if Vector is empty." alt="" coords="501,5,617,32"/>
-<area shape="rect" id="node2" href="$class_ao_avl_map.html#a88fbb2373ede5785d10dc4af24ce993f" title=" " alt="" coords="275,5,453,32"/>
-<area shape="rect" id="node3" href="$class_menu.html#a92bafcf65e97e2539fb0030422aa80d8" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="104,5,227,32"/>
-<area shape="rect" id="node4" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node1" title="Check on if Vector is empty." alt="" coords="657,31,773,57"/>
+<area shape="rect" id="node2" href="$class_ao_avl_map.html#aa1235e17821e4743a3e683f54dd2da2f" title="Calculates the Sample Pearson Correlation Coefficient (sPCC) between two sets of data." alt="" coords="431,31,609,57"/>
+<area shape="rect" id="node3" href="$class_menu.html#a92bafcf65e97e2539fb0030422aa80d8" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="260,31,383,57"/>
+<area shape="rect" id="node4" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="133,5,183,32"/>
+<area shape="rect" id="node5" href="$_menu_test_8cpp.html#a867b9298fce2d874c7c6608b8e93ac83" title=" " alt="" coords="104,56,212,83"/>
+<area shape="rect" id="node6" href="$_menu_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
 </map>

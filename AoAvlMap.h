@@ -78,23 +78,34 @@ public:
     */
     float CalculateSampleStandardDeviation(Node<T>* root, SensorMeasurementType sensorMeasurementType, unsigned &count) const;
 
+    /**
+     * @brief Extracts measurements of a specified sensor measurement type from the AVL tree.
+     *
+     * This function traverses the AVL tree in an inorder manner and extracts measurements
+     * of the specified sensor measurement type from each node. The extracted measurements
+     * are pushed into the provided vector.
+     *
+     * @tparam T The type of elements stored in the AVL tree.
+     * @param[in] root The root node of the AVL tree.
+     * @param[in] sensorMeasurementType The type of sensor measurement to extract.
+     * @param[in] measurements A vector to store the extracted measurements.
+     */
     void ExtractMeasurements(Node<T>* root, SensorMeasurementType sensorMeasurementType, Vector<float>& measurements) const;
 
-    float CalculateSPCC( const Vector<float>& data1, const Vector<float>& data2 ) const;
-
     /**
-    * @brief Finds the highest solar radiation readings for a specific date.
-    *
-    * This method searches the AVL map for the highest solar radiation readings recorded
-    * on the specified date (day, month, year). It returns a vector of pairs containing
-    * the highest radiation value(s) and the corresponding time(s) of measurement.
-    *
-    * @param[in] day The day of the date.
-    * @param[in] month The month of the date.
-    * @param[in] year The year of the date.
-    * @return A vector of pairs representing the highest solar radiation and its corresponding time(s).
-    */
-    //vector<pair<float, string>> FindHighestSolarRadiation(unsigned day, unsigned month, unsigned year) const;
+     * @brief Calculates the Sample Pearson Correlation Coefficient (sPCC) between two sets of data.
+     *
+     * This function computes the sPCC, a measure of the linear correlation between two sets of data.
+     * It requires two vectors of float data, dataOne and dataTwo, containing the values of the variables
+     * to be correlated. It returns the calculated sPCC.
+     *
+     * @tparam T The type of elements stored in the vectors.
+     * @param[in] dataOne The first set of data for correlation.
+     * @param[in] dataTwo The second set of data for correlation.
+     * @return The calculated Sample Pearson Correlation Coefficient (sPCC). If the sizes of dataOne and dataTwo
+     * are not equal or if either of the vectors is empty, it returns -1.0 to indicate an error.
+     */
+    float CalculateSPCC(const Vector<float> &dataOne, const Vector<float> &dataTwo ) const;
 
 private:
     map<unsigned, array<AVL<SensorRecType>, NUM_MTH>> m_data;    ///< Map storing arrays of sensor data vectors organized by month and year.
@@ -113,24 +124,6 @@ private:
     *
     */
     void InOrderTraversalSumAndSquareSum(Node<T>* root, SensorMeasurementType sensorMeasurementType, float& sum, float& sumSquare) const;
-
-    /**
-     * @brief Traverses the AVL tree recursively to find the highest solar radiation readings for a given date.
-     *
-     * This function traverses the AVL tree recursively starting from the given node to find the highest solar radiation
-     * readings recorded on a specific date. It updates the highest radiation value and corresponding times accordingly.
-     *
-     * @tparam T The type of data stored in the AVL tree.
-     * @param node Pointer to the current node being visited during traversal.
-     * @param day The day of the month for which the highest radiation is being searched.
-     * @param month The month for which the highest radiation is being searched.
-     * @param year The year for which the highest radiation is being searched.
-     * @param highestRadiation Reference to the variable holding the highest radiation value found so far.
-     * @param highestRadiations Reference to the vector holding pairs of highest radiation values and corresponding times.
-     */
-    //void TraverseAndFindHighestRadiation(Node<T>* node, unsigned day, unsigned month, unsigned year, float& highestRadiation, vector<pair<float, string>>& highestRadiations) const;
-
-
 };
 
 template<class T>

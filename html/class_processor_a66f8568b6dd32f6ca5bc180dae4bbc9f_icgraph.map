@@ -1,7 +1,9 @@
 <map id="Processor::GetInstance" name="Processor::GetInstance">
-<area shape="rect" id="node1" title="Returns the singleton instance of Processor." alt="" coords="279,31,437,57"/>
-<area shape="rect" id="node2" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
-<area shape="rect" id="node3" href="$class_menu.html#ab2efff71fdf8728a1d593c2a0f323b3d" title="Option to process sensor data for all months of a specified year and export results to a file." alt="" coords="104,31,231,57"/>
-<area shape="rect" id="node4" href="$_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5" title=" " alt="" coords="106,81,229,108"/>
-<area shape="rect" id="node5" href="$_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" id="node1" title="Returns the singleton instance of Processor." alt="" coords="437,56,596,83"/>
+<area shape="rect" id="node2" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="134,5,185,32"/>
+<area shape="rect" id="node3" href="$class_menu.html#ab2efff71fdf8728a1d593c2a0f323b3d" title="Option to process sensor data for all months of a specified year and export results to a file." alt="" coords="263,56,389,83"/>
+<area shape="rect" id="node6" href="$_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5" title=" " alt="" coords="265,107,387,133"/>
+<area shape="rect" id="node4" href="$_menu_test_8cpp.html#aaec49654a81505febfa00c2fe7913bad" title=" " alt="" coords="104,56,215,83"/>
+<area shape="rect" id="node5" href="$_menu_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" id="node7" href="$_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="134,107,185,133"/>
 </map>

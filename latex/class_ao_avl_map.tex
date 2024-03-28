@@ -11,8 +11,7 @@ Represents the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} Class.
 
 
 
-Collaboration diagram for Ao\+Avl\+Map$<$ T $>$\+:
-\nopagebreak
+Collaboration diagram for Ao\+Avl\+Map$<$ T $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -33,9 +32,9 @@ void \mbox{\hyperlink{class_ao_avl_map_afe182a9b789a029dba7352892669fa19}{In\+Or
 float \mbox{\hyperlink{class_ao_avl_map_a66bd893ec3632a752ebc316e43c3236a}{Calculate\+Sample\+Standard\+Deviation}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$root, \mbox{\hyperlink{_sensor_measurement_type_8h_abee7b7fdc87d37c2132a67729cc0ab43}{Sensor\+Measurement\+Type}} sensor\+Measurement\+Type, unsigned \&count) const
 \begin{DoxyCompactList}\small\item\em Calculates the sample standard deviation of sensor measurements. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9}{Extract\+Measurements}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$root, \mbox{\hyperlink{_sensor_measurement_type_8h_abee7b7fdc87d37c2132a67729cc0ab43}{Sensor\+Measurement\+Type}} sensor\+Measurement\+Type, \mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&measurements) const
-\item 
-float \mbox{\hyperlink{class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f}{Calculate\+S\+P\+CC}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&data1, const \mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&data2) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Extracts measurements of a specified sensor measurement type from the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ao_avl_map_aa1235e17821e4743a3e683f54dd2da2f}{Calculate\+S\+P\+CC}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&data\+One, const \mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&data\+Two) const
+\begin{DoxyCompactList}\small\item\em Calculates the Sample Pearson Correlation Coefficient (s\+P\+CC) between two sets of data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -81,7 +80,7 @@ The sample standard deviation of sensor measurements.
 \end{DoxyReturn}
 
 
-Definition at line 233 of file Ao\+Avl\+Map.\+h.
+Definition at line 226 of file Ao\+Avl\+Map.\+h.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -91,23 +90,44 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_ao_avl_map_a66bd893ec3632a752ebc316e43c3236a_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f}\label{class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f}} 
+\mbox{\Hypertarget{class_ao_avl_map_aa1235e17821e4743a3e683f54dd2da2f}\label{class_ao_avl_map_aa1235e17821e4743a3e683f54dd2da2f}} 
 \index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!CalculateSPCC@{CalculateSPCC}}
 \index{CalculateSPCC@{CalculateSPCC}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{CalculateSPCC()}{CalculateSPCC()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-float \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Calculate\+S\+P\+CC (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&}]{data1,  }\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&}]{data2 }\end{DoxyParamCaption}) const}
+float \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Calculate\+S\+P\+CC (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&}]{data\+One,  }\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ float $>$ \&}]{data\+Two }\end{DoxyParamCaption}) const}
 
 
 
-Definition at line 271 of file Ao\+Avl\+Map.\+h.
+Calculates the Sample Pearson Correlation Coefficient (s\+P\+CC) between two sets of data. 
+
+This function computes the s\+P\+CC, a measure of the linear correlation between two sets of data. It requires two vectors of float data, data\+One and data\+Two, containing the values of the variables to be correlated. It returns the calculated s\+P\+CC.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements stored in the vectors. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data\+One} & The first set of data for correlation. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data\+Two} & The second set of data for correlation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The calculated Sample Pearson Correlation Coefficient (s\+P\+CC). If the sizes of data\+One and data\+Two are not equal or if either of the vectors is empty, it returns -\/1.\+0 to indicate an error. 
+\end{DoxyReturn}
+
+
+Definition at line 264 of file Ao\+Avl\+Map.\+h.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=339pt]{class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f_cgraph}
+\includegraphics[width=339pt]{class_ao_avl_map_aa1235e17821e4743a3e683f54dd2da2f_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -115,7 +135,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ao_avl_map_a88fbb2373ede5785d10dc4af24ce993f_icgraph}
+\includegraphics[width=350pt]{class_ao_avl_map_aa1235e17821e4743a3e683f54dd2da2f_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9}\label{class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9}} 
@@ -127,7 +147,27 @@ void \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Extract\+Meas
 
 
 
-Definition at line 245 of file Ao\+Avl\+Map.\+h.
+Extracts measurements of a specified sensor measurement type from the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. 
+
+This function traverses the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree in an inorder manner and extracts measurements of the specified sensor measurement type from each node. The extracted measurements are pushed into the provided vector.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements stored in the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em root} & The root node of the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sensor\+Measurement\+Type} & The type of sensor measurement to extract. \\
+\hline
+\mbox{\texttt{ in}}  & {\em measurements} & A vector to store the extracted measurements. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 238 of file Ao\+Avl\+Map.\+h.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -175,7 +215,7 @@ Get a constant reference to the sensor data map.
 \end{DoxyReturn}
 
 
-Definition at line 137 of file Ao\+Avl\+Map.\+h.
+Definition at line 130 of file Ao\+Avl\+Map.\+h.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -209,7 +249,7 @@ This method traverses the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree in an in-\/
 \end{DoxyParams}
 
 
-Definition at line 177 of file Ao\+Avl\+Map.\+h.
+Definition at line 170 of file Ao\+Avl\+Map.\+h.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -237,10 +277,9 @@ Insert sensor data into the map consisted with array of Vectors.
 \end{DoxyParams}
 
 
-Definition at line 149 of file Ao\+Avl\+Map.\+h.
+Definition at line 142 of file Ao\+Avl\+Map.\+h.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

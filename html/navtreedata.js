@@ -56,7 +56,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_v_l_8h.html",
-"class_ao_avl_map.html#a7e21558689bec8bcab2dedf297b1f798"
+"_wind_speed_test_8cpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

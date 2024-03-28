@@ -36,12 +36,6 @@ void TestInOrderTraversalSSD( AoAvlMap<T> &testMap );
 
 void TestExtractMeasurements();
 
-/**
-template<class T>
-void TestHighestSolarRadiation(AoAvlMap<T> &testMap, unsigned day, unsigned month, unsigned year);*/
-
-//template<class T>
-//void TestHighestSolarRadiation( AoAvlMap<T> ao_avl_map );
 
 int main()
 {
@@ -74,11 +68,6 @@ int main()
     TestInOrderTraversalSSD( testMap );
 
     TestExtractMeasurements();
-
-    //TestHighestSolarRadiation(testMap, 11, 10, 2020);
-
-    //TestHighestSolarRadiation( testMap );
-
 
     return 0;
 }
@@ -213,14 +202,15 @@ void TestInOrderTraversalSSD( AoAvlMap<T> &testMap )
     float sampleStandardDeviation = testMap.CalculateSampleStandardDeviation(avlTree.GetRoot(), sensorType, count);
 
     // Output the result
-    std::cout << "Sample standard deviation of wind speed for " << month << "/" << year << ": " << sampleStandardDeviation << std::endl;
+    cout << "Sample standard deviation of wind speed for " << month << "/" << year << ": " << sampleStandardDeviation << '\n' << endl;
 }
 
 void TestExtractMeasurements()
 {
+    cout << "Test on Extracting Data from AVL and insert to Vector: " << endl;
     AoAvlMap<SensorRecType> testMap;
     AVL<SensorRecType> sensorRecords;
-    vector<float> windMeasurements;
+    Vector<float> windMeasurements;
 
     Date date1(2022, 3, 20);
     Time time1(8, 0);
@@ -252,41 +242,8 @@ void TestExtractMeasurements()
         }
     }
     // Verify the number of wind speed measurements extracted
-    Assert_Equals(windMeasurements.size() == 2, "Correct number of wind speed measurements stored in vector");
+    Assert_Equals(windMeasurements.GetUsed() == 2, "Correct number of wind speed measurements stored in vector");
 }
-
-
-/**
-template<class T>
-void TestHighestSolarRadiation( AoAvlMap<T> ao_avl_map )
-{
-    //AoAvlMap<SensorRecType> ao_avl_map;
-    pair<float, string> highest_solar_radiation = ao_avl_map.FindHighestSolarRadiation(11, 10, 2020);
-    cout << "The highest solar radiation reading is " << highest_solar_radiation.first << " at " << highest_solar_radiation.second << "." << endl;
-}
-
-template<class T>
-void TestHighestSolarRadiation(AoAvlMap<T> &testMap, unsigned day, unsigned month, unsigned year)
-{
-    cout << "\nTest On FindHighestSolarRadiation: " << endl;
-
-    // Call the function being tested
-    vector<pair<float, string>> highestRadiations = testMap.FindHighestSolarRadiation(day, month, year);
-
-    // Print the results
-    cout << "Highest Solar Radiation Readings for " << day << "/" << month << "/" << year << ":" << endl;
-    for (const auto &radiation : highestRadiations)
-    {
-        cout << "Radiation: " << radiation.first << " kW/m^2, Time: " << radiation.second << endl;
-    }
-    Assert_Equals(!highestRadiations.empty(), "Highest solar radiation readings are not empty");
-
-    // Assert that each radiation reading is non-negative
-    for (const auto &radiation : highestRadiations)
-    {
-        Assert_Equals(radiation.first >= 0.0f, "Solar radiation reading is non-negative");
-    }
-} */
 
 //++++ For displaying traversal operation +++
 template<class T>

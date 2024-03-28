@@ -1,0 +1,10 @@
+<map id="TestOptionTwo" name="TestOptionTwo">
+<area shape="rect" id="node1" title=" " alt="" coords="5,147,113,174"/>
+<area shape="rect" id="node2" href="$class_menu.html#ac59025fad993c4db4cb50feaad62e4a0" title="Option to calculate and display either average ambient temperature or solar radiation for each month ..." alt="" coords="161,147,316,174"/>
+<area shape="rect" id="node3" href="$class_ao_avl_map.html#a66bd893ec3632a752ebc316e43c3236a" title="Calculates the sample standard deviation of sensor measurements." alt="" coords="375,5,561,47"/>
+<area shape="rect" id="node4" href="$class_tree.html#a5596f364c74235f642a3e995878943fa" title="Get the root node of the tree." alt="" coords="417,71,519,98"/>
+<area shape="rect" id="node5" href="$class_ao_avl_map.html#a7e21558689bec8bcab2dedf297b1f798" title="Get a constant reference to the sensor data map." alt="" coords="379,122,557,149"/>
+<area shape="rect" id="node6" href="$class_tree.html#ab793c2ca18ef3d4a24dcf64902a75880" title="Get the number of nodes in the Tree." alt="" coords="399,173,537,199"/>
+<area shape="rect" id="node7" href="$class_ao_avl_map.html#afe182a9b789a029dba7352892669fa19" title="Performs in&#45;order traversal of the AVL tree and accumulates the sum of sensor measurements." alt="" coords="364,223,572,250"/>
+<area shape="rect" id="node8" href="$class_tree.html#a044a94a076990c0520c25705382d1454" title="Checks if the Tree is empty." alt="" coords="417,274,519,301"/>
+</map>

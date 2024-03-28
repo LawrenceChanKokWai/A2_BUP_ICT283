@@ -1,8 +1,9 @@
 <map id="AoAvlMap.h" name="AoAvlMap.h">
-<area shape="rect" id="node1" title="AoAvlMap class definition." alt="" coords="93,5,184,32"/>
-<area shape="rect" id="node2" href="$_ao_avl_map_test_8cpp.html" title="AoAvlMap Test execution file." alt="" coords="5,80,136,107"/>
-<area shape="rect" id="node3" href="$_processor_8h.html" title="Processor class definition." alt="" coords="161,80,253,107"/>
-<area shape="rect" id="node4" href="$_main_8cpp.html" title="Entry point for the assignment. The main execution file." alt="" coords="55,155,129,181"/>
-<area shape="rect" id="node5" href="$_processor_8cpp.html" title="Processor class implementation file." alt="" coords="153,155,260,181"/>
-<area shape="rect" id="node6" href="$_processor_test_8cpp.html" title="Processor Test execution file." alt="" coords="284,155,415,181"/>
+<area shape="rect" id="node1" title="AoAvlMap class definition." alt="" coords="108,5,199,32"/>
+<area shape="rect" id="node2" href="$_ao_avl_map_test_8cpp.html" title="AoAvlMap Test execution file." alt="" coords="20,80,151,107"/>
+<area shape="rect" id="node3" href="$_processor_8h.html" title="Processor class definition." alt="" coords="175,80,267,107"/>
+<area shape="rect" id="node4" href="$_main_8cpp.html" title="Entry point for the assignment. The main execution file." alt="" coords="5,155,80,181"/>
+<area shape="rect" id="node5" href="$_menu_test_8cpp.html" title="Menu Test execution file." alt="" coords="104,155,208,181"/>
+<area shape="rect" id="node6" href="$_processor_8cpp.html" title="Processor class implementation file." alt="" coords="232,155,339,181"/>
+<area shape="rect" id="node7" href="$_processor_test_8cpp.html" title="Processor Test execution file." alt="" coords="363,155,493,181"/>
 </map>
