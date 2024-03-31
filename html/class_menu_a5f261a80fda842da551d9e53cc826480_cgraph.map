@@ -1,0 +1,9 @@
+<map id="Menu::OptionThree" name="Menu::OptionThree">
+<area shape="rect" id="node1" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="5,107,137,133"/>
+<area shape="rect" id="node2" href="$class_ao_avl_map.html#aa1235e17821e4743a3e683f54dd2da2f" title="Calculates the Sample Pearson Correlation Coefficient (sPCC) between two sets of data." alt="" coords="204,56,383,83"/>
+<area shape="rect" id="node5" href="$class_ao_avl_map.html#a9ebd2f8953929698626a253d805d71a9" title="Extracts measurements of a specified sensor measurement type from the AVL tree." alt="" coords="185,107,401,133"/>
+<area shape="rect" id="node7" href="$class_ao_avl_map.html#a7e21558689bec8bcab2dedf297b1f798" title="Get a constant reference to the sensor data map." alt="" coords="205,157,382,184"/>
+<area shape="rect" id="node3" href="$class_vector.html#ab72cd45d42bfea0432b2780c504ea867" title="Get the number of elements used in the vector." alt="" coords="453,5,571,32"/>
+<area shape="rect" id="node4" href="$class_vector.html#a9c74fd822fb8b1c5f7eeaf7deaad9abc" title="Check on if Vector is empty." alt="" coords="454,56,570,83"/>
+<area shape="rect" id="node6" href="$class_vector.html#a0b4525d26f9397f327e6adb7c7eee22c" title="Insert an object to the end of the vector." alt="" coords="449,107,575,133"/>
+</map>

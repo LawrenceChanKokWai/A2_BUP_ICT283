@@ -1,10 +1,12 @@
 <map id="AoAvlMap::InsertSensorData" name="AoAvlMap::InsertSensorData">
-<area shape="rect" id="node1" title="Insert sensor data into the map consisted with array of Vectors." alt="" coords="497,81,685,108"/>
-<area shape="rect" id="node2" href="$class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="277,31,447,57"/>
-<area shape="rect" id="node6" href="$_ao_avl_map_test_8cpp.html#ac8582988e27bbf21c4b1e47c221984e5" title=" " alt="" coords="275,81,449,108"/>
-<area shape="rect" id="node8" href="$_ao_avl_map_test_8cpp.html#a3fca6b5072a0713600abe13bbb77d8c6" title=" " alt="" coords="309,132,415,159"/>
-<area shape="rect" id="node3" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="140,5,191,32"/>
-<area shape="rect" id="node4" href="$_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5" title=" " alt="" coords="104,56,227,83"/>
-<area shape="rect" id="node5" href="$_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
-<area shape="rect" id="node7" href="$_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="140,119,191,145"/>
+<area shape="rect" id="node1" title="Insert sensor data into the map consisted with array of Vectors." alt="" coords="713,107,901,133"/>
+<area shape="rect" id="node2" href="$class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="493,56,663,83"/>
+<area shape="rect" id="node8" href="$_ao_avl_map_test_8cpp.html#ac8582988e27bbf21c4b1e47c221984e5" title=" " alt="" coords="491,107,665,133"/>
+<area shape="rect" id="node10" href="$_ao_avl_map_test_8cpp.html#a3fca6b5072a0713600abe13bbb77d8c6" title=" " alt="" coords="525,157,631,184"/>
+<area shape="rect" id="node3" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="146,5,197,32"/>
+<area shape="rect" id="node4" href="$class_processor.html#ad8c3c5b193b38060b4aa355078f22513" title="Reloads data from a CSV file into an AoAvlMap." alt="" coords="287,56,443,83"/>
+<area shape="rect" id="node7" href="$_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5" title=" " alt="" coords="110,107,233,133"/>
+<area shape="rect" id="node5" href="$_processor_test_8cpp.html#a42311f3097675417627b086d6ede606a" title=" " alt="" coords="104,56,239,83"/>
+<area shape="rect" id="node6" href="$_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" id="node9" href="$_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="339,157,390,184"/>
 </map>

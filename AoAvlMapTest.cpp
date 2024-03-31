@@ -36,11 +36,17 @@ void TestInOrderTraversalSSD( AoAvlMap<T> &testMap );
 
 void TestExtractMeasurements();
 
+template<class T>
+void TestIsEmpty( AoAvlMap<T> &testMap );
+
+template<class T>
+void TestDestroyMap( AoAvlMap<T> &testMap );
 
 int main()
 {
 
     AoAvlMap<SensorRecType> testMap;
+    TestIsEmpty( testMap );
 
     Date date(11,10,2020);
     Time time(11,20);
@@ -68,6 +74,8 @@ int main()
     TestInOrderTraversalSSD( testMap );
 
     TestExtractMeasurements();
+
+    TestDestroyMap( testMap );
 
     return 0;
 }
@@ -243,6 +251,7 @@ void TestExtractMeasurements()
     }
     // Verify the number of wind speed measurements extracted
     Assert_Equals(windMeasurements.GetUsed() == 2, "Correct number of wind speed measurements stored in vector");
+    cout << endl;
 }
 
 //++++ For displaying traversal operation +++
@@ -251,4 +260,23 @@ void Display( const T &node )
 {
     cout << '\n' << '\t' << '\t' << '\t' << node << " ";
 }
+
+template<class T>
+void TestIsEmpty( AoAvlMap<T> &testMap )
+{
+    cout << "Test if MAP is empty: " << endl;
+    Assert_Equals( testMap.IsEmpty(), "Map is empty" );
+    cout << endl;
+}
+
+template<class T>
+void TestDestroyMap( AoAvlMap<T> &testMap )
+{
+    cout << "Test on destroying previous data on Map" << endl;
+    Assert_Equals( !testMap.IsEmpty(), "[BEFORE Destroying]: Map is not empty");
+    testMap.Destroy();
+    Assert_Equals( testMap.IsEmpty(), "[AFTER Destroying]: Map has destroyed previous data.");
+    cout << endl;
+}
+
 

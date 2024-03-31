@@ -21,6 +21,8 @@ void TestLoadCsvFilePathToVector( Vector<T> &csvFilePath );
 template<class T>
 void TestLoadCsvData( Vector<string> &csvFilePath, AoAvlMap<T> &aoAvlMap );
 
+template<class T>
+void TestReloadCsvData( AoAvlMap<T> &aoAvlMap, const string &filePath );
 
 int main()
 {
@@ -38,6 +40,7 @@ int main()
 
     TestLoadCsvFilePathToVector( csvFilePath );
     TestLoadCsvData( csvFilePath, testMap );
+    TestReloadCsvData( testMap, filename );
 
     return 0;
 }
@@ -69,3 +72,12 @@ void TestLoadCsvData( Vector<string> &csvFilePath, AoAvlMap<T> &aoAvlMap )
     Processor::GetInstance().LoadCSVData( csvFilePath, aoAvlMap );
     cout << endl;
 }
+
+template<class T>
+void TestReloadCsvData( AoAvlMap<T> &aoAvlMap, const string &filePath )
+{
+    cout << "Test on reloading csv data into the map" << endl;
+    Processor::GetInstance().ReloadData( aoAvlMap, filePath );
+    cout << endl;
+}
+

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Assignment Two: Processor.cpp Source File</title>
+<title>Assignment_Two: Processor.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,9 +25,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Assignment Two
-   &#160;<span id="projectnumber">1.0.0</span>
+   <div id="projectname">Assignment_Two
    </div>
+   <div id="projectbrief">ICT283_Assignment Two</div>
   </td>
  </tr>
  </tbody>
@@ -277,13 +277,38 @@ $(document).ready(function(){initNavTree('_processor_8cpp_source.html',''); init
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">return</span> someStrings;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="class_processor.html#ad8c3c5b193b38060b4aa355078f22513">  206</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_processor.html#ad8c3c5b193b38060b4aa355078f22513">Processor::ReloadData</a>( <a class="code" href="class_ao_avl_map.html">AoAvlMap&lt;SensorRecType&gt;</a> &amp;mapAoBst, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; filename )</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;{</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">// Clear previously loaded data and reset counters</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    m_dataRead = 0;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    m_dataInserted = 0;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="comment">// Clear any existing data structures</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    mapAoBst.<a class="code" href="class_ao_avl_map.html#a37e34f010607dfd1ca5b4a74cd3eca35">Destroy</a>();</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">if</span>( mapAoBst.<a class="code" href="class_ao_avl_map.html#a27de5b518f6f0bca6d4208e811fafaf5">IsEmpty</a>() )</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Previous Map Destroyed, Now reloading data.....&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="comment">// Load data from file</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <a class="code" href="class_vector.html">Vector&lt;string&gt;</a> csvFilePath;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        ifstream input(filename);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <a class="code" href="class_processor.html#a248511764e3ce60ee72f8ae8fd0d47c9">LoadCSVFilePathToVector</a>(csvFilePath, input, filename);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <a class="code" href="class_processor.html#a5378867146978d9ab1d62de4e8d8b80a">LoadCSVData</a>(csvFilePath, mapAoBst);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        cerr &lt;&lt; <span class="stringliteral">&quot;Error destroying previous map.&quot;</span> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;}</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_processor_html"><div class="ttname"><a href="class_processor.html">Processor</a></div><div class="ttdoc">The Processor class handles processing of CSV data as a singleton.</div><div class="ttdef"><b>Definition:</b> <a href="_processor_8h_source.html#l00030">Processor.h:30</a></div></div>
 <div class="ttc" id="aclass_processor_html_a5378867146978d9ab1d62de4e8d8b80a"><div class="ttname"><a href="class_processor.html#a5378867146978d9ab1d62de4e8d8b80a">Processor::LoadCSVData</a></div><div class="ttdeci">void LoadCSVData(Vector&lt; string &gt; &amp;csvFilePath, AoAvlMap&lt; SensorRecType &gt; &amp;mapAoBst)</div><div class="ttdoc">Loads data from CSV files into an AVL map.</div><div class="ttdef"><b>Definition:</b> <a href="_processor_8cpp_source.html#l00058">Processor.cpp:58</a></div></div>
 <div class="ttc" id="a_processor_8h_html"><div class="ttname"><a href="_processor_8h.html">Processor.h</a></div><div class="ttdoc">Processor class definition.</div></div>
-<div class="ttc" id="aclass_ao_avl_map_html_affcadb4f51032bc0cd78619fd97f1bcc"><div class="ttname"><a href="class_ao_avl_map.html#affcadb4f51032bc0cd78619fd97f1bcc">AoAvlMap::InsertSensorData</a></div><div class="ttdeci">bool InsertSensorData(const T &amp;sensorData)</div><div class="ttdoc">Insert sensor data into the map consisted with array of Vectors.</div><div class="ttdef"><b>Definition:</b> <a href="_ao_avl_map_8h_source.html#l00142">AoAvlMap.h:142</a></div></div>
+<div class="ttc" id="aclass_ao_avl_map_html_affcadb4f51032bc0cd78619fd97f1bcc"><div class="ttname"><a href="class_ao_avl_map.html#affcadb4f51032bc0cd78619fd97f1bcc">AoAvlMap::InsertSensorData</a></div><div class="ttdeci">bool InsertSensorData(const T &amp;sensorData)</div><div class="ttdoc">Insert sensor data into the map consisted with array of Vectors.</div><div class="ttdef"><b>Definition:</b> <a href="_ao_avl_map_8h_source.html#l00159">AoAvlMap.h:159</a></div></div>
 <div class="ttc" id="anamespace_constant_html_a78f2bc44b4c0903e6cac64ab409367a2"><div class="ttname"><a href="namespace_constant.html#a78f2bc44b4c0903e6cac64ab409367a2">Constant::INFO</a></div><div class="ttdeci">std::string INFO(const std::string &amp;message)</div><div class="ttdoc">Returns an information message.</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00069">Constant.h:69</a></div></div>
 <div class="ttc" id="aclass_measurement_html_ab6ad71b0556bed9b80d4b4512894237c"><div class="ttname"><a href="class_measurement.html#ab6ad71b0556bed9b80d4b4512894237c">Measurement::SetMeasurement</a></div><div class="ttdeci">void SetMeasurement(const float &amp;measurement)</div><div class="ttdoc">Setter for the measurement variable.</div><div class="ttdef"><b>Definition:</b> <a href="_measurement_8cpp_source.html#l00027">Measurement.cpp:27</a></div></div>
 <div class="ttc" id="aclass_date_html_a66c5ea64f0337c094c58df64ad9b0c0e"><div class="ttname"><a href="class_date.html#a66c5ea64f0337c094c58df64ad9b0c0e">Date::SetMonth</a></div><div class="ttdeci">void SetMonth(const unsigned &amp;month)</div><div class="ttdoc">Method that allows setting the month associated with the Date class.</div><div class="ttdef"><b>Definition:</b> <a href="_date_8cpp_source.html#l00046">Date.cpp:46</a></div></div>
@@ -298,6 +323,7 @@ $(document).ready(function(){initNavTree('_processor_8cpp_source.html',''); init
 <div class="ttc" id="aclass_date_html_adb6f84b444ecf60bd8577be22de74fe2"><div class="ttname"><a href="class_date.html#adb6f84b444ecf60bd8577be22de74fe2">Date::GetMonthInStr</a></div><div class="ttdeci">string GetMonthInStr(const unsigned &amp;month) const</div><div class="ttdoc">Method that allows retrieving the month in string with the Date class.</div><div class="ttdef"><b>Definition:</b> <a href="_date_8cpp_source.html#l00094">Date.cpp:94</a></div></div>
 <div class="ttc" id="aclass_solar_radiation_html"><div class="ttname"><a href="class_solar_radiation.html">SolarRadiation</a></div><div class="ttdoc">Represents a temperature measurement.</div><div class="ttdef"><b>Definition:</b> <a href="_solar_radiation_8h_source.html#l00023">SolarRadiation.h:23</a></div></div>
 <div class="ttc" id="aclass_processor_html_a9ffca81c2e7aee9a5194e5d6f62d2ee4"><div class="ttname"><a href="class_processor.html#a9ffca81c2e7aee9a5194e5d6f62d2ee4">Processor::OutputStreamMeasurement</a></div><div class="ttdeci">bool OutputStreamMeasurement(SensorRecType &amp;sensorRecType, ofstream &amp;outputFile, unsigned &amp;month, float &amp;speedMean, float &amp;speedSsd, float &amp;tempMean, float &amp;tempSsd, float &amp;srSum)</div><div class="ttdoc">Records sensor data to an output file and computes statistical measurements.</div><div class="ttdef"><b>Definition:</b> <a href="_processor_8cpp_source.html#l00176">Processor.cpp:176</a></div></div>
+<div class="ttc" id="aclass_ao_avl_map_html_a37e34f010607dfd1ca5b4a74cd3eca35"><div class="ttname"><a href="class_ao_avl_map.html#a37e34f010607dfd1ca5b4a74cd3eca35">AoAvlMap::Destroy</a></div><div class="ttdeci">void Destroy()</div><div class="ttdoc">Destroys the AoAvlMap by clearing all AVL trees and removing all elements.</div><div class="ttdef"><b>Definition:</b> <a href="_ao_avl_map_8h_source.html#l00334">AoAvlMap.h:334</a></div></div>
 <div class="ttc" id="aclass_processor_html_a66f8568b6dd32f6ca5bc180dae4bbc9f"><div class="ttname"><a href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a></div><div class="ttdeci">static Processor &amp; GetInstance()</div><div class="ttdoc">Returns the singleton instance of Processor.</div><div class="ttdef"><b>Definition:</b> <a href="_processor_8cpp_source.html#l00031">Processor.cpp:31</a></div></div>
 <div class="ttc" id="anamespace_constant_html_aa5c507fc288b7c880ef32fefcdf91760"><div class="ttname"><a href="namespace_constant.html#aa5c507fc288b7c880ef32fefcdf91760">Constant::TOTAL_SAVED_DATA_MSG</a></div><div class="ttdeci">const std::string TOTAL_SAVED_DATA_MSG</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00024">Constant.h:24</a></div></div>
 <div class="ttc" id="aclass_date_html_aa10bb7c41d0aaa084790f48dd9dbffd9"><div class="ttname"><a href="class_date.html#aa10bb7c41d0aaa084790f48dd9dbffd9">Date::SetDay</a></div><div class="ttdeci">void SetDay(const unsigned &amp;day)</div><div class="ttdoc">Method that allows setting the day associated with the Date class.</div><div class="ttdef"><b>Definition:</b> <a href="_date_8cpp_source.html#l00041">Date.cpp:41</a></div></div>
@@ -306,6 +332,8 @@ $(document).ready(function(){initNavTree('_processor_8cpp_source.html',''); init
 <div class="ttc" id="aclass_time_html_af0b98cbc57d252e672b4599571142376"><div class="ttname"><a href="class_time.html#af0b98cbc57d252e672b4599571142376">Time::SetMinute</a></div><div class="ttdeci">void SetMinute(const unsigned &amp;minute)</div><div class="ttdoc">Method that allows setting the minute associated with the Time class.</div><div class="ttdef"><b>Definition:</b> <a href="_time_8cpp_source.html#l00039">Time.cpp:39</a></div></div>
 <div class="ttc" id="aclass_temperature_html"><div class="ttname"><a href="class_temperature.html">Temperature</a></div><div class="ttdoc">Represents a temperature measurement.</div><div class="ttdef"><b>Definition:</b> <a href="_temperature_8h_source.html#l00023">Temperature.h:23</a></div></div>
 <div class="ttc" id="aclass_vector_html_a0b4525d26f9397f327e6adb7c7eee22c"><div class="ttname"><a href="class_vector.html#a0b4525d26f9397f327e6adb7c7eee22c">Vector::InsertLast</a></div><div class="ttdeci">bool InsertLast(const T &amp;object)</div><div class="ttdoc">Insert an object to the end of the vector.</div><div class="ttdef"><b>Definition:</b> <a href="_vector_8h_source.html#l00322">Vector.h:322</a></div></div>
+<div class="ttc" id="aclass_ao_avl_map_html_a27de5b518f6f0bca6d4208e811fafaf5"><div class="ttname"><a href="class_ao_avl_map.html#a27de5b518f6f0bca6d4208e811fafaf5">AoAvlMap::IsEmpty</a></div><div class="ttdeci">bool IsEmpty() const</div><div class="ttdoc">Checks if the AoAvlMap is empty.</div><div class="ttdef"><b>Definition:</b> <a href="_ao_avl_map_8h_source.html#l00328">AoAvlMap.h:328</a></div></div>
+<div class="ttc" id="aclass_processor_html_ad8c3c5b193b38060b4aa355078f22513"><div class="ttname"><a href="class_processor.html#ad8c3c5b193b38060b4aa355078f22513">Processor::ReloadData</a></div><div class="ttdeci">void ReloadData(AoAvlMap&lt; SensorRecType &gt; &amp;mapAoBst, const string &amp;filename)</div><div class="ttdoc">Reloads data from a CSV file into an AoAvlMap.</div><div class="ttdef"><b>Definition:</b> <a href="_processor_8cpp_source.html#l00206">Processor.cpp:206</a></div></div>
 <div class="ttc" id="aclass_date_html"><div class="ttname"><a href="class_date.html">Date</a></div><div class="ttdoc">Represents a date for the measurements.</div><div class="ttdef"><b>Definition:</b> <a href="_date_8h_source.html#l00022">Date.h:22</a></div></div>
 <div class="ttc" id="aclass_sensor_rec_type_html"><div class="ttname"><a href="class_sensor_rec_type.html">SensorRecType</a></div><div class="ttdoc">Represents a sensor record type with date, time, wind speed, temperature, solar radiation components.</div><div class="ttdef"><b>Definition:</b> <a href="_sensor_rec_type_8h_source.html#l00035">SensorRecType.h:35</a></div></div>
 <!-- start footer part -->

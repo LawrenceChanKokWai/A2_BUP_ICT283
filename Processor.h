@@ -85,6 +85,20 @@ public:
         float &tempSsd,
         float &srSum );
 
+    /**
+     * @brief Reloads data from a CSV file into an AoAvlMap.
+     *
+     * This method clears any existing data in the provided AoAvlMap,
+     * resets the data read and inserted counters, and then loads data
+     * from the specified CSV file into the AoAvlMap.
+     *
+     * @param[in] mapAoBst Reference to the AoAvlMap where the data will be loaded.
+     * @param[in] filename The path to the CSV file containing the data to be loaded.
+     *
+     */
+    void ReloadData( AoAvlMap<SensorRecType> &mapAoBst, const string& filename );
+
+
 private:
     static Processor *s_instance;   /**< Pointer to the singleton instance. */
     unsigned m_dataRead;            /**< Counter for the number of data read. */

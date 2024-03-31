@@ -39,16 +39,16 @@ public:
     void OptionOne( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year, unsigned &month ) const;
 
     /**
-     *  @brief Option to calculate and display either average ambient temperature
-     *  or solar radiation for each month of a specified year.
+     *  @brief Option to calculate and display average ambient temperature
+     *  for each month of a specified year.
      *
      *  @param[in] avl An AVL tree containing sensor data.
      *  @param[in] aoAvlMap An AoAvlMap containing sensor data.
      *  @param[in] year The year for which data is to be analyzed.
-     *  @param[in] option A character indicating the option to calculate ('2' for temperature, '3' for solar radiation).
+     *  @param[in] option A character indicating the option to calculate ('2' for temperature).
      *
      */
-    void OptionTwoThree( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year, char &option ) const;
+    void OptionTwo( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year, char &option ) const;
 
     /**
      *
@@ -71,7 +71,7 @@ public:
      *  @param[in] month The month for which correlation coefficients are to be calculated.
      *
      */
-    void OptionFive( AoAvlMap<T> &aoAvlMap, unsigned &month );
+    void OptionThree( AoAvlMap<T> &aoAvlMap, unsigned &month );
 
 private:
 
@@ -128,7 +128,7 @@ void Menu<T>::OptionOne( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year, uns
 }
 
 template<class T>
-void Menu<T>::OptionTwoThree( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year, char &option ) const
+void Menu<T>::OptionTwo( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year, char &option ) const
 {
     T sensorRecType;
     float sum = 0.0;
@@ -262,7 +262,7 @@ void Menu<T>::OptionFour( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, ofstream &outputFi
 }
 
 template<class T>
-void Menu<T>::OptionFive( AoAvlMap<T> &aoAvlMap, unsigned &month )
+void Menu<T>::OptionThree( AoAvlMap<T> &aoAvlMap, unsigned &month )
 {
     Vector<float> windSpeeds;
     Vector<float> temperatures;
@@ -311,6 +311,7 @@ void Menu<T>::PrintSpccValues(const string &label, float value)
         cout << fixed << setprecision(3) << value << endl;
     }
 }
+
 
 
 #endif // MENU_H_INCLUDED

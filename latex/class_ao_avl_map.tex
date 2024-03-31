@@ -9,15 +9,6 @@ Represents the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} Class.
 
 {\ttfamily \#include $<$Ao\+Avl\+Map.\+h$>$}
 
-
-
-Collaboration diagram for Ao\+Avl\+Map$<$ T $>$\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=263pt]{class_ao_avl_map__coll__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,6 +18,10 @@ map$<$ unsigned, array$<$ \mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$, \mbox{
 \begin{DoxyCompactList}\small\item\em Get a reference to the sensor data map. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_ao_avl_map_affcadb4f51032bc0cd78619fd97f1bcc}{Insert\+Sensor\+Data}} (const T \&sensor\+Data)
 \begin{DoxyCompactList}\small\item\em Insert sensor data into the map consisted with array of Vectors. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ao_avl_map_a27de5b518f6f0bca6d4208e811fafaf5}{Is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} is empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ao_avl_map_a37e34f010607dfd1ca5b4a74cd3eca35}{Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} by clearing all \mbox{\hyperlink{class_a_v_l}{A\+VL}} trees and removing all elements. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_ao_avl_map_afe182a9b789a029dba7352892669fa19}{In\+Order\+Traversal\+Sum}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$root, \mbox{\hyperlink{_sensor_measurement_type_8h_abee7b7fdc87d37c2132a67729cc0ab43}{Sensor\+Measurement\+Type}} sensor\+Measurement\+Type, float \&sum) const
 \begin{DoxyCompactList}\small\item\em Performs in-\/order traversal of the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree and accumulates the sum of sensor measurements. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_ao_avl_map_a66bd893ec3632a752ebc316e43c3236a}{Calculate\+Sample\+Standard\+Deviation}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$root, \mbox{\hyperlink{_sensor_measurement_type_8h_abee7b7fdc87d37c2132a67729cc0ab43}{Sensor\+Measurement\+Type}} sensor\+Measurement\+Type, unsigned \&count) const
@@ -80,7 +75,7 @@ The sample standard deviation of sensor measurements.
 \end{DoxyReturn}
 
 
-Definition at line 226 of file Ao\+Avl\+Map.\+h.
+Definition at line 243 of file Ao\+Avl\+Map.\+h.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -120,7 +115,7 @@ The calculated Sample Pearson Correlation Coefficient (s\+P\+CC). If the sizes o
 \end{DoxyReturn}
 
 
-Definition at line 264 of file Ao\+Avl\+Map.\+h.
+Definition at line 281 of file Ao\+Avl\+Map.\+h.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -136,6 +131,36 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_ao_avl_map_aa1235e17821e4743a3e683f54dd2da2f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ao_avl_map_a37e34f010607dfd1ca5b4a74cd3eca35}\label{class_ao_avl_map_a37e34f010607dfd1ca5b4a74cd3eca35}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Destroy}
+
+
+
+Destroys the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} by clearing all \mbox{\hyperlink{class_a_v_l}{A\+VL}} trees and removing all elements. 
+
+This function iterates through the map and clears each \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree stored in it. After clearing all \mbox{\hyperlink{class_a_v_l}{A\+VL}} trees, it clears the map itself, effectively destroying all elements and freeing memory.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of data stored in the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}. \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 334 of file Ao\+Avl\+Map.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ao_avl_map_a37e34f010607dfd1ca5b4a74cd3eca35_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9}\label{class_ao_avl_map_a9ebd2f8953929698626a253d805d71a9}} 
@@ -167,7 +192,7 @@ This function traverses the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree in an ino
 \end{DoxyParams}
 
 
-Definition at line 238 of file Ao\+Avl\+Map.\+h.
+Definition at line 255 of file Ao\+Avl\+Map.\+h.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -215,7 +240,7 @@ Get a constant reference to the sensor data map.
 \end{DoxyReturn}
 
 
-Definition at line 130 of file Ao\+Avl\+Map.\+h.
+Definition at line 147 of file Ao\+Avl\+Map.\+h.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -249,7 +274,7 @@ This method traverses the \mbox{\hyperlink{class_a_v_l}{A\+VL}} tree in an in-\/
 \end{DoxyParams}
 
 
-Definition at line 170 of file Ao\+Avl\+Map.\+h.
+Definition at line 187 of file Ao\+Avl\+Map.\+h.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -277,13 +302,45 @@ Insert sensor data into the map consisted with array of Vectors.
 \end{DoxyParams}
 
 
-Definition at line 142 of file Ao\+Avl\+Map.\+h.
+Definition at line 159 of file Ao\+Avl\+Map.\+h.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_ao_avl_map_affcadb4f51032bc0cd78619fd97f1bcc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ao_avl_map_a27de5b518f6f0bca6d4208e811fafaf5}\label{class_ao_avl_map_a27de5b518f6f0bca6d4208e811fafaf5}} 
+\index{AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!AoAvlMap$<$ T $>$@{AoAvlMap$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsEmpty()}{IsEmpty()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$\+::Is\+Empty}
+
+
+
+Checks if the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} is empty. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of data stored in the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+True if the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} is empty, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 328 of file Ao\+Avl\+Map.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ao_avl_map_a27de5b518f6f0bca6d4208e811fafaf5_icgraph}
 \end{center}
 \end{figure}
 

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Assignment Two: Main.cpp Source File</title>
+<title>Assignment_Two: Main.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,9 +25,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Assignment Two
-   &#160;<span id="projectnumber">1.0.0</span>
+   <div id="projectname">Assignment_Two
    </div>
+   <div id="projectbrief">ICT283_Assignment Two</div>
   </td>
  </tr>
  </tbody>
@@ -98,118 +98,122 @@ $(document).ready(function(){initNavTree('_main_8cpp_source.html',''); initResiz
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_main_8cpp.html#a59eb9a26e61d10775dd9996b0ec489a5">printWithPrecision</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; label, <span class="keywordtype">float</span> value);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   23</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">string</span> directoryPath = string(__FILE__).substr(0, <span class="keywordtype">string</span>(__FILE__).find_last_of(<span class="stringliteral">&quot;\\/&quot;</span>) + 1) + <span class="stringliteral">&quot;data\\&quot;</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> filename = directoryPath + <span class="stringliteral">&quot;data_source.txt&quot;</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> outFilePath = directoryPath + <span class="stringliteral">&quot;WindTempSolar.csv&quot;</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_vector.html">Vector&lt;string&gt;</a> csvFilePath;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_ao_avl_map.html">AoAvlMap&lt;SensorRecType&gt;</a> mapRecords;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    ifstream inFile( filename );</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ofstream outputFile( outFilePath );</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a>().<a class="code" href="class_processor.html#a248511764e3ce60ee72f8ae8fd0d47c9">LoadCSVFilePathToVector</a>( csvFilePath, inFile, filename );</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a>().<a class="code" href="class_processor.html#a5378867146978d9ab1d62de4e8d8b80a">LoadCSVData</a>( csvFilePath, mapRecords );</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_input_validator.html">InputValidator</a> validator;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_sensor_rec_type.html">SensorRecType</a> sensorRecType;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_a_v_l.html">AVL&lt;SensorRecType&gt;</a> avlRecords;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   21</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">string</span> directoryPath = string(__FILE__).substr(0, <span class="keywordtype">string</span>(__FILE__).find_last_of(<span class="stringliteral">&quot;\\/&quot;</span>) + 1) + <span class="stringliteral">&quot;data\\&quot;</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> filename = directoryPath + <span class="stringliteral">&quot;data_source.txt&quot;</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> outFilePath = directoryPath + <span class="stringliteral">&quot;WindTempSolar.csv&quot;</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_vector.html">Vector&lt;string&gt;</a> csvFilePath;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_ao_avl_map.html">AoAvlMap&lt;SensorRecType&gt;</a> mapRecords;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ifstream inFile( filename );</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    ofstream outputFile( outFilePath );</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a>().<a class="code" href="class_processor.html#a248511764e3ce60ee72f8ae8fd0d47c9">LoadCSVFilePathToVector</a>( csvFilePath, inFile, filename );</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a>().<a class="code" href="class_processor.html#a5378867146978d9ab1d62de4e8d8b80a">LoadCSVData</a>( csvFilePath, mapRecords );</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_input_validator.html">InputValidator</a> validator;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_sensor_rec_type.html">SensorRecType</a> sensorRecType;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_a_v_l.html">AVL&lt;SensorRecType&gt;</a> avlRecords;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_menu.html">Menu&lt;SensorRecType&gt;</a> menu;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_menu.html">Menu&lt;SensorRecType&gt;</a> menu;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">string</span> year;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">string</span> month;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">string</span> day;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">char</span> user_choice;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">do</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">unsigned</span> validatedMonth = 0;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">unsigned</span> validatedYear = 0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        cout    &lt;&lt; <a class="code" href="namespace_constant.html#a6edebbfacf5d95f673b0f6aa3ab2e32d">Constant::MENU_OPTIONS_MSG</a></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                   &lt;&lt; <a class="code" href="namespace_constant.html#a27564afd094e0bc059ed0f9cb4fea380">Constant::MENU_OPTION_ONE_MSG</a></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                   &lt;&lt; <a class="code" href="namespace_constant.html#a2ece56ffe903a53cccf5d3914a945533">Constant::MENU_OPTION_TWO_MSG</a></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                   &lt;&lt; <a class="code" href="namespace_constant.html#a828dbb0cd4e0566ca0ab432916f75c85">Constant::MENU_OPTION_THREE_MSG</a></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                   &lt;&lt; <a class="code" href="namespace_constant.html#ae784b14e10ab78367c987d42810f80c9">Constant::MENU_OPTION_FOUR_MSG</a></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                   &lt;&lt; <a class="code" href="namespace_constant.html#a0273751fb186ec7fa80f6c84628a5c30">Constant::MENU_OPTION_FIVE_MSG</a></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                   &lt;&lt; <a class="code" href="namespace_constant.html#aef419ca2a485682a05163c8fa07cec8c">Constant::MENU_OPTION_SIX_MSG</a> &lt;&lt; endl;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        cout &lt;&lt; <a class="code" href="namespace_constant.html#a214af7084f5ce6abd7084212b7635d16">Constant::SELECTION_INPUT</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        user_choice = getch();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">switch</span>( user_choice )</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;1&#39;</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            cout &lt;&lt; <a class="code" href="namespace_constant.html#adb53ba11b57b9e77f3bf68172c90488a">Constant::SELECTED_OPTION_ONE_MSG</a> &lt;&lt; endl;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            validatedMonth = validator.<a class="code" href="class_input_validator.html#aa8aa998dfb86b883a11cf4c2195d550f">MonthValidation</a>(month);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            validatedYear = validator.<a class="code" href="class_input_validator.html#adafc081b7b324c0f458e7b05dadaed8c">YearValidation</a>(year);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">string</span> year;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">string</span> month;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">string</span> day;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">char</span> user_choice;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">unsigned</span> validatedMonth = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">unsigned</span> validatedYear = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        cout    &lt;&lt; <a class="code" href="namespace_constant.html#a6edebbfacf5d95f673b0f6aa3ab2e32d">Constant::MENU_OPTIONS_MSG</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                &lt;&lt; <a class="code" href="namespace_constant.html#a27564afd094e0bc059ed0f9cb4fea380">Constant::MENU_OPTION_ONE_MSG</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                &lt;&lt; <a class="code" href="namespace_constant.html#a2ece56ffe903a53cccf5d3914a945533">Constant::MENU_OPTION_TWO_MSG</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                &lt;&lt; <a class="code" href="namespace_constant.html#a828dbb0cd4e0566ca0ab432916f75c85">Constant::MENU_OPTION_THREE_MSG</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                &lt;&lt; <a class="code" href="namespace_constant.html#ae784b14e10ab78367c987d42810f80c9">Constant::MENU_OPTION_FOUR_MSG</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                &lt;&lt; <a class="code" href="namespace_constant.html#a0273751fb186ec7fa80f6c84628a5c30">Constant::MENU_OPTION_FIVE_MSG</a></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                &lt;&lt; <a class="code" href="namespace_constant.html#aef419ca2a485682a05163c8fa07cec8c">Constant::MENU_OPTION_SIX_MSG</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        cout &lt;&lt; <a class="code" href="namespace_constant.html#a214af7084f5ce6abd7084212b7635d16">Constant::SELECTION_INPUT</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        user_choice = getch();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">switch</span>( user_choice )</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;1&#39;</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            cout &lt;&lt; <a class="code" href="namespace_constant.html#adb53ba11b57b9e77f3bf68172c90488a">Constant::SELECTED_OPTION_ONE_MSG</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            validatedMonth = validator.<a class="code" href="class_input_validator.html#aa8aa998dfb86b883a11cf4c2195d550f">MonthValidation</a>(month);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            validatedYear = validator.<a class="code" href="class_input_validator.html#adafc081b7b324c0f458e7b05dadaed8c">YearValidation</a>(year);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            menu.<a class="code" href="class_menu.html#a393c430fcb58575dbd8d2219046a0aeb">OptionOne</a>( avlRecords, mapRecords, validatedYear, validatedMonth );</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            menu.<a class="code" href="class_menu.html#a393c430fcb58575dbd8d2219046a0aeb">OptionOne</a>( avlRecords, mapRecords, validatedYear, validatedMonth );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;2&#39;</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            cout &lt;&lt; <a class="code" href="namespace_constant.html#a37e785807a4f2d9a921abdf2852cab95">Constant::SELECTED_OPTION_TWO_MSG</a> &lt;&lt; endl;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            validatedYear = validator.<a class="code" href="class_input_validator.html#adafc081b7b324c0f458e7b05dadaed8c">YearValidation</a>(year);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>  &lt;&lt; <a class="code" href="namespace_constant.html#a3c6c8f8f08b3a1073451e36f6548534a">Constant::OUTPUT</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt; validatedYear &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;2&#39;</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            cout &lt;&lt; <a class="code" href="namespace_constant.html#a37e785807a4f2d9a921abdf2852cab95">Constant::SELECTED_OPTION_TWO_MSG</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            validatedYear = validator.<a class="code" href="class_input_validator.html#adafc081b7b324c0f458e7b05dadaed8c">YearValidation</a>(year);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>  &lt;&lt; <a class="code" href="namespace_constant.html#a3c6c8f8f08b3a1073451e36f6548534a">Constant::OUTPUT</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt; validatedYear &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            menu.<a class="code" href="class_menu.html#a4b303a6db3bf6df2d2a5365e77dfdc6c">OptionTwo</a>( avlRecords, mapRecords, validatedYear, user_choice );</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            menu.<a class="code" href="class_menu.html#ac59025fad993c4db4cb50feaad62e4a0">OptionTwoThree</a>( avlRecords, mapRecords, validatedYear, user_choice );</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;3&#39;</span>:</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            cout &lt;&lt; <a class="code" href="namespace_constant.html#a31fee176e8c0c9563000463ba82dc487">Constant::SELECTED_OPTION_THREE_MSG</a> &lt;&lt; endl;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            validatedYear = validator.<a class="code" href="class_input_validator.html#adafc081b7b324c0f458e7b05dadaed8c">YearValidation</a>(year);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>  &lt;&lt; <a class="code" href="namespace_constant.html#a3c6c8f8f08b3a1073451e36f6548534a">Constant::OUTPUT</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt; validatedYear &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            menu.<a class="code" href="class_menu.html#ac59025fad993c4db4cb50feaad62e4a0">OptionTwoThree</a>( avlRecords, mapRecords, validatedYear, user_choice );</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;4&#39;</span>:</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            cout &lt;&lt; <a class="code" href="namespace_constant.html#a7cf2df285f1d92219940fd95a97f2989">Constant::SELECTED_OPTION_FOUR_MSG</a> &lt;&lt; endl;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            validatedYear = validator.<a class="code" href="class_input_validator.html#adafc081b7b324c0f458e7b05dadaed8c">YearValidation</a>(year);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt; <a class="code" href="namespace_constant.html#a3c6c8f8f08b3a1073451e36f6548534a">Constant::OUTPUT</a> &lt;&lt; endl;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt;  validatedYear &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            menu.<a class="code" href="class_menu.html#ab2efff71fdf8728a1d593c2a0f323b3d">OptionFour</a>( avlRecords, mapRecords, outputFile, outFilePath, validatedYear );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;3&#39;</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            cout &lt;&lt; <a class="code" href="namespace_constant.html#a5db1970bed05d59fb9a7a6fe28b3733a">Constant::SELECTED_OPTION_FIVE_MSG</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordtype">unsigned</span> validatedMonth = validator.<a class="code" href="class_input_validator.html#aa8aa998dfb86b883a11cf4c2195d550f">MonthValidation</a>(month);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt; <a class="code" href="namespace_constant.html#a3c6c8f8f08b3a1073451e36f6548534a">Constant::OUTPUT</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Sample Pearson Correlation Coefficient for &quot;</span> &lt;&lt; sensorRecType.<a class="code" href="class_sensor_rec_type.html#a7e94391ece6b543bc24c6c053e1db5e7">GetSensorDate</a>().<a class="code" href="class_date.html#adb6f84b444ecf60bd8577be22de74fe2">GetMonthInStr</a>(validatedMonth) &lt;&lt; endl;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            menu.<a class="code" href="class_menu.html#a5f261a80fda842da551d9e53cc826480">OptionThree</a>( mapRecords, validatedMonth );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;4&#39;</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            cout &lt;&lt; <a class="code" href="namespace_constant.html#a7cf2df285f1d92219940fd95a97f2989">Constant::SELECTED_OPTION_FOUR_MSG</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            validatedYear = validator.<a class="code" href="class_input_validator.html#adafc081b7b324c0f458e7b05dadaed8c">YearValidation</a>(year);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt; <a class="code" href="namespace_constant.html#a3c6c8f8f08b3a1073451e36f6548534a">Constant::OUTPUT</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt;  validatedYear &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;5&#39;</span>:</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            cout &lt;&lt; <a class="code" href="namespace_constant.html#a5db1970bed05d59fb9a7a6fe28b3733a">Constant::SELECTED_OPTION_FIVE_MSG</a> &lt;&lt; endl;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordtype">unsigned</span> validatedMonth = validator.<a class="code" href="class_input_validator.html#aa8aa998dfb86b883a11cf4c2195d550f">MonthValidation</a>(month);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt; <a class="code" href="namespace_constant.html#a3c6c8f8f08b3a1073451e36f6548534a">Constant::OUTPUT</a> &lt;&lt; endl;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Sample Pearson Correlation Coefficient for &quot;</span> &lt;&lt; sensorRecType.<a class="code" href="class_sensor_rec_type.html#a7e94391ece6b543bc24c6c053e1db5e7">GetSensorDate</a>().<a class="code" href="class_date.html#adb6f84b444ecf60bd8577be22de74fe2">GetMonthInStr</a>(validatedMonth) &lt;&lt; endl;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            menu.<a class="code" href="class_menu.html#a92bafcf65e97e2539fb0030422aa80d8">OptionFive</a>( mapRecords, validatedMonth );</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;6&#39;</span>:</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            cout &lt;&lt; <a class="code" href="namespace_constant.html#a259270bc65e3c87ccd9376a1b97c7b40">Constant::SELECTED_OPTION_SIX_MSG</a> &lt;&lt; endl;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            exit(0);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        cout &lt;&lt; <a class="code" href="namespace_constant.html#a78f2bc44b4c0903e6cac64ab409367a2">Constant::INFO</a>( <a class="code" href="namespace_constant.html#a647f10b6b98f31cbad63d7b75d16d247">Constant::PRESS_ENTER_TO_CONTINUE_MSG</a> ) &lt;&lt; endl;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">while</span>( getch() != 13 );</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        system(<span class="stringliteral">&quot;cls&quot;</span>);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">while</span>( user_choice !=27 );</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            menu.<a class="code" href="class_menu.html#ab2efff71fdf8728a1d593c2a0f323b3d">OptionFour</a>( avlRecords, mapRecords, outputFile, outFilePath, validatedYear );</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;5&#39;</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            cout &lt;&lt; <a class="code" href="namespace_constant.html#a5db1970bed05d59fb9a7a6fe28b3733a">Constant::SELECTED_OPTION_FIVE_MSG</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt; <a class="code" href="namespace_constant.html#a3c6c8f8f08b3a1073451e36f6548534a">Constant::OUTPUT</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Reloading data: &quot;</span> &lt;&lt; filename &lt;&lt; endl;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <a class="code" href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a>().<a class="code" href="class_processor.html#ad8c3c5b193b38060b4aa355078f22513">ReloadData</a>(mapRecords, filename);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;6&#39;</span>:</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            cout &lt;&lt; <a class="code" href="namespace_constant.html#a259270bc65e3c87ccd9376a1b97c7b40">Constant::SELECTED_OPTION_SIX_MSG</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            exit(0);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        cout &lt;&lt; <a class="code" href="namespace_constant.html#a78f2bc44b4c0903e6cac64ab409367a2">Constant::INFO</a>( <a class="code" href="namespace_constant.html#a647f10b6b98f31cbad63d7b75d16d247">Constant::PRESS_ENTER_TO_CONTINUE_MSG</a> ) &lt;&lt; endl;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">while</span>( getch() != 13 );</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        system(<span class="stringliteral">&quot;cls&quot;</span>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">while</span>( user_choice !=27 );</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_processor_html_a5378867146978d9ab1d62de4e8d8b80a"><div class="ttname"><a href="class_processor.html#a5378867146978d9ab1d62de4e8d8b80a">Processor::LoadCSVData</a></div><div class="ttdeci">void LoadCSVData(Vector&lt; string &gt; &amp;csvFilePath, AoAvlMap&lt; SensorRecType &gt; &amp;mapAoBst)</div><div class="ttdoc">Loads data from CSV files into an AVL map.</div><div class="ttdef"><b>Definition:</b> <a href="_processor_8cpp_source.html#l00058">Processor.cpp:58</a></div></div>
 <div class="ttc" id="aclass_input_validator_html"><div class="ttname"><a href="class_input_validator.html">InputValidator</a></div><div class="ttdoc">Class for user input validation related to month and year.</div><div class="ttdef"><b>Definition:</b> <a href="_input_validator_8h_source.html#l00025">InputValidator.h:25</a></div></div>
+<div class="ttc" id="aclass_menu_html_a5f261a80fda842da551d9e53cc826480"><div class="ttname"><a href="class_menu.html#a5f261a80fda842da551d9e53cc826480">Menu::OptionThree</a></div><div class="ttdeci">void OptionThree(AoAvlMap&lt; T &gt; &amp;aoAvlMap, unsigned &amp;month)</div><div class="ttdoc">Option to calculate and display sample Pearson correlation coefficient values for wind speed,...</div><div class="ttdef"><b>Definition:</b> <a href="_menu_8h_source.html#l00265">Menu.h:265</a></div></div>
 <div class="ttc" id="a_processor_8h_html"><div class="ttname"><a href="_processor_8h.html">Processor.h</a></div><div class="ttdoc">Processor class definition.</div></div>
 <div class="ttc" id="anamespace_constant_html_a214af7084f5ce6abd7084212b7635d16"><div class="ttname"><a href="namespace_constant.html#a214af7084f5ce6abd7084212b7635d16">Constant::SELECTION_INPUT</a></div><div class="ttdeci">const std::string SELECTION_INPUT</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00026">Constant.h:26</a></div></div>
 <div class="ttc" id="anamespace_constant_html_a78f2bc44b4c0903e6cac64ab409367a2"><div class="ttname"><a href="namespace_constant.html#a78f2bc44b4c0903e6cac64ab409367a2">Constant::INFO</a></div><div class="ttdeci">std::string INFO(const std::string &amp;message)</div><div class="ttdoc">Returns an information message.</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00069">Constant.h:69</a></div></div>
@@ -223,27 +227,25 @@ $(document).ready(function(){initNavTree('_main_8cpp_source.html',''); initResiz
 <div class="ttc" id="anamespace_constant_html_a3c6c8f8f08b3a1073451e36f6548534a"><div class="ttname"><a href="namespace_constant.html#a3c6c8f8f08b3a1073451e36f6548534a">Constant::OUTPUT</a></div><div class="ttdeci">const std::string OUTPUT</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00025">Constant.h:25</a></div></div>
 <div class="ttc" id="aclass_input_validator_html_aa8aa998dfb86b883a11cf4c2195d550f"><div class="ttname"><a href="class_input_validator.html#aa8aa998dfb86b883a11cf4c2195d550f">InputValidator::MonthValidation</a></div><div class="ttdeci">unsigned MonthValidation(string &amp;month)</div><div class="ttdoc">Validates user input for month.</div><div class="ttdef"><b>Definition:</b> <a href="_input_validator_8cpp_source.html#l00039">InputValidator.cpp:39</a></div></div>
 <div class="ttc" id="anamespace_constant_html_ae784b14e10ab78367c987d42810f80c9"><div class="ttname"><a href="namespace_constant.html#ae784b14e10ab78367c987d42810f80c9">Constant::MENU_OPTION_FOUR_MSG</a></div><div class="ttdeci">const std::string MENU_OPTION_FOUR_MSG</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00038">Constant.h:38</a></div></div>
-<div class="ttc" id="aclass_menu_html_ac59025fad993c4db4cb50feaad62e4a0"><div class="ttname"><a href="class_menu.html#ac59025fad993c4db4cb50feaad62e4a0">Menu::OptionTwoThree</a></div><div class="ttdeci">void OptionTwoThree(AVL&lt; T &gt; &amp;avl, AoAvlMap&lt; T &gt; &amp;aoAvlMap, unsigned &amp;year, char &amp;option) const</div><div class="ttdoc">Option to calculate and display either average ambient temperature or solar radiation for each month ...</div><div class="ttdef"><b>Definition:</b> <a href="_menu_8h_source.html#l00131">Menu.h:131</a></div></div>
 <div class="ttc" id="a_menu_8h_html"><div class="ttname"><a href="_menu_8h.html">Menu.h</a></div><div class="ttdoc">Menu class definition.</div></div>
 <div class="ttc" id="aclass_processor_html_a248511764e3ce60ee72f8ae8fd0d47c9"><div class="ttname"><a href="class_processor.html#a248511764e3ce60ee72f8ae8fd0d47c9">Processor::LoadCSVFilePathToVector</a></div><div class="ttdeci">void LoadCSVFilePathToVector(Vector&lt; string &gt; &amp;csvFilePath, ifstream &amp;input, const string &amp;filename)</div><div class="ttdoc">Loads the CSV file paths from an txt file and stream into a vector.</div><div class="ttdef"><b>Definition:</b> <a href="_processor_8cpp_source.html#l00037">Processor.cpp:37</a></div></div>
 <div class="ttc" id="aclass_date_html_adb6f84b444ecf60bd8577be22de74fe2"><div class="ttname"><a href="class_date.html#adb6f84b444ecf60bd8577be22de74fe2">Date::GetMonthInStr</a></div><div class="ttdeci">string GetMonthInStr(const unsigned &amp;month) const</div><div class="ttdoc">Method that allows retrieving the month in string with the Date class.</div><div class="ttdef"><b>Definition:</b> <a href="_date_8cpp_source.html#l00094">Date.cpp:94</a></div></div>
 <div class="ttc" id="aclass_menu_html"><div class="ttname"><a href="class_menu.html">Menu</a></div><div class="ttdoc">A class representing a menu interface for sensor data analysis.</div><div class="ttdef"><b>Definition:</b> <a href="_menu_8h_source.html#l00025">Menu.h:25</a></div></div>
+<div class="ttc" id="aclass_menu_html_a4b303a6db3bf6df2d2a5365e77dfdc6c"><div class="ttname"><a href="class_menu.html#a4b303a6db3bf6df2d2a5365e77dfdc6c">Menu::OptionTwo</a></div><div class="ttdeci">void OptionTwo(AVL&lt; T &gt; &amp;avl, AoAvlMap&lt; T &gt; &amp;aoAvlMap, unsigned &amp;year, char &amp;option) const</div><div class="ttdoc">Option to calculate and display average ambient temperature for each month of a specified year.</div><div class="ttdef"><b>Definition:</b> <a href="_menu_8h_source.html#l00131">Menu.h:131</a></div></div>
 <div class="ttc" id="anamespace_constant_html_a2ece56ffe903a53cccf5d3914a945533"><div class="ttname"><a href="namespace_constant.html#a2ece56ffe903a53cccf5d3914a945533">Constant::MENU_OPTION_TWO_MSG</a></div><div class="ttdeci">const std::string MENU_OPTION_TWO_MSG</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00036">Constant.h:36</a></div></div>
 <div class="ttc" id="anamespace_constant_html_a6edebbfacf5d95f673b0f6aa3ab2e32d"><div class="ttname"><a href="namespace_constant.html#a6edebbfacf5d95f673b0f6aa3ab2e32d">Constant::MENU_OPTIONS_MSG</a></div><div class="ttdeci">const std::string MENU_OPTIONS_MSG</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00034">Constant.h:34</a></div></div>
 <div class="ttc" id="aclass_menu_html_a393c430fcb58575dbd8d2219046a0aeb"><div class="ttname"><a href="class_menu.html#a393c430fcb58575dbd8d2219046a0aeb">Menu::OptionOne</a></div><div class="ttdeci">void OptionOne(AVL&lt; T &gt; &amp;avl, AoAvlMap&lt; T &gt; &amp;aoAvlMap, unsigned &amp;year, unsigned &amp;month) const</div><div class="ttdoc">Option to calculate and display average wind speed and its standard deviation for a specified year an...</div><div class="ttdef"><b>Definition:</b> <a href="_menu_8h_source.html#l00094">Menu.h:94</a></div></div>
 <div class="ttc" id="anamespace_constant_html_a0273751fb186ec7fa80f6c84628a5c30"><div class="ttname"><a href="namespace_constant.html#a0273751fb186ec7fa80f6c84628a5c30">Constant::MENU_OPTION_FIVE_MSG</a></div><div class="ttdeci">const std::string MENU_OPTION_FIVE_MSG</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00039">Constant.h:39</a></div></div>
 <div class="ttc" id="anamespace_constant_html_adb53ba11b57b9e77f3bf68172c90488a"><div class="ttname"><a href="namespace_constant.html#adb53ba11b57b9e77f3bf68172c90488a">Constant::SELECTED_OPTION_ONE_MSG</a></div><div class="ttdeci">const std::string SELECTED_OPTION_ONE_MSG</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00027">Constant.h:27</a></div></div>
-<div class="ttc" id="a_main_8cpp_html_a59eb9a26e61d10775dd9996b0ec489a5"><div class="ttname"><a href="_main_8cpp.html#a59eb9a26e61d10775dd9996b0ec489a5">printWithPrecision</a></div><div class="ttdeci">void printWithPrecision(const string &amp;label, float value)</div></div>
 <div class="ttc" id="anamespace_constant_html_a27564afd094e0bc059ed0f9cb4fea380"><div class="ttname"><a href="namespace_constant.html#a27564afd094e0bc059ed0f9cb4fea380">Constant::MENU_OPTION_ONE_MSG</a></div><div class="ttdeci">const std::string MENU_OPTION_ONE_MSG</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00035">Constant.h:35</a></div></div>
-<div class="ttc" id="anamespace_constant_html_a31fee176e8c0c9563000463ba82dc487"><div class="ttname"><a href="namespace_constant.html#a31fee176e8c0c9563000463ba82dc487">Constant::SELECTED_OPTION_THREE_MSG</a></div><div class="ttdeci">const std::string SELECTED_OPTION_THREE_MSG</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00029">Constant.h:29</a></div></div>
 <div class="ttc" id="aclass_processor_html_a66f8568b6dd32f6ca5bc180dae4bbc9f"><div class="ttname"><a href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a></div><div class="ttdeci">static Processor &amp; GetInstance()</div><div class="ttdoc">Returns the singleton instance of Processor.</div><div class="ttdef"><b>Definition:</b> <a href="_processor_8cpp_source.html#l00031">Processor.cpp:31</a></div></div>
-<div class="ttc" id="aclass_menu_html_a92bafcf65e97e2539fb0030422aa80d8"><div class="ttname"><a href="class_menu.html#a92bafcf65e97e2539fb0030422aa80d8">Menu::OptionFive</a></div><div class="ttdeci">void OptionFive(AoAvlMap&lt; T &gt; &amp;aoAvlMap, unsigned &amp;month)</div><div class="ttdoc">Option to calculate and display sample Pearson correlation coefficient values for wind speed,...</div><div class="ttdef"><b>Definition:</b> <a href="_menu_8h_source.html#l00265">Menu.h:265</a></div></div>
-<div class="ttc" id="a_main_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="_main_8cpp_source.html#l00023">Main.cpp:23</a></div></div>
+<div class="ttc" id="a_main_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="_main_8cpp_source.html#l00021">Main.cpp:21</a></div></div>
 <div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">Defines a Vector Class, Dynamic Array Implementation.</div><div class="ttdef"><b>Definition:</b> <a href="_vector_8h_source.html#l00023">Vector.h:23</a></div></div>
 <div class="ttc" id="aclass_a_v_l_html"><div class="ttname"><a href="class_a_v_l.html">AVL</a></div><div class="ttdoc">Represents the AVL Class.</div><div class="ttdef"><b>Definition:</b> <a href="_a_v_l_8h_source.html#l00020">AVL.h:20</a></div></div>
 <div class="ttc" id="aclass_input_validator_html_adafc081b7b324c0f458e7b05dadaed8c"><div class="ttname"><a href="class_input_validator.html#adafc081b7b324c0f458e7b05dadaed8c">InputValidator::YearValidation</a></div><div class="ttdeci">unsigned YearValidation(string &amp;year)</div><div class="ttdoc">Validates user input for year.</div><div class="ttdef"><b>Definition:</b> <a href="_input_validator_8cpp_source.html#l00059">InputValidator.cpp:59</a></div></div>
 <div class="ttc" id="anamespace_constant_html_a647f10b6b98f31cbad63d7b75d16d247"><div class="ttname"><a href="namespace_constant.html#a647f10b6b98f31cbad63d7b75d16d247">Constant::PRESS_ENTER_TO_CONTINUE_MSG</a></div><div class="ttdeci">const std::string PRESS_ENTER_TO_CONTINUE_MSG</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00033">Constant.h:33</a></div></div>
 <div class="ttc" id="anamespace_constant_html_a828dbb0cd4e0566ca0ab432916f75c85"><div class="ttname"><a href="namespace_constant.html#a828dbb0cd4e0566ca0ab432916f75c85">Constant::MENU_OPTION_THREE_MSG</a></div><div class="ttdeci">const std::string MENU_OPTION_THREE_MSG</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00037">Constant.h:37</a></div></div>
+<div class="ttc" id="aclass_processor_html_ad8c3c5b193b38060b4aa355078f22513"><div class="ttname"><a href="class_processor.html#ad8c3c5b193b38060b4aa355078f22513">Processor::ReloadData</a></div><div class="ttdeci">void ReloadData(AoAvlMap&lt; SensorRecType &gt; &amp;mapAoBst, const string &amp;filename)</div><div class="ttdoc">Reloads data from a CSV file into an AoAvlMap.</div><div class="ttdef"><b>Definition:</b> <a href="_processor_8cpp_source.html#l00206">Processor.cpp:206</a></div></div>
 <div class="ttc" id="anamespace_constant_html_a7cf2df285f1d92219940fd95a97f2989"><div class="ttname"><a href="namespace_constant.html#a7cf2df285f1d92219940fd95a97f2989">Constant::SELECTED_OPTION_FOUR_MSG</a></div><div class="ttdeci">const std::string SELECTED_OPTION_FOUR_MSG</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00030">Constant.h:30</a></div></div>
 <div class="ttc" id="anamespace_constant_html_a5db1970bed05d59fb9a7a6fe28b3733a"><div class="ttname"><a href="namespace_constant.html#a5db1970bed05d59fb9a7a6fe28b3733a">Constant::SELECTED_OPTION_FIVE_MSG</a></div><div class="ttdeci">const std::string SELECTED_OPTION_FIVE_MSG</div><div class="ttdef"><b>Definition:</b> <a href="_constant_8h_source.html#l00031">Constant.h:31</a></div></div>
 <div class="ttc" id="aclass_sensor_rec_type_html"><div class="ttname"><a href="class_sensor_rec_type.html">SensorRecType</a></div><div class="ttdoc">Represents a sensor record type with date, time, wind speed, temperature, solar radiation components.</div><div class="ttdef"><b>Definition:</b> <a href="_sensor_rec_type_8h_source.html#l00035">SensorRecType.h:35</a></div></div>

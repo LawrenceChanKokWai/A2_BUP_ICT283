@@ -1,34 +1,37 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,733,56,759"/>
-<area shape="rect" id="node2" href="$class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f" title="Returns the singleton instance of Processor." alt="" coords="391,547,550,574"/>
-<area shape="rect" id="node3" href="$class_date.html#adb6f84b444ecf60bd8577be22de74fe2" title="Method that allows retrieving the month in string with the Date class." alt="" coords="139,809,280,835"/>
-<area shape="rect" id="node4" href="$class_sensor_rec_type.html#a7e94391ece6b543bc24c6c053e1db5e7" title="Get the date component of the sensor record." alt="" coords="104,859,315,886"/>
-<area shape="rect" id="node5" href="$namespace_constant.html#a78f2bc44b4c0903e6cac64ab409367a2" title="Returns an information message." alt="" coords="415,961,527,987"/>
-<area shape="rect" id="node6" href="$class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="124,243,295,270"/>
-<area shape="rect" id="node15" href="$class_processor.html#a248511764e3ce60ee72f8ae8fd0d47c9" title="Loads the CSV file paths from an txt file and stream into a vector." alt="" coords="113,80,305,121"/>
-<area shape="rect" id="node17" href="$class_input_validator.html#aa8aa998dfb86b883a11cf4c2195d550f" title="Validates user input for month." alt="" coords="108,1011,311,1038"/>
-<area shape="rect" id="node19" href="$class_menu.html#a92bafcf65e97e2539fb0030422aa80d8" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="148,526,271,553"/>
-<area shape="rect" id="node24" href="$class_menu.html#ab2efff71fdf8728a1d593c2a0f323b3d" title="Option to process sensor data for all months of a specified year and export results to a file." alt="" coords="146,657,273,683"/>
-<area shape="rect" id="node30" href="$class_menu.html#a393c430fcb58575dbd8d2219046a0aeb" title="Option to calculate and display average wind speed and its standard deviation for a specified year an..." alt="" coords="147,758,271,785"/>
-<area shape="rect" id="node31" href="$class_menu.html#ac59025fad993c4db4cb50feaad62e4a0" title="Option to calculate and display either average ambient temperature or solar radiation for each month ..." alt="" coords="132,707,287,734"/>
-<area shape="rect" id="node32" href="$class_input_validator.html#adafc081b7b324c0f458e7b05dadaed8c" title="Validates user input for year." alt="" coords="113,961,306,987"/>
-<area shape="rect" id="node7" href="$class_vector.html#ab72cd45d42bfea0432b2780c504ea867" title="Get the number of elements used in the vector." alt="" coords="630,421,749,447"/>
-<area shape="rect" id="node8" href="$class_ao_avl_map.html#affcadb4f51032bc0cd78619fd97f1bcc" title="Insert sensor data into the map consisted with array of Vectors." alt="" coords="377,91,565,118"/>
-<area shape="rect" id="node9" href="$class_date.html#aa10bb7c41d0aaa084790f48dd9dbffd9" title="Method that allows setting the day associated with the Date class." alt="" coords="421,142,521,169"/>
-<area shape="rect" id="node10" href="$class_time.html#a0f1261eb686b1aaa0366d39e035fb818" title="Method that allows setting the hour associated with the Time class." alt="" coords="418,193,523,219"/>
-<area shape="rect" id="node11" href="$class_measurement.html#ab6ad71b0556bed9b80d4b4512894237c" title="Setter for the measurement variable." alt="" coords="367,243,575,270"/>
-<area shape="rect" id="node12" href="$class_time.html#af0b98cbc57d252e672b4599571142376" title="Method that allows setting the minute associated with the Time class." alt="" coords="412,294,529,321"/>
-<area shape="rect" id="node13" href="$class_date.html#a66c5ea64f0337c094c58df64ad9b0c0e" title="Method that allows setting the month associated with the Date class." alt="" coords="414,345,527,371"/>
-<area shape="rect" id="node14" href="$class_date.html#a732cdd3dafa961d7c11b3252ad95ddbd" title="Method that allows setting the year associated with the Date class." alt="" coords="419,41,523,67"/>
-<area shape="rect" id="node16" href="$class_vector.html#a0b4525d26f9397f327e6adb7c7eee22c" title="Insert an object to the end of the vector." alt="" coords="627,181,752,207"/>
-<area shape="rect" id="node18" href="$namespace_constant.html#a3b30e2d2a7a08b7f334e56853fef4a6e" title="Returns a status message based on a condition." alt="" coords="405,1011,537,1038"/>
-<area shape="rect" id="node20" href="$class_ao_avl_map.html#aa1235e17821e4743a3e683f54dd2da2f" title="Calculates the Sample Pearson Correlation Coefficient (sPCC) between two sets of data." alt="" coords="381,497,560,523"/>
-<area shape="rect" id="node22" href="$class_ao_avl_map.html#a9ebd2f8953929698626a253d805d71a9" title="Extracts measurements of a specified sensor measurement type from the AVL tree." alt="" coords="363,446,579,473"/>
-<area shape="rect" id="node23" href="$class_ao_avl_map.html#a7e21558689bec8bcab2dedf297b1f798" title="Get a constant reference to the sensor data map." alt="" coords="382,598,559,625"/>
-<area shape="rect" id="node21" href="$class_vector.html#a9c74fd822fb8b1c5f7eeaf7deaad9abc" title="Check on if Vector is empty." alt="" coords="631,497,747,523"/>
-<area shape="rect" id="node25" href="$class_ao_avl_map.html#a66bd893ec3632a752ebc316e43c3236a" title="Calculates the sample standard deviation of sensor measurements." alt="" coords="377,649,564,691"/>
-<area shape="rect" id="node26" href="$class_tree.html#a5596f364c74235f642a3e995878943fa" title="Get the root node of the tree." alt="" coords="419,715,522,742"/>
-<area shape="rect" id="node27" href="$class_tree.html#ab793c2ca18ef3d4a24dcf64902a75880" title="Get the number of nodes in the Tree." alt="" coords="401,766,540,793"/>
-<area shape="rect" id="node28" href="$class_ao_avl_map.html#afe182a9b789a029dba7352892669fa19" title="Performs in&#45;order traversal of the AVL tree and accumulates the sum of sensor measurements." alt="" coords="367,817,575,843"/>
-<area shape="rect" id="node29" href="$class_tree.html#a044a94a076990c0520c25705382d1454" title="Checks if the Tree is empty." alt="" coords="419,867,522,894"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,477,56,504"/>
+<area shape="rect" id="node2" href="$class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f" title="Returns the singleton instance of Processor." alt="" coords="391,5,550,32"/>
+<area shape="rect" id="node3" href="$class_date.html#adb6f84b444ecf60bd8577be22de74fe2" title="Method that allows retrieving the month in string with the Date class." alt="" coords="139,579,280,605"/>
+<area shape="rect" id="node4" href="$class_sensor_rec_type.html#a7e94391ece6b543bc24c6c053e1db5e7" title="Get the date component of the sensor record." alt="" coords="104,629,315,656"/>
+<area shape="rect" id="node5" href="$namespace_constant.html#a78f2bc44b4c0903e6cac64ab409367a2" title="Returns an information message." alt="" coords="415,731,527,757"/>
+<area shape="rect" id="node6" href="$class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="385,544,556,571"/>
+<area shape="rect" id="node15" href="$class_processor.html#a248511764e3ce60ee72f8ae8fd0d47c9" title="Loads the CSV file paths from an txt file and stream into a vector." alt="" coords="375,478,567,519"/>
+<area shape="rect" id="node17" href="$class_input_validator.html#aa8aa998dfb86b883a11cf4c2195d550f" title="Validates user input for month." alt="" coords="108,781,311,808"/>
+<area shape="rect" id="node19" href="$class_menu.html#ab2efff71fdf8728a1d593c2a0f323b3d" title="Option to process sensor data for all months of a specified year and export results to a file." alt="" coords="146,173,273,200"/>
+<area shape="rect" id="node26" href="$class_menu.html#a393c430fcb58575dbd8d2219046a0aeb" title="Option to calculate and display average wind speed and its standard deviation for a specified year an..." alt="" coords="147,275,271,301"/>
+<area shape="rect" id="node27" href="$class_menu.html#a5f261a80fda842da551d9e53cc826480" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="143,376,275,403"/>
+<area shape="rect" id="node31" href="$class_menu.html#a4b303a6db3bf6df2d2a5365e77dfdc6c" title="Option to calculate and display average ambient temperature for each month of a specified year." alt="" coords="148,224,271,251"/>
+<area shape="rect" id="node32" href="$class_processor.html#ad8c3c5b193b38060b4aa355078f22513" title="Reloads data from a CSV file into an AoAvlMap." alt="" coords="131,528,287,555"/>
+<area shape="rect" id="node35" href="$class_input_validator.html#adafc081b7b324c0f458e7b05dadaed8c" title="Validates user input for year." alt="" coords="113,731,306,757"/>
+<area shape="rect" id="node7" href="$class_vector.html#ab72cd45d42bfea0432b2780c504ea867" title="Get the number of elements used in the vector." alt="" coords="671,417,790,444"/>
+<area shape="rect" id="node8" href="$class_ao_avl_map.html#affcadb4f51032bc0cd78619fd97f1bcc" title="Insert sensor data into the map consisted with array of Vectors." alt="" coords="637,772,825,799"/>
+<area shape="rect" id="node9" href="$class_date.html#aa10bb7c41d0aaa084790f48dd9dbffd9" title="Method that allows setting the day associated with the Date class." alt="" coords="681,468,781,495"/>
+<area shape="rect" id="node10" href="$class_time.html#a0f1261eb686b1aaa0366d39e035fb818" title="Method that allows setting the hour associated with the Time class." alt="" coords="678,519,783,545"/>
+<area shape="rect" id="node11" href="$class_measurement.html#ab6ad71b0556bed9b80d4b4512894237c" title="Setter for the measurement variable." alt="" coords="627,569,835,596"/>
+<area shape="rect" id="node12" href="$class_time.html#af0b98cbc57d252e672b4599571142376" title="Method that allows setting the minute associated with the Time class." alt="" coords="672,620,789,647"/>
+<area shape="rect" id="node13" href="$class_date.html#a66c5ea64f0337c094c58df64ad9b0c0e" title="Method that allows setting the month associated with the Date class." alt="" coords="674,671,787,697"/>
+<area shape="rect" id="node14" href="$class_date.html#a732cdd3dafa961d7c11b3252ad95ddbd" title="Method that allows setting the year associated with the Date class." alt="" coords="679,721,783,748"/>
+<area shape="rect" id="node16" href="$class_vector.html#a0b4525d26f9397f327e6adb7c7eee22c" title="Insert an object to the end of the vector." alt="" coords="668,367,793,393"/>
+<area shape="rect" id="node18" href="$namespace_constant.html#a3b30e2d2a7a08b7f334e56853fef4a6e" title="Returns a status message based on a condition." alt="" coords="405,781,537,808"/>
+<area shape="rect" id="node20" href="$class_ao_avl_map.html#a66bd893ec3632a752ebc316e43c3236a" title="Calculates the sample standard deviation of sensor measurements." alt="" coords="377,107,564,149"/>
+<area shape="rect" id="node21" href="$class_tree.html#a5596f364c74235f642a3e995878943fa" title="Get the root node of the tree." alt="" coords="419,173,522,200"/>
+<area shape="rect" id="node22" href="$class_ao_avl_map.html#a7e21558689bec8bcab2dedf297b1f798" title="Get a constant reference to the sensor data map." alt="" coords="382,325,559,352"/>
+<area shape="rect" id="node23" href="$class_tree.html#ab793c2ca18ef3d4a24dcf64902a75880" title="Get the number of nodes in the Tree." alt="" coords="401,224,540,251"/>
+<area shape="rect" id="node24" href="$class_ao_avl_map.html#afe182a9b789a029dba7352892669fa19" title="Performs in&#45;order traversal of the AVL tree and accumulates the sum of sensor measurements." alt="" coords="367,275,575,301"/>
+<area shape="rect" id="node25" href="$class_tree.html#a044a94a076990c0520c25705382d1454" title="Checks if the Tree is empty." alt="" coords="419,56,522,83"/>
+<area shape="rect" id="node28" href="$class_ao_avl_map.html#aa1235e17821e4743a3e683f54dd2da2f" title="Calculates the Sample Pearson Correlation Coefficient (sPCC) between two sets of data." alt="" coords="381,376,560,403"/>
+<area shape="rect" id="node30" href="$class_ao_avl_map.html#a9ebd2f8953929698626a253d805d71a9" title="Extracts measurements of a specified sensor measurement type from the AVL tree." alt="" coords="363,427,579,453"/>
+<area shape="rect" id="node29" href="$class_vector.html#a9c74fd822fb8b1c5f7eeaf7deaad9abc" title="Check on if Vector is empty." alt="" coords="673,316,789,343"/>
+<area shape="rect" id="node33" href="$class_ao_avl_map.html#a37e34f010607dfd1ca5b4a74cd3eca35" title="Destroys the AoAvlMap by clearing all AVL trees and removing all elements." alt="" coords="404,645,537,672"/>
+<area shape="rect" id="node34" href="$class_ao_avl_map.html#a27de5b518f6f0bca6d4208e811fafaf5" title="Checks if the AoAvlMap is empty." alt="" coords="403,595,539,621"/>
 </map>

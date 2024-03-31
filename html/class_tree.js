@@ -8,6 +8,7 @@ var class_tree =
     [ "Delete", "class_tree.html#a4768c5f1eabf101f09a4c9d76b7cbae0", null ],
     [ "DeleteNode", "class_tree.html#a9fac6880bddfbf0f134b645597c84502", null ],
     [ "Destroy", "class_tree.html#a32f6059fe774b46f73859a170771fa0f", null ],
+    [ "DestroyTree", "class_tree.html#ab4b5d449fe7f4ed09859d0d3e814797f", null ],
     [ "GetHeight", "class_tree.html#a2f5a3bbb794f377f6e47aa068992b454", null ],
     [ "GetLeaves", "class_tree.html#a2b28d6d430d0ae0a832fce5b653f4d2c", null ],
     [ "GetMaxTreeSubHeight", "class_tree.html#a95c514dc005fba6d4863e52d77f51151", null ],

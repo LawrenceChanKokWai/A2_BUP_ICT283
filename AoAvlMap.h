@@ -50,6 +50,23 @@ public:
      */
     bool InsertSensorData(const T &sensorData);
 
+    /**
+     * @brief Checks if the AoAvlMap is empty.
+     *
+     * @tparam T The type of data stored in the AoAvlMap.
+     * @return True if the AoAvlMap is empty, false otherwise.
+     */
+    bool IsEmpty() const;
+
+    /**
+     * @brief Destroys the AoAvlMap by clearing all AVL trees and removing all elements.
+     *
+     * This function iterates through the map and clears each AVL tree stored in it. After clearing all AVL trees,
+     * it clears the map itself, effectively destroying all elements and freeing memory.
+     *
+     * @tparam T The type of data stored in the AoAvlMap.
+     */
+    void Destroy();
 
     /**
     * @brief Performs in-order traversal of the AVL tree and accumulates the sum of sensor measurements.
@@ -306,5 +323,27 @@ float AoAvlMap<T>::CalculateSPCC(const Vector<float> &dataOne, const Vector<floa
 
     return spcc;
 }
+
+template<class T>
+bool AoAvlMap<T>::IsEmpty() const
+{
+    return ( m_data.empty() );
+}
+
+template<class T>
+void AoAvlMap<T>::Destroy()
+{
+    // Iterate through the map and clear each AVL tree
+    for (auto& yearData : m_data)
+    {
+        for (auto& monthTree : yearData.second)
+        {
+            monthTree.DestroyTree(); // Assuming Clear() method is defined in the AVL class
+        }
+    }
+    // After clearing all AVL trees, clear the map itself
+    m_data.clear();
+}
+
 
 #endif // AOAVLMAP_H_INCLUDED

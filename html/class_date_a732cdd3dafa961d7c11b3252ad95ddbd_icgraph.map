@@ -1,10 +1,12 @@
 <map id="Date::SetYear" name="Date::SetYear">
-<area shape="rect" id="node1" title="Method that allows setting the year associated with the Date class." alt="" coords="493,81,597,108"/>
-<area shape="rect" id="node2" href="$class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="275,31,445,57"/>
-<area shape="rect" id="node6" href="$_date_8h.html#a91689294160722f73fdf2a3dfbfeebac" title="Function: Overloaded stream extraction operator for Date class." alt="" coords="317,81,403,108"/>
-<area shape="rect" id="node7" href="$_date_test_8cpp.html#a830232d5681a58d832e12e5546eb5022" title=" " alt="" coords="315,132,405,159"/>
-<area shape="rect" id="node3" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="140,5,191,32"/>
-<area shape="rect" id="node4" href="$_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5" title=" " alt="" coords="104,56,227,83"/>
-<area shape="rect" id="node5" href="$_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
-<area shape="rect" id="node8" href="$_date_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="140,132,191,159"/>
+<area shape="rect" id="node1" title="Method that allows setting the year associated with the Date class." alt="" coords="709,107,813,133"/>
+<area shape="rect" id="node2" href="$class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="491,56,661,83"/>
+<area shape="rect" id="node8" href="$_date_8h.html#a91689294160722f73fdf2a3dfbfeebac" title="Function: Overloaded stream extraction operator for Date class." alt="" coords="533,107,619,133"/>
+<area shape="rect" id="node9" href="$_date_test_8cpp.html#a830232d5681a58d832e12e5546eb5022" title=" " alt="" coords="531,157,621,184"/>
+<area shape="rect" id="node3" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="146,5,197,32"/>
+<area shape="rect" id="node4" href="$class_processor.html#ad8c3c5b193b38060b4aa355078f22513" title="Reloads data from a CSV file into an AoAvlMap." alt="" coords="287,56,443,83"/>
+<area shape="rect" id="node7" href="$_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5" title=" " alt="" coords="110,107,233,133"/>
+<area shape="rect" id="node5" href="$_processor_test_8cpp.html#a42311f3097675417627b086d6ede606a" title=" " alt="" coords="104,56,239,83"/>
+<area shape="rect" id="node6" href="$_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" id="node10" href="$_date_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="339,157,390,184"/>
 </map>

@@ -1,20 +1,21 @@
 <map id="Vector::InsertLast" name="Vector::InsertLast">
-<area shape="rect" id="node1" title="Insert an object to the end of the vector." alt="" coords="764,288,889,315"/>
-<area shape="rect" id="node2" href="$class_ao_avl_map.html#a9ebd2f8953929698626a253d805d71a9" title="Extracts measurements of a specified sensor measurement type from the AVL tree." alt="" coords="500,56,716,83"/>
-<area shape="rect" id="node9" href="$class_processor.html#a248511764e3ce60ee72f8ae8fd0d47c9" title="Loads the CSV file paths from an txt file and stream into a vector." alt="" coords="260,107,452,149"/>
-<area shape="rect" id="node10" href="$_vector_test_8cpp.html#a326cb6137cb6eca92a4f397c64180e3b" title=" " alt="" coords="536,263,680,289"/>
-<area shape="rect" id="node12" href="$_vector_test_8cpp.html#a9cb97e3cde0342e32436577b21607110" title=" " alt="" coords="505,313,711,340"/>
-<area shape="rect" id="node13" href="$_vector_test_8cpp.html#a8abd4a8fdc1f5b6e1ab0af03aaf9edba" title=" " alt="" coords="543,364,673,391"/>
-<area shape="rect" id="node14" href="$_vector_test_8cpp.html#ac689fb9bd0c024fdb4026c5ba171f6f2" title=" " alt="" coords="529,415,687,441"/>
-<area shape="rect" id="node15" href="$_vector_test_8cpp.html#a07f2fb8d56936008826aa2169e64b7f0" title=" " alt="" coords="535,465,681,492"/>
-<area shape="rect" id="node16" href="$_vector_test_8cpp.html#a0f4dee5c1407a1d563e85e601f344263" title=" " alt="" coords="513,516,703,543"/>
-<area shape="rect" id="node17" href="$_vector_test_8cpp.html#a437143d80f70017b7ffc64a095028413" title=" " alt="" coords="536,161,680,188"/>
-<area shape="rect" id="node18" href="$_vector_test_8cpp.html#aa3aebda70f73d1e7bcb3456a07dfb6f9" title=" " alt="" coords="523,212,693,239"/>
-<area shape="rect" id="node3" href="$class_menu.html#a92bafcf65e97e2539fb0030422aa80d8" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="295,56,417,83"/>
-<area shape="rect" id="node7" href="$_ao_avl_map_test_8cpp.html#ac8582988e27bbf21c4b1e47c221984e5" title=" " alt="" coords="269,5,443,32"/>
-<area shape="rect" id="node4" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="133,111,183,137"/>
-<area shape="rect" id="node5" href="$_menu_test_8cpp.html#a867b9298fce2d874c7c6608b8e93ac83" title=" " alt="" coords="104,56,212,83"/>
-<area shape="rect" id="node6" href="$_menu_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
-<area shape="rect" id="node8" href="$_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="133,5,183,32"/>
-<area shape="rect" id="node11" href="$_vector_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="331,339,381,365"/>
+<area shape="rect" id="node1" title="Insert an object to the end of the vector." alt="" coords="773,296,899,323"/>
+<area shape="rect" id="node2" href="$class_ao_avl_map.html#a9ebd2f8953929698626a253d805d71a9" title="Extracts measurements of a specified sensor measurement type from the AVL tree." alt="" coords="509,52,725,79"/>
+<area shape="rect" id="node7" href="$class_processor.html#a248511764e3ce60ee72f8ae8fd0d47c9" title="Loads the CSV file paths from an txt file and stream into a vector." alt="" coords="521,103,713,145"/>
+<area shape="rect" id="node11" href="$_vector_test_8cpp.html#a326cb6137cb6eca92a4f397c64180e3b" title=" " alt="" coords="545,169,689,196"/>
+<area shape="rect" id="node13" href="$_vector_test_8cpp.html#a9cb97e3cde0342e32436577b21607110" title=" " alt="" coords="514,220,721,247"/>
+<area shape="rect" id="node14" href="$_vector_test_8cpp.html#a8abd4a8fdc1f5b6e1ab0af03aaf9edba" title=" " alt="" coords="552,271,683,297"/>
+<area shape="rect" id="node15" href="$_vector_test_8cpp.html#ac689fb9bd0c024fdb4026c5ba171f6f2" title=" " alt="" coords="538,321,697,348"/>
+<area shape="rect" id="node16" href="$_vector_test_8cpp.html#a07f2fb8d56936008826aa2169e64b7f0" title=" " alt="" coords="545,372,690,399"/>
+<area shape="rect" id="node17" href="$_vector_test_8cpp.html#a0f4dee5c1407a1d563e85e601f344263" title=" " alt="" coords="522,423,713,449"/>
+<area shape="rect" id="node18" href="$_vector_test_8cpp.html#a437143d80f70017b7ffc64a095028413" title=" " alt="" coords="545,473,689,500"/>
+<area shape="rect" id="node19" href="$_vector_test_8cpp.html#aa3aebda70f73d1e7bcb3456a07dfb6f9" title=" " alt="" coords="533,524,702,551"/>
+<area shape="rect" id="node3" href="$class_menu.html#a5f261a80fda842da551d9e53cc826480" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="308,56,440,83"/>
+<area shape="rect" id="node5" href="$_ao_avl_map_test_8cpp.html#ac8582988e27bbf21c4b1e47c221984e5" title=" " alt="" coords="287,5,461,32"/>
+<area shape="rect" id="node4" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="146,107,197,133"/>
+<area shape="rect" id="node6" href="$_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="146,5,197,32"/>
+<area shape="rect" id="node8" href="$class_processor.html#ad8c3c5b193b38060b4aa355078f22513" title="Reloads data from a CSV file into an AoAvlMap." alt="" coords="296,157,452,184"/>
+<area shape="rect" id="node9" href="$_processor_test_8cpp.html#a42311f3097675417627b086d6ede606a" title=" " alt="" coords="104,157,239,184"/>
+<area shape="rect" id="node10" href="$_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,157,56,184"/>
+<area shape="rect" id="node12" href="$_vector_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="349,347,399,373"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="Temperature" name="Temperature">
-<area shape="rect" id="node1" title="Represents a temperature measurement." alt="" coords="19,189,134,296"/>
-<area shape="rect" id="node2" href="$class_measurement.html" title="Represents a base class." alt="" coords="5,5,148,141"/>
+<area shape="rect" id="node1" title="Represents a temperature measurement." alt="" coords="9,80,103,107"/>
+<area shape="rect" id="node2" href="$class_measurement.html" title="Represents a base class." alt="" coords="5,5,107,32"/>
 </map>

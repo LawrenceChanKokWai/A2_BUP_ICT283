@@ -1,5 +1,5 @@
 <map id="Tree&lt; T &gt;" name="Tree&lt; T &gt;">
-<area shape="rect" id="node1" title="Tree base class." alt="" coords="41,5,213,684"/>
-<area shape="rect" id="node2" href="$class_a_v_l.html" title="Represents the AVL Class." alt="" coords="5,732,115,853"/>
-<area shape="rect" id="node3" href="$class_b_s_t.html" title="Represents the BST Class." alt="" coords="139,732,248,853"/>
+<area shape="rect" id="node1" title="Tree base class." alt="" coords="56,5,135,32"/>
+<area shape="rect" id="node2" href="$class_a_v_l.html" title="Represents the AVL Class." alt="" coords="5,80,84,107"/>
+<area shape="rect" id="node3" href="$class_b_s_t.html" title="Represents the BST Class." alt="" coords="108,80,187,107"/>
 </map>

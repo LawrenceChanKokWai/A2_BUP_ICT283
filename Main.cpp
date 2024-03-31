@@ -18,8 +18,6 @@
 
 using namespace std;
 
-void printWithPrecision(const string& label, float value);
-
 int main()
 {
     string directoryPath = string(__FILE__).substr(0, string(__FILE__).find_last_of("\\/") + 1) + "data\\";
@@ -51,12 +49,12 @@ int main()
         unsigned validatedYear = 0;
 
         cout    << Constant::MENU_OPTIONS_MSG
-                   << Constant::MENU_OPTION_ONE_MSG
-                   << Constant::MENU_OPTION_TWO_MSG
-                   << Constant::MENU_OPTION_THREE_MSG
-                   << Constant::MENU_OPTION_FOUR_MSG
-                   << Constant::MENU_OPTION_FIVE_MSG
-                   << Constant::MENU_OPTION_SIX_MSG << endl;
+                << Constant::MENU_OPTION_ONE_MSG
+                << Constant::MENU_OPTION_TWO_MSG
+                << Constant::MENU_OPTION_THREE_MSG
+                << Constant::MENU_OPTION_FOUR_MSG
+                << Constant::MENU_OPTION_FIVE_MSG
+                << Constant::MENU_OPTION_SIX_MSG << endl;
 
         cout << Constant::SELECTION_INPUT;
         user_choice = getch();
@@ -76,17 +74,21 @@ int main()
             validatedYear = validator.YearValidation(year);
             cout << '\n'  << Constant::OUTPUT << '\n' << validatedYear << ":" << endl;
 
-            menu.OptionTwoThree( avlRecords, mapRecords, validatedYear, user_choice );
+            menu.OptionTwo( avlRecords, mapRecords, validatedYear, user_choice );
 
             break;
         case '3':
-            cout << Constant::SELECTED_OPTION_THREE_MSG << endl;
-            validatedYear = validator.YearValidation(year);
-            cout << '\n'  << Constant::OUTPUT << '\n' << validatedYear << ":" << endl;
+        {
+            cout << Constant::SELECTED_OPTION_FIVE_MSG << endl;
+            unsigned validatedMonth = validator.MonthValidation(month);
 
-            menu.OptionTwoThree( avlRecords, mapRecords, validatedYear, user_choice );
+            cout << '\n' << Constant::OUTPUT << endl;
+            cout << "Sample Pearson Correlation Coefficient for " << sensorRecType.GetSensorDate().GetMonthInStr(validatedMonth) << endl;
+
+            menu.OptionThree( mapRecords, validatedMonth );
 
             break;
+        }
         case '4':
             cout << Constant::SELECTED_OPTION_FOUR_MSG << endl;
             validatedYear = validator.YearValidation(year);
@@ -99,12 +101,13 @@ int main()
         case '5':
         {
             cout << Constant::SELECTED_OPTION_FIVE_MSG << endl;
-            unsigned validatedMonth = validator.MonthValidation(month);
 
             cout << '\n' << Constant::OUTPUT << endl;
-            cout << "Sample Pearson Correlation Coefficient for " << sensorRecType.GetSensorDate().GetMonthInStr(validatedMonth) << endl;
+            cout << "Reloading data: " << filename << endl;
 
-            menu.OptionFive( mapRecords, validatedMonth );
+            Processor::GetInstance().ReloadData(mapRecords, filename);
+
+            cout << '\n' << endl;
 
             break;
         }

@@ -1,0 +1,6 @@
+<map id="TestDestroyMap" name="TestDestroyMap">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,123,83"/>
+<area shape="rect" id="node2" href="$_ao_avl_map_test_8cpp.html#a0153045686dc242fefe3bddac5b95f82" title=" " alt="" coords="185,5,292,32"/>
+<area shape="rect" id="node3" href="$class_ao_avl_map.html#a37e34f010607dfd1ca5b4a74cd3eca35" title="Destroys the AoAvlMap by clearing all AVL trees and removing all elements." alt="" coords="172,56,305,83"/>
+<area shape="rect" id="node4" href="$class_ao_avl_map.html#a27de5b518f6f0bca6d4208e811fafaf5" title="Checks if the AoAvlMap is empty." alt="" coords="171,107,307,133"/>
+</map>

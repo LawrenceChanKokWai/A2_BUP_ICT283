@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Assignment Two: ProcessorTest.cpp Source File</title>
+<title>Assignment_Two: ProcessorTest.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,9 +25,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Assignment Two
-   &#160;<span id="projectnumber">1.0.0</span>
+   <div id="projectname">Assignment_Two
    </div>
+   <div id="projectbrief">ICT283_Assignment Two</div>
   </td>
  </tr>
  </tbody>
@@ -101,67 +101,81 @@ $(document).ready(function(){initNavTree('_processor_test_8cpp_source.html','');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5">TestLoadCsvData</a>( <a class="code" href="class_vector.html">Vector&lt;string&gt;</a> &amp;csvFilePath, <a class="code" href="class_ao_avl_map.html">AoAvlMap&lt;T&gt;</a> &amp;aoAvlMap );</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   25</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_vector.html">Vector&lt;string&gt;</a> csvFilePath;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_ao_avl_map.html">AoAvlMap&lt;SensorRecType&gt;</a> testMap;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">string</span> directoryPath = string(__FILE__).substr(0, <span class="keywordtype">string</span>(__FILE__).find_last_of(<span class="stringliteral">&quot;\\/&quot;</span>) + 1) + <span class="stringliteral">&quot;data\\&quot;</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> filename = directoryPath + <span class="stringliteral">&quot;data_source_test.txt&quot;</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">//const string outFilePath = directoryPath + &quot;WindTempSolar.csv&quot;;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    ifstream input( filename );</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_processor_test_8cpp.html#a42311f3097675417627b086d6ede606a">TestReloadCsvData</a>( <a class="code" href="class_ao_avl_map.html">AoAvlMap&lt;T&gt;</a> &amp;aoAvlMap, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;filePath );</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   27</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_vector.html">Vector&lt;string&gt;</a> csvFilePath;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_ao_avl_map.html">AoAvlMap&lt;SensorRecType&gt;</a> testMap;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">string</span> directoryPath = string(__FILE__).substr(0, <span class="keywordtype">string</span>(__FILE__).find_last_of(<span class="stringliteral">&quot;\\/&quot;</span>) + 1) + <span class="stringliteral">&quot;data\\&quot;</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> filename = directoryPath + <span class="stringliteral">&quot;data_source_test.txt&quot;</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//const string outFilePath = directoryPath + &quot;WindTempSolar.csv&quot;;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a>().<a class="code" href="class_processor.html#a248511764e3ce60ee72f8ae8fd0d47c9">LoadCSVFilePathToVector</a>( csvFilePath, input, filename );</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="_processor_test_8cpp.html#a05655d63954f1a5a2ccfe9c2510149f0">TestLoadCsvFilePathToVector</a>( csvFilePath );</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5">TestLoadCsvData</a>( csvFilePath, testMap );</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    ifstream input( filename );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a>().<a class="code" href="class_processor.html#a248511764e3ce60ee72f8ae8fd0d47c9">LoadCSVFilePathToVector</a>( csvFilePath, input, filename );</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="_processor_test_8cpp.html#a05655d63954f1a5a2ccfe9c2510149f0">TestLoadCsvFilePathToVector</a>( csvFilePath );</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5">TestLoadCsvData</a>( csvFilePath, testMap );</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="_processor_test_8cpp.html#a42311f3097675417627b086d6ede606a">TestReloadCsvData</a>( testMap, filename );</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="_processor_test_8cpp.html#ab622bbc0e19041b69081fef20c6348f0">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_processor_test_8cpp.html#ab622bbc0e19041b69081fef20c6348f0">Assert_Equal</a>( <span class="keywordtype">bool</span> condition, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;message )</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span>( condition )</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\t[ PASS ]: &quot;</span> &lt;&lt; message &lt;&lt; endl;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\t[ FAIL ]: &quot;</span> &lt;&lt; message &lt;&lt; endl;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="_processor_test_8cpp.html#a05655d63954f1a5a2ccfe9c2510149f0">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_processor_test_8cpp.html#a05655d63954f1a5a2ccfe9c2510149f0">TestLoadCsvFilePathToVector</a>( <a class="code" href="class_vector.html">Vector&lt;T&gt;</a> &amp;csvFilePath )</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Test on csv file path loading to vector: &quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="_processor_test_8cpp.html#ab622bbc0e19041b69081fef20c6348f0">Assert_Equal</a>( csvFilePath.<a class="code" href="class_vector.html#ab72cd45d42bfea0432b2780c504ea867">GetUsed</a>() == 3, <span class="stringliteral">&quot;Csv File Path Loading to Vector&quot;</span> );</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    cout &lt;&lt; endl;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5">   66</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5">TestLoadCsvData</a>( <a class="code" href="class_vector.html">Vector&lt;string&gt;</a> &amp;csvFilePath, <a class="code" href="class_ao_avl_map.html">AoAvlMap&lt;T&gt;</a> &amp;aoAvlMap )</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Test on loading csv data into the map: &quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a>().<a class="code" href="class_processor.html#a5378867146978d9ab1d62de4e8d8b80a">LoadCSVData</a>( csvFilePath, aoAvlMap );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    cout &lt;&lt; endl;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="_processor_test_8cpp.html#ab622bbc0e19041b69081fef20c6348f0">   48</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_processor_test_8cpp.html#ab622bbc0e19041b69081fef20c6348f0">Assert_Equal</a>( <span class="keywordtype">bool</span> condition, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;message )</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span>( condition )</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\t[ PASS ]: &quot;</span> &lt;&lt; message &lt;&lt; endl;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\t[ FAIL ]: &quot;</span> &lt;&lt; message &lt;&lt; endl;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="_processor_test_8cpp.html#a05655d63954f1a5a2ccfe9c2510149f0">   61</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_processor_test_8cpp.html#a05655d63954f1a5a2ccfe9c2510149f0">TestLoadCsvFilePathToVector</a>( <a class="code" href="class_vector.html">Vector&lt;T&gt;</a> &amp;csvFilePath )</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Test on csv file path loading to vector: &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="_processor_test_8cpp.html#ab622bbc0e19041b69081fef20c6348f0">Assert_Equal</a>( csvFilePath.<a class="code" href="class_vector.html#ab72cd45d42bfea0432b2780c504ea867">GetUsed</a>() == 3, <span class="stringliteral">&quot;Csv File Path Loading to Vector&quot;</span> );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5">   69</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5">TestLoadCsvData</a>( <a class="code" href="class_vector.html">Vector&lt;string&gt;</a> &amp;csvFilePath, <a class="code" href="class_ao_avl_map.html">AoAvlMap&lt;T&gt;</a> &amp;aoAvlMap )</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Test on loading csv data into the map: &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a>().<a class="code" href="class_processor.html#a5378867146978d9ab1d62de4e8d8b80a">LoadCSVData</a>( csvFilePath, aoAvlMap );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="_processor_test_8cpp.html#a42311f3097675417627b086d6ede606a">   77</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_processor_test_8cpp.html#a42311f3097675417627b086d6ede606a">TestReloadCsvData</a>( <a class="code" href="class_ao_avl_map.html">AoAvlMap&lt;T&gt;</a> &amp;aoAvlMap, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;filePath )</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Test on reloading csv data into the map&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a>().<a class="code" href="class_processor.html#ad8c3c5b193b38060b4aa355078f22513">ReloadData</a>( aoAvlMap, filePath );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_processor_html_a5378867146978d9ab1d62de4e8d8b80a"><div class="ttname"><a href="class_processor.html#a5378867146978d9ab1d62de4e8d8b80a">Processor::LoadCSVData</a></div><div class="ttdeci">void LoadCSVData(Vector&lt; string &gt; &amp;csvFilePath, AoAvlMap&lt; SensorRecType &gt; &amp;mapAoBst)</div><div class="ttdoc">Loads data from CSV files into an AVL map.</div><div class="ttdef"><b>Definition:</b> <a href="_processor_8cpp_source.html#l00058">Processor.cpp:58</a></div></div>
 <div class="ttc" id="a_processor_8h_html"><div class="ttname"><a href="_processor_8h.html">Processor.h</a></div><div class="ttdoc">Processor class definition.</div></div>
-<div class="ttc" id="a_processor_test_8cpp_html_ab622bbc0e19041b69081fef20c6348f0"><div class="ttname"><a href="_processor_test_8cpp.html#ab622bbc0e19041b69081fef20c6348f0">Assert_Equal</a></div><div class="ttdeci">void Assert_Equal(bool condition, const string &amp;message)</div><div class="ttdef"><b>Definition:</b> <a href="_processor_test_8cpp_source.html#l00045">ProcessorTest.cpp:45</a></div></div>
+<div class="ttc" id="a_processor_test_8cpp_html_a42311f3097675417627b086d6ede606a"><div class="ttname"><a href="_processor_test_8cpp.html#a42311f3097675417627b086d6ede606a">TestReloadCsvData</a></div><div class="ttdeci">void TestReloadCsvData(AoAvlMap&lt; T &gt; &amp;aoAvlMap, const string &amp;filePath)</div><div class="ttdef"><b>Definition:</b> <a href="_processor_test_8cpp_source.html#l00077">ProcessorTest.cpp:77</a></div></div>
+<div class="ttc" id="a_processor_test_8cpp_html_ab622bbc0e19041b69081fef20c6348f0"><div class="ttname"><a href="_processor_test_8cpp.html#ab622bbc0e19041b69081fef20c6348f0">Assert_Equal</a></div><div class="ttdeci">void Assert_Equal(bool condition, const string &amp;message)</div><div class="ttdef"><b>Definition:</b> <a href="_processor_test_8cpp_source.html#l00048">ProcessorTest.cpp:48</a></div></div>
 <div class="ttc" id="aclass_vector_html_ab72cd45d42bfea0432b2780c504ea867"><div class="ttname"><a href="class_vector.html#ab72cd45d42bfea0432b2780c504ea867">Vector::GetUsed</a></div><div class="ttdeci">unsigned GetUsed() const</div><div class="ttdoc">Get the number of elements used in the vector.</div><div class="ttdef"><b>Definition:</b> <a href="_vector_8h_source.html#l00286">Vector.h:286</a></div></div>
 <div class="ttc" id="aclass_ao_avl_map_html"><div class="ttname"><a href="class_ao_avl_map.html">AoAvlMap</a></div><div class="ttdoc">Represents the AoAvlMap Class.</div><div class="ttdef"><b>Definition:</b> <a href="_ao_avl_map_8h_source.html#l00027">AoAvlMap.h:27</a></div></div>
-<div class="ttc" id="a_processor_test_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="_processor_test_8cpp_source.html#l00025">ProcessorTest.cpp:25</a></div></div>
+<div class="ttc" id="a_processor_test_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="_processor_test_8cpp_source.html#l00027">ProcessorTest.cpp:27</a></div></div>
 <div class="ttc" id="aclass_processor_html_a248511764e3ce60ee72f8ae8fd0d47c9"><div class="ttname"><a href="class_processor.html#a248511764e3ce60ee72f8ae8fd0d47c9">Processor::LoadCSVFilePathToVector</a></div><div class="ttdeci">void LoadCSVFilePathToVector(Vector&lt; string &gt; &amp;csvFilePath, ifstream &amp;input, const string &amp;filename)</div><div class="ttdoc">Loads the CSV file paths from an txt file and stream into a vector.</div><div class="ttdef"><b>Definition:</b> <a href="_processor_8cpp_source.html#l00037">Processor.cpp:37</a></div></div>
-<div class="ttc" id="a_processor_test_8cpp_html_a05655d63954f1a5a2ccfe9c2510149f0"><div class="ttname"><a href="_processor_test_8cpp.html#a05655d63954f1a5a2ccfe9c2510149f0">TestLoadCsvFilePathToVector</a></div><div class="ttdeci">void TestLoadCsvFilePathToVector(Vector&lt; T &gt; &amp;csvFilePath)</div><div class="ttdef"><b>Definition:</b> <a href="_processor_test_8cpp_source.html#l00058">ProcessorTest.cpp:58</a></div></div>
-<div class="ttc" id="a_processor_test_8cpp_html_a65a80aa54a41bc9eed898bf6af591bd5"><div class="ttname"><a href="_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5">TestLoadCsvData</a></div><div class="ttdeci">void TestLoadCsvData(Vector&lt; string &gt; &amp;csvFilePath, AoAvlMap&lt; T &gt; &amp;aoAvlMap)</div><div class="ttdef"><b>Definition:</b> <a href="_processor_test_8cpp_source.html#l00066">ProcessorTest.cpp:66</a></div></div>
+<div class="ttc" id="a_processor_test_8cpp_html_a05655d63954f1a5a2ccfe9c2510149f0"><div class="ttname"><a href="_processor_test_8cpp.html#a05655d63954f1a5a2ccfe9c2510149f0">TestLoadCsvFilePathToVector</a></div><div class="ttdeci">void TestLoadCsvFilePathToVector(Vector&lt; T &gt; &amp;csvFilePath)</div><div class="ttdef"><b>Definition:</b> <a href="_processor_test_8cpp_source.html#l00061">ProcessorTest.cpp:61</a></div></div>
+<div class="ttc" id="a_processor_test_8cpp_html_a65a80aa54a41bc9eed898bf6af591bd5"><div class="ttname"><a href="_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5">TestLoadCsvData</a></div><div class="ttdeci">void TestLoadCsvData(Vector&lt; string &gt; &amp;csvFilePath, AoAvlMap&lt; T &gt; &amp;aoAvlMap)</div><div class="ttdef"><b>Definition:</b> <a href="_processor_test_8cpp_source.html#l00069">ProcessorTest.cpp:69</a></div></div>
 <div class="ttc" id="aclass_processor_html_a66f8568b6dd32f6ca5bc180dae4bbc9f"><div class="ttname"><a href="class_processor.html#a66f8568b6dd32f6ca5bc180dae4bbc9f">Processor::GetInstance</a></div><div class="ttdeci">static Processor &amp; GetInstance()</div><div class="ttdoc">Returns the singleton instance of Processor.</div><div class="ttdef"><b>Definition:</b> <a href="_processor_8cpp_source.html#l00031">Processor.cpp:31</a></div></div>
 <div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">Defines a Vector Class, Dynamic Array Implementation.</div><div class="ttdef"><b>Definition:</b> <a href="_vector_8h_source.html#l00023">Vector.h:23</a></div></div>
+<div class="ttc" id="aclass_processor_html_ad8c3c5b193b38060b4aa355078f22513"><div class="ttname"><a href="class_processor.html#ad8c3c5b193b38060b4aa355078f22513">Processor::ReloadData</a></div><div class="ttdeci">void ReloadData(AoAvlMap&lt; SensorRecType &gt; &amp;mapAoBst, const string &amp;filename)</div><div class="ttdoc">Reloads data from a CSV file into an AoAvlMap.</div><div class="ttdef"><b>Definition:</b> <a href="_processor_8cpp_source.html#l00206">Processor.cpp:206</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

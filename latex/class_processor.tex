@@ -9,15 +9,6 @@ The \mbox{\hyperlink{class_processor}{Processor}} class handles processing of C\
 
 {\ttfamily \#include $<$Processor.\+h$>$}
 
-
-
-Collaboration diagram for Processor\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=232pt]{class_processor__coll__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,7 +17,9 @@ void \mbox{\hyperlink{class_processor_a248511764e3ce60ee72f8ae8fd0d47c9}{Load\+C
 void \mbox{\hyperlink{class_processor_a5378867146978d9ab1d62de4e8d8b80a}{Load\+C\+S\+V\+Data}} (\mbox{\hyperlink{class_vector}{Vector}}$<$ string $>$ \&csv\+File\+Path, \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ \mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} $>$ \&map\+Ao\+Bst)
 \begin{DoxyCompactList}\small\item\em Loads data from C\+SV files into an \mbox{\hyperlink{class_a_v_l}{A\+VL}} map. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_processor_a9ffca81c2e7aee9a5194e5d6f62d2ee4}{Output\+Stream\+Measurement}} (\mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} \&sensor\+Rec\+Type, ofstream \&output\+File, unsigned \&month, float \&speed\+Mean, float \&speed\+Ssd, float \&temp\+Mean, float \&temp\+Ssd, float \&sr\+Sum)
-\begin{DoxyCompactList}\small\item\em Records sensor data to an output file and computes statistical measurements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Records sensor data to an output file and computes statistical measurements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_processor_ad8c3c5b193b38060b4aa355078f22513}{Reload\+Data}} (\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ \mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} $>$ \&map\+Ao\+Bst, const string \&filename)
+\begin{DoxyCompactList}\small\item\em Reloads data from a C\+SV file into an \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -92,14 +85,16 @@ std\+::cout $<$$<$ \char`\"{}\+Date\+: \char`\"{} $<$$<$ D\+Value.\+Get\+Day() $
 
 Definition at line 58 of file Processor.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_processor_a5378867146978d9ab1d62de4e8d8b80a_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -129,18 +124,20 @@ Loads the C\+SV file paths from an txt file and stream into a vector.
 
 Definition at line 37 of file Processor.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_processor_a248511764e3ce60ee72f8ae8fd0d47c9_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=298pt]{class_processor_a248511764e3ce60ee72f8ae8fd0d47c9_icgraph}
+\includegraphics[width=350pt]{class_processor_a248511764e3ce60ee72f8ae8fd0d47c9_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_processor_a9ffca81c2e7aee9a5194e5d6f62d2ee4}\label{class_processor_a9ffca81c2e7aee9a5194e5d6f62d2ee4}} 
@@ -178,11 +175,51 @@ This function records sensor data to the specified output file and calculates st
 
 Definition at line 176 of file Processor.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_processor_a9ffca81c2e7aee9a5194e5d6f62d2ee4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_processor_ad8c3c5b193b38060b4aa355078f22513}\label{class_processor_ad8c3c5b193b38060b4aa355078f22513}} 
+\index{Processor@{Processor}!ReloadData@{ReloadData}}
+\index{ReloadData@{ReloadData}!Processor@{Processor}}
+\doxysubsubsection{\texorpdfstring{ReloadData()}{ReloadData()}}
+{\footnotesize\ttfamily void Processor\+::\+Reload\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ \mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} $>$ \&}]{map\+Ao\+Bst,  }\item[{const string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Reloads data from a C\+SV file into an \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}. 
+
+This method clears any existing data in the provided \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}, resets the data read and inserted counters, and then loads data from the specified C\+SV file into the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em map\+Ao\+Bst} & Reference to the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} where the data will be loaded. \\
+\hline
+\mbox{\texttt{ in}}  & {\em filename} & The path to the C\+SV file containing the data to be loaded. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 206 of file Processor.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_processor_ad8c3c5b193b38060b4aa355078f22513_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_processor_ad8c3c5b193b38060b4aa355078f22513_icgraph}
 \end{center}
 \end{figure}
 

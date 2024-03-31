@@ -154,7 +154,7 @@ public:
     void PostOrderTraversal( PFnTraversal traversal ) const;
     /** @} */
 
-
+    void DestroyTree();
 
 protected:
     Node<T> *m_root;    /**< Pointer to the root of the Tree */
@@ -403,6 +403,12 @@ Tree<T> &Tree<T>::operator = ( const Tree &otherTree )
         CopyTree( m_root, otherTree.m_root );
     }
     return *this;
+}
+
+template<class T>
+void Tree<T>::DestroyTree()
+{
+    Destroy( m_root );
 }
 
 template<class T>

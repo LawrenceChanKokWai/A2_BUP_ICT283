@@ -203,4 +203,29 @@ Vector<string> Processor::Split( const string &aString, char delimiter )
     return someStrings;
 }
 
+void Processor::ReloadData( AoAvlMap<SensorRecType> &mapAoBst, const string& filename )
+{
+    // Clear previously loaded data and reset counters
+    m_dataRead = 0;
+    m_dataInserted = 0;
+
+    // Clear any existing data structures
+    mapAoBst.Destroy();
+    if( mapAoBst.IsEmpty() )
+    {
+        cout << "Previous Map Destroyed, Now reloading data....." << endl;
+
+        // Load data from file
+        Vector<string> csvFilePath;
+        ifstream input(filename);
+        LoadCSVFilePathToVector(csvFilePath, input, filename);
+        LoadCSVData(csvFilePath, mapAoBst);
+    }
+    else
+    {
+        cerr << "Error destroying previous map." << '\n' << endl;
+    }
+}
+
+
 

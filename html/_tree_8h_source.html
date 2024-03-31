@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Assignment Two: Tree.h Source File</title>
+<title>Assignment_Two: Tree.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,9 +25,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Assignment Two
-   &#160;<span id="projectnumber">1.0.0</span>
+   <div id="projectname">Assignment_Two
    </div>
+   <div id="projectbrief">ICT283_Assignment Two</div>
   </td>
  </tr>
  </tbody>
@@ -132,6 +132,8 @@ $(document).ready(function(){initNavTree('_tree_8h_source.html',''); initResizab
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tree.html#a4d29f29b9501d174fab425e6e1c38ab0">InOrderTraversal</a>( <a class="code" href="class_tree.html#a46e5fa0d2056c3db382460c6d987b737">PFnTraversal</a> traversal ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tree.html#a6083a1ba68c84a4fc80e9639f9886bb2">PostOrderTraversal</a>( <a class="code" href="class_tree.html#a46e5fa0d2056c3db382460c6d987b737">PFnTraversal</a> traversal ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tree.html#ab4b5d449fe7f4ed09859d0d3e814797f">DestroyTree</a>();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="class_tree.html#a4098a01e271f8649bff54a04fbb4df94">  160</a></span>&#160;    <a class="code" href="struct_node.html">Node&lt;T&gt;</a> *<a class="code" href="class_tree.html#a4098a01e271f8649bff54a04fbb4df94">m_root</a>;    </div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tree.html#a32f6059fe774b46f73859a170771fa0f">Destroy</a>( <a class="code" href="struct_node.html">Node&lt;T&gt;</a> *&amp;ptr );</div>
@@ -315,85 +317,91 @@ $(document).ready(function(){initNavTree('_tree_8h_source.html',''); initResizab
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;}</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160; </div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00409"></a><span class="lineno"><a class="line" href="class_tree.html#afedf8158bf6ad32cf3568409f1d81150">  409</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_tree.html#afedf8158bf6ad32cf3568409f1d81150">Tree&lt;T&gt;::Search</a>( <a class="code" href="struct_node.html">Node&lt;T&gt;</a> *&amp;current, <span class="keyword">const</span> T &amp;<span class="keywordtype">object</span> )</div>
+<div class="line"><a name="l00409"></a><span class="lineno"><a class="line" href="class_tree.html#ab4b5d449fe7f4ed09859d0d3e814797f">  409</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#ab4b5d449fe7f4ed09859d0d3e814797f">Tree&lt;T&gt;::DestroyTree</a>()</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;{</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keywordflow">if</span>( current == <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    {</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    }</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <span class="keywordtype">object</span> == current-&gt;<a class="code" href="struct_node.html#afa8960a19fcab38df33b56d4543ddc0f">m_object</a> )</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    {</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    }</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( object &lt; current-&gt;m_object )</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    {</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        <span class="keywordflow">return</span> Search( current-&gt;<a class="code" href="struct_node.html#a883926a5576bc84eba20398c5984fbdb">m_left</a>, <span class="keywordtype">object</span> );</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    }</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    {</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        <span class="keywordflow">return</span> Search( current-&gt;<a class="code" href="struct_node.html#a3dcad8ea33abc8a284f73a076fff87c7">m_right</a>, <span class="keywordtype">object</span> );</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    }</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;}</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00430"></a><span class="lineno"><a class="line" href="class_tree.html#acf0cb1178e10fcdbd06e9b101c0ce678">  430</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_tree.html#acf0cb1178e10fcdbd06e9b101c0ce678">Tree&lt;T&gt;::SearchNode</a>( <span class="keyword">const</span> T &amp;<span class="keywordtype">object</span> )</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;{</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <span class="keywordflow">return</span> Search( m_root, <span class="keywordtype">object</span> );</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    Destroy( m_root );</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;}</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00415"></a><span class="lineno"><a class="line" href="class_tree.html#afedf8158bf6ad32cf3568409f1d81150">  415</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_tree.html#afedf8158bf6ad32cf3568409f1d81150">Tree&lt;T&gt;::Search</a>( <a class="code" href="struct_node.html">Node&lt;T&gt;</a> *&amp;current, <span class="keyword">const</span> T &amp;<span class="keywordtype">object</span> )</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;{</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="keywordflow">if</span>( current == <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    {</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    }</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <span class="keywordtype">object</span> == current-&gt;<a class="code" href="struct_node.html#afa8960a19fcab38df33b56d4543ddc0f">m_object</a> )</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    {</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    }</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( object &lt; current-&gt;m_object )</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    {</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        <span class="keywordflow">return</span> Search( current-&gt;<a class="code" href="struct_node.html#a883926a5576bc84eba20398c5984fbdb">m_left</a>, <span class="keywordtype">object</span> );</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    }</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    {</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        <span class="keywordflow">return</span> Search( current-&gt;<a class="code" href="struct_node.html#a3dcad8ea33abc8a284f73a076fff87c7">m_right</a>, <span class="keywordtype">object</span> );</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    }</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;}</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00436"></a><span class="lineno"><a class="line" href="class_tree.html#a5344c97d57067fd9e853b97cbb8d04d8">  436</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#a5344c97d57067fd9e853b97cbb8d04d8">Tree&lt;T&gt;::InOrder</a>( PFnTraversal traversal, <a class="code" href="struct_node.html">Node&lt;T&gt;</a> *ptr )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordflow">if</span>( ptr != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    {</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        InOrder( traversal, ptr-&gt;<a class="code" href="struct_node.html#a883926a5576bc84eba20398c5984fbdb">m_left</a> );</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        ( traversal )( ptr-&gt;<a class="code" href="struct_node.html#afa8960a19fcab38df33b56d4543ddc0f">m_object</a> );</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        InOrder( traversal, ptr-&gt;<a class="code" href="struct_node.html#a3dcad8ea33abc8a284f73a076fff87c7">m_right</a> );</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    }</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;}</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160; </div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00447"></a><span class="lineno"><a class="line" href="class_tree.html#a4d29f29b9501d174fab425e6e1c38ab0">  447</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#a4d29f29b9501d174fab425e6e1c38ab0">Tree&lt;T&gt;::InOrderTraversal</a>( PFnTraversal traversal )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordflow">return</span> InOrder( traversal, m_root );</div>
+<div class="line"><a name="l00436"></a><span class="lineno"><a class="line" href="class_tree.html#acf0cb1178e10fcdbd06e9b101c0ce678">  436</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_tree.html#acf0cb1178e10fcdbd06e9b101c0ce678">Tree&lt;T&gt;::SearchNode</a>( <span class="keyword">const</span> T &amp;<span class="keywordtype">object</span> )</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;{</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordflow">return</span> Search( m_root, <span class="keywordtype">object</span> );</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;}</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160; </div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00442"></a><span class="lineno"><a class="line" href="class_tree.html#a5344c97d57067fd9e853b97cbb8d04d8">  442</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#a5344c97d57067fd9e853b97cbb8d04d8">Tree&lt;T&gt;::InOrder</a>( PFnTraversal traversal, <a class="code" href="struct_node.html">Node&lt;T&gt;</a> *ptr )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="keywordflow">if</span>( ptr != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    {</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        InOrder( traversal, ptr-&gt;<a class="code" href="struct_node.html#a883926a5576bc84eba20398c5984fbdb">m_left</a> );</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        ( traversal )( ptr-&gt;<a class="code" href="struct_node.html#afa8960a19fcab38df33b56d4543ddc0f">m_object</a> );</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        InOrder( traversal, ptr-&gt;<a class="code" href="struct_node.html#a3dcad8ea33abc8a284f73a076fff87c7">m_right</a> );</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    }</div>
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;}</div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00453"></a><span class="lineno"><a class="line" href="class_tree.html#a75f6d3c33b6953ead7704350ee19fcef">  453</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#a75f6d3c33b6953ead7704350ee19fcef">Tree&lt;T&gt;::PreOrder</a>( PFnTraversal traversal, <a class="code" href="struct_node.html">Node&lt;T&gt;</a> *ptr )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno"><a class="line" href="class_tree.html#a4d29f29b9501d174fab425e6e1c38ab0">  453</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#a4d29f29b9501d174fab425e6e1c38ab0">Tree&lt;T&gt;::InOrderTraversal</a>( PFnTraversal traversal )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="keywordflow">if</span>( ptr != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    {</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        ( traversal )( ptr-&gt;<a class="code" href="struct_node.html#afa8960a19fcab38df33b56d4543ddc0f">m_object</a> );</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        PreOrder( traversal, ptr-&gt;<a class="code" href="struct_node.html#a883926a5576bc84eba20398c5984fbdb">m_left</a> );</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        PreOrder( traversal, ptr-&gt;<a class="code" href="struct_node.html#a3dcad8ea33abc8a284f73a076fff87c7">m_right</a> );</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    }</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;}</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00464"></a><span class="lineno"><a class="line" href="class_tree.html#a3c6d0827e3f1a0d7ca8e42634fda861a">  464</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#a3c6d0827e3f1a0d7ca8e42634fda861a">Tree&lt;T&gt;::PreOrderTraversal</a>( PFnTraversal traversal )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordflow">return</span> PreOrder( traversal, m_root );</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="keywordflow">return</span> InOrder( traversal, m_root );</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;}</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160; </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00459"></a><span class="lineno"><a class="line" href="class_tree.html#a75f6d3c33b6953ead7704350ee19fcef">  459</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#a75f6d3c33b6953ead7704350ee19fcef">Tree&lt;T&gt;::PreOrder</a>( PFnTraversal traversal, <a class="code" href="struct_node.html">Node&lt;T&gt;</a> *ptr )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="keywordflow">if</span>( ptr != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    {</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        ( traversal )( ptr-&gt;<a class="code" href="struct_node.html#afa8960a19fcab38df33b56d4543ddc0f">m_object</a> );</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        PreOrder( traversal, ptr-&gt;<a class="code" href="struct_node.html#a883926a5576bc84eba20398c5984fbdb">m_left</a> );</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        PreOrder( traversal, ptr-&gt;<a class="code" href="struct_node.html#a3dcad8ea33abc8a284f73a076fff87c7">m_right</a> );</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    }</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;}</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160; </div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00470"></a><span class="lineno"><a class="line" href="class_tree.html#abf853f3ba2eeb4f07f21f2f6a9df1eac">  470</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#abf853f3ba2eeb4f07f21f2f6a9df1eac">Tree&lt;T&gt;::PostOrder</a>( PFnTraversal traversal, <a class="code" href="struct_node.html">Node&lt;T&gt;</a> *ptr )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00470"></a><span class="lineno"><a class="line" href="class_tree.html#a3c6d0827e3f1a0d7ca8e42634fda861a">  470</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#a3c6d0827e3f1a0d7ca8e42634fda861a">Tree&lt;T&gt;::PreOrderTraversal</a>( PFnTraversal traversal )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordflow">if</span>( ptr != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    {</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        PostOrder( traversal, ptr-&gt;<a class="code" href="struct_node.html#a883926a5576bc84eba20398c5984fbdb">m_left</a> );</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        PostOrder( traversal, ptr-&gt;<a class="code" href="struct_node.html#a3dcad8ea33abc8a284f73a076fff87c7">m_right</a> );</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        ( traversal )( ptr-&gt;<a class="code" href="struct_node.html#afa8960a19fcab38df33b56d4543ddc0f">m_object</a> );</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    }</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;}</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160; </div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00481"></a><span class="lineno"><a class="line" href="class_tree.html#a6083a1ba68c84a4fc80e9639f9886bb2">  481</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#a6083a1ba68c84a4fc80e9639f9886bb2">Tree&lt;T&gt;::PostOrderTraversal</a>( PFnTraversal traversal )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    <span class="keywordflow">return</span> PostOrder( traversal, m_root );</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordflow">return</span> PreOrder( traversal, m_root );</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;}</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160; </div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00476"></a><span class="lineno"><a class="line" href="class_tree.html#abf853f3ba2eeb4f07f21f2f6a9df1eac">  476</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#abf853f3ba2eeb4f07f21f2f6a9df1eac">Tree&lt;T&gt;::PostOrder</a>( PFnTraversal traversal, <a class="code" href="struct_node.html">Node&lt;T&gt;</a> *ptr )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="keywordflow">if</span>( ptr != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    {</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        PostOrder( traversal, ptr-&gt;<a class="code" href="struct_node.html#a883926a5576bc84eba20398c5984fbdb">m_left</a> );</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        PostOrder( traversal, ptr-&gt;<a class="code" href="struct_node.html#a3dcad8ea33abc8a284f73a076fff87c7">m_right</a> );</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        ( traversal )( ptr-&gt;<a class="code" href="struct_node.html#afa8960a19fcab38df33b56d4543ddc0f">m_object</a> );</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    }</div>
 <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;}</div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160; </div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160; </div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="preprocessor">#endif // TREE_H_INCLUDED</span></div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00487"></a><span class="lineno"><a class="line" href="class_tree.html#a6083a1ba68c84a4fc80e9639f9886bb2">  487</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_tree.html#a6083a1ba68c84a4fc80e9639f9886bb2">Tree&lt;T&gt;::PostOrderTraversal</a>( PFnTraversal traversal )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    <span class="keywordflow">return</span> PostOrder( traversal, m_root );</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;}</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160; </div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160; </div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;<span class="preprocessor">#endif // TREE_H_INCLUDED</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_tree_html_ab793c2ca18ef3d4a24dcf64902a75880"><div class="ttname"><a href="class_tree.html#ab793c2ca18ef3d4a24dcf64902a75880">Tree::GetTreeNodes</a></div><div class="ttdeci">int GetTreeNodes() const</div><div class="ttdoc">Get the number of nodes in the Tree.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00336">Tree.h:336</a></div></div>
@@ -407,27 +415,28 @@ $(document).ready(function(){initNavTree('_tree_8h_source.html',''); initResizab
 <div class="ttc" id="aclass_tree_html_a597230911c83f98802722a71f22725c8"><div class="ttname"><a href="class_tree.html#a597230911c83f98802722a71f22725c8">Tree::GetTreeLeaves</a></div><div class="ttdeci">int GetTreeLeaves() const</div><div class="ttdoc">Get the number of leaf nodes in the Tree.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00356">Tree.h:356</a></div></div>
 <div class="ttc" id="aclass_tree_html_acaf7821762fc42e92c5ae6731737db3f"><div class="ttname"><a href="class_tree.html#acaf7821762fc42e92c5ae6731737db3f">Tree::GetNodes</a></div><div class="ttdeci">int GetNodes(Node&lt; T &gt; *ptr) const</div><div class="ttdoc">Method used to get the total number of nodes in a subtree at the given node.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00323">Tree.h:323</a></div></div>
 <div class="ttc" id="aclass_tree_html_a4098a01e271f8649bff54a04fbb4df94"><div class="ttname"><a href="class_tree.html#a4098a01e271f8649bff54a04fbb4df94">Tree::m_root</a></div><div class="ttdeci">Node&lt; T &gt; * m_root</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00160">Tree.h:160</a></div></div>
+<div class="ttc" id="aclass_tree_html_ab4b5d449fe7f4ed09859d0d3e814797f"><div class="ttname"><a href="class_tree.html#ab4b5d449fe7f4ed09859d0d3e814797f">Tree::DestroyTree</a></div><div class="ttdeci">void DestroyTree()</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00409">Tree.h:409</a></div></div>
 <div class="ttc" id="astruct_node_html"><div class="ttname"><a href="struct_node.html">Node</a></div><div class="ttdoc">Node structure for an template Tree.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00020">Tree.h:20</a></div></div>
 <div class="ttc" id="aclass_tree_html_a95c514dc005fba6d4863e52d77f51151"><div class="ttname"><a href="class_tree.html#a95c514dc005fba6d4863e52d77f51151">Tree::GetMaxTreeSubHeight</a></div><div class="ttdeci">int GetMaxTreeSubHeight(int left, int right) const</div><div class="ttdoc">Method used to get the maximum of two integers.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00291">Tree.h:291</a></div></div>
-<div class="ttc" id="aclass_tree_html_acf0cb1178e10fcdbd06e9b101c0ce678"><div class="ttname"><a href="class_tree.html#acf0cb1178e10fcdbd06e9b101c0ce678">Tree::SearchNode</a></div><div class="ttdeci">bool SearchNode(const T &amp;object)</div><div class="ttdoc">Search for a node with the specified object in the Tree.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00430">Tree.h:430</a></div></div>
+<div class="ttc" id="aclass_tree_html_acf0cb1178e10fcdbd06e9b101c0ce678"><div class="ttname"><a href="class_tree.html#acf0cb1178e10fcdbd06e9b101c0ce678">Tree::SearchNode</a></div><div class="ttdeci">bool SearchNode(const T &amp;object)</div><div class="ttdoc">Search for a node with the specified object in the Tree.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00436">Tree.h:436</a></div></div>
 <div class="ttc" id="aclass_tree_html_a97f47942518add7d96509e2b9bf0a540"><div class="ttname"><a href="class_tree.html#a97f47942518add7d96509e2b9bf0a540">Tree::Insert</a></div><div class="ttdeci">virtual bool Insert(Node&lt; T &gt; *&amp;current, const T &amp;object)=0</div><div class="ttdoc">Method used to insert a new node with the specified object into a subtree.</div></div>
 <div class="ttc" id="aclass_tree_html_aaea71906a9b35a24d04f459f0a51b050"><div class="ttname"><a href="class_tree.html#aaea71906a9b35a24d04f459f0a51b050">Tree::operator=</a></div><div class="ttdeci">Tree &amp; operator=(const Tree &amp;otherTree)</div><div class="ttdoc">Equals assignment operator used for assigning the contents from another Tree.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00391">Tree.h:391</a></div></div>
 <div class="ttc" id="aclass_tree_html_aac4a2389f6e9ef8fe7ec06da23b51242"><div class="ttname"><a href="class_tree.html#aac4a2389f6e9ef8fe7ec06da23b51242">Tree::InsertNode</a></div><div class="ttdeci">virtual bool InsertNode(const T &amp;object)=0</div><div class="ttdoc">Insert a new node with the specified object into the Tree.</div></div>
 <div class="ttc" id="aclass_tree_html_a32f6059fe774b46f73859a170771fa0f"><div class="ttname"><a href="class_tree.html#a32f6059fe774b46f73859a170771fa0f">Tree::Destroy</a></div><div class="ttdeci">void Destroy(Node&lt; T &gt; *&amp;ptr)</div><div class="ttdoc">Recursively destroy the Tree starting from the given node.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00255">Tree.h:255</a></div></div>
-<div class="ttc" id="aclass_tree_html_a75f6d3c33b6953ead7704350ee19fcef"><div class="ttname"><a href="class_tree.html#a75f6d3c33b6953ead7704350ee19fcef">Tree::PreOrder</a></div><div class="ttdeci">void PreOrder(PFnTraversal traversal, Node&lt; T &gt; *ptr) const</div><div class="ttdoc">Method used to perform a pre-order traversal of a subtree and print the node values.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00453">Tree.h:453</a></div></div>
+<div class="ttc" id="aclass_tree_html_a75f6d3c33b6953ead7704350ee19fcef"><div class="ttname"><a href="class_tree.html#a75f6d3c33b6953ead7704350ee19fcef">Tree::PreOrder</a></div><div class="ttdeci">void PreOrder(PFnTraversal traversal, Node&lt; T &gt; *ptr) const</div><div class="ttdoc">Method used to perform a pre-order traversal of a subtree and print the node values.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00459">Tree.h:459</a></div></div>
 <div class="ttc" id="aclass_tree_html_a2f5a3bbb794f377f6e47aa068992b454"><div class="ttname"><a href="class_tree.html#a2f5a3bbb794f377f6e47aa068992b454">Tree::GetHeight</a></div><div class="ttdeci">int GetHeight(Node&lt; T &gt; *ptr) const</div><div class="ttdoc">Method used to get the height of a subtree at the given node.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00304">Tree.h:304</a></div></div>
 <div class="ttc" id="aclass_tree_html_a044a94a076990c0520c25705382d1454"><div class="ttname"><a href="class_tree.html#a044a94a076990c0520c25705382d1454">Tree::IsEmpty</a></div><div class="ttdeci">bool IsEmpty() const</div><div class="ttdoc">Checks if the Tree is empty.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00279">Tree.h:279</a></div></div>
 <div class="ttc" id="aclass_tree_html_a46e5fa0d2056c3db382460c6d987b737"><div class="ttname"><a href="class_tree.html#a46e5fa0d2056c3db382460c6d987b737">Tree::PFnTraversal</a></div><div class="ttdeci">void(* PFnTraversal)(const T &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00034">Tree.h:34</a></div></div>
-<div class="ttc" id="aclass_tree_html_a4d29f29b9501d174fab425e6e1c38ab0"><div class="ttname"><a href="class_tree.html#a4d29f29b9501d174fab425e6e1c38ab0">Tree::InOrderTraversal</a></div><div class="ttdeci">void InOrderTraversal(PFnTraversal traversal) const</div><div class="ttdoc">Perform a in-order traversal of the Tree and print the node values.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00447">Tree.h:447</a></div></div>
-<div class="ttc" id="aclass_tree_html_abf853f3ba2eeb4f07f21f2f6a9df1eac"><div class="ttname"><a href="class_tree.html#abf853f3ba2eeb4f07f21f2f6a9df1eac">Tree::PostOrder</a></div><div class="ttdeci">void PostOrder(PFnTraversal traversal, Node&lt; T &gt; *ptr) const</div><div class="ttdoc">Method used to perform a post-order traversal of a subtree and print the node values.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00470">Tree.h:470</a></div></div>
-<div class="ttc" id="aclass_tree_html_afedf8158bf6ad32cf3568409f1d81150"><div class="ttname"><a href="class_tree.html#afedf8158bf6ad32cf3568409f1d81150">Tree::Search</a></div><div class="ttdeci">bool Search(Node&lt; T &gt; *&amp;current, const T &amp;object)</div><div class="ttdoc">Method used to search for a node with the specified object in a subtree.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00409">Tree.h:409</a></div></div>
-<div class="ttc" id="aclass_tree_html_a3c6d0827e3f1a0d7ca8e42634fda861a"><div class="ttname"><a href="class_tree.html#a3c6d0827e3f1a0d7ca8e42634fda861a">Tree::PreOrderTraversal</a></div><div class="ttdeci">void PreOrderTraversal(PFnTraversal traversal) const</div><div class="ttdoc">Perform a pre-order traversal of the Tree and print the node values.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00464">Tree.h:464</a></div></div>
+<div class="ttc" id="aclass_tree_html_a4d29f29b9501d174fab425e6e1c38ab0"><div class="ttname"><a href="class_tree.html#a4d29f29b9501d174fab425e6e1c38ab0">Tree::InOrderTraversal</a></div><div class="ttdeci">void InOrderTraversal(PFnTraversal traversal) const</div><div class="ttdoc">Perform a in-order traversal of the Tree and print the node values.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00453">Tree.h:453</a></div></div>
+<div class="ttc" id="aclass_tree_html_abf853f3ba2eeb4f07f21f2f6a9df1eac"><div class="ttname"><a href="class_tree.html#abf853f3ba2eeb4f07f21f2f6a9df1eac">Tree::PostOrder</a></div><div class="ttdeci">void PostOrder(PFnTraversal traversal, Node&lt; T &gt; *ptr) const</div><div class="ttdoc">Method used to perform a post-order traversal of a subtree and print the node values.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00476">Tree.h:476</a></div></div>
+<div class="ttc" id="aclass_tree_html_afedf8158bf6ad32cf3568409f1d81150"><div class="ttname"><a href="class_tree.html#afedf8158bf6ad32cf3568409f1d81150">Tree::Search</a></div><div class="ttdeci">bool Search(Node&lt; T &gt; *&amp;current, const T &amp;object)</div><div class="ttdoc">Method used to search for a node with the specified object in a subtree.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00415">Tree.h:415</a></div></div>
+<div class="ttc" id="aclass_tree_html_a3c6d0827e3f1a0d7ca8e42634fda861a"><div class="ttname"><a href="class_tree.html#a3c6d0827e3f1a0d7ca8e42634fda861a">Tree::PreOrderTraversal</a></div><div class="ttdeci">void PreOrderTraversal(PFnTraversal traversal) const</div><div class="ttdoc">Perform a pre-order traversal of the Tree and print the node values.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00470">Tree.h:470</a></div></div>
 <div class="ttc" id="astruct_node_html_afa8960a19fcab38df33b56d4543ddc0f"><div class="ttname"><a href="struct_node.html#afa8960a19fcab38df33b56d4543ddc0f">Node::m_object</a></div><div class="ttdeci">T m_object</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00022">Tree.h:22</a></div></div>
 <div class="ttc" id="aclass_tree_html_a5953ef0d64a1a0a4862376b92b6a1208"><div class="ttname"><a href="class_tree.html#a5953ef0d64a1a0a4862376b92b6a1208">Tree::CopyTree</a></div><div class="ttdeci">void CopyTree(Node&lt; T &gt; *&amp;copiedTreeRoot, Node&lt; T &gt; *otherTreeRoot)</div><div class="ttdoc">Method used to copy the contents of one subtree to another.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00362">Tree.h:362</a></div></div>
 <div class="ttc" id="aclass_tree_html_a4768c5f1eabf101f09a4c9d76b7cbae0"><div class="ttname"><a href="class_tree.html#a4768c5f1eabf101f09a4c9d76b7cbae0">Tree::Delete</a></div><div class="ttdeci">virtual bool Delete(Node&lt; T &gt; *&amp;current, const T &amp;object)=0</div><div class="ttdoc">Method used to delete a node with the specified object in a Tree tree.</div></div>
-<div class="ttc" id="aclass_tree_html_a6083a1ba68c84a4fc80e9639f9886bb2"><div class="ttname"><a href="class_tree.html#a6083a1ba68c84a4fc80e9639f9886bb2">Tree::PostOrderTraversal</a></div><div class="ttdeci">void PostOrderTraversal(PFnTraversal traversal) const</div><div class="ttdoc">Perform a post-order traversal of the Tree and print the node values.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00481">Tree.h:481</a></div></div>
+<div class="ttc" id="aclass_tree_html_a6083a1ba68c84a4fc80e9639f9886bb2"><div class="ttname"><a href="class_tree.html#a6083a1ba68c84a4fc80e9639f9886bb2">Tree::PostOrderTraversal</a></div><div class="ttdeci">void PostOrderTraversal(PFnTraversal traversal) const</div><div class="ttdoc">Perform a post-order traversal of the Tree and print the node values.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00487">Tree.h:487</a></div></div>
 <div class="ttc" id="astruct_node_html_a3dcad8ea33abc8a284f73a076fff87c7"><div class="ttname"><a href="struct_node.html#a3dcad8ea33abc8a284f73a076fff87c7">Node::m_right</a></div><div class="ttdeci">Node * m_right</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00024">Tree.h:24</a></div></div>
-<div class="ttc" id="aclass_tree_html_a5344c97d57067fd9e853b97cbb8d04d8"><div class="ttname"><a href="class_tree.html#a5344c97d57067fd9e853b97cbb8d04d8">Tree::InOrder</a></div><div class="ttdeci">void InOrder(PFnTraversal traversal, Node&lt; T &gt; *ptr) const</div><div class="ttdoc">Method used to perform an in-order traversal of a subtree and print the node values.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00436">Tree.h:436</a></div></div>
+<div class="ttc" id="aclass_tree_html_a5344c97d57067fd9e853b97cbb8d04d8"><div class="ttname"><a href="class_tree.html#a5344c97d57067fd9e853b97cbb8d04d8">Tree::InOrder</a></div><div class="ttdeci">void InOrder(PFnTraversal traversal, Node&lt; T &gt; *ptr) const</div><div class="ttdoc">Method used to perform an in-order traversal of a subtree and print the node values.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00442">Tree.h:442</a></div></div>
 <div class="ttc" id="aclass_tree_html"><div class="ttname"><a href="class_tree.html">Tree</a></div><div class="ttdoc">Tree base class.</div><div class="ttdef"><b>Definition:</b> <a href="_tree_8h_source.html#l00031">Tree.h:31</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
