@@ -51,6 +51,16 @@ public:
     void OptionTwo( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, unsigned &year, char &option ) const;
 
     /**
+    *  @brief Option to calculate and display sample Pearson correlation coefficient values
+    *  for wind speed, temperature, and solar radiation for a specified month.
+    *
+    *  @param[in] aoAvlMap An AoAvlMap containing sensor data.
+    *  @param[in] month The month for which correlation coefficients are to be calculated.
+    *
+    */
+    void OptionThree( AoAvlMap<T> &aoAvlMap, unsigned &month );
+
+    /**
      *
      *  @brief Option to process sensor data for all months of a specified year and export results to a file.
      *
@@ -64,20 +74,32 @@ public:
     void OptionFour( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, ofstream &outputFile, const string &filePath, unsigned &year );
 
     /**
-     *  @brief Option to calculate and display sample Pearson correlation coefficient values
-     *  for wind speed, temperature, and solar radiation for a specified month.
+     * @brief Displays the file paths provided in a vector.
      *
-     *  @param[in] aoAvlMap An AoAvlMap containing sensor data.
-     *  @param[in] month The month for which correlation coefficients are to be calculated.
+     * This function displays the file paths contained in the given vector
+     * and prompts the user to select one by its index.
      *
+     * @param[in] csvFilePath A vector containing file paths.
      */
-    void OptionThree( AoAvlMap<T> &aoAvlMap, unsigned &month );
+    void DisplayFilePath( Vector<string> &csvFilePath );
+
+    /**
+     * @brief Inserts user-selected file paths into a vector based on provided indexes.
+     *
+     * This function prompts the user to enter indexes corresponding to file paths
+     * provided in the `csvFilePath` vector. It validates the input and inserts
+     * the selected file paths into the `selectedIndexes` vector.
+     *
+     * @param[in] csvFilePath A vector containing file paths.
+     * @param[in] selectedIndexes A vector to store the selected file paths.
+     */
+    void InsertUserFileSelection( Vector<string> &csvFilePath, Vector<string> &selectedIndexes );
 
 private:
 
     /**
      *
-     *  @brief Helper function to print sample Pearson correlation coefficient values with appropriate labels and formatting.
+     *  @brief Function to print sample Pearson correlation coefficient values with appropriate labels and formatting.
      *
      *  @param[in] label The label for the correlation coefficient.
      *  @param[in] value The value of the correlation coefficient.
@@ -293,6 +315,60 @@ void Menu<T>::OptionThree( AoAvlMap<T> &aoAvlMap, unsigned &month )
     PrintSpccValues("S_R", sPCC_S_R);
     PrintSpccValues("T_R", sPCC_T_R);
     cout << endl;
+}
+
+template<class T>
+void Menu<T>::DisplayFilePath( Vector<string> &csvFilePath )
+{
+    cout << "Please select the file paths below to be loaded into the program, and Press 'ENTER' -->" << endl;
+    for (unsigned i = 0; i < csvFilePath.GetUsed(); i++)
+    {
+        cout << "[ " << i << " ]: " << csvFilePath[i] << endl;
+    }
+    cout << endl;
+}
+
+template<class T>
+void Menu<T>::InsertUserFileSelection( Vector<string> &csvFilePath, Vector<string> &selectedIndexes )
+{
+    string input;
+    do
+    {
+        //cout << "Enter the indexes of the files you want to select (press Enter when done):" << endl;
+        while (true)
+        {
+            getline(cin, input);
+            if (input.empty())
+            {
+                break;
+            }
+            // Check if input contains only digits
+            bool isUnsigned = true;
+            for (char c : input)
+            {
+                if (!isdigit(c))
+                {
+                    isUnsigned = false;
+                    break;
+                }
+            }
+            if (!isUnsigned)
+            {
+                cout << "[ ERROR ]: Please enter only unsigned integers." << endl;
+                cout << Constant::SELECTION_INPUT;
+                continue;
+            }
+            unsigned selectedIndex = stoi(input); // Convert input to an integer
+            if (selectedIndex >= csvFilePath.GetUsed())
+            {
+                cout << "[ ERROR ]: Index out of range. Please enter a valid index." << endl;
+                cout << Constant::SELECTION_INPUT;
+                continue;
+            }
+            selectedIndexes.InsertLast(csvFilePath[selectedIndex]);
+        }
+    }
+    while (selectedIndexes.IsEmpty());     // Check if at least one index is provided
 }
 
 

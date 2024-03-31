@@ -74,9 +74,9 @@ public:
     unsigned DayValidation( string &day );
 
 private:
-    unsigned m_userYear;         ///< Holds the user input for year.
-    unsigned m_userMonth;       ///< Holds the user input for month.
-    unsigned m_userDay;          ///< Hold the user input from day
+    unsigned m_userYear;                 ///< Holds the user input for year.
+    unsigned m_userMonth;              ///< Holds the user input for month.
+    unsigned m_userDay;                 ///< Hold the user input for day.
 
     /**
      * @brief Checks if the user input for year is valid.
@@ -104,6 +104,7 @@ private:
      * @return True if the input is invalid (outside the range of 1 to 31), false otherwise.
      */
     bool IsDayInputValid() const;
+
 };
 
 #endif // INPUTVALIDATOR_H_INCLUDED

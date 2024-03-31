@@ -1,18 +1,20 @@
 <map id="Vector::GetUsed" name="Vector::GetUsed">
-<area shape="rect" id="node1" title="Get the number of elements used in the vector." alt="" coords="807,183,925,209"/>
-<area shape="rect" id="node2" href="$class_ao_avl_map.html#aa1235e17821e4743a3e683f54dd2da2f" title="Calculates the Sample Pearson Correlation Coefficient (sPCC) between two sets of data." alt="" coords="566,5,745,32"/>
-<area shape="rect" id="node5" href="$class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="570,81,741,108"/>
-<area shape="rect" id="node10" href="$_vector_test_8cpp.html#a326cb6137cb6eca92a4f397c64180e3b" title=" " alt="" coords="583,132,727,159"/>
-<area shape="rect" id="node12" href="$_vector_test_8cpp.html#a9cb97e3cde0342e32436577b21607110" title=" " alt="" coords="552,183,759,209"/>
-<area shape="rect" id="node13" href="$_ao_avl_map_test_8cpp.html#ac8582988e27bbf21c4b1e47c221984e5" title=" " alt="" coords="568,284,743,311"/>
-<area shape="rect" id="node15" href="$_vector_test_8cpp.html#a531b8ed90de8a82ce4ed51f4228a8655" title=" " alt="" coords="598,233,713,260"/>
-<area shape="rect" id="node16" href="$_processor_test_8cpp.html#a05655d63954f1a5a2ccfe9c2510149f0" title=" " alt="" coords="104,259,300,285"/>
-<area shape="rect" id="node3" href="$class_menu.html#a5f261a80fda842da551d9e53cc826480" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="360,5,492,32"/>
-<area shape="rect" id="node4" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="177,56,227,83"/>
-<area shape="rect" id="node6" href="$class_processor.html#ad8c3c5b193b38060b4aa355078f22513" title="Reloads data from a CSV file into an AoAvlMap." alt="" coords="348,107,504,133"/>
-<area shape="rect" id="node9" href="$_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5" title=" " alt="" coords="141,157,263,184"/>
-<area shape="rect" id="node7" href="$_processor_test_8cpp.html#a42311f3097675417627b086d6ede606a" title=" " alt="" coords="135,107,269,133"/>
-<area shape="rect" id="node8" href="$_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,157,56,184"/>
-<area shape="rect" id="node11" href="$_vector_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="401,208,451,235"/>
-<area shape="rect" id="node14" href="$_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="401,284,451,311"/>
+<area shape="rect" id="node1" title="Get the number of elements used in the vector." alt="" coords="847,208,965,235"/>
+<area shape="rect" id="node2" href="$class_ao_avl_map.html#aa1235e17821e4743a3e683f54dd2da2f" title="Calculates the Sample Pearson Correlation Coefficient (sPCC) between two sets of data." alt="" coords="606,5,785,32"/>
+<area shape="rect" id="node5" href="$class_menu.html#a25062943ad66e985fdcece72e828b7b8" title="Displays the file paths provided in a vector." alt="" coords="369,56,523,83"/>
+<area shape="rect" id="node6" href="$class_menu.html#a93ab848fc34eb8a18a5eb3a44554c0cf" title="Inserts user&#45;selected file paths into a vector based on provided indexes." alt="" coords="348,107,544,133"/>
+<area shape="rect" id="node7" href="$class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="610,157,781,184"/>
+<area shape="rect" id="node12" href="$_vector_test_8cpp.html#a326cb6137cb6eca92a4f397c64180e3b" title=" " alt="" coords="623,208,767,235"/>
+<area shape="rect" id="node14" href="$_vector_test_8cpp.html#a9cb97e3cde0342e32436577b21607110" title=" " alt="" coords="592,259,799,285"/>
+<area shape="rect" id="node15" href="$_ao_avl_map_test_8cpp.html#ac8582988e27bbf21c4b1e47c221984e5" title=" " alt="" coords="608,360,783,387"/>
+<area shape="rect" id="node17" href="$_vector_test_8cpp.html#a531b8ed90de8a82ce4ed51f4228a8655" title=" " alt="" coords="638,309,753,336"/>
+<area shape="rect" id="node18" href="$_processor_test_8cpp.html#a05655d63954f1a5a2ccfe9c2510149f0" title=" " alt="" coords="104,360,300,387"/>
+<area shape="rect" id="node3" href="$class_menu.html#a5f261a80fda842da551d9e53cc826480" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="380,5,512,32"/>
+<area shape="rect" id="node4" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="177,107,227,133"/>
+<area shape="rect" id="node8" href="$class_processor.html#a039de5c87c6dcc96d5c582ea279236db" title="Reloads data from a CSV file into an AoAvlMap." alt="" coords="368,208,524,235"/>
+<area shape="rect" id="node11" href="$_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5" title=" " alt="" coords="141,259,263,285"/>
+<area shape="rect" id="node9" href="$_processor_test_8cpp.html#a42311f3097675417627b086d6ede606a" title=" " alt="" coords="135,208,269,235"/>
+<area shape="rect" id="node10" href="$_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,259,56,285"/>
+<area shape="rect" id="node13" href="$_vector_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="421,309,471,336"/>
+<area shape="rect" id="node16" href="$_ao_avl_map_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="421,360,471,387"/>
 </map>

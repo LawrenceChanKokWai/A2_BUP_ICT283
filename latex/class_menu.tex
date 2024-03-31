@@ -16,10 +16,14 @@ void \mbox{\hyperlink{class_menu_a393c430fcb58575dbd8d2219046a0aeb}{Option\+One}
 \begin{DoxyCompactList}\small\item\em Option to calculate and display average wind speed and its standard deviation for a specified year and month. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_menu_a4b303a6db3bf6df2d2a5365e77dfdc6c}{Option\+Two}} (\mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$ \&avl, \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&ao\+Avl\+Map, unsigned \&year, char \&option) const
 \begin{DoxyCompactList}\small\item\em Option to calculate and display average ambient temperature for each month of a specified year. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_a5f261a80fda842da551d9e53cc826480}{Option\+Three}} (\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&ao\+Avl\+Map, unsigned \&month)
+\begin{DoxyCompactList}\small\item\em Option to calculate and display sample Pearson correlation coefficient values for wind speed, temperature, and solar radiation for a specified month. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_menu_ab2efff71fdf8728a1d593c2a0f323b3d}{Option\+Four}} (\mbox{\hyperlink{class_a_v_l}{A\+VL}}$<$ T $>$ \&avl, \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&ao\+Avl\+Map, ofstream \&output\+File, const string \&file\+Path, unsigned \&year)
 \begin{DoxyCompactList}\small\item\em Option to process sensor data for all months of a specified year and export results to a file. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_menu_a5f261a80fda842da551d9e53cc826480}{Option\+Three}} (\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ T $>$ \&ao\+Avl\+Map, unsigned \&month)
-\begin{DoxyCompactList}\small\item\em Option to calculate and display sample Pearson correlation coefficient values for wind speed, temperature, and solar radiation for a specified month. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_menu_a25062943ad66e985fdcece72e828b7b8}{Display\+File\+Path}} (\mbox{\hyperlink{class_vector}{Vector}}$<$ string $>$ \&csv\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Displays the file paths provided in a vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_a93ab848fc34eb8a18a5eb3a44554c0cf}{Insert\+User\+File\+Selection}} (\mbox{\hyperlink{class_vector}{Vector}}$<$ string $>$ \&csv\+File\+Path, \mbox{\hyperlink{class_vector}{Vector}}$<$ string $>$ \&selected\+Indexes)
+\begin{DoxyCompactList}\small\item\em Inserts user-\/selected file paths into a vector based on provided indexes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -35,6 +39,84 @@ Definition at line 25 of file Menu.\+h.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_menu_a25062943ad66e985fdcece72e828b7b8}\label{class_menu_a25062943ad66e985fdcece72e828b7b8}} 
+\index{Menu$<$ T $>$@{Menu$<$ T $>$}!DisplayFilePath@{DisplayFilePath}}
+\index{DisplayFilePath@{DisplayFilePath}!Menu$<$ T $>$@{Menu$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DisplayFilePath()}{DisplayFilePath()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_menu}{Menu}}$<$ T $>$\+::Display\+File\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ string $>$ \&}]{csv\+File\+Path }\end{DoxyParamCaption})}
+
+
+
+Displays the file paths provided in a vector. 
+
+This function displays the file paths contained in the given vector and prompts the user to select one by its index.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em csv\+File\+Path} & A vector containing file paths. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 321 of file Menu.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{class_menu_a25062943ad66e985fdcece72e828b7b8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{class_menu_a25062943ad66e985fdcece72e828b7b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_menu_a93ab848fc34eb8a18a5eb3a44554c0cf}\label{class_menu_a93ab848fc34eb8a18a5eb3a44554c0cf}} 
+\index{Menu$<$ T $>$@{Menu$<$ T $>$}!InsertUserFileSelection@{InsertUserFileSelection}}
+\index{InsertUserFileSelection@{InsertUserFileSelection}!Menu$<$ T $>$@{Menu$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InsertUserFileSelection()}{InsertUserFileSelection()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_menu}{Menu}}$<$ T $>$\+::Insert\+User\+File\+Selection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ string $>$ \&}]{csv\+File\+Path,  }\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ string $>$ \&}]{selected\+Indexes }\end{DoxyParamCaption})}
+
+
+
+Inserts user-\/selected file paths into a vector based on provided indexes. 
+
+This function prompts the user to enter indexes corresponding to file paths provided in the {\ttfamily csv\+File\+Path} vector. It validates the input and inserts the selected file paths into the {\ttfamily selected\+Indexes} vector.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em csv\+File\+Path} & A vector containing file paths. \\
+\hline
+\mbox{\texttt{ in}}  & {\em selected\+Indexes} & A vector to store the selected file paths. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 332 of file Menu.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_menu_a93ab848fc34eb8a18a5eb3a44554c0cf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{class_menu_a93ab848fc34eb8a18a5eb3a44554c0cf_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_menu_ab2efff71fdf8728a1d593c2a0f323b3d}\label{class_menu_ab2efff71fdf8728a1d593c2a0f323b3d}} 
 \index{Menu$<$ T $>$@{Menu$<$ T $>$}!OptionFour@{OptionFour}}
 \index{OptionFour@{OptionFour}!Menu$<$ T $>$@{Menu$<$ T $>$}}
@@ -61,18 +143,16 @@ Option to process sensor data for all months of a specified year and export resu
 \end{DoxyParams}
 
 
-Definition at line 189 of file Menu.\+h.
+Definition at line 211 of file Menu.\+h.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_menu_ab2efff71fdf8728a1d593c2a0f323b3d_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -103,18 +183,16 @@ Option to calculate and display average wind speed and its standard deviation fo
 \end{DoxyParams}
 
 
-Definition at line 94 of file Menu.\+h.
+Definition at line 116 of file Menu.\+h.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_menu_a393c430fcb58575dbd8d2219046a0aeb_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -141,18 +219,16 @@ Option to calculate and display sample Pearson correlation coefficient values fo
 \end{DoxyParams}
 
 
-Definition at line 265 of file Menu.\+h.
+Definition at line 287 of file Menu.\+h.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_menu_a5f261a80fda842da551d9e53cc826480_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -183,18 +259,16 @@ Option to calculate and display average ambient temperature for each month of a 
 \end{DoxyParams}
 
 
-Definition at line 131 of file Menu.\+h.
+Definition at line 153 of file Menu.\+h.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_menu_a4b303a6db3bf6df2d2a5365e77dfdc6c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

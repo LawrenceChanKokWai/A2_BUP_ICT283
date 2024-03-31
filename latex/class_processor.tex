@@ -18,7 +18,9 @@ void \mbox{\hyperlink{class_processor_a5378867146978d9ab1d62de4e8d8b80a}{Load\+C
 \begin{DoxyCompactList}\small\item\em Loads data from C\+SV files into an \mbox{\hyperlink{class_a_v_l}{A\+VL}} map. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_processor_a9ffca81c2e7aee9a5194e5d6f62d2ee4}{Output\+Stream\+Measurement}} (\mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} \&sensor\+Rec\+Type, ofstream \&output\+File, unsigned \&month, float \&speed\+Mean, float \&speed\+Ssd, float \&temp\+Mean, float \&temp\+Ssd, float \&sr\+Sum)
 \begin{DoxyCompactList}\small\item\em Records sensor data to an output file and computes statistical measurements. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_processor_ad8c3c5b193b38060b4aa355078f22513}{Reload\+Data}} (\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ \mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} $>$ \&map\+Ao\+Bst, const string \&filename)
+void \mbox{\hyperlink{class_processor_a5554d20e58db8c07faed18be6dd982c5}{Destroy\+Data}} (\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ \mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} $>$ \&map\+Ao\+Bst)
+\begin{DoxyCompactList}\small\item\em Destroys the data structures associated with the \mbox{\hyperlink{class_processor}{Processor}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_processor_a039de5c87c6dcc96d5c582ea279236db}{Reload\+Data}} (\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ \mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} $>$ \&map\+Ao\+Bst, \mbox{\hyperlink{class_vector}{Vector}}$<$ string $>$ \&csv\+File\+Path)
 \begin{DoxyCompactList}\small\item\em Reloads data from a C\+SV file into an \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -37,6 +39,43 @@ Definition at line 30 of file Processor.\+h.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_processor_a5554d20e58db8c07faed18be6dd982c5}\label{class_processor_a5554d20e58db8c07faed18be6dd982c5}} 
+\index{Processor@{Processor}!DestroyData@{DestroyData}}
+\index{DestroyData@{DestroyData}!Processor@{Processor}}
+\doxysubsubsection{\texorpdfstring{DestroyData()}{DestroyData()}}
+{\footnotesize\ttfamily void Processor\+::\+Destroy\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ \mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} $>$ \&}]{map\+Ao\+Bst }\end{DoxyParamCaption})}
+
+
+
+Destroys the data structures associated with the \mbox{\hyperlink{class_processor}{Processor}}. 
+
+This function resets the counters for data read and inserted to zero and clears any existing data structures stored in the provided \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em map\+Ao\+Bst} & The \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} containing the data structures to be destroyed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 206 of file Processor.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_processor_a5554d20e58db8c07faed18be6dd982c5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{class_processor_a5554d20e58db8c07faed18be6dd982c5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_processor_a66f8568b6dd32f6ca5bc180dae4bbc9f}\label{class_processor_a66f8568b6dd32f6ca5bc180dae4bbc9f}} 
 \index{Processor@{Processor}!GetInstance@{GetInstance}}
 \index{GetInstance@{GetInstance}!Processor@{Processor}}
@@ -54,8 +93,7 @@ Returns the singleton instance of \mbox{\hyperlink{class_processor}{Processor}}.
 
 Definition at line 31 of file Processor.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -85,8 +123,7 @@ std\+::cout $<$$<$ \char`\"{}\+Date\+: \char`\"{} $<$$<$ D\+Value.\+Get\+Day() $
 
 Definition at line 58 of file Processor.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -124,8 +161,7 @@ Loads the C\+SV file paths from an txt file and stream into a vector.
 
 Definition at line 37 of file Processor.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -137,7 +173,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_processor_a248511764e3ce60ee72f8ae8fd0d47c9_icgraph}
+\includegraphics[width=298pt]{class_processor_a248511764e3ce60ee72f8ae8fd0d47c9_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_processor_a9ffca81c2e7aee9a5194e5d6f62d2ee4}\label{class_processor_a9ffca81c2e7aee9a5194e5d6f62d2ee4}} 
@@ -175,19 +211,18 @@ This function records sensor data to the specified output file and calculates st
 
 Definition at line 176 of file Processor.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_processor_a9ffca81c2e7aee9a5194e5d6f62d2ee4_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_processor_ad8c3c5b193b38060b4aa355078f22513}\label{class_processor_ad8c3c5b193b38060b4aa355078f22513}} 
+\mbox{\Hypertarget{class_processor_a039de5c87c6dcc96d5c582ea279236db}\label{class_processor_a039de5c87c6dcc96d5c582ea279236db}} 
 \index{Processor@{Processor}!ReloadData@{ReloadData}}
 \index{ReloadData@{ReloadData}!Processor@{Processor}}
 \doxysubsubsection{\texorpdfstring{ReloadData()}{ReloadData()}}
-{\footnotesize\ttfamily void Processor\+::\+Reload\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ \mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} $>$ \&}]{map\+Ao\+Bst,  }\item[{const string \&}]{filename }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Processor\+::\+Reload\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}}$<$ \mbox{\hyperlink{class_sensor_rec_type}{Sensor\+Rec\+Type}} $>$ \&}]{map\+Ao\+Bst,  }\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ string $>$ \&}]{csv\+File\+Path }\end{DoxyParamCaption})}
 
 
 
@@ -199,19 +234,21 @@ This method clears any existing data in the provided \mbox{\hyperlink{class_ao_a
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em map\+Ao\+Bst} & Reference to the \mbox{\hyperlink{class_ao_avl_map}{Ao\+Avl\+Map}} where the data will be loaded. \\
 \hline
+\mbox{\texttt{ in}}  & {\em csv\+File\+Path} & The path to the C\+SV file containing the data stored at. \\
+\hline
 \mbox{\texttt{ in}}  & {\em filename} & The path to the C\+SV file containing the data to be loaded. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 206 of file Processor.\+cpp.
+Definition at line 215 of file Processor.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_processor_ad8c3c5b193b38060b4aa355078f22513_cgraph}
+\includegraphics[width=350pt]{class_processor_a039de5c87c6dcc96d5c582ea279236db_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -219,7 +256,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_processor_ad8c3c5b193b38060b4aa355078f22513_icgraph}
+\includegraphics[width=350pt]{class_processor_a039de5c87c6dcc96d5c582ea279236db_icgraph}
 \end{center}
 \end{figure}
 

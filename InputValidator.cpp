@@ -76,6 +76,8 @@ unsigned InputValidator::YearValidation( string &year )
     return m_userYear;
 }
 
+// ***** PRIVATE ******************************************************
+// *******************************************************************
 bool InputValidator::IsDayInputValid() const
 {
     return ( m_userDay <= 0 || m_userDay > 31 );

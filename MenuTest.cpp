@@ -23,7 +23,7 @@ template<class T>
 void TestOptionTwo( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, Menu<T> &menu, unsigned &year, char &option );
 
 template<class T>
-void TestOptionThree( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, Menu<T> &menu, unsigned &year, char &option );
+void TestOptionThree( AoAvlMap<T> &aoAvlMap, Menu<T> &menu, unsigned &month );
 
 template<class T>
 void TestOptionFour(
@@ -65,9 +65,9 @@ int main()
 
     TestOptionOne( avlRecords, mapRecords, menu, year, month );
     TestOptionTwo( avlRecords, mapRecords, menu, year, optionTwo );
-    TestOptionThree( avlRecords, mapRecords, menu, year, optionThree );
+    TestOptionThree( mapRecords, menu, month );
     TestOptionFour( avlRecords, mapRecords, menu, outputFile, outFilePath, year );
-    TestOptionFive( mapRecords, menu, month );
+
 
     return 0;
 }
@@ -95,14 +95,14 @@ template<class T>
 void TestOptionTwo( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, Menu<T> &menu, unsigned &year, char &option )
 {
     cout << "Test on Option Two: " << '\n';
-    menu.OptionTwoThree( avl, aoAvlMap, year, option );
+    menu.OptionTwo( avl, aoAvlMap, year, option );
 }
 
 template<class T>
-void TestOptionThree( AVL<T> &avl, AoAvlMap<T> &aoAvlMap, Menu<T> &menu, unsigned &year, char &option )
+void TestOptionThree( AoAvlMap<T> &aoAvlMap, Menu<T> &menu, unsigned &month )
 {
-    cout << "Test on Option Three: " << '\n';
-    menu.OptionTwoThree( avl, aoAvlMap, year, option );
+    cout << "Test on Option Three: " << endl;
+    menu.OptionThree( aoAvlMap, month );
 }
 
 template<class T>
@@ -118,9 +118,3 @@ void TestOptionFour(
     menu.OptionFour( avl, aoAvlMap, outputFile, filePath, year );
 }
 
-template<class T>
-void TestOptionFive( AoAvlMap<T> &aoAvlMap, Menu<T> &menu, unsigned &month )
-{
-    cout << "Test on Option Five: " << endl;
-    menu.OptionFive( aoAvlMap, month );
-}

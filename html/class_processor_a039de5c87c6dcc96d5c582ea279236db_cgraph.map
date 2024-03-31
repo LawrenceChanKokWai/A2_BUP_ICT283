@@ -1,0 +1,13 @@
+<map id="Processor::ReloadData" name="Processor::ReloadData">
+<area shape="rect" id="node1" title="Reloads data from a CSV file into an AoAvlMap." alt="" coords="5,157,161,184"/>
+<area shape="rect" id="node2" href="$class_ao_avl_map.html#a27de5b518f6f0bca6d4208e811fafaf5" title="Checks if the AoAvlMap is empty." alt="" coords="227,132,363,159"/>
+<area shape="rect" id="node3" href="$class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="209,183,380,209"/>
+<area shape="rect" id="node4" href="$class_vector.html#ab72cd45d42bfea0432b2780c504ea867" title="Get the number of elements used in the vector." alt="" coords="473,5,591,32"/>
+<area shape="rect" id="node5" href="$class_ao_avl_map.html#affcadb4f51032bc0cd78619fd97f1bcc" title="Insert sensor data into the map consisted with array of Vectors." alt="" coords="438,56,626,83"/>
+<area shape="rect" id="node6" href="$class_date.html#aa10bb7c41d0aaa084790f48dd9dbffd9" title="Method that allows setting the day associated with the Date class." alt="" coords="482,107,582,133"/>
+<area shape="rect" id="node7" href="$class_time.html#a0f1261eb686b1aaa0366d39e035fb818" title="Method that allows setting the hour associated with the Time class." alt="" coords="479,157,585,184"/>
+<area shape="rect" id="node8" href="$class_measurement.html#ab6ad71b0556bed9b80d4b4512894237c" title="Setter for the measurement variable." alt="" coords="428,208,636,235"/>
+<area shape="rect" id="node9" href="$class_time.html#af0b98cbc57d252e672b4599571142376" title="Method that allows setting the minute associated with the Time class." alt="" coords="473,259,591,285"/>
+<area shape="rect" id="node10" href="$class_date.html#a66c5ea64f0337c094c58df64ad9b0c0e" title="Method that allows setting the month associated with the Date class." alt="" coords="475,309,589,336"/>
+<area shape="rect" id="node11" href="$class_date.html#a732cdd3dafa961d7c11b3252ad95ddbd" title="Method that allows setting the year associated with the Date class." alt="" coords="480,360,584,387"/>
+</map>

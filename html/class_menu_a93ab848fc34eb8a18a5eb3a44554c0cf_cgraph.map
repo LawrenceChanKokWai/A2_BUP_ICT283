@@ -1,0 +1,6 @@
+<map id="Menu::InsertUserFileSelection" name="Menu::InsertUserFileSelection">
+<area shape="rect" id="node1" title="Inserts user&#45;selected file paths into a vector based on provided indexes." alt="" coords="5,56,201,83"/>
+<area shape="rect" id="node2" href="$class_vector.html#ab72cd45d42bfea0432b2780c504ea867" title="Get the number of elements used in the vector." alt="" coords="253,5,371,32"/>
+<area shape="rect" id="node3" href="$class_vector.html#a0b4525d26f9397f327e6adb7c7eee22c" title="Insert an object to the end of the vector." alt="" coords="249,56,375,83"/>
+<area shape="rect" id="node4" href="$class_vector.html#a9c74fd822fb8b1c5f7eeaf7deaad9abc" title="Check on if Vector is empty." alt="" coords="254,107,370,133"/>
+</map>

@@ -36,7 +36,7 @@ namespace Constant
     const std::string MENU_OPTION_TWO_MSG = "\n\t[ 2 ] : Average ambient air temperature and sample standard deviation for each month of a year. ";
     const std::string MENU_OPTION_THREE_MSG = "\n\t[ 3 ] : Calculates Sample Pearson Correlation Coefficient for a user specified month and combinations \n\t\tof two data fields.";
     const std::string MENU_OPTION_FOUR_MSG = "\n\t[ 4 ] : Average wind speed (km/h), average ambient temperature and \n\t\ttotal solar radiation in kWh/m2 for each month of a specific year.";
-    const std::string MENU_OPTION_FIVE_MSG = "\n\t[ 5 ] : Enables reloading from the data/data_source.txt file";
+    const std::string MENU_OPTION_FIVE_MSG = "\n\t[ 5 ] : Enables reloading from the data/data_source.txt file,\n\t\tand selecting files to be reloaded. ";
     const std::string MENU_OPTION_SIX_MSG = "\n\t[ 6 ] : Exit the program.";
     const std::string DAY_RANGE_MSG = "Please enter day between 1 ~ 31, and press [ ENTER ]";
     const std::string MONTH_RANGE_MSG = "Please enter month between 1 ~ 12, and press [ ENTER ]";

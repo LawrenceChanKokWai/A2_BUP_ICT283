@@ -107,9 +107,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ffca81c2e7aee9a5194e5d6f62d2ee4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#a9ffca81c2e7aee9a5194e5d6f62d2ee4">OutputStreamMeasurement</a> (<a class="el" href="class_sensor_rec_type.html">SensorRecType</a> &amp;sensorRecType, ofstream &amp;outputFile, unsigned &amp;month, float &amp;speedMean, float &amp;speedSsd, float &amp;tempMean, float &amp;tempSsd, float &amp;srSum)</td></tr>
 <tr class="memdesc:a9ffca81c2e7aee9a5194e5d6f62d2ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Records sensor data to an output file and computes statistical measurements.  <a href="class_processor.html#a9ffca81c2e7aee9a5194e5d6f62d2ee4">More...</a><br /></td></tr>
 <tr class="separator:a9ffca81c2e7aee9a5194e5d6f62d2ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8c3c5b193b38060b4aa355078f22513"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#ad8c3c5b193b38060b4aa355078f22513">ReloadData</a> (<a class="el" href="class_ao_avl_map.html">AoAvlMap</a>&lt; <a class="el" href="class_sensor_rec_type.html">SensorRecType</a> &gt; &amp;mapAoBst, const string &amp;filename)</td></tr>
-<tr class="memdesc:ad8c3c5b193b38060b4aa355078f22513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reloads data from a CSV file into an <a class="el" href="class_ao_avl_map.html" title="Represents the AoAvlMap Class.">AoAvlMap</a>.  <a href="class_processor.html#ad8c3c5b193b38060b4aa355078f22513">More...</a><br /></td></tr>
-<tr class="separator:ad8c3c5b193b38060b4aa355078f22513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5554d20e58db8c07faed18be6dd982c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#a5554d20e58db8c07faed18be6dd982c5">DestroyData</a> (<a class="el" href="class_ao_avl_map.html">AoAvlMap</a>&lt; <a class="el" href="class_sensor_rec_type.html">SensorRecType</a> &gt; &amp;mapAoBst)</td></tr>
+<tr class="memdesc:a5554d20e58db8c07faed18be6dd982c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the data structures associated with the <a class="el" href="class_processor.html" title="The Processor class handles processing of CSV data as a singleton.">Processor</a>.  <a href="class_processor.html#a5554d20e58db8c07faed18be6dd982c5">More...</a><br /></td></tr>
+<tr class="separator:a5554d20e58db8c07faed18be6dd982c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039de5c87c6dcc96d5c582ea279236db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#a039de5c87c6dcc96d5c582ea279236db">ReloadData</a> (<a class="el" href="class_ao_avl_map.html">AoAvlMap</a>&lt; <a class="el" href="class_sensor_rec_type.html">SensorRecType</a> &gt; &amp;mapAoBst, <a class="el" href="class_vector.html">Vector</a>&lt; string &gt; &amp;csvFilePath)</td></tr>
+<tr class="memdesc:a039de5c87c6dcc96d5c582ea279236db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reloads data from a CSV file into an <a class="el" href="class_ao_avl_map.html" title="Represents the AoAvlMap Class.">AoAvlMap</a>.  <a href="class_processor.html#a039de5c87c6dcc96d5c582ea279236db">More...</a><br /></td></tr>
+<tr class="separator:a039de5c87c6dcc96d5c582ea279236db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -123,6 +126,53 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_processor_8h_source.html#l00030">30</a> of file <a class="el" href="_processor_8h_source.html">Processor.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5554d20e58db8c07faed18be6dd982c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5554d20e58db8c07faed18be6dd982c5">&#9670;&nbsp;</a></span>DestroyData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Processor::DestroyData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_ao_avl_map.html">AoAvlMap</a>&lt; <a class="el" href="class_sensor_rec_type.html">SensorRecType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mapAoBst</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroys the data structures associated with the <a class="el" href="class_processor.html" title="The Processor class handles processing of CSV data as a singleton.">Processor</a>. </p>
+<p>This function resets the counters for data read and inserted to zero and clears any existing data structures stored in the provided <a class="el" href="class_ao_avl_map.html" title="Represents the AoAvlMap Class.">AoAvlMap</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mapAoBst</td><td>The <a class="el" href="class_ao_avl_map.html" title="Represents the AoAvlMap Class.">AoAvlMap</a> containing the data structures to be destroyed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_processor_8cpp_source.html#l00206">206</a> of file <a class="el" href="_processor_8cpp_source.html">Processor.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processor_a5554d20e58db8c07faed18be6dd982c5_cgraph.png" border="0" usemap="#class_processor_a5554d20e58db8c07faed18be6dd982c5_cgraph" alt=""/></div>
+<map name="class_processor_a5554d20e58db8c07faed18be6dd982c5_cgraph" id="class_processor_a5554d20e58db8c07faed18be6dd982c5_cgraph">
+<area shape="rect" title="Destroys the data structures associated with the Processor." alt="" coords="5,5,167,32"/>
+<area shape="rect" href="class_ao_avl_map.html#a37e34f010607dfd1ca5b4a74cd3eca35" title="Destroys the AoAvlMap by clearing all AVL trees and removing all elements." alt="" coords="215,5,348,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processor_a5554d20e58db8c07faed18be6dd982c5_icgraph.png" border="0" usemap="#class_processor_a5554d20e58db8c07faed18be6dd982c5_icgraph" alt=""/></div>
+<map name="class_processor_a5554d20e58db8c07faed18be6dd982c5_icgraph" id="class_processor_a5554d20e58db8c07faed18be6dd982c5_icgraph">
+<area shape="rect" title="Destroys the data structures associated with the Processor." alt="" coords="104,5,265,32"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a66f8568b6dd32f6ca5bc180dae4bbc9f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a66f8568b6dd32f6ca5bc180dae4bbc9f">&#9670;&nbsp;</a></span>GetInstance()</h2>
 
@@ -229,7 +279,7 @@ Here is the caller graph for this function:</div>
 <map name="class_processor_a5378867146978d9ab1d62de4e8d8b80a_icgraph" id="class_processor_a5378867146978d9ab1d62de4e8d8b80a_icgraph">
 <area shape="rect" title="Loads data from CSV files into an AVL map." alt="" coords="491,56,661,83"/>
 <area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="146,5,197,32"/>
-<area shape="rect" href="class_processor.html#ad8c3c5b193b38060b4aa355078f22513" title="Reloads data from a CSV file into an AoAvlMap." alt="" coords="287,56,443,83"/>
+<area shape="rect" href="class_processor.html#a039de5c87c6dcc96d5c582ea279236db" title="Reloads data from a CSV file into an AoAvlMap." alt="" coords="287,56,443,83"/>
 <area shape="rect" href="_processor_test_8cpp.html#a65a80aa54a41bc9eed898bf6af591bd5" title=" " alt="" coords="303,107,426,133"/>
 <area shape="rect" href="_processor_test_8cpp.html#a42311f3097675417627b086d6ede606a" title=" " alt="" coords="104,56,239,83"/>
 <area shape="rect" href="_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,56,108"/>
@@ -295,11 +345,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_processor_a248511764e3ce60ee72f8ae8fd0d47c9_icgraph.png" border="0" usemap="#class_processor_a248511764e3ce60ee72f8ae8fd0d47c9_icgraph" alt=""/></div>
 <map name="class_processor_a248511764e3ce60ee72f8ae8fd0d47c9_icgraph" id="class_processor_a248511764e3ce60ee72f8ae8fd0d47c9_icgraph">
-<area shape="rect" title="Loads the CSV file paths from an txt file and stream into a vector." alt="" coords="491,23,683,65"/>
-<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="146,5,197,32"/>
-<area shape="rect" href="class_processor.html#ad8c3c5b193b38060b4aa355078f22513" title="Reloads data from a CSV file into an AoAvlMap." alt="" coords="287,56,443,83"/>
-<area shape="rect" href="_processor_test_8cpp.html#a42311f3097675417627b086d6ede606a" title=" " alt="" coords="104,56,239,83"/>
-<area shape="rect" href="_processor_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" title="Loads the CSV file paths from an txt file and stream into a vector." alt="" coords="104,5,296,47"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
 </map>
 </div>
 
@@ -397,8 +444,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ad8c3c5b193b38060b4aa355078f22513"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8c3c5b193b38060b4aa355078f22513">&#9670;&nbsp;</a></span>ReloadData()</h2>
+<a id="a039de5c87c6dcc96d5c582ea279236db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a039de5c87c6dcc96d5c582ea279236db">&#9670;&nbsp;</a></span>ReloadData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -412,8 +459,8 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const string &amp;&#160;</td>
-          <td class="paramname"><em>filename</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector</a>&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>csvFilePath</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -428,38 +475,36 @@ Here is the call graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mapAoBst</td><td>Reference to the <a class="el" href="class_ao_avl_map.html" title="Represents the AoAvlMap Class.">AoAvlMap</a> where the data will be loaded. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">csvFilePath</td><td>The path to the CSV file containing the data stored at. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The path to the CSV file containing the data to be loaded. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_processor_8cpp_source.html#l00206">206</a> of file <a class="el" href="_processor_8cpp_source.html">Processor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_processor_8cpp_source.html#l00215">215</a> of file <a class="el" href="_processor_8cpp_source.html">Processor.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_processor_ad8c3c5b193b38060b4aa355078f22513_cgraph.png" border="0" usemap="#class_processor_ad8c3c5b193b38060b4aa355078f22513_cgraph" alt=""/></div>
-<map name="class_processor_ad8c3c5b193b38060b4aa355078f22513_cgraph" id="class_processor_ad8c3c5b193b38060b4aa355078f22513_cgraph">
-<area shape="rect" title="Reloads data from a CSV file into an AoAvlMap." alt="" coords="5,183,161,209"/>
-<area shape="rect" href="class_ao_avl_map.html#a37e34f010607dfd1ca5b4a74cd3eca35" title="Destroys the AoAvlMap by clearing all AVL trees and removing all elements." alt="" coords="239,107,372,133"/>
-<area shape="rect" href="class_ao_avl_map.html#a27de5b518f6f0bca6d4208e811fafaf5" title="Checks if the AoAvlMap is empty." alt="" coords="237,157,373,184"/>
-<area shape="rect" href="class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="220,208,391,235"/>
-<area shape="rect" href="class_processor.html#a248511764e3ce60ee72f8ae8fd0d47c9" title="Loads the CSV file paths from an txt file and stream into a vector." alt="" coords="209,331,401,373"/>
-<area shape="rect" href="class_vector.html#ab72cd45d42bfea0432b2780c504ea867" title="Get the number of elements used in the vector." alt="" coords="494,5,613,32"/>
-<area shape="rect" href="class_ao_avl_map.html#affcadb4f51032bc0cd78619fd97f1bcc" title="Insert sensor data into the map consisted with array of Vectors." alt="" coords="459,56,647,83"/>
-<area shape="rect" href="class_date.html#aa10bb7c41d0aaa084790f48dd9dbffd9" title="Method that allows setting the day associated with the Date class." alt="" coords="503,107,603,133"/>
-<area shape="rect" href="class_time.html#a0f1261eb686b1aaa0366d39e035fb818" title="Method that allows setting the hour associated with the Time class." alt="" coords="501,157,606,184"/>
-<area shape="rect" href="class_measurement.html#ab6ad71b0556bed9b80d4b4512894237c" title="Setter for the measurement variable." alt="" coords="449,208,657,235"/>
-<area shape="rect" href="class_time.html#af0b98cbc57d252e672b4599571142376" title="Method that allows setting the minute associated with the Time class." alt="" coords="495,259,612,285"/>
-<area shape="rect" href="class_date.html#a66c5ea64f0337c094c58df64ad9b0c0e" title="Method that allows setting the month associated with the Date class." alt="" coords="497,309,610,336"/>
-<area shape="rect" href="class_date.html#a732cdd3dafa961d7c11b3252ad95ddbd" title="Method that allows setting the year associated with the Date class." alt="" coords="501,360,605,387"/>
-<area shape="rect" href="class_vector.html#a0b4525d26f9397f327e6adb7c7eee22c" title="Insert an object to the end of the vector." alt="" coords="491,411,616,437"/>
+<div class="center"><img src="class_processor_a039de5c87c6dcc96d5c582ea279236db_cgraph.png" border="0" usemap="#class_processor_a039de5c87c6dcc96d5c582ea279236db_cgraph" alt=""/></div>
+<map name="class_processor_a039de5c87c6dcc96d5c582ea279236db_cgraph" id="class_processor_a039de5c87c6dcc96d5c582ea279236db_cgraph">
+<area shape="rect" title="Reloads data from a CSV file into an AoAvlMap." alt="" coords="5,157,161,184"/>
+<area shape="rect" href="class_ao_avl_map.html#a27de5b518f6f0bca6d4208e811fafaf5" title="Checks if the AoAvlMap is empty." alt="" coords="227,132,363,159"/>
+<area shape="rect" href="class_processor.html#a5378867146978d9ab1d62de4e8d8b80a" title="Loads data from CSV files into an AVL map." alt="" coords="209,183,380,209"/>
+<area shape="rect" href="class_vector.html#ab72cd45d42bfea0432b2780c504ea867" title="Get the number of elements used in the vector." alt="" coords="473,5,591,32"/>
+<area shape="rect" href="class_ao_avl_map.html#affcadb4f51032bc0cd78619fd97f1bcc" title="Insert sensor data into the map consisted with array of Vectors." alt="" coords="438,56,626,83"/>
+<area shape="rect" href="class_date.html#aa10bb7c41d0aaa084790f48dd9dbffd9" title="Method that allows setting the day associated with the Date class." alt="" coords="482,107,582,133"/>
+<area shape="rect" href="class_time.html#a0f1261eb686b1aaa0366d39e035fb818" title="Method that allows setting the hour associated with the Time class." alt="" coords="479,157,585,184"/>
+<area shape="rect" href="class_measurement.html#ab6ad71b0556bed9b80d4b4512894237c" title="Setter for the measurement variable." alt="" coords="428,208,636,235"/>
+<area shape="rect" href="class_time.html#af0b98cbc57d252e672b4599571142376" title="Method that allows setting the minute associated with the Time class." alt="" coords="473,259,591,285"/>
+<area shape="rect" href="class_date.html#a66c5ea64f0337c094c58df64ad9b0c0e" title="Method that allows setting the month associated with the Date class." alt="" coords="475,309,589,336"/>
+<area shape="rect" href="class_date.html#a732cdd3dafa961d7c11b3252ad95ddbd" title="Method that allows setting the year associated with the Date class." alt="" coords="480,360,584,387"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_processor_ad8c3c5b193b38060b4aa355078f22513_icgraph.png" border="0" usemap="#class_processor_ad8c3c5b193b38060b4aa355078f22513_icgraph" alt=""/></div>
-<map name="class_processor_ad8c3c5b193b38060b4aa355078f22513_icgraph" id="class_processor_ad8c3c5b193b38060b4aa355078f22513_icgraph">
+<div class="center"><img src="class_processor_a039de5c87c6dcc96d5c582ea279236db_icgraph.png" border="0" usemap="#class_processor_a039de5c87c6dcc96d5c582ea279236db_icgraph" alt=""/></div>
+<map name="class_processor_a039de5c87c6dcc96d5c582ea279236db_icgraph" id="class_processor_a039de5c87c6dcc96d5c582ea279236db_icgraph">
 <area shape="rect" title="Reloads data from a CSV file into an AoAvlMap." alt="" coords="287,31,443,57"/>
 <area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="146,5,197,32"/>
 <area shape="rect" href="_processor_test_8cpp.html#a42311f3097675417627b086d6ede606a" title=" " alt="" coords="104,56,239,83"/>

@@ -86,6 +86,16 @@ public:
         float &srSum );
 
     /**
+     * @brief Destroys the data structures associated with the Processor.
+     *
+     * This function resets the counters for data read and inserted to zero and
+     * clears any existing data structures stored in the provided AoAvlMap.
+     *
+     * @param[in] mapAoBst The AoAvlMap containing the data structures to be destroyed.
+     */
+    void DestroyData( AoAvlMap<SensorRecType> &mapAoBst );
+
+    /**
      * @brief Reloads data from a CSV file into an AoAvlMap.
      *
      * This method clears any existing data in the provided AoAvlMap,
@@ -93,10 +103,11 @@ public:
      * from the specified CSV file into the AoAvlMap.
      *
      * @param[in] mapAoBst Reference to the AoAvlMap where the data will be loaded.
+     * @param[in] csvFilePath The path to the CSV file containing the data stored at.
      * @param[in] filename The path to the CSV file containing the data to be loaded.
      *
      */
-    void ReloadData( AoAvlMap<SensorRecType> &mapAoBst, const string& filename );
+    void ReloadData( AoAvlMap<SensorRecType> &mapAoBst, Vector<string> &csvFilePath );
 
 
 private:

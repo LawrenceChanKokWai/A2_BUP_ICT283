@@ -1,6 +1,7 @@
 <map id="Vector::IsEmpty" name="Vector::IsEmpty">
-<area shape="rect" id="node1" title="Check on if Vector is empty." alt="" coords="511,5,627,32"/>
-<area shape="rect" id="node2" href="$class_ao_avl_map.html#aa1235e17821e4743a3e683f54dd2da2f" title="Calculates the Sample Pearson Correlation Coefficient (sPCC) between two sets of data." alt="" coords="284,5,463,32"/>
-<area shape="rect" id="node3" href="$class_menu.html#a5f261a80fda842da551d9e53cc826480" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="104,5,236,32"/>
-<area shape="rect" id="node4" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node1" title="Check on if Vector is empty." alt="" coords="575,31,691,57"/>
+<area shape="rect" id="node2" href="$class_ao_avl_map.html#aa1235e17821e4743a3e683f54dd2da2f" title="Calculates the Sample Pearson Correlation Coefficient (sPCC) between two sets of data." alt="" coords="348,5,527,32"/>
+<area shape="rect" id="node5" href="$class_menu.html#a93ab848fc34eb8a18a5eb3a44554c0cf" title="Inserts user&#45;selected file paths into a vector based on provided indexes." alt="" coords="104,56,300,83"/>
+<area shape="rect" id="node3" href="$class_menu.html#a5f261a80fda842da551d9e53cc826480" title="Option to calculate and display sample Pearson correlation coefficient values for wind speed,..." alt="" coords="136,5,268,32"/>
+<area shape="rect" id="node4" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,56,57"/>
 </map>

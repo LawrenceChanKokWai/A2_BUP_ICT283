@@ -42,6 +42,7 @@ int main()
     string year;
     string month;
     string day;
+    string fileSelection;
     char user_choice;
     do
     {
@@ -103,12 +104,19 @@ int main()
             cout << Constant::SELECTED_OPTION_FIVE_MSG << endl;
 
             cout << '\n' << Constant::OUTPUT << endl;
-            cout << "Reloading data: " << filename << endl;
+            cout << "Destroying previous data..." << '\n' << endl;
+            Processor::GetInstance().DestroyData( mapRecords );
 
-            Processor::GetInstance().ReloadData(mapRecords, filename);
+            menu.DisplayFilePath( csvFilePath );
 
-            cout << '\n' << endl;
+            Vector<string> selectedIndexes;
 
+            menu.InsertUserFileSelection( csvFilePath, selectedIndexes );
+
+            csvFilePath = selectedIndexes;
+            selectedIndexes.~Vector();
+
+            Processor::GetInstance().ReloadData( mapRecords, csvFilePath );
             break;
         }
         case '6':
